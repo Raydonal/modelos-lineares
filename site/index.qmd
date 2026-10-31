@@ -4,9 +4,11 @@ Este site acompanha o livro *Modelos Lineares: Teoria, Geometria e Aplicações*
 Cristiano Ferraz e André Leite. O livro traz a teoria, as figuras e as tabelas; aqui está o código que
 reproduz cada resultado, em R e em Python, com a saída de cada exemplo.
 
-Cada capítulo traz os exemplos na ordem dos scripts. As abas **R** e **Python** mostram o mesmo exemplo
-nas duas linguagens, e a escolha vale para a página inteira. Os exemplos sintéticos usam um gerador
-portátil, que dá os mesmos números em R e em Python.
+Cada capítulo traz os exemplos na ordem dos scripts: primeiro o código, depois tudo o que ele produz, com
+as tabelas impressas na saída e, logo abaixo, as figuras do exemplo com o código que as gera. As abas **R**
+e **Python** mostram o mesmo exemplo nas duas linguagens, e a escolha vale para a página inteira. As figuras
+são geradas em Python. Os exemplos sintéticos usam um gerador portátil, que dá os mesmos números em R e em
+Python.
 
 ## Como reproduzir
 
