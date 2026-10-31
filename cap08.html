@@ -1,0 +1,1597 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pt" xml:lang="pt"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.10.20">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>8. Formas quadráticas, cálculo matricial e produtos de Kronecker – Modelos Lineares: material reprodutível</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./cap09.html" rel="next">
+<link href="./cap07.html" rel="prev">
+<script src="site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-29e00c98bbba659d91ab3844292f79dc.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap-0cef25672159723637f712c6c0bfc800.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "Nenhum resultado",
+    "search-matching-documents-text": "documentos correspondentes",
+    "search-copy-link-title": "Copiar link para a busca",
+    "search-hide-matches-text": "Esconder correspondências adicionais",
+    "search-more-match-text": "mais correspondência neste documento",
+    "search-more-matches-text": "mais correspondências neste documento",
+    "search-clear-button-title": "Limpar",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancelar",
+    "search-submit-button-title": "Enviar",
+    "search-label": "Procurar"
+  }
+}</script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+</head>
+
+<body class="nav-sidebar floating quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./cap01.html">Álgebra matricial</a></li><li class="breadcrumb-item"><a href="./cap08.html"><span class="chapter-title">8. Formas quadráticas, cálculo matricial e produtos de Kronecker</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Procurar" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="./">Modelos Lineares: material reprodutível</a> 
+        <div class="sidebar-tools-main">
+    <a href="https://github.com/Raydonal/modelos-lineares" title="Código fonte" class="quarto-navigation-tool px-1" aria-label="Código fonte"><i class="bi bi-github"></i></a>
+</div>
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Procurar"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Apresentação</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
+ <span class="menu-text">Álgebra matricial</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Alternar seção">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./cap01.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">1. Vetores, matrizes e espaços lineares</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./cap02.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">2. Posto, sistemas lineares e as fatorações LU e QR</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./cap03.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">3. Determinantes, inversas e matrizes particionadas</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./cap04.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">4. Inversas generalizadas e sistemas lineares</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./cap05.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">5. Matrizes idempotentes e projeções</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./cap06.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">6. Autovalores, decomposição espectral e SVD</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./cap07.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">7. Normas matriciais, condicionamento e a inversa de Moore–Penrose</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./cap08.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">8. Formas quadráticas, cálculo matricial e produtos de Kronecker</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
+ <span class="menu-text">Distribuições</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Alternar seção">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./cap09.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">9. Vetores aleatórios e a distribuição normal multivariada</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./cap10.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">10. Distribuição de formas quadráticas</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true">
+ <span class="menu-text">O modelo linear</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Alternar seção">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./cap11.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">11. Formulações do modelo linear</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./cap12.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">12. Estimabilidade e o teorema de Gauss–Markov</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./cap13.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">13. Mínimos quadrados generalizados, restrições e o teorema de Frisch–Waugh–Lovell</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true">
+ <span class="menu-text">O livro</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true" aria-label="Alternar seção">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./participe.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Participe</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./erratas.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Erratas</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Índice</h2>
+   
+  <ul>
+  <li><a href="#exemplos" id="toc-exemplos" class="nav-link active" data-scroll-target="#exemplos">Exemplos</a>
+  <ul class="collapse">
+  <li><a href="#ex-01_minimizacao" id="toc-ex-01_minimizacao" class="nav-link" data-scroll-target="#ex-01_minimizacao">Minimização de funções quadráticas, com e sem restrições lineares</a></li>
+  <li><a href="#ex-02_derivadas" id="toc-ex-02_derivadas" class="nav-link" data-scroll-target="#ex-02_derivadas">Derivadas matriciais conferidas por diferenças finitas</a></li>
+  <li><a href="#ex-03_kronecker" id="toc-ex-03_kronecker" class="nav-link" data-scroll-target="#ex-03_kronecker">Produto de Kronecker, vec e vech</a></li>
+  <li><a href="#ex-04_mle_normal" id="toc-ex-04_mle_normal" class="nav-link" data-scroll-target="#ex-04_mle_normal">Máxima verossimilhança da normal multivariada pelo cálculo matricial (dados wage1)</a></li>
+  <li><a href="#ex-05_islm_nao_linear" id="toc-ex-05_islm_nao_linear" class="nav-link" data-scroll-target="#ex-05_islm_nao_linear">IS-LM não linear: estática comparativa pelo teorema da função implícita</a></li>
+  <li><a href="#ex-06_kronecker_parcelas" id="toc-ex-06_kronecker_parcelas" class="nav-link" data-scroll-target="#ex-06_kronecker_parcelas">Parcelas subdivididas no experimento de aveia: a covariância como produto de Kronecker</a></li>
+  <li><a href="#ex-07_influencia_pca" id="toc-ex-07_influencia_pca" class="nav-link" data-scroll-target="#ex-07_influencia_pca">Influência de cada imagem no primeiro autovalor (derivada de autovalores)</a></li>
+  <li><a href="#ex-08_atencao_gradiente" id="toc-ex-08_atencao_gradiente" class="nav-link" data-scroll-target="#ex-08_atencao_gradiente">Retropropagação numa camada de atenção, conferida por diferenças finitas</a></li>
+  </ul></li>
+  </ul>
+<div class="toc-actions"><ul><li><a href="https://github.com/Raydonal/modelos-lineares/issues/new" class="toc-action"><i class="bi bi-github"></i>Criar uma issue</a></li></ul></div></nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./cap01.html">Álgebra matricial</a></li><li class="breadcrumb-item"><a href="./cap08.html"><span class="chapter-title">8. Formas quadráticas, cálculo matricial e produtos de Kronecker</span></a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title"><span class="chapter-title">8. Formas quadráticas, cálculo matricial e produtos de Kronecker</span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p>Material reprodutível do Capítulo 8 do livro.</p>
+<section id="exemplos" class="level2">
+<h2 class="anchored" data-anchor-id="exemplos">Exemplos</h2>
+<section id="ex-01_minimizacao" class="level3">
+<h3 class="anchored" data-anchor-id="ex-01_minimizacao">Minimização de funções quadráticas, com e sem restrições lineares</h3>
+<div class="tabset-margin-container"></div><div class="panel-tabset" data-group="linguagem">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true" href="">R</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false" href="">Python</a></li></ul>
+<div class="tab-content" data-group="linguagem">
+<div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>R/cap08/01_minimizacao.R</strong></pre>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1" data-filename="R/cap08/01_minimizacao.R"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Cap. 8 -- Minimização de funções quadráticas, com e sem restrições lineares</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>A <span class="ot">&lt;-</span> <span class="fu">matrix</span>(<span class="fu">c</span>(<span class="dv">2</span>, <span class="sc">-</span><span class="dv">1</span>, <span class="sc">-</span><span class="dv">1</span>, <span class="sc">-</span><span class="dv">1</span>, <span class="dv">2</span>, <span class="sc">-</span><span class="dv">1</span>, <span class="sc">-</span><span class="dv">1</span>, <span class="sc">-</span><span class="dv">1</span>, <span class="dv">2</span>), <span class="dv">3</span>)          <span class="co"># Laplaciano do triângulo: posto 2, A 1 = 0</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">eigen</span>(A, <span class="at">symmetric =</span> <span class="cn">TRUE</span>)<span class="sc">$</span>values</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>f <span class="ot">&lt;-</span> <span class="cf">function</span>(x, b) <span class="fl">0.5</span> <span class="sc">*</span> <span class="fu">drop</span>(<span class="fu">t</span>(x) <span class="sc">%*%</span> A <span class="sc">%*%</span> x) <span class="sc">-</span> <span class="fu">sum</span>(b <span class="sc">*</span> x)</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>b1 <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="sc">-</span><span class="dv">2</span>, <span class="dv">1</span>)                                          <span class="co"># b em C(A) (soma zero): há mínimo</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>b2 <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">1</span>)                                           <span class="co"># b fora de C(A): f é ilimitada inferiormente</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>G <span class="ot">&lt;-</span> MASS<span class="sc">::</span><span class="fu">ginv</span>(A)</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>x1 <span class="ot">&lt;-</span> G <span class="sc">%*%</span> b1</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="fu">c</span>(<span class="at">compativel =</span> <span class="fu">max</span>(<span class="fu">abs</span>(A <span class="sc">%*%</span> x1 <span class="sc">-</span> b1)), <span class="at">minimo =</span> <span class="fu">f</span>(x1, b1), <span class="at">formula =</span> <span class="sc">-</span><span class="fl">0.5</span> <span class="sc">*</span> <span class="fu">drop</span>(<span class="fu">t</span>(b1) <span class="sc">%*%</span> G <span class="sc">%*%</span> b1))</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="fu">sapply</span>(<span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">5</span>, <span class="sc">-</span><span class="dv">3</span>), <span class="cf">function</span>(t) <span class="fu">f</span>(x1 <span class="sc">+</span> t, b1))              <span class="co"># x1 + t 1 também minimiza (direção de N(A))</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="fu">sapply</span>(<span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">10</span>, <span class="dv">100</span>), <span class="cf">function</span>(t) <span class="fu">f</span>(t <span class="sc">*</span> <span class="fu">rep</span>(<span class="dv">1</span>, <span class="dv">3</span>), b2))     <span class="co"># decresce sem limite</span></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="co"># Com restrição linear C x = d: sistema de Lagrange [[A, C'], [C, 0]]</span></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>A2 <span class="ot">&lt;-</span> <span class="fu">diag</span>(<span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>)); bb <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">1</span>)</span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>C <span class="ot">&lt;-</span> <span class="fu">matrix</span>(<span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">1</span>), <span class="dv">1</span>); d <span class="ot">&lt;-</span> <span class="dv">1</span></span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>M <span class="ot">&lt;-</span> <span class="fu">rbind</span>(<span class="fu">cbind</span>(A2, <span class="fu">t</span>(C)), <span class="fu">cbind</span>(C, <span class="dv">0</span>))</span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>sol <span class="ot">&lt;-</span> <span class="fu">solve</span>(M, <span class="fu">c</span>(bb, d)); x <span class="ot">&lt;-</span> sol[<span class="dv">1</span><span class="sc">:</span><span class="dv">3</span>]; mult <span class="ot">&lt;-</span> sol[<span class="dv">4</span>]</span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a><span class="fu">c</span>(<span class="at">x =</span> x, <span class="at">multiplicador =</span> mult, <span class="at">restricao =</span> <span class="fu">sum</span>(x) <span class="sc">-</span> d)</span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a><span class="co"># Conferência: o gradiente A x - b é proporcional a C' (condição de otimalidade)</span></span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a><span class="fu">drop</span>(A2 <span class="sc">%*%</span> x <span class="sc">-</span> bb) <span class="sc">/</span> <span class="fu">c</span>(C)</span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a><span class="co"># Minimizar sobre x2 uma forma quadrática particionada dá o complemento de Schur</span></span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>S <span class="ot">&lt;-</span> <span class="fu">matrix</span>(<span class="fu">c</span>(<span class="dv">4</span>, <span class="dv">2</span>, <span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">2</span>), <span class="dv">3</span>); x1v <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">2</span>)</span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a>S11 <span class="ot">&lt;-</span> S[<span class="dv">1</span><span class="sc">:</span><span class="dv">2</span>, <span class="dv">1</span><span class="sc">:</span><span class="dv">2</span>]; S12 <span class="ot">&lt;-</span> S[<span class="dv">1</span><span class="sc">:</span><span class="dv">2</span>, <span class="dv">3</span>, drop <span class="ot">=</span> <span class="cn">FALSE</span>]; S22 <span class="ot">&lt;-</span> S[<span class="dv">3</span>, <span class="dv">3</span>]</span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a>x2_otimo <span class="ot">&lt;-</span> <span class="sc">-</span><span class="fu">drop</span>(<span class="fu">solve</span>(S22, <span class="fu">t</span>(S12) <span class="sc">%*%</span> x1v))</span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a><span class="fu">c</span>(<span class="at">min_numerico =</span> <span class="fu">optimize</span>(<span class="cf">function</span>(t) <span class="fu">drop</span>(<span class="fu">t</span>(<span class="fu">c</span>(x1v, t)) <span class="sc">%*%</span> S <span class="sc">%*%</span> <span class="fu">c</span>(x1v, t)), <span class="fu">c</span>(<span class="sc">-</span><span class="dv">10</span>, <span class="dv">10</span>))<span class="sc">$</span>objective,</span>
+<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a>  <span class="at">schur =</span> <span class="fu">drop</span>(<span class="fu">t</span>(x1v) <span class="sc">%*%</span> (S11 <span class="sc">-</span> S12 <span class="sc">%*%</span> <span class="fu">solve</span>(S22) <span class="sc">%*%</span> <span class="fu">t</span>(S12)) <span class="sc">%*%</span> x1v), <span class="at">x2_otimo =</span> x2_otimo)</span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<p><strong>Saída</strong></p>
+<pre class="text"><code>[1] 3.000000e+00 3.000000e+00 2.220446e-15
+   compativel        minimo       formula 
+ 4.440892e-16 -1.000000e+00 -1.000000e+00 
+[1] -1 -1 -1
+[1]   -3  -30 -300
+           x1            x2            x3 multiplicador     restricao 
+ 5.454545e-01  2.727273e-01  1.818182e-01  4.545455e-01 -1.110223e-16 
+[1] -0.4545455 -0.4545455 -0.4545455
+min_numerico        schur     x2_otimo 
+        19.5         19.5         -1.5</code></pre>
+<p><a href="https://github.com/Raydonal/modelos-lineares/blob/main/R/cap08/01_minimizacao.R">Ver no GitHub</a></p>
+</div>
+<div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>python/cap08/01_minimizacao.py</strong></pre>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3" data-filename="python/cap08/01_minimizacao.py"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co">"""Cap. 8 -- Minimização de funções quadráticas, com e sem restrições lineares."""</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> scipy.optimize <span class="im">import</span> minimize_scalar</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>A <span class="op">=</span> np.array([[<span class="fl">2.0</span>, <span class="op">-</span><span class="dv">1</span>, <span class="op">-</span><span class="dv">1</span>], [<span class="op">-</span><span class="dv">1</span>, <span class="dv">2</span>, <span class="op">-</span><span class="dv">1</span>], [<span class="op">-</span><span class="dv">1</span>, <span class="op">-</span><span class="dv">1</span>, <span class="dv">2</span>]])</span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>f <span class="op">=</span> <span class="kw">lambda</span> x, b: <span class="fl">0.5</span> <span class="op">*</span> x <span class="op">@</span> A <span class="op">@</span> x <span class="op">-</span> b <span class="op">@</span> x</span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>b1, b2 <span class="op">=</span> np.array([<span class="fl">1.0</span>, <span class="op">-</span><span class="dv">2</span>, <span class="dv">1</span>]), np.ones(<span class="dv">3</span>)</span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>x1 <span class="op">=</span> np.linalg.pinv(A) <span class="op">@</span> b1</span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"autovalores:"</span>, np.linalg.eigvalsh(A).<span class="bu">round</span>(<span class="dv">10</span>), <span class="st">" mínimo:"</span>, f(x1, b1), <span class="st">" fórmula:"</span>, <span class="op">-</span><span class="fl">0.5</span> <span class="op">*</span> b1 <span class="op">@</span> np.linalg.pinv(A) <span class="op">@</span> b1)</span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"f(x1 + t1):"</span>, [<span class="bu">round</span>(<span class="bu">float</span>(f(x1 <span class="op">+</span> t, b1)), <span class="dv">10</span>) <span class="cf">for</span> t <span class="kw">in</span> (<span class="dv">0</span>, <span class="dv">5</span>, <span class="op">-</span><span class="dv">3</span>)], <span class="st">" f(t1) com b fora de C(A):"</span>, [<span class="bu">float</span>(f(t <span class="op">*</span> np.ones(<span class="dv">3</span>), b2)) <span class="cf">for</span> t <span class="kw">in</span> (<span class="dv">1</span>, <span class="dv">10</span>, <span class="dv">100</span>)])</span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>A2 <span class="op">=</span> np.diag([<span class="fl">1.0</span>, <span class="dv">2</span>, <span class="dv">3</span>])<span class="op">;</span> bb <span class="op">=</span> np.ones(<span class="dv">3</span>)<span class="op">;</span> C <span class="op">=</span> np.ones((<span class="dv">1</span>, <span class="dv">3</span>))</span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>M <span class="op">=</span> np.block([[A2, C.T], [C, np.zeros((<span class="dv">1</span>, <span class="dv">1</span>))]])</span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a>sol <span class="op">=</span> np.linalg.solve(M, np.r_[bb, <span class="dv">1</span>])<span class="op">;</span> x <span class="op">=</span> sol[:<span class="dv">3</span>]</span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"restrito:"</span>, x.<span class="bu">round</span>(<span class="dv">6</span>), <span class="st">"multiplicador:"</span>, <span class="bu">round</span>(sol[<span class="dv">3</span>], <span class="dv">6</span>), <span class="st">"gradiente/C:"</span>, (A2 <span class="op">@</span> x <span class="op">-</span> bb).<span class="bu">round</span>(<span class="dv">6</span>))</span>
+<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a>S <span class="op">=</span> np.array([[<span class="fl">4.0</span>, <span class="dv">2</span>, <span class="dv">1</span>], [<span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">1</span>], [<span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">2</span>]])<span class="op">;</span> x1v <span class="op">=</span> np.array([<span class="fl">1.0</span>, <span class="dv">2</span>])</span>
+<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a>schur <span class="op">=</span> x1v <span class="op">@</span> (S[:<span class="dv">2</span>, :<span class="dv">2</span>] <span class="op">-</span> np.outer(S[:<span class="dv">2</span>, <span class="dv">2</span>], S[<span class="dv">2</span>, :<span class="dv">2</span>]) <span class="op">/</span> S[<span class="dv">2</span>, <span class="dv">2</span>]) <span class="op">@</span> x1v</span>
+<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a>num <span class="op">=</span> minimize_scalar(<span class="kw">lambda</span> t: np.r_[x1v, t] <span class="op">@</span> S <span class="op">@</span> np.r_[x1v, t]).fun</span>
+<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"mínimo em x2: numérico = </span><span class="sc">{</span>num<span class="sc">:.6f}</span><span class="ss">, complemento de Schur = </span><span class="sc">{</span>schur<span class="sc">:.6f}</span><span class="ss">"</span>)</span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<p><strong>Saída</strong></p>
+<pre class="text"><code>autovalores: [-0.  3.  3.]  mínimo: -1.0  fórmula: -0.9999999999999999
+f(x1 + t1): [-1.0, -1.0, -1.0]  f(t1) com b fora de C(A): [-3.0, -30.0, -300.0]
+restrito: [0.545455 0.272727 0.181818] multiplicador: 0.454545 gradiente/C: [-0.454545 -0.454545 -0.454545]
+mínimo em x2: numérico = 19.500000, complemento de Schur = 19.500000</code></pre>
+<p><a href="https://github.com/Raydonal/modelos-lineares/blob/main/python/cap08/01_minimizacao.py">Ver no GitHub</a></p>
+</div>
+</div>
+</div>
+</section>
+<section id="ex-02_derivadas" class="level3">
+<h3 class="anchored" data-anchor-id="ex-02_derivadas">Derivadas matriciais conferidas por diferenças finitas</h3>
+<div class="tabset-margin-container"></div><div class="panel-tabset" data-group="linguagem">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-2-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-1" role="tab" aria-controls="tabset-2-1" aria-selected="true" href="">R</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-2" role="tab" aria-controls="tabset-2-2" aria-selected="false" href="">Python</a></li></ul>
+<div class="tab-content" data-group="linguagem">
+<div id="tabset-2-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-2-1-tab">
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>R/cap08/02_derivadas.R</strong></pre>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5" data-filename="R/cap08/02_derivadas.R"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Cap. 8 -- Derivadas matriciais conferidas por diferenças finitas</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="fu">source</span>(<span class="fu">file.path</span>(<span class="st">"R"</span>, <span class="st">"comum"</span>, <span class="st">"gerador.R"</span>)); g <span class="ot">&lt;-</span> <span class="fu">gerador</span>(<span class="dv">80</span>)</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>n <span class="ot">&lt;-</span> <span class="dv">4</span></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>X <span class="ot">&lt;-</span> <span class="fu">crossprod</span>(<span class="fu">matriz_normal</span>(g, <span class="dv">6</span>, n)) <span class="sc">+</span> <span class="fu">diag</span>(n)            <span class="co"># definida positiva</span></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>dX <span class="ot">&lt;-</span> <span class="fu">matriz_normal</span>(g, n, n); h <span class="ot">&lt;-</span> <span class="fl">1e-6</span></span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>df <span class="ot">&lt;-</span> <span class="cf">function</span>(F) (<span class="fu">F</span>(X <span class="sc">+</span> h <span class="sc">*</span> dX) <span class="sc">-</span> <span class="fu">F</span>(X <span class="sc">-</span> h <span class="sc">*</span> dX)) <span class="sc">/</span> (<span class="dv">2</span> <span class="sc">*</span> h)  <span class="co"># derivada direcional central</span></span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>tr <span class="ot">&lt;-</span> <span class="cf">function</span>(M) <span class="fu">sum</span>(<span class="fu">diag</span>(M))</span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>Xi <span class="ot">&lt;-</span> <span class="fu">solve</span>(X)</span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a><span class="fu">c</span>(<span class="at">log_det =</span> <span class="fu">df</span>(<span class="cf">function</span>(M) <span class="fu">log</span>(<span class="fu">det</span>(M))) <span class="sc">-</span> <span class="fu">tr</span>(Xi <span class="sc">%*%</span> dX),</span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a>  <span class="at">det_relativo =</span> (<span class="fu">df</span>(det) <span class="sc">-</span> <span class="fu">det</span>(X) <span class="sc">*</span> <span class="fu">tr</span>(Xi <span class="sc">%*%</span> dX)) <span class="sc">/</span> <span class="fu">det</span>(X),</span>
+<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a>  <span class="at">inversa =</span> <span class="fu">max</span>(<span class="fu">abs</span>(<span class="fu">df</span>(solve) <span class="sc">+</span> Xi <span class="sc">%*%</span> dX <span class="sc">%*%</span> Xi)),</span>
+<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a>  <span class="at">traco_AX =</span> <span class="fu">df</span>(<span class="cf">function</span>(M) <span class="fu">tr</span>(<span class="fu">diag</span>(<span class="dv">1</span><span class="sc">:</span>n) <span class="sc">%*%</span> M)) <span class="sc">-</span> <span class="fu">tr</span>(<span class="fu">diag</span>(<span class="dv">1</span><span class="sc">:</span>n) <span class="sc">%*%</span> dX))</span>
+<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a><span class="co"># Gradientes: d/dX log det X = X^{-T};  d/dX det X = matriz de cofatores</span></span>
+<span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a>grad_num <span class="ot">&lt;-</span> <span class="cf">function</span>(F) { Gm <span class="ot">&lt;-</span> <span class="fu">matrix</span>(<span class="dv">0</span>, n, n)</span>
+<span id="cb5-15"><a href="#cb5-15" aria-hidden="true" tabindex="-1"></a>  <span class="cf">for</span> (i <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span>n) <span class="cf">for</span> (j <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span>n) { E <span class="ot">&lt;-</span> <span class="fu">matrix</span>(<span class="dv">0</span>, n, n); E[i, j] <span class="ot">&lt;-</span> h; Gm[i, j] <span class="ot">&lt;-</span> (<span class="fu">F</span>(X <span class="sc">+</span> E) <span class="sc">-</span> <span class="fu">F</span>(X <span class="sc">-</span> E)) <span class="sc">/</span> (<span class="dv">2</span> <span class="sc">*</span> h) }; Gm }</span>
+<span id="cb5-16"><a href="#cb5-16" aria-hidden="true" tabindex="-1"></a><span class="fu">c</span>(<span class="at">grad_logdet =</span> <span class="fu">max</span>(<span class="fu">abs</span>(<span class="fu">grad_num</span>(<span class="cf">function</span>(M) <span class="fu">log</span>(<span class="fu">det</span>(M))) <span class="sc">-</span> <span class="fu">t</span>(Xi))),</span>
+<span id="cb5-17"><a href="#cb5-17" aria-hidden="true" tabindex="-1"></a>  <span class="at">grad_det_cofatores_rel =</span> <span class="fu">max</span>(<span class="fu">abs</span>(<span class="fu">grad_num</span>(det) <span class="sc">-</span> <span class="fu">det</span>(X) <span class="sc">*</span> <span class="fu">t</span>(Xi))) <span class="sc">/</span> <span class="fu">det</span>(X))</span>
+<span id="cb5-18"><a href="#cb5-18" aria-hidden="true" tabindex="-1"></a><span class="co"># Formas quadráticas: d(x'Ax)/dx = (A + A')x</span></span>
+<span id="cb5-19"><a href="#cb5-19" aria-hidden="true" tabindex="-1"></a>A <span class="ot">&lt;-</span> <span class="fu">matriz_normal</span>(g, n, n); x <span class="ot">&lt;-</span> <span class="fu">drop</span>(<span class="fu">matriz_normal</span>(g, n, <span class="dv">1</span>))</span>
+<span id="cb5-20"><a href="#cb5-20" aria-hidden="true" tabindex="-1"></a>gq <span class="ot">&lt;-</span> <span class="fu">sapply</span>(<span class="dv">1</span><span class="sc">:</span>n, <span class="cf">function</span>(i) { e <span class="ot">&lt;-</span> <span class="fu">replace</span>(<span class="fu">numeric</span>(n), i, h); (<span class="fu">drop</span>(<span class="fu">t</span>(x <span class="sc">+</span> e) <span class="sc">%*%</span> A <span class="sc">%*%</span> (x <span class="sc">+</span> e)) <span class="sc">-</span> <span class="fu">drop</span>(<span class="fu">t</span>(x <span class="sc">-</span> e) <span class="sc">%*%</span> A <span class="sc">%*%</span> (x <span class="sc">-</span> e))) <span class="sc">/</span> (<span class="dv">2</span> <span class="sc">*</span> h) })</span>
+<span id="cb5-21"><a href="#cb5-21" aria-hidden="true" tabindex="-1"></a><span class="fu">max</span>(<span class="fu">abs</span>(gq <span class="sc">-</span> (A <span class="sc">+</span> <span class="fu">t</span>(A)) <span class="sc">%*%</span> x))</span>
+<span id="cb5-22"><a href="#cb5-22" aria-hidden="true" tabindex="-1"></a><span class="co"># Derivada de um autovalor simples: d lambda = q' dA q</span></span>
+<span id="cb5-23"><a href="#cb5-23" aria-hidden="true" tabindex="-1"></a>S <span class="ot">&lt;-</span> X; dS <span class="ot">&lt;-</span> dX <span class="sc">+</span> <span class="fu">t</span>(dX)</span>
+<span id="cb5-24"><a href="#cb5-24" aria-hidden="true" tabindex="-1"></a>lam <span class="ot">&lt;-</span> <span class="cf">function</span>(M) <span class="fu">eigen</span>(M, <span class="at">symmetric =</span> <span class="cn">TRUE</span>)<span class="sc">$</span>values</span>
+<span id="cb5-25"><a href="#cb5-25" aria-hidden="true" tabindex="-1"></a>q1 <span class="ot">&lt;-</span> <span class="fu">eigen</span>(S, <span class="at">symmetric =</span> <span class="cn">TRUE</span>)<span class="sc">$</span>vectors[, <span class="dv">1</span>]</span>
+<span id="cb5-26"><a href="#cb5-26" aria-hidden="true" tabindex="-1"></a><span class="fu">c</span>(<span class="at">numerica =</span> (<span class="fu">lam</span>(S <span class="sc">+</span> h <span class="sc">*</span> dS)[<span class="dv">1</span>] <span class="sc">-</span> <span class="fu">lam</span>(S <span class="sc">-</span> h <span class="sc">*</span> dS)[<span class="dv">1</span>]) <span class="sc">/</span> (<span class="dv">2</span> <span class="sc">*</span> h), <span class="at">formula =</span> <span class="fu">drop</span>(<span class="fu">t</span>(q1) <span class="sc">%*%</span> dS <span class="sc">%*%</span> q1))</span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<p><strong>Saída</strong></p>
+<pre class="text"><code>      log_det  det_relativo       inversa      traco_AX 
+ 1.725589e-10  1.533009e-10  4.612792e-11 -5.015918e-09 
+           grad_logdet grad_det_cofatores_rel 
+          4.176173e-10           4.346769e-10 
+[1] 1.902682e-10
+ numerica   formula 
+-1.873281 -1.873281</code></pre>
+<p><a href="https://github.com/Raydonal/modelos-lineares/blob/main/R/cap08/02_derivadas.R">Ver no GitHub</a></p>
+</div>
+<div id="tabset-2-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-2-2-tab">
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>python/cap08/02_derivadas.py</strong></pre>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7" data-filename="python/cap08/02_derivadas.py"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co">"""Cap. 8 -- Derivadas matriciais conferidas por diferenças finitas."""</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> sys</span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> pathlib <span class="im">import</span> Path</span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a>sys.path.insert(<span class="dv">0</span>, <span class="bu">str</span>(Path(<span class="va">__file__</span>).resolve().parents[<span class="dv">1</span>]))</span>
+<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> comum.gerador <span class="im">import</span> Gerador  <span class="co"># noqa: E402</span></span>
+<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a>g <span class="op">=</span> Gerador(<span class="dv">80</span>)<span class="op">;</span> n <span class="op">=</span> <span class="dv">4</span></span>
+<span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a>B <span class="op">=</span> g.matriz_normal(<span class="dv">6</span>, n)<span class="op">;</span> X <span class="op">=</span> B.T <span class="op">@</span> B <span class="op">+</span> np.eye(n)<span class="op">;</span> dX <span class="op">=</span> g.matriz_normal(n, n)<span class="op">;</span> h <span class="op">=</span> <span class="fl">1e-6</span></span>
+<span id="cb7-12"><a href="#cb7-12" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> <span class="kw">lambda</span> F: (F(X <span class="op">+</span> h <span class="op">*</span> dX) <span class="op">-</span> F(X <span class="op">-</span> h <span class="op">*</span> dX)) <span class="op">/</span> (<span class="dv">2</span> <span class="op">*</span> h)</span>
+<span id="cb7-13"><a href="#cb7-13" aria-hidden="true" tabindex="-1"></a>Xi <span class="op">=</span> np.linalg.inv(X)</span>
+<span id="cb7-14"><a href="#cb7-14" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"log det:"</span>, df(<span class="kw">lambda</span> M: np.linalg.slogdet(M)[<span class="dv">1</span>]) <span class="op">-</span> np.trace(Xi <span class="op">@</span> dX))</span>
+<span id="cb7-15"><a href="#cb7-15" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"det (relativo):"</span>, (df(np.linalg.det) <span class="op">-</span> np.linalg.det(X) <span class="op">*</span> np.trace(Xi <span class="op">@</span> dX)) <span class="op">/</span> np.linalg.det(X))</span>
+<span id="cb7-16"><a href="#cb7-16" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"inversa:"</span>, np.<span class="bu">abs</span>(df(np.linalg.inv) <span class="op">+</span> Xi <span class="op">@</span> dX <span class="op">@</span> Xi).<span class="bu">max</span>())</span>
+<span id="cb7-17"><a href="#cb7-17" aria-hidden="true" tabindex="-1"></a>S, dS <span class="op">=</span> X, dX <span class="op">+</span> dX.T</span>
+<span id="cb7-18"><a href="#cb7-18" aria-hidden="true" tabindex="-1"></a>lam <span class="op">=</span> <span class="kw">lambda</span> M: np.linalg.eigvalsh(M)[<span class="op">-</span><span class="dv">1</span>]</span>
+<span id="cb7-19"><a href="#cb7-19" aria-hidden="true" tabindex="-1"></a>q1 <span class="op">=</span> np.linalg.eigh(S)[<span class="dv">1</span>][:, <span class="op">-</span><span class="dv">1</span>]</span>
+<span id="cb7-20"><a href="#cb7-20" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"d lambda_1: numérica = </span><span class="sc">{</span>(lam(S <span class="op">+</span> h <span class="op">*</span> dS) <span class="op">-</span> lam(S <span class="op">-</span> h <span class="op">*</span> dS)) <span class="op">/</span> (<span class="dv">2</span> <span class="op">*</span> h)<span class="sc">:.6f}</span><span class="ss">, fórmula = </span><span class="sc">{</span>q1 <span class="op">@</span> dS <span class="op">@</span> q1<span class="sc">:.6f}</span><span class="ss">"</span>)</span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<p><strong>Saída</strong></p>
+<pre class="text"><code>log det: 1.725589671153216e-10
+det (relativo): 1.5330101256503058e-10
+inversa: 4.612791051905596e-11
+d lambda_1: numérica = -1.873281, fórmula = -1.873281</code></pre>
+<p><a href="https://github.com/Raydonal/modelos-lineares/blob/main/python/cap08/02_derivadas.py">Ver no GitHub</a></p>
+</div>
+</div>
+</div>
+</section>
+<section id="ex-03_kronecker" class="level3">
+<h3 class="anchored" data-anchor-id="ex-03_kronecker">Produto de Kronecker, vec e vech</h3>
+<div class="tabset-margin-container"></div><div class="panel-tabset" data-group="linguagem">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-3-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-3-1" role="tab" aria-controls="tabset-3-1" aria-selected="true" href="">R</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-3-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-3-2" role="tab" aria-controls="tabset-3-2" aria-selected="false" href="">Python</a></li></ul>
+<div class="tab-content" data-group="linguagem">
+<div id="tabset-3-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-3-1-tab">
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>R/cap08/03_kronecker.R</strong></pre>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb9" data-filename="R/cap08/03_kronecker.R"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Cap. 8 -- Produto de Kronecker, vec e vech</span></span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="fu">source</span>(<span class="fu">file.path</span>(<span class="st">"R"</span>, <span class="st">"comum"</span>, <span class="st">"gerador.R"</span>)); g <span class="ot">&lt;-</span> <span class="fu">gerador</span>(<span class="dv">81</span>)</span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>A <span class="ot">&lt;-</span> <span class="fu">matriz_normal</span>(g, <span class="dv">2</span>, <span class="dv">3</span>); B <span class="ot">&lt;-</span> <span class="fu">matriz_normal</span>(g, <span class="dv">4</span>, <span class="dv">2</span>); C <span class="ot">&lt;-</span> <span class="fu">matriz_normal</span>(g, <span class="dv">3</span>, <span class="dv">5</span>); D <span class="ot">&lt;-</span> <span class="fu">matriz_normal</span>(g, <span class="dv">2</span>, <span class="dv">3</span>)</span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a><span class="fu">c</span>(<span class="at">produto_misto =</span> <span class="fu">max</span>(<span class="fu">abs</span>(<span class="fu">kronecker</span>(A, B) <span class="sc">%*%</span> <span class="fu">kronecker</span>(C, D) <span class="sc">-</span> <span class="fu">kronecker</span>(A <span class="sc">%*%</span> C, B <span class="sc">%*%</span> D))),</span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">transposta =</span> <span class="fu">max</span>(<span class="fu">abs</span>(<span class="fu">t</span>(<span class="fu">kronecker</span>(A, B)) <span class="sc">-</span> <span class="fu">kronecker</span>(<span class="fu">t</span>(A), <span class="fu">t</span>(B)))))</span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a>P <span class="ot">&lt;-</span> <span class="fu">crossprod</span>(<span class="fu">matriz_normal</span>(g, <span class="dv">3</span>, <span class="dv">3</span>)) <span class="sc">+</span> <span class="fu">diag</span>(<span class="dv">3</span>); Q <span class="ot">&lt;-</span> <span class="fu">crossprod</span>(<span class="fu">matriz_normal</span>(g, <span class="dv">2</span>, <span class="dv">2</span>)) <span class="sc">+</span> <span class="fu">diag</span>(<span class="dv">2</span>)</span>
+<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a>K <span class="ot">&lt;-</span> <span class="fu">kronecker</span>(P, Q)</span>
+<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a>lp <span class="ot">&lt;-</span> <span class="fu">eigen</span>(P)<span class="sc">$</span>values; lq <span class="ot">&lt;-</span> <span class="fu">eigen</span>(Q)<span class="sc">$</span>values</span>
+<span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a><span class="fu">c</span>(<span class="at">autovalores =</span> <span class="fu">max</span>(<span class="fu">abs</span>(<span class="fu">sort</span>(<span class="fu">eigen</span>(K)<span class="sc">$</span>values) <span class="sc">-</span> <span class="fu">sort</span>(<span class="fu">outer</span>(lp, lq)))),</span>
+<span id="cb9-10"><a href="#cb9-10" aria-hidden="true" tabindex="-1"></a>  <span class="at">det =</span> <span class="fu">det</span>(K) <span class="sc">/</span> (<span class="fu">det</span>(P)<span class="sc">^</span><span class="dv">2</span> <span class="sc">*</span> <span class="fu">det</span>(Q)<span class="sc">^</span><span class="dv">3</span>), <span class="at">traco =</span> <span class="fu">sum</span>(<span class="fu">diag</span>(K)) <span class="sc">-</span> <span class="fu">sum</span>(<span class="fu">diag</span>(P)) <span class="sc">*</span> <span class="fu">sum</span>(<span class="fu">diag</span>(Q)),</span>
+<span id="cb9-11"><a href="#cb9-11" aria-hidden="true" tabindex="-1"></a>  <span class="at">inversa =</span> <span class="fu">max</span>(<span class="fu">abs</span>(<span class="fu">solve</span>(K) <span class="sc">-</span> <span class="fu">kronecker</span>(<span class="fu">solve</span>(P), <span class="fu">solve</span>(Q)))))</span>
+<span id="cb9-12"><a href="#cb9-12" aria-hidden="true" tabindex="-1"></a><span class="co"># vec(A X C) = (C' kron A) vec(X), e a solução de A X C = B (Cap. 4)</span></span>
+<span id="cb9-13"><a href="#cb9-13" aria-hidden="true" tabindex="-1"></a>vec <span class="ot">&lt;-</span> <span class="cf">function</span>(M) <span class="fu">as.vector</span>(M)</span>
+<span id="cb9-14"><a href="#cb9-14" aria-hidden="true" tabindex="-1"></a>X <span class="ot">&lt;-</span> <span class="fu">matriz_normal</span>(g, <span class="dv">3</span>, <span class="dv">3</span>); A1 <span class="ot">&lt;-</span> <span class="fu">matriz_normal</span>(g, <span class="dv">4</span>, <span class="dv">3</span>); C1 <span class="ot">&lt;-</span> <span class="fu">matriz_normal</span>(g, <span class="dv">3</span>, <span class="dv">2</span>)</span>
+<span id="cb9-15"><a href="#cb9-15" aria-hidden="true" tabindex="-1"></a><span class="fu">max</span>(<span class="fu">abs</span>(<span class="fu">vec</span>(A1 <span class="sc">%*%</span> X <span class="sc">%*%</span> C1) <span class="sc">-</span> <span class="fu">kronecker</span>(<span class="fu">t</span>(C1), A1) <span class="sc">%*%</span> <span class="fu">vec</span>(X)))</span>
+<span id="cb9-16"><a href="#cb9-16" aria-hidden="true" tabindex="-1"></a>Bm <span class="ot">&lt;-</span> A1 <span class="sc">%*%</span> X <span class="sc">%*%</span> C1</span>
+<span id="cb9-17"><a href="#cb9-17" aria-hidden="true" tabindex="-1"></a>Xs <span class="ot">&lt;-</span> MASS<span class="sc">::</span><span class="fu">ginv</span>(A1) <span class="sc">%*%</span> Bm <span class="sc">%*%</span> MASS<span class="sc">::</span><span class="fu">ginv</span>(C1)              <span class="co"># solução de norma mínima</span></span>
+<span id="cb9-18"><a href="#cb9-18" aria-hidden="true" tabindex="-1"></a><span class="fu">c</span>(<span class="at">resolve =</span> <span class="fu">max</span>(<span class="fu">abs</span>(A1 <span class="sc">%*%</span> Xs <span class="sc">%*%</span> C1 <span class="sc">-</span> Bm)),</span>
+<span id="cb9-19"><a href="#cb9-19" aria-hidden="true" tabindex="-1"></a>  <span class="at">mesma_que_via_vec =</span> <span class="fu">max</span>(<span class="fu">abs</span>(<span class="fu">vec</span>(Xs) <span class="sc">-</span> MASS<span class="sc">::</span><span class="fu">ginv</span>(<span class="fu">kronecker</span>(<span class="fu">t</span>(C1), A1)) <span class="sc">%*%</span> <span class="fu">vec</span>(Bm))))</span>
+<span id="cb9-20"><a href="#cb9-20" aria-hidden="true" tabindex="-1"></a><span class="co"># Matriz de comutação K: vec(A') = K vec(A); matriz de duplicação D: vec(S) = D vech(S)</span></span>
+<span id="cb9-21"><a href="#cb9-21" aria-hidden="true" tabindex="-1"></a>comutacao <span class="ot">&lt;-</span> <span class="cf">function</span>(m, n) { Km <span class="ot">&lt;-</span> <span class="fu">matrix</span>(<span class="dv">0</span>, m <span class="sc">*</span> n, m <span class="sc">*</span> n)</span>
+<span id="cb9-22"><a href="#cb9-22" aria-hidden="true" tabindex="-1"></a>  <span class="cf">for</span> (i <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span>m) <span class="cf">for</span> (j <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span>n) Km[(i <span class="sc">-</span> <span class="dv">1</span>) <span class="sc">*</span> n <span class="sc">+</span> j, (j <span class="sc">-</span> <span class="dv">1</span>) <span class="sc">*</span> m <span class="sc">+</span> i] <span class="ot">&lt;-</span> <span class="dv">1</span>; Km }</span>
+<span id="cb9-23"><a href="#cb9-23" aria-hidden="true" tabindex="-1"></a>Am <span class="ot">&lt;-</span> <span class="fu">matriz_normal</span>(g, <span class="dv">2</span>, <span class="dv">3</span>)</span>
+<span id="cb9-24"><a href="#cb9-24" aria-hidden="true" tabindex="-1"></a><span class="fu">max</span>(<span class="fu">abs</span>(<span class="fu">comutacao</span>(<span class="dv">2</span>, <span class="dv">3</span>) <span class="sc">%*%</span> <span class="fu">vec</span>(Am) <span class="sc">-</span> <span class="fu">vec</span>(<span class="fu">t</span>(Am))))</span>
+<span id="cb9-25"><a href="#cb9-25" aria-hidden="true" tabindex="-1"></a>duplicacao <span class="ot">&lt;-</span> <span class="cf">function</span>(n) { Dm <span class="ot">&lt;-</span> <span class="fu">matrix</span>(<span class="dv">0</span>, n <span class="sc">*</span> n, n <span class="sc">*</span> (n <span class="sc">+</span> <span class="dv">1</span>) <span class="sc">/</span> <span class="dv">2</span>); k <span class="ot">&lt;-</span> <span class="dv">0</span></span>
+<span id="cb9-26"><a href="#cb9-26" aria-hidden="true" tabindex="-1"></a>  <span class="cf">for</span> (j <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span>n) <span class="cf">for</span> (i <span class="cf">in</span> j<span class="sc">:</span>n) { k <span class="ot">&lt;-</span> k <span class="sc">+</span> <span class="dv">1</span>; Dm[(j <span class="sc">-</span> <span class="dv">1</span>) <span class="sc">*</span> n <span class="sc">+</span> i, k] <span class="ot">&lt;-</span> <span class="dv">1</span>; Dm[(i <span class="sc">-</span> <span class="dv">1</span>) <span class="sc">*</span> n <span class="sc">+</span> j, k] <span class="ot">&lt;-</span> <span class="dv">1</span> }; Dm }</span>
+<span id="cb9-27"><a href="#cb9-27" aria-hidden="true" tabindex="-1"></a>vech <span class="ot">&lt;-</span> <span class="cf">function</span>(M) M[<span class="fu">lower.tri</span>(M, <span class="at">diag =</span> <span class="cn">TRUE</span>)]</span>
+<span id="cb9-28"><a href="#cb9-28" aria-hidden="true" tabindex="-1"></a><span class="fu">c</span>(<span class="at">duplicacao =</span> <span class="fu">max</span>(<span class="fu">abs</span>(<span class="fu">duplicacao</span>(<span class="dv">3</span>) <span class="sc">%*%</span> <span class="fu">vech</span>(P) <span class="sc">-</span> <span class="fu">vec</span>(P))), <span class="at">dim =</span> <span class="fu">dim</span>(<span class="fu">duplicacao</span>(<span class="dv">3</span>)))</span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<p><strong>Saída</strong></p>
+<pre class="text"><code>produto_misto    transposta 
+ 1.776357e-15  0.000000e+00 
+  autovalores           det         traco       inversa 
+ 1.278977e-13  1.000000e+00 -1.421085e-14  1.387779e-17 
+[1] 2.498002e-16
+          resolve mesma_que_via_vec 
+     3.330669e-16      9.714451e-16 
+[1] 0
+duplicacao       dim1       dim2 
+         0          9          6</code></pre>
+<p><a href="https://github.com/Raydonal/modelos-lineares/blob/main/R/cap08/03_kronecker.R">Ver no GitHub</a></p>
+</div>
+<div id="tabset-3-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-3-2-tab">
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>python/cap08/03_kronecker.py</strong></pre>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb11" data-filename="python/cap08/03_kronecker.py"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="co">"""Cap. 8 -- Produto de Kronecker, vec e vech."""</span></span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> sys</span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> pathlib <span class="im">import</span> Path</span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-7"><a href="#cb11-7" aria-hidden="true" tabindex="-1"></a>sys.path.insert(<span class="dv">0</span>, <span class="bu">str</span>(Path(<span class="va">__file__</span>).resolve().parents[<span class="dv">1</span>]))</span>
+<span id="cb11-8"><a href="#cb11-8" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> comum.gerador <span class="im">import</span> Gerador  <span class="co"># noqa: E402</span></span>
+<span id="cb11-9"><a href="#cb11-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-10"><a href="#cb11-10" aria-hidden="true" tabindex="-1"></a>g <span class="op">=</span> Gerador(<span class="dv">81</span>)</span>
+<span id="cb11-11"><a href="#cb11-11" aria-hidden="true" tabindex="-1"></a>A, B, C, D <span class="op">=</span> g.matriz_normal(<span class="dv">2</span>, <span class="dv">3</span>), g.matriz_normal(<span class="dv">4</span>, <span class="dv">2</span>), g.matriz_normal(<span class="dv">3</span>, <span class="dv">5</span>), g.matriz_normal(<span class="dv">2</span>, <span class="dv">3</span>)</span>
+<span id="cb11-12"><a href="#cb11-12" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"produto misto:"</span>, np.<span class="bu">abs</span>(np.kron(A, B) <span class="op">@</span> np.kron(C, D) <span class="op">-</span> np.kron(A <span class="op">@</span> C, B <span class="op">@</span> D)).<span class="bu">max</span>())</span>
+<span id="cb11-13"><a href="#cb11-13" aria-hidden="true" tabindex="-1"></a>vec <span class="op">=</span> <span class="kw">lambda</span> M: M.reshape(<span class="op">-</span><span class="dv">1</span>, order<span class="op">=</span><span class="st">"F"</span>)                     <span class="co"># empilha colunas</span></span>
+<span id="cb11-14"><a href="#cb11-14" aria-hidden="true" tabindex="-1"></a>X, A1, C1 <span class="op">=</span> g.matriz_normal(<span class="dv">3</span>, <span class="dv">3</span>), g.matriz_normal(<span class="dv">4</span>, <span class="dv">3</span>), g.matriz_normal(<span class="dv">3</span>, <span class="dv">2</span>)</span>
+<span id="cb11-15"><a href="#cb11-15" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"vec(AXC) = (C' kron A) vec X:"</span>, np.<span class="bu">abs</span>(vec(A1 <span class="op">@</span> X <span class="op">@</span> C1) <span class="op">-</span> np.kron(C1.T, A1) <span class="op">@</span> vec(X)).<span class="bu">max</span>())</span>
+<span id="cb11-16"><a href="#cb11-16" aria-hidden="true" tabindex="-1"></a>Bm <span class="op">=</span> A1 <span class="op">@</span> X <span class="op">@</span> C1<span class="op">;</span> Xs <span class="op">=</span> np.linalg.pinv(A1) <span class="op">@</span> Bm <span class="op">@</span> np.linalg.pinv(C1)</span>
+<span id="cb11-17"><a href="#cb11-17" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"A Xs C = B:"</span>, np.<span class="bu">abs</span>(A1 <span class="op">@</span> Xs <span class="op">@</span> C1 <span class="op">-</span> Bm).<span class="bu">max</span>(), <span class="st">" igual à via vec:"</span>, np.<span class="bu">abs</span>(vec(Xs) <span class="op">-</span> np.linalg.pinv(np.kron(C1.T, A1)) <span class="op">@</span> vec(Bm)).<span class="bu">max</span>())</span>
+<span id="cb11-18"><a href="#cb11-18" aria-hidden="true" tabindex="-1"></a>P <span class="op">=</span> g.matriz_normal(<span class="dv">3</span>, <span class="dv">3</span>)<span class="op">;</span> P <span class="op">=</span> P.T <span class="op">@</span> P <span class="op">+</span> np.eye(<span class="dv">3</span>)<span class="op">;</span> Q <span class="op">=</span> g.matriz_normal(<span class="dv">2</span>, <span class="dv">2</span>)<span class="op">;</span> Q <span class="op">=</span> Q.T <span class="op">@</span> Q <span class="op">+</span> np.eye(<span class="dv">2</span>)</span>
+<span id="cb11-19"><a href="#cb11-19" aria-hidden="true" tabindex="-1"></a>ev <span class="op">=</span> np.sort(np.linalg.eigvalsh(np.kron(P, Q)))</span>
+<span id="cb11-20"><a href="#cb11-20" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"autovalores do Kronecker = produtos:"</span>, np.<span class="bu">abs</span>(ev <span class="op">-</span> np.sort(np.outer(np.linalg.eigvalsh(P), np.linalg.eigvalsh(Q)).ravel())).<span class="bu">max</span>())</span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<p><strong>Saída</strong></p>
+<pre class="text"><code>produto misto: 1.7763568394002505e-15
+vec(AXC) = (C' kron A) vec X: 8.881784197001252e-16
+A Xs C = B: 3.1086244689504383e-15  igual à via vec: 1.5543122344752192e-15
+autovalores do Kronecker = produtos: 5.329070518200751e-15</code></pre>
+<p><a href="https://github.com/Raydonal/modelos-lineares/blob/main/python/cap08/03_kronecker.py">Ver no GitHub</a></p>
+</div>
+</div>
+</div>
+</section>
+<section id="ex-04_mle_normal" class="level3">
+<h3 class="anchored" data-anchor-id="ex-04_mle_normal">Máxima verossimilhança da normal multivariada pelo cálculo matricial (dados wage1)</h3>
+<div class="tabset-margin-container"></div><div class="panel-tabset" data-group="linguagem">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-4-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-4-1" role="tab" aria-controls="tabset-4-1" aria-selected="true" href="">R</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-4-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-4-2" role="tab" aria-controls="tabset-4-2" aria-selected="false" href="">Python</a></li></ul>
+<div class="tab-content" data-group="linguagem">
+<div id="tabset-4-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-4-1-tab">
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>R/cap08/04_mle_normal.R</strong></pre>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb13" data-filename="R/cap08/04_mle_normal.R"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Cap. 8 -- Máxima verossimilhança da normal multivariada pelo cálculo matricial (dados wage1)</span></span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>w <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="fu">file.path</span>(<span class="st">"dados"</span>, <span class="st">"wage1.csv"</span>))</span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>X <span class="ot">&lt;-</span> <span class="fu">cbind</span>(<span class="at">lsal =</span> <span class="fu">log</span>(w<span class="sc">$</span>wage), <span class="at">educ =</span> w<span class="sc">$</span>educ, <span class="at">exper =</span> w<span class="sc">$</span>exper, <span class="at">perm =</span> w<span class="sc">$</span>tenure); n <span class="ot">&lt;-</span> <span class="fu">nrow</span>(X); p <span class="ot">&lt;-</span> <span class="fu">ncol</span>(X)</span>
+<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a>loglik <span class="ot">&lt;-</span> <span class="cf">function</span>(mu, Sigma) {</span>
+<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a>  R <span class="ot">&lt;-</span> <span class="fu">chol</span>(Sigma); Z <span class="ot">&lt;-</span> <span class="fu">backsolve</span>(R, <span class="fu">t</span>(X) <span class="sc">-</span> mu, <span class="at">transpose =</span> <span class="cn">TRUE</span>)   <span class="co"># Z = R^{-T} (x_i - mu)</span></span>
+<span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a>  <span class="sc">-</span>n <span class="sc">*</span> p <span class="sc">/</span> <span class="dv">2</span> <span class="sc">*</span> <span class="fu">log</span>(<span class="dv">2</span> <span class="sc">*</span> pi) <span class="sc">-</span> n <span class="sc">*</span> <span class="fu">sum</span>(<span class="fu">log</span>(<span class="fu">diag</span>(R))) <span class="sc">-</span> <span class="fu">sum</span>(Z<span class="sc">^</span><span class="dv">2</span>) <span class="sc">/</span> <span class="dv">2</span></span>
+<span id="cb13-7"><a href="#cb13-7" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb13-8"><a href="#cb13-8" aria-hidden="true" tabindex="-1"></a>mu_hat <span class="ot">&lt;-</span> <span class="fu">colMeans</span>(X); Ac <span class="ot">&lt;-</span> <span class="fu">crossprod</span>(<span class="fu">sweep</span>(X, <span class="dv">2</span>, mu_hat)); Sigma_hat <span class="ot">&lt;-</span> Ac <span class="sc">/</span> n</span>
+<span id="cb13-9"><a href="#cb13-9" aria-hidden="true" tabindex="-1"></a><span class="fu">round</span>(Sigma_hat, <span class="dv">3</span>)</span>
+<span id="cb13-10"><a href="#cb13-10" aria-hidden="true" tabindex="-1"></a><span class="co"># Gradiente em relação a Sigma: G = (1/2) Sigma^{-1} (A - n Sigma) Sigma^{-1} (nulo no máximo)</span></span>
+<span id="cb13-11"><a href="#cb13-11" aria-hidden="true" tabindex="-1"></a>grad <span class="ot">&lt;-</span> <span class="cf">function</span>(S) { Si <span class="ot">&lt;-</span> <span class="fu">solve</span>(S); <span class="fl">0.5</span> <span class="sc">*</span> Si <span class="sc">%*%</span> (Ac <span class="sc">-</span> n <span class="sc">*</span> S) <span class="sc">%*%</span> Si }</span>
+<span id="cb13-12"><a href="#cb13-12" aria-hidden="true" tabindex="-1"></a><span class="fu">c</span>(<span class="at">norma_grad_no_mle =</span> <span class="fu">norm</span>(<span class="fu">grad</span>(Sigma_hat), <span class="st">"F"</span>), <span class="at">norma_grad_em_cov =</span> <span class="fu">norm</span>(<span class="fu">grad</span>(<span class="fu">cov</span>(X)), <span class="st">"F"</span>))</span>
+<span id="cb13-13"><a href="#cb13-13" aria-hidden="true" tabindex="-1"></a><span class="co"># Conferência do gradiente por diferenças finitas (direção simétrica sorteada)</span></span>
+<span id="cb13-14"><a href="#cb13-14" aria-hidden="true" tabindex="-1"></a><span class="fu">source</span>(<span class="fu">file.path</span>(<span class="st">"R"</span>, <span class="st">"comum"</span>, <span class="st">"gerador.R"</span>)); g <span class="ot">&lt;-</span> <span class="fu">gerador</span>(<span class="dv">84</span>)</span>
+<span id="cb13-15"><a href="#cb13-15" aria-hidden="true" tabindex="-1"></a>E <span class="ot">&lt;-</span> <span class="fu">matriz_normal</span>(g, p, p); E <span class="ot">&lt;-</span> (E <span class="sc">+</span> <span class="fu">t</span>(E)) <span class="sc">/</span> <span class="dv">2</span>; h <span class="ot">&lt;-</span> <span class="fl">1e-6</span>; S0 <span class="ot">&lt;-</span> <span class="fu">cov</span>(X) <span class="sc">*</span> <span class="fl">1.3</span></span>
+<span id="cb13-16"><a href="#cb13-16" aria-hidden="true" tabindex="-1"></a><span class="fu">c</span>(<span class="at">numerica =</span> (<span class="fu">loglik</span>(mu_hat, S0 <span class="sc">+</span> h <span class="sc">*</span> E) <span class="sc">-</span> <span class="fu">loglik</span>(mu_hat, S0 <span class="sc">-</span> h <span class="sc">*</span> E)) <span class="sc">/</span> (<span class="dv">2</span> <span class="sc">*</span> h), <span class="at">formula =</span> <span class="fu">sum</span>(<span class="fu">grad</span>(S0) <span class="sc">*</span> E))</span>
+<span id="cb13-17"><a href="#cb13-17" aria-hidden="true" tabindex="-1"></a><span class="co"># Perturbações de Sigma_hat (em direções simétricas) sempre reduzem a verossimilhança</span></span>
+<span id="cb13-18"><a href="#cb13-18" aria-hidden="true" tabindex="-1"></a>l0 <span class="ot">&lt;-</span> <span class="fu">loglik</span>(mu_hat, Sigma_hat)</span>
+<span id="cb13-19"><a href="#cb13-19" aria-hidden="true" tabindex="-1"></a>dif <span class="ot">&lt;-</span> <span class="fu">replicate</span>(<span class="dv">1000</span>, { E <span class="ot">&lt;-</span> <span class="fu">matriz_normal</span>(g, p, p); E <span class="ot">&lt;-</span> <span class="fl">0.02</span> <span class="sc">*</span> (E <span class="sc">+</span> <span class="fu">t</span>(E)) <span class="sc">/</span> <span class="dv">2</span> <span class="sc">*</span> <span class="fu">sqrt</span>(<span class="fu">mean</span>(<span class="fu">diag</span>(Sigma_hat)))</span>
+<span id="cb13-20"><a href="#cb13-20" aria-hidden="true" tabindex="-1"></a>  S <span class="ot">&lt;-</span> Sigma_hat <span class="sc">+</span> E; <span class="cf">if</span> (<span class="fu">min</span>(<span class="fu">eigen</span>(S, <span class="at">symmetric =</span> <span class="cn">TRUE</span>)<span class="sc">$</span>values) <span class="sc">&lt;=</span> <span class="dv">0</span>) <span class="cn">NA</span> <span class="cf">else</span> <span class="fu">loglik</span>(mu_hat, S) <span class="sc">-</span> l0 })</span>
+<span id="cb13-21"><a href="#cb13-21" aria-hidden="true" tabindex="-1"></a><span class="fu">c</span>(<span class="at">max_diferenca =</span> <span class="fu">max</span>(dif, <span class="at">na.rm =</span> <span class="cn">TRUE</span>), <span class="at">loglik_max =</span> l0)</span>
+<span id="cb13-22"><a href="#cb13-22" aria-hidden="true" tabindex="-1"></a><span class="co"># Correlações implicadas pelo estimador</span></span>
+<span id="cb13-23"><a href="#cb13-23" aria-hidden="true" tabindex="-1"></a><span class="fu">round</span>(<span class="fu">cov2cor</span>(Sigma_hat), <span class="dv">3</span>)</span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<p><strong>Saída</strong></p>
+<pre class="text"><code>       lsal    educ   exper   perm
+lsal  0.282   0.633   0.802  1.248
+educ  0.633   7.653 -11.236 -1.122
+exper 0.802 -11.236 183.853 48.863
+perm  1.248  -1.122  48.863 52.094
+norma_grad_no_mle norma_grad_em_cov 
+     6.037053e-14      2.612225e+00 
+numerica  formula 
+-582.653 -582.653 
+max_diferenca    loglik_max 
+   -0.1972611 -5395.3143300 
+       lsal   educ  exper   perm
+lsal  1.000  0.431  0.111  0.326
+educ  0.431  1.000 -0.300 -0.056
+exper 0.111 -0.300  1.000  0.499
+perm  0.326 -0.056  0.499  1.000</code></pre>
+<p><a href="https://github.com/Raydonal/modelos-lineares/blob/main/R/cap08/04_mle_normal.R">Ver no GitHub</a></p>
+</div>
+<div id="tabset-4-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-4-2-tab">
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>python/cap08/04_mle_normal.py</strong></pre>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb15" data-filename="python/cap08/04_mle_normal.py"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="co">"""Cap. 8 -- Máxima verossimilhança da normal multivariada pelo cálculo matricial (dados wage1)."""</span></span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> pathlib <span class="im">import</span> Path</span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb15-6"><a href="#cb15-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-7"><a href="#cb15-7" aria-hidden="true" tabindex="-1"></a>w <span class="op">=</span> pd.read_csv(Path(<span class="va">__file__</span>).resolve().parents[<span class="dv">2</span>] <span class="op">/</span> <span class="st">"dados"</span> <span class="op">/</span> <span class="st">"wage1.csv"</span>)</span>
+<span id="cb15-8"><a href="#cb15-8" aria-hidden="true" tabindex="-1"></a>X <span class="op">=</span> np.column_stack([np.log(w[<span class="st">"wage"</span>]), w[<span class="st">"educ"</span>], w[<span class="st">"exper"</span>], w[<span class="st">"tenure"</span>]])<span class="op">;</span> n, p <span class="op">=</span> X.shape</span>
+<span id="cb15-9"><a href="#cb15-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-10"><a href="#cb15-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-11"><a href="#cb15-11" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> loglik(mu, S):</span>
+<span id="cb15-12"><a href="#cb15-12" aria-hidden="true" tabindex="-1"></a>    L <span class="op">=</span> np.linalg.cholesky(S)<span class="op">;</span> Z <span class="op">=</span> np.linalg.solve(L, (X <span class="op">-</span> mu).T)</span>
+<span id="cb15-13"><a href="#cb15-13" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="op">-</span>n <span class="op">*</span> p <span class="op">/</span> <span class="dv">2</span> <span class="op">*</span> np.log(<span class="dv">2</span> <span class="op">*</span> np.pi) <span class="op">-</span> n <span class="op">*</span> np.log(np.diag(L)).<span class="bu">sum</span>() <span class="op">-</span> (Z <span class="op">**</span> <span class="dv">2</span>).<span class="bu">sum</span>() <span class="op">/</span> <span class="dv">2</span></span>
+<span id="cb15-14"><a href="#cb15-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-15"><a href="#cb15-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-16"><a href="#cb15-16" aria-hidden="true" tabindex="-1"></a>mu <span class="op">=</span> X.mean(<span class="dv">0</span>)<span class="op">;</span> Ac <span class="op">=</span> (X <span class="op">-</span> mu).T <span class="op">@</span> (X <span class="op">-</span> mu)<span class="op">;</span> Sh <span class="op">=</span> Ac <span class="op">/</span> n</span>
+<span id="cb15-17"><a href="#cb15-17" aria-hidden="true" tabindex="-1"></a>grad <span class="op">=</span> <span class="kw">lambda</span> S: <span class="fl">0.5</span> <span class="op">*</span> np.linalg.inv(S) <span class="op">@</span> (Ac <span class="op">-</span> n <span class="op">*</span> S) <span class="op">@</span> np.linalg.inv(S)</span>
+<span id="cb15-18"><a href="#cb15-18" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(Sh.<span class="bu">round</span>(<span class="dv">3</span>))</span>
+<span id="cb15-19"><a href="#cb15-19" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"||grad|| no EMV = </span><span class="sc">{</span>np<span class="sc">.</span>linalg<span class="sc">.</span>norm(grad(Sh))<span class="sc">:.2e}</span><span class="ss">, na covariância com n-1 = </span><span class="sc">{</span>np<span class="sc">.</span>linalg<span class="sc">.</span>norm(grad(np.cov(X.T)))<span class="sc">:.4f}</span><span class="ss">"</span>)</span>
+<span id="cb15-20"><a href="#cb15-20" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"log-verossimilhança máxima = </span><span class="sc">{</span>loglik(mu, Sh)<span class="sc">:.4f}</span><span class="ss">"</span>)</span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<p><strong>Saída</strong></p>
+<pre class="text"><code>[[  0.282   0.633   0.802   1.248]
+ [  0.633   7.653 -11.236  -1.122]
+ [  0.802 -11.236 183.853  48.863]
+ [  1.248  -1.122  48.863  52.094]]
+||grad|| no EMV = 0.00e+00, na covariância com n-1 = 2.6122
+log-verossimilhança máxima = -5395.3143</code></pre>
+<p><a href="https://github.com/Raydonal/modelos-lineares/blob/main/python/cap08/04_mle_normal.py">Ver no GitHub</a></p>
+</div>
+</div>
+</div>
+</section>
+<section id="ex-05_islm_nao_linear" class="level3">
+<h3 class="anchored" data-anchor-id="ex-05_islm_nao_linear">IS-LM não linear: estática comparativa pelo teorema da função implícita</h3>
+<div class="tabset-margin-container"></div><div class="panel-tabset" data-group="linguagem">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-5-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-5-1" role="tab" aria-controls="tabset-5-1" aria-selected="true" href="">R</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-5-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-5-2" role="tab" aria-controls="tabset-5-2" aria-selected="false" href="">Python</a></li></ul>
+<div class="tab-content" data-group="linguagem">
+<div id="tabset-5-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-5-1-tab">
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>R/cap08/05_islm_nao_linear.R</strong></pre>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb17" data-filename="R/cap08/05_islm_nao_linear.R"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Cap. 8 -- IS-LM não linear: estática comparativa pelo teorema da função implícita</span></span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a><span class="co"># IS: Y = c0 + c1 (Y - T) + I(r) + G, com I(r) = 800 (r/5)^(-0,3125)</span></span>
+<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a><span class="co"># LM: M/P = L(Y, r) = 500 (Y/4000)^2 (r/5)^(-1)      (tangentes ao modelo linear do Cap. 3 em Y = 4000, r = 5)</span></span>
+<span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a>c0 <span class="ot">&lt;-</span> <span class="dv">100</span>; c1 <span class="ot">&lt;-</span> <span class="fl">0.75</span>; Tx <span class="ot">&lt;-</span> <span class="dv">200</span></span>
+<span id="cb17-5"><a href="#cb17-5" aria-hidden="true" tabindex="-1"></a>Fsis <span class="ot">&lt;-</span> <span class="cf">function</span>(x, G, M) { Y <span class="ot">&lt;-</span> x[<span class="dv">1</span>]; r <span class="ot">&lt;-</span> x[<span class="dv">2</span>]</span>
+<span id="cb17-6"><a href="#cb17-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">c</span>(Y <span class="sc">-</span> c0 <span class="sc">-</span> c1 <span class="sc">*</span> (Y <span class="sc">-</span> Tx) <span class="sc">-</span> <span class="dv">800</span> <span class="sc">*</span> (r <span class="sc">/</span> <span class="dv">5</span>)<span class="sc">^</span>(<span class="sc">-</span><span class="fl">0.3125</span>) <span class="sc">-</span> G, M <span class="sc">-</span> <span class="dv">500</span> <span class="sc">*</span> (Y <span class="sc">/</span> <span class="dv">4000</span>)<span class="sc">^</span><span class="dv">2</span> <span class="sc">*</span> (r <span class="sc">/</span> <span class="dv">5</span>)<span class="sc">^</span>(<span class="sc">-</span><span class="dv">1</span>)) }</span>
+<span id="cb17-7"><a href="#cb17-7" aria-hidden="true" tabindex="-1"></a>Jx <span class="ot">&lt;-</span> <span class="cf">function</span>(x) { Y <span class="ot">&lt;-</span> x[<span class="dv">1</span>]; r <span class="ot">&lt;-</span> x[<span class="dv">2</span>]                    <span class="co"># jacobiano em relação a (Y, r)</span></span>
+<span id="cb17-8"><a href="#cb17-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">rbind</span>(<span class="fu">c</span>(<span class="dv">1</span> <span class="sc">-</span> c1, <span class="fl">0.3125</span> <span class="sc">*</span> <span class="dv">800</span> <span class="sc">/</span> <span class="dv">5</span> <span class="sc">*</span> (r <span class="sc">/</span> <span class="dv">5</span>)<span class="sc">^</span>(<span class="sc">-</span><span class="fl">1.3125</span>)),</span>
+<span id="cb17-9"><a href="#cb17-9" aria-hidden="true" tabindex="-1"></a>        <span class="fu">c</span>(<span class="sc">-</span><span class="dv">1000</span> <span class="sc">/</span> <span class="dv">4000</span> <span class="sc">*</span> (Y <span class="sc">/</span> <span class="dv">4000</span>) <span class="sc">*</span> (r <span class="sc">/</span> <span class="dv">5</span>)<span class="sc">^</span>(<span class="sc">-</span><span class="dv">1</span>), <span class="dv">500</span> <span class="sc">*</span> (Y <span class="sc">/</span> <span class="dv">4000</span>)<span class="sc">^</span><span class="dv">2</span> <span class="sc">*</span> (r <span class="sc">/</span> <span class="dv">5</span>)<span class="sc">^</span>(<span class="sc">-</span><span class="dv">2</span>) <span class="sc">/</span> <span class="dv">5</span>)) }</span>
+<span id="cb17-10"><a href="#cb17-10" aria-hidden="true" tabindex="-1"></a>Jtheta <span class="ot">&lt;-</span> <span class="fu">rbind</span>(<span class="fu">c</span>(<span class="sc">-</span><span class="dv">1</span>, <span class="dv">0</span>), <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">1</span>))                           <span class="co"># jacobiano em relação a (G, M)</span></span>
+<span id="cb17-11"><a href="#cb17-11" aria-hidden="true" tabindex="-1"></a><span class="co"># Newton em (Y, log r), que mantém os juros positivos: d/d(log r) = r d/dr</span></span>
+<span id="cb17-12"><a href="#cb17-12" aria-hidden="true" tabindex="-1"></a>newton <span class="ot">&lt;-</span> <span class="cf">function</span>(G, M, <span class="at">x =</span> <span class="fu">c</span>(<span class="dv">4000</span>, <span class="dv">5</span>)) {</span>
+<span id="cb17-13"><a href="#cb17-13" aria-hidden="true" tabindex="-1"></a>  z <span class="ot">&lt;-</span> <span class="fu">c</span>(x[<span class="dv">1</span>], <span class="fu">log</span>(x[<span class="dv">2</span>]))</span>
+<span id="cb17-14"><a href="#cb17-14" aria-hidden="true" tabindex="-1"></a>  <span class="cf">for</span> (k <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">100</span>) { x <span class="ot">&lt;-</span> <span class="fu">c</span>(z[<span class="dv">1</span>], <span class="fu">exp</span>(z[<span class="dv">2</span>])); Jz <span class="ot">&lt;-</span> <span class="fu">Jx</span>(x) <span class="sc">%*%</span> <span class="fu">diag</span>(<span class="fu">c</span>(<span class="dv">1</span>, x[<span class="dv">2</span>]))</span>
+<span id="cb17-15"><a href="#cb17-15" aria-hidden="true" tabindex="-1"></a>    z <span class="ot">&lt;-</span> z <span class="sc">-</span> <span class="fu">solve</span>(Jz, <span class="fu">Fsis</span>(x, G, M)) }</span>
+<span id="cb17-16"><a href="#cb17-16" aria-hidden="true" tabindex="-1"></a>  <span class="fu">c</span>(z[<span class="dv">1</span>], <span class="fu">exp</span>(z[<span class="dv">2</span>]))</span>
+<span id="cb17-17"><a href="#cb17-17" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb17-18"><a href="#cb17-18" aria-hidden="true" tabindex="-1"></a>x0 <span class="ot">&lt;-</span> <span class="fu">newton</span>(<span class="dv">250</span>, <span class="dv">500</span>); x0</span>
+<span id="cb17-19"><a href="#cb17-19" aria-hidden="true" tabindex="-1"></a>mult <span class="ot">&lt;-</span> <span class="sc">-</span><span class="fu">solve</span>(<span class="fu">Jx</span>(x0), Jtheta); <span class="fu">dimnames</span>(mult) <span class="ot">&lt;-</span> <span class="fu">list</span>(<span class="fu">c</span>(<span class="st">"Y"</span>, <span class="st">"r"</span>), <span class="fu">c</span>(<span class="st">"dG"</span>, <span class="st">"dM"</span>)); <span class="fu">round</span>(mult, <span class="dv">5</span>)</span>
+<span id="cb17-20"><a href="#cb17-20" aria-hidden="true" tabindex="-1"></a><span class="co"># Conferência por diferenças finitas</span></span>
+<span id="cb17-21"><a href="#cb17-21" aria-hidden="true" tabindex="-1"></a>h <span class="ot">&lt;-</span> <span class="fl">1e-4</span></span>
+<span id="cb17-22"><a href="#cb17-22" aria-hidden="true" tabindex="-1"></a><span class="fu">round</span>(<span class="fu">cbind</span>(<span class="at">dG =</span> (<span class="fu">newton</span>(<span class="dv">250</span> <span class="sc">+</span> h, <span class="dv">500</span>) <span class="sc">-</span> <span class="fu">newton</span>(<span class="dv">250</span> <span class="sc">-</span> h, <span class="dv">500</span>)) <span class="sc">/</span> (<span class="dv">2</span> <span class="sc">*</span> h),</span>
+<span id="cb17-23"><a href="#cb17-23" aria-hidden="true" tabindex="-1"></a>            <span class="at">dM =</span> (<span class="fu">newton</span>(<span class="dv">250</span>, <span class="dv">500</span> <span class="sc">+</span> h) <span class="sc">-</span> <span class="fu">newton</span>(<span class="dv">250</span>, <span class="dv">500</span> <span class="sc">-</span> h)) <span class="sc">/</span> (<span class="dv">2</span> <span class="sc">*</span> h)), <span class="dv">5</span>)</span>
+<span id="cb17-24"><a href="#cb17-24" aria-hidden="true" tabindex="-1"></a><span class="co"># Expansão monetária: o modelo linear do Cap. 3 levaria os juros a zero; no não linear, o efeito se esgota</span></span>
+<span id="cb17-25"><a href="#cb17-25" aria-hidden="true" tabindex="-1"></a>res <span class="ot">&lt;-</span> <span class="fu">t</span>(<span class="fu">sapply</span>(<span class="fu">c</span>(<span class="dv">500</span>, <span class="dv">750</span>, <span class="dv">1000</span>, <span class="dv">1500</span>, <span class="dv">2000</span>, <span class="dv">3000</span>), <span class="cf">function</span>(M) {</span>
+<span id="cb17-26"><a href="#cb17-26" aria-hidden="true" tabindex="-1"></a>  x <span class="ot">&lt;-</span> <span class="fu">newton</span>(<span class="dv">250</span>, M, <span class="at">x =</span> <span class="fu">c</span>(<span class="dv">4000</span>, <span class="dv">5</span>)); m <span class="ot">&lt;-</span> <span class="sc">-</span><span class="fu">solve</span>(<span class="fu">Jx</span>(x), Jtheta)</span>
+<span id="cb17-27"><a href="#cb17-27" aria-hidden="true" tabindex="-1"></a>  <span class="fu">c</span>(<span class="at">M =</span> M, <span class="at">Y =</span> x[<span class="dv">1</span>], <span class="at">r =</span> x[<span class="dv">2</span>], <span class="at">dY_dM =</span> m[<span class="dv">1</span>, <span class="dv">2</span>], <span class="at">Y_linear =</span> <span class="dv">4000</span> <span class="sc">+</span> (M <span class="sc">-</span> <span class="dv">500</span>) <span class="sc">*</span> <span class="dv">50</span> <span class="sc">/</span> <span class="fl">37.5</span>, <span class="at">r_linear =</span> <span class="dv">5</span> <span class="sc">-</span> (M <span class="sc">-</span> <span class="dv">500</span>) <span class="sc">*</span> <span class="fl">0.25</span> <span class="sc">/</span> <span class="fl">37.5</span>)</span>
+<span id="cb17-28"><a href="#cb17-28" aria-hidden="true" tabindex="-1"></a>}))</span>
+<span id="cb17-29"><a href="#cb17-29" aria-hidden="true" tabindex="-1"></a><span class="fu">round</span>(res, <span class="dv">3</span>)</span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<p><strong>Saída</strong></p>
+<pre class="text"><code>[1] 4000    5
+       dG       dM
+Y 2.66667  1.33333
+r 0.00667 -0.00667
+          dG       dM
+[1,] 2.66667  1.33333
+[2,] 0.00667 -0.00667
+        M        Y     r dY_dM Y_linear r_linear
+[1,]  500 4000.000 5.000 1.333 4000.000    5.000
+[2,]  750 4281.246 3.819 0.962 4333.333    3.333
+[3,] 1000 4494.656 3.157 0.763 4666.667    1.667
+[4,] 1500 4816.396 2.416 0.550 5333.333   -1.667
+[5,] 2000 5060.498 2.001 0.436 6000.000   -5.000
+[6,] 3000 5428.462 1.535 0.315 7333.333  -11.667</code></pre>
+<p><a href="https://github.com/Raydonal/modelos-lineares/blob/main/R/cap08/05_islm_nao_linear.R">Ver no GitHub</a></p>
+</div>
+<div id="tabset-5-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-5-2-tab">
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>python/cap08/05_islm_nao_linear.py</strong></pre>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb19" data-filename="python/cap08/05_islm_nao_linear.py"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="co">"""Cap. 8 -- IS-LM não linear: estática comparativa pelo teorema da função implícita."""</span></span>
+<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-4"><a href="#cb19-4" aria-hidden="true" tabindex="-1"></a>c0, c1, T <span class="op">=</span> <span class="dv">100</span>, <span class="fl">0.75</span>, <span class="dv">200</span></span>
+<span id="cb19-5"><a href="#cb19-5" aria-hidden="true" tabindex="-1"></a>F <span class="op">=</span> <span class="kw">lambda</span> x, G, M: np.array([x[<span class="dv">0</span>] <span class="op">-</span> c0 <span class="op">-</span> c1 <span class="op">*</span> (x[<span class="dv">0</span>] <span class="op">-</span> T) <span class="op">-</span> <span class="dv">800</span> <span class="op">*</span> (x[<span class="dv">1</span>] <span class="op">/</span> <span class="dv">5</span>) <span class="op">**</span> <span class="op">-</span><span class="fl">0.3125</span> <span class="op">-</span> G,</span>
+<span id="cb19-6"><a href="#cb19-6" aria-hidden="true" tabindex="-1"></a>                              M <span class="op">-</span> <span class="dv">500</span> <span class="op">*</span> (x[<span class="dv">0</span>] <span class="op">/</span> <span class="dv">4000</span>) <span class="op">**</span> <span class="dv">2</span> <span class="op">*</span> (x[<span class="dv">1</span>] <span class="op">/</span> <span class="dv">5</span>) <span class="op">**</span> <span class="op">-</span><span class="dv">1</span>])</span>
+<span id="cb19-7"><a href="#cb19-7" aria-hidden="true" tabindex="-1"></a>Jx <span class="op">=</span> <span class="kw">lambda</span> x: np.array([[<span class="dv">1</span> <span class="op">-</span> c1, <span class="fl">0.3125</span> <span class="op">*</span> <span class="dv">800</span> <span class="op">/</span> <span class="dv">5</span> <span class="op">*</span> (x[<span class="dv">1</span>] <span class="op">/</span> <span class="dv">5</span>) <span class="op">**</span> <span class="op">-</span><span class="fl">1.3125</span>],</span>
+<span id="cb19-8"><a href="#cb19-8" aria-hidden="true" tabindex="-1"></a>                         [<span class="op">-</span><span class="dv">1000</span> <span class="op">/</span> <span class="dv">4000</span> <span class="op">*</span> (x[<span class="dv">0</span>] <span class="op">/</span> <span class="dv">4000</span>) <span class="op">*</span> (x[<span class="dv">1</span>] <span class="op">/</span> <span class="dv">5</span>) <span class="op">**</span> <span class="op">-</span><span class="dv">1</span>, <span class="dv">500</span> <span class="op">*</span> (x[<span class="dv">0</span>] <span class="op">/</span> <span class="dv">4000</span>) <span class="op">**</span> <span class="dv">2</span> <span class="op">*</span> (x[<span class="dv">1</span>] <span class="op">/</span> <span class="dv">5</span>) <span class="op">**</span> <span class="op">-</span><span class="dv">2</span> <span class="op">/</span> <span class="dv">5</span>]])</span>
+<span id="cb19-9"><a href="#cb19-9" aria-hidden="true" tabindex="-1"></a>Jt <span class="op">=</span> np.array([[<span class="op">-</span><span class="fl">1.0</span>, <span class="dv">0</span>], [<span class="dv">0</span>, <span class="dv">1</span>]])</span>
+<span id="cb19-10"><a href="#cb19-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-11"><a href="#cb19-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-12"><a href="#cb19-12" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> newton(G, M, x<span class="op">=</span>(<span class="fl">4000.0</span>, <span class="fl">5.0</span>)):</span>
+<span id="cb19-13"><a href="#cb19-13" aria-hidden="true" tabindex="-1"></a>    z <span class="op">=</span> np.array([x[<span class="dv">0</span>], np.log(x[<span class="dv">1</span>])])</span>
+<span id="cb19-14"><a href="#cb19-14" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> _ <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">100</span>):</span>
+<span id="cb19-15"><a href="#cb19-15" aria-hidden="true" tabindex="-1"></a>        x <span class="op">=</span> np.array([z[<span class="dv">0</span>], np.exp(z[<span class="dv">1</span>])])<span class="op">;</span> z <span class="op">=</span> z <span class="op">-</span> np.linalg.solve(Jx(x) <span class="op">@</span> np.diag([<span class="dv">1</span>, x[<span class="dv">1</span>]]), F(x, G, M))</span>
+<span id="cb19-16"><a href="#cb19-16" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> np.array([z[<span class="dv">0</span>], np.exp(z[<span class="dv">1</span>])])</span>
+<span id="cb19-17"><a href="#cb19-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-18"><a href="#cb19-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-19"><a href="#cb19-19" aria-hidden="true" tabindex="-1"></a>x0 <span class="op">=</span> newton(<span class="dv">250</span>, <span class="dv">500</span>)</span>
+<span id="cb19-20"><a href="#cb19-20" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"equilíbrio:"</span>, x0.<span class="bu">round</span>(<span class="dv">4</span>), <span class="st">"</span><span class="ch">\n</span><span class="st">multiplicadores (TFI):</span><span class="ch">\n</span><span class="st">"</span>, (<span class="op">-</span>np.linalg.solve(Jx(x0), Jt)).<span class="bu">round</span>(<span class="dv">5</span>))</span>
+<span id="cb19-21"><a href="#cb19-21" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> M <span class="kw">in</span> (<span class="dv">500</span>, <span class="dv">750</span>, <span class="dv">1000</span>, <span class="dv">1500</span>, <span class="dv">2000</span>, <span class="dv">3000</span>):</span>
+<span id="cb19-22"><a href="#cb19-22" aria-hidden="true" tabindex="-1"></a>    x <span class="op">=</span> newton(<span class="dv">250</span>, M)<span class="op">;</span> m <span class="op">=</span> <span class="op">-</span>np.linalg.solve(Jx(x), Jt)</span>
+<span id="cb19-23"><a href="#cb19-23" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f"M/P = </span><span class="sc">{</span>M<span class="sc">:4d}</span><span class="ss">: Y = </span><span class="sc">{</span>x[<span class="dv">0</span>]<span class="sc">:8.3f}</span><span class="ss">, r = </span><span class="sc">{</span>x[<span class="dv">1</span>]<span class="sc">:6.3f}</span><span class="ss">, dY/dM = </span><span class="sc">{</span>m[<span class="dv">0</span>, <span class="dv">1</span>]<span class="sc">:.3f}</span><span class="ss">"</span>)</span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<p><strong>Saída</strong></p>
+<pre class="text"><code>equilíbrio: [4000.    5.] 
+multiplicadores (TFI):
+ [[ 2.66667  1.33333]
+ [ 0.00667 -0.00667]]
+M/P =  500: Y = 4000.000, r =  5.000, dY/dM = 1.333
+M/P =  750: Y = 4281.246, r =  3.819, dY/dM = 0.962
+M/P = 1000: Y = 4494.656, r =  3.157, dY/dM = 0.763
+M/P = 1500: Y = 4816.396, r =  2.416, dY/dM = 0.550
+M/P = 2000: Y = 5060.498, r =  2.001, dY/dM = 0.436
+M/P = 3000: Y = 5428.462, r =  1.535, dY/dM = 0.315</code></pre>
+<p><a href="https://github.com/Raydonal/modelos-lineares/blob/main/python/cap08/05_islm_nao_linear.py">Ver no GitHub</a></p>
+</div>
+</div>
+</div>
+<section id="figura-islm_nao_linear" class="level4">
+<h4 class="anchored" data-anchor-id="figura-islm_nao_linear">Figura: islm nao linear</h4>
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>python/cap08/fig_cap08.py</strong></pre>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb21" data-filename="python/cap08/fig_cap08.py"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> fig_islm():</span>
+<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a>    c0, c1, T <span class="op">=</span> <span class="dv">100</span>, <span class="fl">0.75</span>, <span class="dv">200</span></span>
+<span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a>    F <span class="op">=</span> <span class="kw">lambda</span> x, M: np.array([x[<span class="dv">0</span>] <span class="op">-</span> c0 <span class="op">-</span> c1 <span class="op">*</span> (x[<span class="dv">0</span>] <span class="op">-</span> T) <span class="op">-</span> <span class="dv">800</span> <span class="op">*</span> (x[<span class="dv">1</span>] <span class="op">/</span> <span class="dv">5</span>) <span class="op">**</span> <span class="op">-</span><span class="fl">0.3125</span> <span class="op">-</span> <span class="dv">250</span>,</span>
+<span id="cb21-4"><a href="#cb21-4" aria-hidden="true" tabindex="-1"></a>                               M <span class="op">-</span> <span class="dv">500</span> <span class="op">*</span> (x[<span class="dv">0</span>] <span class="op">/</span> <span class="dv">4000</span>) <span class="op">**</span> <span class="dv">2</span> <span class="op">*</span> (x[<span class="dv">1</span>] <span class="op">/</span> <span class="dv">5</span>) <span class="op">**</span> <span class="op">-</span><span class="dv">1</span>])</span>
+<span id="cb21-5"><a href="#cb21-5" aria-hidden="true" tabindex="-1"></a>    Jx <span class="op">=</span> <span class="kw">lambda</span> x: np.array([[<span class="dv">1</span> <span class="op">-</span> c1, <span class="fl">0.3125</span> <span class="op">*</span> <span class="dv">800</span> <span class="op">/</span> <span class="dv">5</span> <span class="op">*</span> (x[<span class="dv">1</span>] <span class="op">/</span> <span class="dv">5</span>) <span class="op">**</span> <span class="op">-</span><span class="fl">1.3125</span>],</span>
+<span id="cb21-6"><a href="#cb21-6" aria-hidden="true" tabindex="-1"></a>                             [<span class="op">-</span><span class="dv">1000</span> <span class="op">/</span> <span class="dv">4000</span> <span class="op">*</span> (x[<span class="dv">0</span>] <span class="op">/</span> <span class="dv">4000</span>) <span class="op">*</span> (x[<span class="dv">1</span>] <span class="op">/</span> <span class="dv">5</span>) <span class="op">**</span> <span class="op">-</span><span class="dv">1</span>, <span class="dv">500</span> <span class="op">*</span> (x[<span class="dv">0</span>] <span class="op">/</span> <span class="dv">4000</span>) <span class="op">**</span> <span class="dv">2</span> <span class="op">*</span> (x[<span class="dv">1</span>] <span class="op">/</span> <span class="dv">5</span>) <span class="op">**</span> <span class="op">-</span><span class="dv">2</span> <span class="op">/</span> <span class="dv">5</span>]])</span>
+<span id="cb21-7"><a href="#cb21-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-8"><a href="#cb21-8" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> newton(M):</span>
+<span id="cb21-9"><a href="#cb21-9" aria-hidden="true" tabindex="-1"></a>        z <span class="op">=</span> np.array([<span class="fl">4000.0</span>, np.log(<span class="fl">5.0</span>)])</span>
+<span id="cb21-10"><a href="#cb21-10" aria-hidden="true" tabindex="-1"></a>        <span class="cf">for</span> _ <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">100</span>):</span>
+<span id="cb21-11"><a href="#cb21-11" aria-hidden="true" tabindex="-1"></a>            x <span class="op">=</span> np.array([z[<span class="dv">0</span>], np.exp(z[<span class="dv">1</span>])])<span class="op">;</span> z <span class="op">=</span> z <span class="op">-</span> np.linalg.solve(Jx(x) <span class="op">@</span> np.diag([<span class="dv">1</span>, x[<span class="dv">1</span>]]), F(x, M))</span>
+<span id="cb21-12"><a href="#cb21-12" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> np.array([z[<span class="dv">0</span>], np.exp(z[<span class="dv">1</span>])])</span>
+<span id="cb21-13"><a href="#cb21-13" aria-hidden="true" tabindex="-1"></a>    Ms <span class="op">=</span> np.linspace(<span class="dv">300</span>, <span class="dv">3000</span>, <span class="dv">60</span>)<span class="op">;</span> sol <span class="op">=</span> np.array([newton(M) <span class="cf">for</span> M <span class="kw">in</span> Ms])</span>
+<span id="cb21-14"><a href="#cb21-14" aria-hidden="true" tabindex="-1"></a>    dY <span class="op">=</span> [(<span class="op">-</span>np.linalg.solve(Jx(x), np.array([[<span class="op">-</span><span class="fl">1.0</span>, <span class="dv">0</span>], [<span class="dv">0</span>, <span class="dv">1</span>]])))[<span class="dv">0</span>, <span class="dv">1</span>] <span class="cf">for</span> x <span class="kw">in</span> sol]</span>
+<span id="cb21-15"><a href="#cb21-15" aria-hidden="true" tabindex="-1"></a>    fig, (a1, a2) <span class="op">=</span> plt.subplots(<span class="dv">1</span>, <span class="dv">2</span>, figsize<span class="op">=</span>(LARG, <span class="fl">2.5</span>))</span>
+<span id="cb21-16"><a href="#cb21-16" aria-hidden="true" tabindex="-1"></a>    a1.plot(Ms, sol[:, <span class="dv">1</span>], color<span class="op">=</span>CATEG[<span class="dv">0</span>], label<span class="op">=</span><span class="st">"não linear"</span>)</span>
+<span id="cb21-17"><a href="#cb21-17" aria-hidden="true" tabindex="-1"></a>    a1.plot(Ms, <span class="dv">5</span> <span class="op">-</span> (Ms <span class="op">-</span> <span class="dv">500</span>) <span class="op">*</span> <span class="fl">0.25</span> <span class="op">/</span> <span class="fl">37.5</span>, color<span class="op">=</span>CATEG[<span class="dv">1</span>], ls<span class="op">=</span><span class="st">"--"</span>, label<span class="op">=</span><span class="st">"linear (Cap. 3)"</span>)</span>
+<span id="cb21-18"><a href="#cb21-18" aria-hidden="true" tabindex="-1"></a>    a1.axhline(<span class="dv">0</span>, color<span class="op">=</span>COR[<span class="st">"cinza"</span>], lw<span class="op">=</span><span class="fl">0.5</span>)<span class="op">;</span> a1.set_ylim(<span class="op">-</span><span class="dv">3</span>, <span class="dv">7</span>)</span>
+<span id="cb21-19"><a href="#cb21-19" aria-hidden="true" tabindex="-1"></a>    a1.set_xlabel(<span class="st">"oferta real de moeda $M/P$"</span>)<span class="op">;</span> a1.set_ylabel(<span class="st">"juros de equilíbrio $r$ (%)"</span>)</span>
+<span id="cb21-20"><a href="#cb21-20" aria-hidden="true" tabindex="-1"></a>    a1.legend(fontsize<span class="op">=</span><span class="fl">6.5</span>)<span class="op">;</span> a1.set_title(<span class="st">"(a) juros"</span>, fontsize<span class="op">=</span><span class="fl">8.5</span>, loc<span class="op">=</span><span class="st">"left"</span>)<span class="op">;</span> virgula(a1, <span class="st">"y"</span>)</span>
+<span id="cb21-21"><a href="#cb21-21" aria-hidden="true" tabindex="-1"></a>    a2.plot(Ms, dY, color<span class="op">=</span>CATEG[<span class="dv">0</span>])<span class="op">;</span> a2.axhline(<span class="dv">50</span> <span class="op">/</span> <span class="fl">37.5</span>, color<span class="op">=</span>CATEG[<span class="dv">1</span>], ls<span class="op">=</span><span class="st">"--"</span>)</span>
+<span id="cb21-22"><a href="#cb21-22" aria-hidden="true" tabindex="-1"></a>    a2.set_xlabel(<span class="st">"oferta real de moeda $M/P$"</span>)<span class="op">;</span> a2.set_ylabel(<span class="vs">r"</span><span class="dv">$</span><span class="er">\</span><span class="vs">partial Y/</span><span class="er">\</span><span class="vs">partial</span><span class="kw">(</span><span class="vs">M/P</span><span class="kw">)</span><span class="dv">$</span><span class="vs">"</span>)</span>
+<span id="cb21-23"><a href="#cb21-23" aria-hidden="true" tabindex="-1"></a>    a2.set_title(<span class="st">"(b) potência da política monetária"</span>, fontsize<span class="op">=</span><span class="fl">8.5</span>, loc<span class="op">=</span><span class="st">"left"</span>)<span class="op">;</span> virgula(a2, <span class="st">"y"</span>)</span>
+<span id="cb21-24"><a href="#cb21-24" aria-hidden="true" tabindex="-1"></a>    fig.tight_layout()<span class="op">;</span> salvar(fig, CAP, <span class="st">"islm_nao_linear"</span>)</span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<p>Trecho de <a href="https://github.com/Raydonal/modelos-lineares/blob/main/python/cap08/fig_cap08.py"><code>python/cap08/fig_cap08.py</code></a>, que traz também as importações e o estilo.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="imagens/cap08/islm_nao_linear.png" class="img-fluid figure-img" alt="Figura islm nao linear"></p>
+<figcaption>IS-LM não linear. (a) Juros de equilíbrio em função da oferta real de moeda: o modelo linear do o texto do livro leva os juros a valores negativos; o não linear se aproxima de zero devagar. (b) O multiplicador da moeda sobre a renda, calculado pelo teorema da função implícita, cai à medida que a moeda aumenta (linha tracejada: o valor constante do modelo linear).</figcaption>
+</figure>
+</div>
+</section>
+</section>
+<section id="ex-06_kronecker_parcelas" class="level3">
+<h3 class="anchored" data-anchor-id="ex-06_kronecker_parcelas">Parcelas subdivididas no experimento de aveia: a covariância como produto de Kronecker</h3>
+<div class="tabset-margin-container"></div><div class="panel-tabset" data-group="linguagem">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-6-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-6-1" role="tab" aria-controls="tabset-6-1" aria-selected="true" href="">R</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-6-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-6-2" role="tab" aria-controls="tabset-6-2" aria-selected="false" href="">Python</a></li></ul>
+<div class="tab-content" data-group="linguagem">
+<div id="tabset-6-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-6-1-tab">
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>R/cap08/06_kronecker_parcelas.R</strong></pre>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb22" data-filename="R/cap08/06_kronecker_parcelas.R"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Cap. 8 -- Parcelas subdivididas no experimento de aveia: a covariância como produto de Kronecker</span></span>
+<span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a>a <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="fu">file.path</span>(<span class="st">"dados"</span>, <span class="st">"yates_oats.csv"</span>))</span>
+<span id="cb22-3"><a href="#cb22-3" aria-hidden="true" tabindex="-1"></a>a <span class="ot">&lt;-</span> a[<span class="fu">order</span>(a<span class="sc">$</span>block, a<span class="sc">$</span>gen, a<span class="sc">$</span>nitro), ]                   <span class="co"># 18 parcelas (bloco x variedade), 4 subparcelas cada</span></span>
+<span id="cb22-4"><a href="#cb22-4" aria-hidden="true" tabindex="-1"></a>y <span class="ot">&lt;-</span> a<span class="sc">$</span>yield; n <span class="ot">&lt;-</span> <span class="fu">length</span>(y)</span>
+<span id="cb22-5"><a href="#cb22-5" aria-hidden="true" tabindex="-1"></a>X <span class="ot">&lt;-</span> <span class="fu">model.matrix</span>(<span class="sc">~</span> <span class="fu">factor</span>(block) <span class="sc">+</span> gen <span class="sc">+</span> <span class="fu">factor</span>(nitro), a); p <span class="ot">&lt;-</span> <span class="fu">ncol</span>(X)</span>
+<span id="cb22-6"><a href="#cb22-6" aria-hidden="true" tabindex="-1"></a><span class="co"># V = I_18 kron (s2 I_4 + s2p J_4): erro de subparcela s2 e de parcela s2p</span></span>
+<span id="cb22-7"><a href="#cb22-7" aria-hidden="true" tabindex="-1"></a>Vk <span class="ot">&lt;-</span> <span class="cf">function</span>(s2, s2p) <span class="fu">kronecker</span>(<span class="fu">diag</span>(<span class="dv">18</span>), s2 <span class="sc">*</span> <span class="fu">diag</span>(<span class="dv">4</span>) <span class="sc">+</span> s2p <span class="sc">*</span> <span class="fu">matrix</span>(<span class="dv">1</span>, <span class="dv">4</span>, <span class="dv">4</span>))</span>
+<span id="cb22-8"><a href="#cb22-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Inversa e determinante pelas fórmulas de Kronecker e espectrais</span></span>
+<span id="cb22-9"><a href="#cb22-9" aria-hidden="true" tabindex="-1"></a>inv_bloco <span class="ot">&lt;-</span> <span class="cf">function</span>(s2, s2p) (<span class="fu">diag</span>(<span class="dv">4</span>) <span class="sc">-</span> <span class="fl">0.25</span>) <span class="sc">/</span> s2 <span class="sc">+</span> <span class="fl">0.25</span> <span class="sc">/</span> (s2 <span class="sc">+</span> <span class="dv">4</span> <span class="sc">*</span> s2p)   <span class="co"># (s2 I + s2p J)^{-1}</span></span>
+<span id="cb22-10"><a href="#cb22-10" aria-hidden="true" tabindex="-1"></a>loglik <span class="ot">&lt;-</span> <span class="cf">function</span>(s2, s2p) {</span>
+<span id="cb22-11"><a href="#cb22-11" aria-hidden="true" tabindex="-1"></a>  Vi <span class="ot">&lt;-</span> <span class="fu">kronecker</span>(<span class="fu">diag</span>(<span class="dv">18</span>), <span class="fu">inv_bloco</span>(s2, s2p))</span>
+<span id="cb22-12"><a href="#cb22-12" aria-hidden="true" tabindex="-1"></a>  logdet <span class="ot">&lt;-</span> <span class="dv">18</span> <span class="sc">*</span> (<span class="dv">3</span> <span class="sc">*</span> <span class="fu">log</span>(s2) <span class="sc">+</span> <span class="fu">log</span>(s2 <span class="sc">+</span> <span class="dv">4</span> <span class="sc">*</span> s2p))           <span class="co"># autovalores: s2 (54 vezes) e s2 + 4 s2p (18)</span></span>
+<span id="cb22-13"><a href="#cb22-13" aria-hidden="true" tabindex="-1"></a>  b <span class="ot">&lt;-</span> <span class="fu">solve</span>(<span class="fu">t</span>(X) <span class="sc">%*%</span> Vi <span class="sc">%*%</span> X, <span class="fu">t</span>(X) <span class="sc">%*%</span> Vi <span class="sc">%*%</span> y); r <span class="ot">&lt;-</span> y <span class="sc">-</span> X <span class="sc">%*%</span> b</span>
+<span id="cb22-14"><a href="#cb22-14" aria-hidden="true" tabindex="-1"></a>  <span class="sc">-</span><span class="fl">0.5</span> <span class="sc">*</span> (n <span class="sc">*</span> <span class="fu">log</span>(<span class="dv">2</span> <span class="sc">*</span> pi) <span class="sc">+</span> logdet <span class="sc">+</span> <span class="fu">drop</span>(<span class="fu">t</span>(r) <span class="sc">%*%</span> Vi <span class="sc">%*%</span> r))</span>
+<span id="cb22-15"><a href="#cb22-15" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb22-16"><a href="#cb22-16" aria-hidden="true" tabindex="-1"></a>V0 <span class="ot">&lt;-</span> <span class="fu">Vk</span>(<span class="dv">150</span>, <span class="dv">200</span>)</span>
+<span id="cb22-17"><a href="#cb22-17" aria-hidden="true" tabindex="-1"></a><span class="fu">c</span>(<span class="at">inversa =</span> <span class="fu">max</span>(<span class="fu">abs</span>(<span class="fu">solve</span>(V0) <span class="sc">-</span> <span class="fu">kronecker</span>(<span class="fu">diag</span>(<span class="dv">18</span>), <span class="fu">inv_bloco</span>(<span class="dv">150</span>, <span class="dv">200</span>)))),</span>
+<span id="cb22-18"><a href="#cb22-18" aria-hidden="true" tabindex="-1"></a>  <span class="at">logdet =</span> <span class="fu">determinant</span>(V0)<span class="sc">$</span>modulus[<span class="dv">1</span>] <span class="sc">-</span> <span class="dv">18</span> <span class="sc">*</span> (<span class="dv">3</span> <span class="sc">*</span> <span class="fu">log</span>(<span class="dv">150</span>) <span class="sc">+</span> <span class="fu">log</span>(<span class="dv">150</span> <span class="sc">+</span> <span class="dv">800</span>)))</span>
+<span id="cb22-19"><a href="#cb22-19" aria-hidden="true" tabindex="-1"></a><span class="co"># Máxima verossimilhança (perfilada em beta) para (s2, s2p)</span></span>
+<span id="cb22-20"><a href="#cb22-20" aria-hidden="true" tabindex="-1"></a>opt <span class="ot">&lt;-</span> <span class="fu">optim</span>(<span class="fu">c</span>(<span class="fu">log</span>(<span class="dv">150</span>), <span class="fu">log</span>(<span class="dv">200</span>)), <span class="cf">function</span>(t) <span class="sc">-</span><span class="fu">loglik</span>(<span class="fu">exp</span>(t[<span class="dv">1</span>]), <span class="fu">exp</span>(t[<span class="dv">2</span>])), <span class="at">control =</span> <span class="fu">list</span>(<span class="at">reltol =</span> <span class="fl">1e-14</span>))</span>
+<span id="cb22-21"><a href="#cb22-21" aria-hidden="true" tabindex="-1"></a>est <span class="ot">&lt;-</span> <span class="fu">exp</span>(opt<span class="sc">$</span>par); <span class="fu">names</span>(est) <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"s2_subparcela"</span>, <span class="st">"s2_parcela"</span>); <span class="fu">round</span>(est, <span class="dv">1</span>)</span>
+<span id="cb22-22"><a href="#cb22-22" aria-hidden="true" tabindex="-1"></a><span class="co"># Erros-padrão por mínimos quadrados generalizados: variedade (entre parcelas) x nitrogênio (dentro)</span></span>
+<span id="cb22-23"><a href="#cb22-23" aria-hidden="true" tabindex="-1"></a>Vi <span class="ot">&lt;-</span> <span class="fu">kronecker</span>(<span class="fu">diag</span>(<span class="dv">18</span>), <span class="fu">inv_bloco</span>(est[<span class="dv">1</span>], est[<span class="dv">2</span>])); covb <span class="ot">&lt;-</span> <span class="fu">solve</span>(<span class="fu">t</span>(X) <span class="sc">%*%</span> Vi <span class="sc">%*%</span> X)</span>
+<span id="cb22-24"><a href="#cb22-24" aria-hidden="true" tabindex="-1"></a>covols <span class="ot">&lt;-</span> <span class="fu">sum</span>(<span class="fu">lm.fit</span>(X, y)<span class="sc">$</span>residuals<span class="sc">^</span><span class="dv">2</span>) <span class="sc">/</span> (n <span class="sc">-</span> p) <span class="sc">*</span> <span class="fu">solve</span>(<span class="fu">crossprod</span>(X))</span>
+<span id="cb22-25"><a href="#cb22-25" aria-hidden="true" tabindex="-1"></a>ep <span class="ot">&lt;-</span> <span class="cf">function</span>(C) <span class="fu">sqrt</span>(<span class="fu">diag</span>(C))[<span class="fu">c</span>(<span class="st">"genMarvellous"</span>, <span class="st">"genVictory"</span>, <span class="st">"factor(nitro)0.6"</span>)]</span>
+<span id="cb22-26"><a href="#cb22-26" aria-hidden="true" tabindex="-1"></a><span class="fu">round</span>(<span class="fu">rbind</span>(<span class="at">MQG =</span> <span class="fu">ep</span>(covb), <span class="at">MQO_ingenuo =</span> <span class="fu">ep</span>(covols)), <span class="dv">2</span>)</span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<p><strong>Saída</strong></p>
+<pre class="text"><code>     inversa       logdet 
+8.673617e-19 2.842171e-13 
+s2_subparcela    s2_parcela 
+        153.5          45.1 
+            genMarvellous genVictory factor(nitro)0.6
+MQG                  5.28       5.28             4.13
+MQO_ingenuo          4.42       4.42             5.10</code></pre>
+<p><a href="https://github.com/Raydonal/modelos-lineares/blob/main/R/cap08/06_kronecker_parcelas.R">Ver no GitHub</a></p>
+</div>
+<div id="tabset-6-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-6-2-tab">
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>python/cap08/06_kronecker_parcelas.py</strong></pre>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb24" data-filename="python/cap08/06_kronecker_parcelas.py"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="co">"""Cap. 8 -- Parcelas subdivididas no experimento de aveia: a covariância como produto de Kronecker."""</span></span>
+<span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> pathlib <span class="im">import</span> Path</span>
+<span id="cb24-3"><a href="#cb24-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb24-4"><a href="#cb24-4" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb24-5"><a href="#cb24-5" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb24-6"><a href="#cb24-6" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> scipy.optimize <span class="im">import</span> minimize</span>
+<span id="cb24-7"><a href="#cb24-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb24-8"><a href="#cb24-8" aria-hidden="true" tabindex="-1"></a>a <span class="op">=</span> pd.read_csv(Path(<span class="va">__file__</span>).resolve().parents[<span class="dv">2</span>] <span class="op">/</span> <span class="st">"dados"</span> <span class="op">/</span> <span class="st">"yates_oats.csv"</span>).sort_values([<span class="st">"block"</span>, <span class="st">"gen"</span>, <span class="st">"nitro"</span>])</span>
+<span id="cb24-9"><a href="#cb24-9" aria-hidden="true" tabindex="-1"></a>y <span class="op">=</span> a[<span class="st">"yield"</span>].to_numpy(<span class="bu">float</span>)<span class="op">;</span> n <span class="op">=</span> <span class="bu">len</span>(y)</span>
+<span id="cb24-10"><a href="#cb24-10" aria-hidden="true" tabindex="-1"></a>X <span class="op">=</span> np.column_stack([np.ones(n), pd.get_dummies(a[<span class="st">"block"</span>], drop_first<span class="op">=</span><span class="va">True</span>), pd.get_dummies(a[<span class="st">"gen"</span>], drop_first<span class="op">=</span><span class="va">True</span>),</span>
+<span id="cb24-11"><a href="#cb24-11" aria-hidden="true" tabindex="-1"></a>                     pd.get_dummies(a[<span class="st">"nitro"</span>], drop_first<span class="op">=</span><span class="va">True</span>)]).astype(<span class="bu">float</span>)</span>
+<span id="cb24-12"><a href="#cb24-12" aria-hidden="true" tabindex="-1"></a>inv_bloco <span class="op">=</span> <span class="kw">lambda</span> s2, s2p: (np.eye(<span class="dv">4</span>) <span class="op">-</span> <span class="fl">0.25</span>) <span class="op">/</span> s2 <span class="op">+</span> <span class="fl">0.25</span> <span class="op">/</span> (s2 <span class="op">+</span> <span class="dv">4</span> <span class="op">*</span> s2p)</span>
+<span id="cb24-13"><a href="#cb24-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb24-14"><a href="#cb24-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb24-15"><a href="#cb24-15" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> loglik(s2, s2p):</span>
+<span id="cb24-16"><a href="#cb24-16" aria-hidden="true" tabindex="-1"></a>    Vi <span class="op">=</span> np.kron(np.eye(<span class="dv">18</span>), inv_bloco(s2, s2p))</span>
+<span id="cb24-17"><a href="#cb24-17" aria-hidden="true" tabindex="-1"></a>    b <span class="op">=</span> np.linalg.solve(X.T <span class="op">@</span> Vi <span class="op">@</span> X, X.T <span class="op">@</span> Vi <span class="op">@</span> y)<span class="op">;</span> r <span class="op">=</span> y <span class="op">-</span> X <span class="op">@</span> b</span>
+<span id="cb24-18"><a href="#cb24-18" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="op">-</span><span class="fl">0.5</span> <span class="op">*</span> (n <span class="op">*</span> np.log(<span class="dv">2</span> <span class="op">*</span> np.pi) <span class="op">+</span> <span class="dv">18</span> <span class="op">*</span> (<span class="dv">3</span> <span class="op">*</span> np.log(s2) <span class="op">+</span> np.log(s2 <span class="op">+</span> <span class="dv">4</span> <span class="op">*</span> s2p)) <span class="op">+</span> r <span class="op">@</span> Vi <span class="op">@</span> r)</span>
+<span id="cb24-19"><a href="#cb24-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb24-20"><a href="#cb24-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb24-21"><a href="#cb24-21" aria-hidden="true" tabindex="-1"></a>V0 <span class="op">=</span> np.kron(np.eye(<span class="dv">18</span>), <span class="dv">150</span> <span class="op">*</span> np.eye(<span class="dv">4</span>) <span class="op">+</span> <span class="dv">200</span> <span class="op">*</span> np.ones((<span class="dv">4</span>, <span class="dv">4</span>)))</span>
+<span id="cb24-22"><a href="#cb24-22" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"inversa por Kronecker:"</span>, np.<span class="bu">abs</span>(np.linalg.inv(V0) <span class="op">-</span> np.kron(np.eye(<span class="dv">18</span>), inv_bloco(<span class="dv">150</span>, <span class="dv">200</span>))).<span class="bu">max</span>())</span>
+<span id="cb24-23"><a href="#cb24-23" aria-hidden="true" tabindex="-1"></a>opt <span class="op">=</span> minimize(<span class="kw">lambda</span> t: <span class="op">-</span>loglik(<span class="op">*</span>np.exp(t)), np.log([<span class="dv">150</span>, <span class="dv">200</span>]), method<span class="op">=</span><span class="st">"Nelder-Mead"</span>, options<span class="op">=</span>{<span class="st">"xatol"</span>: <span class="fl">1e-8</span>, <span class="st">"fatol"</span>: <span class="fl">1e-10</span>})</span>
+<span id="cb24-24"><a href="#cb24-24" aria-hidden="true" tabindex="-1"></a>s2, s2p <span class="op">=</span> np.exp(opt.x)<span class="op">;</span> <span class="bu">print</span>(<span class="ss">f"s2 (subparcela) = </span><span class="sc">{</span>s2<span class="sc">:.1f}</span><span class="ss">, s2p (parcela) = </span><span class="sc">{</span>s2p<span class="sc">:.1f}</span><span class="ss">"</span>)</span>
+<span id="cb24-25"><a href="#cb24-25" aria-hidden="true" tabindex="-1"></a>Vi <span class="op">=</span> np.kron(np.eye(<span class="dv">18</span>), inv_bloco(s2, s2p))<span class="op">;</span> covb <span class="op">=</span> np.linalg.inv(X.T <span class="op">@</span> Vi <span class="op">@</span> X)</span>
+<span id="cb24-26"><a href="#cb24-26" aria-hidden="true" tabindex="-1"></a>res <span class="op">=</span> y <span class="op">-</span> X <span class="op">@</span> np.linalg.lstsq(X, y, rcond<span class="op">=</span><span class="va">None</span>)[<span class="dv">0</span>]<span class="op">;</span> covo <span class="op">=</span> res <span class="op">@</span> res <span class="op">/</span> (n <span class="op">-</span> X.shape[<span class="dv">1</span>]) <span class="op">*</span> np.linalg.inv(X.T <span class="op">@</span> X)</span>
+<span id="cb24-27"><a href="#cb24-27" aria-hidden="true" tabindex="-1"></a>idx <span class="op">=</span> [<span class="dv">6</span>, <span class="dv">7</span>, <span class="dv">10</span>]                                             <span class="co"># Marvellous, Victory, nitro 0,6</span></span>
+<span id="cb24-28"><a href="#cb24-28" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"EP MQG:"</span>, np.sqrt(np.diag(covb))[idx].<span class="bu">round</span>(<span class="dv">2</span>), <span class="st">" EP MQO ingênuo:"</span>, np.sqrt(np.diag(covo))[idx].<span class="bu">round</span>(<span class="dv">2</span>))</span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<p><strong>Saída</strong></p>
+<pre class="text"><code>inversa por Kronecker: 8.673617379884035e-19
+s2 (subparcela) = 153.5, s2p (parcela) = 45.1
+EP MQG: [5.28 5.28 4.13]  EP MQO ingênuo: [4.42 4.42 5.1 ]</code></pre>
+<p><a href="https://github.com/Raydonal/modelos-lineares/blob/main/python/cap08/06_kronecker_parcelas.py">Ver no GitHub</a></p>
+</div>
+</div>
+</div>
+<section id="figura-parcelas_kronecker" class="level4">
+<h4 class="anchored" data-anchor-id="figura-parcelas_kronecker">Figura: parcelas kronecker</h4>
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>python/cap08/fig_cap08.py</strong></pre>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb26" data-filename="python/cap08/fig_cap08.py"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> fig_parcelas():</span>
+<span id="cb26-2"><a href="#cb26-2" aria-hidden="true" tabindex="-1"></a>    s2, s2p <span class="op">=</span> <span class="fl">153.5</span>, <span class="fl">45.1</span></span>
+<span id="cb26-3"><a href="#cb26-3" aria-hidden="true" tabindex="-1"></a>    V <span class="op">=</span> np.kron(np.eye(<span class="dv">18</span>), s2 <span class="op">*</span> np.eye(<span class="dv">4</span>) <span class="op">+</span> s2p <span class="op">*</span> np.ones((<span class="dv">4</span>, <span class="dv">4</span>)))</span>
+<span id="cb26-4"><a href="#cb26-4" aria-hidden="true" tabindex="-1"></a>    fig, (a1, a2) <span class="op">=</span> plt.subplots(<span class="dv">1</span>, <span class="dv">2</span>, figsize<span class="op">=</span>(LARG, <span class="fl">2.6</span>), gridspec_kw<span class="op">=</span>{<span class="st">"width_ratios"</span>: [<span class="dv">1</span>, <span class="fl">1.2</span>]})</span>
+<span id="cb26-5"><a href="#cb26-5" aria-hidden="true" tabindex="-1"></a>    im <span class="op">=</span> a1.imshow(V[:<span class="dv">24</span>, :<span class="dv">24</span>], cmap<span class="op">=</span><span class="st">"Blues"</span>, vmin<span class="op">=</span><span class="dv">0</span>)</span>
+<span id="cb26-6"><a href="#cb26-6" aria-hidden="true" tabindex="-1"></a>    a1.set_xticks([])<span class="op">;</span> a1.set_yticks([])<span class="op">;</span> a1.grid(<span class="va">False</span>)</span>
+<span id="cb26-7"><a href="#cb26-7" aria-hidden="true" tabindex="-1"></a>    a1.set_title(<span class="st">"(a) $</span><span class="ch">\\</span><span class="st">mathbf</span><span class="sc">{V}</span><span class="st">$ (24 primeiras subparcelas)"</span>, fontsize<span class="op">=</span><span class="fl">8.5</span>, loc<span class="op">=</span><span class="st">"left"</span>)</span>
+<span id="cb26-8"><a href="#cb26-8" aria-hidden="true" tabindex="-1"></a>    ep <span class="op">=</span> {<span class="st">"variedade</span><span class="ch">\n</span><span class="st">(entre parcelas)"</span>: (<span class="fl">5.28</span>, <span class="fl">4.42</span>), <span class="st">"nitrogênio</span><span class="ch">\n</span><span class="st">(dentro das parcelas)"</span>: (<span class="fl">4.13</span>, <span class="fl">5.10</span>)}</span>
+<span id="cb26-9"><a href="#cb26-9" aria-hidden="true" tabindex="-1"></a>    pos <span class="op">=</span> np.arange(<span class="dv">2</span>)</span>
+<span id="cb26-10"><a href="#cb26-10" aria-hidden="true" tabindex="-1"></a>    a2.bar(pos <span class="op">-</span> <span class="fl">0.18</span>, [v[<span class="dv">0</span>] <span class="cf">for</span> v <span class="kw">in</span> ep.values()], <span class="fl">0.34</span>, color<span class="op">=</span>CATEG[<span class="dv">0</span>], label<span class="op">=</span><span class="st">"MQG (covariância de Kronecker)"</span>)</span>
+<span id="cb26-11"><a href="#cb26-11" aria-hidden="true" tabindex="-1"></a>    a2.bar(pos <span class="op">+</span> <span class="fl">0.18</span>, [v[<span class="dv">1</span>] <span class="cf">for</span> v <span class="kw">in</span> ep.values()], <span class="fl">0.34</span>, color<span class="op">=</span>CATEG[<span class="dv">1</span>], label<span class="op">=</span><span class="st">"MQO (independência)"</span>)</span>
+<span id="cb26-12"><a href="#cb26-12" aria-hidden="true" tabindex="-1"></a>    a2.set_xticks(pos, <span class="bu">list</span>(ep.keys()), fontsize<span class="op">=</span><span class="dv">7</span>)<span class="op">;</span> a2.set_ylabel(<span class="st">"erro-padrão do contraste"</span>)</span>
+<span id="cb26-13"><a href="#cb26-13" aria-hidden="true" tabindex="-1"></a>    a2.legend(fontsize<span class="op">=</span><span class="fl">6.2</span>, loc<span class="op">=</span><span class="st">"upper right"</span>)<span class="op">;</span> a2.set_ylim(<span class="dv">0</span>, <span class="fl">7.5</span>)<span class="op">;</span> a2.grid(axis<span class="op">=</span><span class="st">"x"</span>, visible<span class="op">=</span><span class="va">False</span>)</span>
+<span id="cb26-14"><a href="#cb26-14" aria-hidden="true" tabindex="-1"></a>    a2.set_title(<span class="st">"(b) erros-padrão"</span>, fontsize<span class="op">=</span><span class="fl">8.5</span>, loc<span class="op">=</span><span class="st">"left"</span>)</span>
+<span id="cb26-15"><a href="#cb26-15" aria-hidden="true" tabindex="-1"></a>    fig.tight_layout()<span class="op">;</span> salvar(fig, CAP, <span class="st">"parcelas_kronecker"</span>)</span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<p>Trecho de <a href="https://github.com/Raydonal/modelos-lineares/blob/main/python/cap08/fig_cap08.py"><code>python/cap08/fig_cap08.py</code></a>, que traz também as importações e o estilo.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="imagens/cap08/parcelas_kronecker.png" class="img-fluid figure-img" alt="Figura parcelas kronecker"></p>
+<figcaption>Parcelas subdivididas no experimento de aveia. (a) A matriz de covariâncias estimada, bloco-diagonal com blocos <span class="math inline">\(4\times4\)</span> (uma parcela cada). (b) Erros-padrão dos contrastes entre variedades (Marvellous menos Golden Rain) e entre doses (<span class="math inline">\(0{,}6\)</span> menos <span class="math inline">\(0\)</span> cwt), sob a covariância de Kronecker e sob independência.</figcaption>
+</figure>
+</div>
+</section>
+</section>
+<section id="ex-07_influencia_pca" class="level3">
+<h3 class="anchored" data-anchor-id="ex-07_influencia_pca">Influência de cada imagem no primeiro autovalor (derivada de autovalores)</h3>
+<div class="tabset-margin-container"></div><div class="panel-tabset" data-group="linguagem">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-7-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-7-1" role="tab" aria-controls="tabset-7-1" aria-selected="true" href="">R</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-7-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-7-2" role="tab" aria-controls="tabset-7-2" aria-selected="false" href="">Python</a></li></ul>
+<div class="tab-content" data-group="linguagem">
+<div id="tabset-7-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-7-1-tab">
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>R/cap08/07_influencia_pca.R</strong></pre>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb27" data-filename="R/cap08/07_influencia_pca.R"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Cap. 8 -- Influência de cada imagem no primeiro autovalor (derivada de autovalores)</span></span>
+<span id="cb27-2"><a href="#cb27-2" aria-hidden="true" tabindex="-1"></a>dig <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="fu">file.path</span>(<span class="st">"dados"</span>, <span class="st">"digitos.csv"</span>))</span>
+<span id="cb27-3"><a href="#cb27-3" aria-hidden="true" tabindex="-1"></a>X <span class="ot">&lt;-</span> <span class="fu">as.matrix</span>(dig[, <span class="sc">-</span><span class="dv">1</span>]); n <span class="ot">&lt;-</span> <span class="fu">nrow</span>(X)</span>
+<span id="cb27-4"><a href="#cb27-4" aria-hidden="true" tabindex="-1"></a>S <span class="ot">&lt;-</span> <span class="fu">cov</span>(X); e <span class="ot">&lt;-</span> <span class="fu">eigen</span>(S, <span class="at">symmetric =</span> <span class="cn">TRUE</span>); l1 <span class="ot">&lt;-</span> e<span class="sc">$</span>values[<span class="dv">1</span>]; q1 <span class="ot">&lt;-</span> e<span class="sc">$</span>vectors[, <span class="dv">1</span>]</span>
+<span id="cb27-5"><a href="#cb27-5" aria-hidden="true" tabindex="-1"></a>Xc <span class="ot">&lt;-</span> <span class="fu">sweep</span>(X, <span class="dv">2</span>, <span class="fu">colMeans</span>(X)); z <span class="ot">&lt;-</span> <span class="fu">drop</span>(Xc <span class="sc">%*%</span> q1)      <span class="co"># escores na 1a componente</span></span>
+<span id="cb27-6"><a href="#cb27-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Sem a observação i: S_(i) = [(n-1) S - n/(n-1) x_i x_i'] / (n-2) (x_i centrado)</span></span>
+<span id="cb27-7"><a href="#cb27-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Primeira ordem (d lambda = q' dS q): lambda_(i) - lambda ~ [lambda - n/(n-1) z_i^2] / (n-2)</span></span>
+<span id="cb27-8"><a href="#cb27-8" aria-hidden="true" tabindex="-1"></a>aprox <span class="ot">&lt;-</span> (l1 <span class="sc">-</span> n <span class="sc">/</span> (n <span class="sc">-</span> <span class="dv">1</span>) <span class="sc">*</span> z<span class="sc">^</span><span class="dv">2</span>) <span class="sc">/</span> (n <span class="sc">-</span> <span class="dv">2</span>)</span>
+<span id="cb27-9"><a href="#cb27-9" aria-hidden="true" tabindex="-1"></a>exato <span class="ot">&lt;-</span> <span class="fu">sapply</span>(<span class="dv">1</span><span class="sc">:</span>n, <span class="cf">function</span>(i) <span class="fu">eigen</span>(<span class="fu">cov</span>(X[<span class="sc">-</span>i, ]), <span class="at">symmetric =</span> <span class="cn">TRUE</span>, <span class="at">only.values =</span> <span class="cn">TRUE</span>)<span class="sc">$</span>values[<span class="dv">1</span>] <span class="sc">-</span> l1)</span>
+<span id="cb27-10"><a href="#cb27-10" aria-hidden="true" tabindex="-1"></a><span class="fu">c</span>(<span class="at">lambda1 =</span> l1, <span class="at">correlacao =</span> <span class="fu">cor</span>(aprox, exato), <span class="at">max_erro_rel =</span> <span class="fu">max</span>(<span class="fu">abs</span>(aprox <span class="sc">-</span> exato)) <span class="sc">/</span> <span class="fu">max</span>(<span class="fu">abs</span>(exato)))</span>
+<span id="cb27-11"><a href="#cb27-11" aria-hidden="true" tabindex="-1"></a>o <span class="ot">&lt;-</span> <span class="fu">order</span>(exato)[<span class="dv">1</span><span class="sc">:</span><span class="dv">5</span>]                                     <span class="co"># remoções que mais reduzem lambda_1</span></span>
+<span id="cb27-12"><a href="#cb27-12" aria-hidden="true" tabindex="-1"></a><span class="fu">data.frame</span>(<span class="at">imagem =</span> o, <span class="at">digito =</span> dig<span class="sc">$</span>digito[o], <span class="at">escore =</span> <span class="fu">round</span>(z[o], <span class="dv">1</span>), <span class="at">exato =</span> <span class="fu">round</span>(exato[o], <span class="dv">3</span>), <span class="at">aprox =</span> <span class="fu">round</span>(aprox[o], <span class="dv">3</span>))</span>
+<span id="cb27-13"><a href="#cb27-13" aria-hidden="true" tabindex="-1"></a><span class="fu">table</span>(<span class="at">digito =</span> dig<span class="sc">$</span>digito[<span class="fu">order</span>(exato)[<span class="dv">1</span><span class="sc">:</span><span class="dv">50</span>]])</span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<p><strong>Saída</strong></p>
+<pre class="text"><code>     lambda1   correlacao max_erro_rel 
+1.790069e+02 9.999903e-01 9.172307e-03 
+  imagem digito escore  exato  aprox
+1   1792      4   31.7 -0.459 -0.460
+2   1087      3  -31.2 -0.439 -0.442
+3    354      4   30.4 -0.413 -0.415
+4   1291      3  -30.3 -0.409 -0.411
+5   1269      4   30.0 -0.398 -0.401
+digito
+ 3  4 
+11 39</code></pre>
+<p><a href="https://github.com/Raydonal/modelos-lineares/blob/main/R/cap08/07_influencia_pca.R">Ver no GitHub</a></p>
+</div>
+<div id="tabset-7-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-7-2-tab">
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>python/cap08/07_influencia_pca.py</strong></pre>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb29" data-filename="python/cap08/07_influencia_pca.py"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a><span class="co">"""Cap. 8 -- Influência de cada imagem no primeiro autovalor (derivada de autovalores)."""</span></span>
+<span id="cb29-2"><a href="#cb29-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> pathlib <span class="im">import</span> Path</span>
+<span id="cb29-3"><a href="#cb29-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-4"><a href="#cb29-4" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb29-5"><a href="#cb29-5" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb29-6"><a href="#cb29-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-7"><a href="#cb29-7" aria-hidden="true" tabindex="-1"></a>dig <span class="op">=</span> pd.read_csv(Path(<span class="va">__file__</span>).resolve().parents[<span class="dv">2</span>] <span class="op">/</span> <span class="st">"dados"</span> <span class="op">/</span> <span class="st">"digitos.csv"</span>)</span>
+<span id="cb29-8"><a href="#cb29-8" aria-hidden="true" tabindex="-1"></a>X <span class="op">=</span> dig.drop(columns<span class="op">=</span><span class="st">"digito"</span>).to_numpy(<span class="bu">float</span>)<span class="op">;</span> n <span class="op">=</span> <span class="bu">len</span>(X)</span>
+<span id="cb29-9"><a href="#cb29-9" aria-hidden="true" tabindex="-1"></a>S <span class="op">=</span> np.cov(X.T)<span class="op">;</span> lam, Q <span class="op">=</span> np.linalg.eigh(S)<span class="op">;</span> l1, q1 <span class="op">=</span> lam[<span class="op">-</span><span class="dv">1</span>], Q[:, <span class="op">-</span><span class="dv">1</span>]</span>
+<span id="cb29-10"><a href="#cb29-10" aria-hidden="true" tabindex="-1"></a>z <span class="op">=</span> (X <span class="op">-</span> X.mean(<span class="dv">0</span>)) <span class="op">@</span> q1</span>
+<span id="cb29-11"><a href="#cb29-11" aria-hidden="true" tabindex="-1"></a>aprox <span class="op">=</span> (l1 <span class="op">-</span> n <span class="op">/</span> (n <span class="op">-</span> <span class="dv">1</span>) <span class="op">*</span> z <span class="op">**</span> <span class="dv">2</span>) <span class="op">/</span> (n <span class="op">-</span> <span class="dv">2</span>)</span>
+<span id="cb29-12"><a href="#cb29-12" aria-hidden="true" tabindex="-1"></a>exato <span class="op">=</span> np.array([np.linalg.eigvalsh(np.cov(np.delete(X, i, <span class="dv">0</span>).T))[<span class="op">-</span><span class="dv">1</span>] <span class="op">-</span> l1 <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(n)])</span>
+<span id="cb29-13"><a href="#cb29-13" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"lambda_1 = </span><span class="sc">{</span>l1<span class="sc">:.4f}</span><span class="ss">, correlação aproximação x exato = </span><span class="sc">{</span>np<span class="sc">.</span>corrcoef(aprox, exato)[<span class="dv">0</span>, <span class="dv">1</span>]<span class="sc">:.6f}</span><span class="ss">"</span>)</span>
+<span id="cb29-14"><a href="#cb29-14" aria-hidden="true" tabindex="-1"></a>o <span class="op">=</span> np.argsort(exato)[:<span class="dv">5</span>]</span>
+<span id="cb29-15"><a href="#cb29-15" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(pd.DataFrame({<span class="st">"imagem"</span>: o <span class="op">+</span> <span class="dv">1</span>, <span class="st">"dígito"</span>: dig[<span class="st">"digito"</span>].to_numpy()[o], <span class="st">"exato"</span>: exato[o].<span class="bu">round</span>(<span class="dv">3</span>), <span class="st">"aprox"</span>: aprox[o].<span class="bu">round</span>(<span class="dv">3</span>)}))</span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<p><strong>Saída</strong></p>
+<pre class="text"><code>lambda_1 = 179.0069, correlação aproximação x exato = 0.999990
+   imagem  dígito  exato  aprox
+0    1792       4 -0.459 -0.460
+1    1087       3 -0.439 -0.442
+2     354       4 -0.413 -0.415
+3    1291       3 -0.409 -0.411
+4    1269       4 -0.398 -0.401</code></pre>
+<p><a href="https://github.com/Raydonal/modelos-lineares/blob/main/python/cap08/07_influencia_pca.py">Ver no GitHub</a></p>
+</div>
+</div>
+</div>
+<section id="figura-influencia_pca" class="level4">
+<h4 class="anchored" data-anchor-id="figura-influencia_pca">Figura: influencia pca</h4>
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>python/cap08/fig_cap08.py</strong></pre>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb31" data-filename="python/cap08/fig_cap08.py"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> fig_influencia():</span>
+<span id="cb31-2"><a href="#cb31-2" aria-hidden="true" tabindex="-1"></a>    dig <span class="op">=</span> pd.read_csv(DADOS <span class="op">/</span> <span class="st">"digitos.csv"</span>)<span class="op">;</span> X <span class="op">=</span> dig.drop(columns<span class="op">=</span><span class="st">"digito"</span>).to_numpy(<span class="bu">float</span>)<span class="op">;</span> n <span class="op">=</span> <span class="bu">len</span>(X)</span>
+<span id="cb31-3"><a href="#cb31-3" aria-hidden="true" tabindex="-1"></a>    lam, Q <span class="op">=</span> np.linalg.eigh(np.cov(X.T))<span class="op">;</span> l1, q1 <span class="op">=</span> lam[<span class="op">-</span><span class="dv">1</span>], Q[:, <span class="op">-</span><span class="dv">1</span>]</span>
+<span id="cb31-4"><a href="#cb31-4" aria-hidden="true" tabindex="-1"></a>    z <span class="op">=</span> (X <span class="op">-</span> X.mean(<span class="dv">0</span>)) <span class="op">@</span> q1<span class="op">;</span> aprox <span class="op">=</span> (l1 <span class="op">-</span> n <span class="op">/</span> (n <span class="op">-</span> <span class="dv">1</span>) <span class="op">*</span> z <span class="op">**</span> <span class="dv">2</span>) <span class="op">/</span> (n <span class="op">-</span> <span class="dv">2</span>)</span>
+<span id="cb31-5"><a href="#cb31-5" aria-hidden="true" tabindex="-1"></a>    exato <span class="op">=</span> np.array([np.linalg.eigvalsh(np.cov(np.delete(X, i, <span class="dv">0</span>).T))[<span class="op">-</span><span class="dv">1</span>] <span class="op">-</span> l1 <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(n)])</span>
+<span id="cb31-6"><a href="#cb31-6" aria-hidden="true" tabindex="-1"></a>    fig, (a1, a2) <span class="op">=</span> plt.subplots(<span class="dv">1</span>, <span class="dv">2</span>, figsize<span class="op">=</span>(LARG, <span class="fl">2.5</span>))</span>
+<span id="cb31-7"><a href="#cb31-7" aria-hidden="true" tabindex="-1"></a>    a1.plot(exato, aprox, <span class="st">"."</span>, ms<span class="op">=</span><span class="dv">2</span>, color<span class="op">=</span>CATEG[<span class="dv">0</span>])<span class="op">;</span> m <span class="op">=</span> [exato.<span class="bu">min</span>(), exato.<span class="bu">max</span>()]</span>
+<span id="cb31-8"><a href="#cb31-8" aria-hidden="true" tabindex="-1"></a>    a1.plot(m, m, color<span class="op">=</span>COR[<span class="st">"cinza"</span>], lw<span class="op">=</span><span class="fl">0.7</span>, ls<span class="op">=</span><span class="st">":"</span>)</span>
+<span id="cb31-9"><a href="#cb31-9" aria-hidden="true" tabindex="-1"></a>    a1.set_xlabel(<span class="st">"variação exata de $</span><span class="ch">\\</span><span class="st">lambda_1$"</span>)<span class="op">;</span> a1.set_ylabel(<span class="st">"aproximação $</span><span class="ch">\\</span><span class="st">mathbf</span><span class="sc">{q}</span><span class="st">_1^</span><span class="ch">\\</span><span class="st">top</span><span class="ch">\\</span><span class="st">Delta</span><span class="ch">\\</span><span class="st">mathbf</span><span class="sc">{S}</span><span class="ch">\\</span><span class="st">,</span><span class="ch">\\</span><span class="st">mathbf</span><span class="sc">{q}</span><span class="st">_1$"</span>)</span>
+<span id="cb31-10"><a href="#cb31-10" aria-hidden="true" tabindex="-1"></a>    a1.set_title(<span class="st">"(a) derivada vs. recálculo"</span>, fontsize<span class="op">=</span><span class="fl">8.5</span>, loc<span class="op">=</span><span class="st">"left"</span>)<span class="op">;</span> virgula(a1)</span>
+<span id="cb31-11"><a href="#cb31-11" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> k, c <span class="kw">in</span> <span class="bu">enumerate</span>(<span class="bu">range</span>(<span class="dv">10</span>)):</span>
+<span id="cb31-12"><a href="#cb31-12" aria-hidden="true" tabindex="-1"></a>        sel <span class="op">=</span> dig[<span class="st">"digito"</span>].to_numpy() <span class="op">==</span> c</span>
+<span id="cb31-13"><a href="#cb31-13" aria-hidden="true" tabindex="-1"></a>        a2.scatter(z[sel], exato[sel], s<span class="op">=</span><span class="dv">2</span>, color<span class="op">=</span>plt.cm.tab10(k), label<span class="op">=</span><span class="bu">str</span>(c))</span>
+<span id="cb31-14"><a href="#cb31-14" aria-hidden="true" tabindex="-1"></a>    a2.set_xlabel(<span class="st">"escore na 1ª componente"</span>)<span class="op">;</span> a2.set_ylabel(<span class="st">"variação exata de $</span><span class="ch">\\</span><span class="st">lambda_1$"</span>)</span>
+<span id="cb31-15"><a href="#cb31-15" aria-hidden="true" tabindex="-1"></a>    a2.legend(fontsize<span class="op">=</span><span class="fl">5.5</span>, ncol<span class="op">=</span><span class="dv">2</span>, markerscale<span class="op">=</span><span class="dv">3</span>, loc<span class="op">=</span><span class="st">"lower center"</span>, handletextpad<span class="op">=</span><span class="fl">0.1</span>, columnspacing<span class="op">=</span><span class="fl">0.5</span>)</span>
+<span id="cb31-16"><a href="#cb31-16" aria-hidden="true" tabindex="-1"></a>    a2.set_title(<span class="st">"(b) influência e escore"</span>, fontsize<span class="op">=</span><span class="fl">8.5</span>, loc<span class="op">=</span><span class="st">"left"</span>)<span class="op">;</span> virgula(a2)</span>
+<span id="cb31-17"><a href="#cb31-17" aria-hidden="true" tabindex="-1"></a>    fig.tight_layout()<span class="op">;</span> salvar(fig, CAP, <span class="st">"influencia_pca"</span>)</span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<p>Trecho de <a href="https://github.com/Raydonal/modelos-lineares/blob/main/python/cap08/fig_cap08.py"><code>python/cap08/fig_cap08.py</code></a>, que traz também as importações e o estilo.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="imagens/cap08/influencia_pca.png" class="img-fluid figure-img" alt="Figura influencia pca"></p>
+<figcaption>Influência de cada imagem no primeiro autovalor. (a) Variação exata (recalculando sem a imagem) contra a aproximação pela derivada do autovalor. (b) A variação exata em função do escore na primeira componente, por dígito: uma parábola, com os extremos ocupados por imagens de <span class="math inline">\(4\)</span> (escores positivos) e de <span class="math inline">\(3\)</span> (negativos).</figcaption>
+</figure>
+</div>
+</section>
+</section>
+<section id="ex-08_atencao_gradiente" class="level3">
+<h3 class="anchored" data-anchor-id="ex-08_atencao_gradiente">Retropropagação numa camada de atenção, conferida por diferenças finitas</h3>
+<div class="tabset-margin-container"></div><div class="panel-tabset" data-group="linguagem">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-8-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-8-1" role="tab" aria-controls="tabset-8-1" aria-selected="true" href="">R</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-8-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-8-2" role="tab" aria-controls="tabset-8-2" aria-selected="false" href="">Python</a></li></ul>
+<div class="tab-content" data-group="linguagem">
+<div id="tabset-8-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-8-1-tab">
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>R/cap08/08_atencao_gradiente.R</strong></pre>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb32" data-filename="R/cap08/08_atencao_gradiente.R"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Cap. 8 -- Retropropagação numa camada de atenção, conferida por diferenças finitas</span></span>
+<span id="cb32-2"><a href="#cb32-2" aria-hidden="true" tabindex="-1"></a><span class="fu">source</span>(<span class="fu">file.path</span>(<span class="st">"R"</span>, <span class="st">"comum"</span>, <span class="st">"gerador.R"</span>)); g <span class="ot">&lt;-</span> <span class="fu">gerador</span>(<span class="dv">88</span>)</span>
+<span id="cb32-3"><a href="#cb32-3" aria-hidden="true" tabindex="-1"></a>n <span class="ot">&lt;-</span> <span class="dv">6</span>; d <span class="ot">&lt;-</span> <span class="dv">5</span>; dk <span class="ot">&lt;-</span> <span class="dv">3</span></span>
+<span id="cb32-4"><a href="#cb32-4" aria-hidden="true" tabindex="-1"></a>X <span class="ot">&lt;-</span> <span class="fu">matriz_normal</span>(g, n, d); Tg <span class="ot">&lt;-</span> <span class="fu">matriz_normal</span>(g, n, d)  <span class="co"># entrada e alvo</span></span>
+<span id="cb32-5"><a href="#cb32-5" aria-hidden="true" tabindex="-1"></a>Wq <span class="ot">&lt;-</span> <span class="fu">matriz_normal</span>(g, d, dk); Wk <span class="ot">&lt;-</span> <span class="fu">matriz_normal</span>(g, d, dk); Wv <span class="ot">&lt;-</span> <span class="fu">matriz_normal</span>(g, d, d)</span>
+<span id="cb32-6"><a href="#cb32-6" aria-hidden="true" tabindex="-1"></a>softmax <span class="ot">&lt;-</span> <span class="cf">function</span>(S) { S <span class="ot">&lt;-</span> S <span class="sc">-</span> <span class="fu">apply</span>(S, <span class="dv">1</span>, max); E <span class="ot">&lt;-</span> <span class="fu">exp</span>(S); E <span class="sc">/</span> <span class="fu">rowSums</span>(E) }</span>
+<span id="cb32-7"><a href="#cb32-7" aria-hidden="true" tabindex="-1"></a>frente <span class="ot">&lt;-</span> <span class="cf">function</span>(Wq, Wk, Wv) {</span>
+<span id="cb32-8"><a href="#cb32-8" aria-hidden="true" tabindex="-1"></a>  Q <span class="ot">&lt;-</span> X <span class="sc">%*%</span> Wq; K <span class="ot">&lt;-</span> X <span class="sc">%*%</span> Wk; V <span class="ot">&lt;-</span> X <span class="sc">%*%</span> Wv</span>
+<span id="cb32-9"><a href="#cb32-9" aria-hidden="true" tabindex="-1"></a>  A <span class="ot">&lt;-</span> <span class="fu">softmax</span>(Q <span class="sc">%*%</span> <span class="fu">t</span>(K) <span class="sc">/</span> <span class="fu">sqrt</span>(dk)); O <span class="ot">&lt;-</span> A <span class="sc">%*%</span> V</span>
+<span id="cb32-10"><a href="#cb32-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">list</span>(<span class="at">Q =</span> Q, <span class="at">K =</span> K, <span class="at">V =</span> V, <span class="at">A =</span> A, <span class="at">O =</span> O, <span class="at">perda =</span> <span class="fl">0.5</span> <span class="sc">*</span> <span class="fu">sum</span>((O <span class="sc">-</span> Tg)<span class="sc">^</span><span class="dv">2</span>))</span>
+<span id="cb32-11"><a href="#cb32-11" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb32-12"><a href="#cb32-12" aria-hidden="true" tabindex="-1"></a>f <span class="ot">&lt;-</span> <span class="fu">frente</span>(Wq, Wk, Wv)</span>
+<span id="cb32-13"><a href="#cb32-13" aria-hidden="true" tabindex="-1"></a><span class="co"># Retropropagação (regras da Seção de cálculo matricial)</span></span>
+<span id="cb32-14"><a href="#cb32-14" aria-hidden="true" tabindex="-1"></a>GO <span class="ot">&lt;-</span> f<span class="sc">$</span>O <span class="sc">-</span> Tg                                             <span class="co"># dL/dO</span></span>
+<span id="cb32-15"><a href="#cb32-15" aria-hidden="true" tabindex="-1"></a>GV <span class="ot">&lt;-</span> <span class="fu">t</span>(f<span class="sc">$</span>A) <span class="sc">%*%</span> GO; GWv <span class="ot">&lt;-</span> <span class="fu">t</span>(X) <span class="sc">%*%</span> GV                    <span class="co"># O = A V</span></span>
+<span id="cb32-16"><a href="#cb32-16" aria-hidden="true" tabindex="-1"></a>GA <span class="ot">&lt;-</span> GO <span class="sc">%*%</span> <span class="fu">t</span>(f<span class="sc">$</span>V)</span>
+<span id="cb32-17"><a href="#cb32-17" aria-hidden="true" tabindex="-1"></a>GS <span class="ot">&lt;-</span> f<span class="sc">$</span>A <span class="sc">*</span> (GA <span class="sc">-</span> <span class="fu">rowSums</span>(GA <span class="sc">*</span> f<span class="sc">$</span>A))                       <span class="co"># softmax por linha: a .* (g - (a'g) 1)</span></span>
+<span id="cb32-18"><a href="#cb32-18" aria-hidden="true" tabindex="-1"></a>GQ <span class="ot">&lt;-</span> GS <span class="sc">%*%</span> f<span class="sc">$</span>K <span class="sc">/</span> <span class="fu">sqrt</span>(dk); GK <span class="ot">&lt;-</span> <span class="fu">t</span>(GS) <span class="sc">%*%</span> f<span class="sc">$</span>Q <span class="sc">/</span> <span class="fu">sqrt</span>(dk)</span>
+<span id="cb32-19"><a href="#cb32-19" aria-hidden="true" tabindex="-1"></a>GWq <span class="ot">&lt;-</span> <span class="fu">t</span>(X) <span class="sc">%*%</span> GQ; GWk <span class="ot">&lt;-</span> <span class="fu">t</span>(X) <span class="sc">%*%</span> GK</span>
+<span id="cb32-20"><a href="#cb32-20" aria-hidden="true" tabindex="-1"></a><span class="co"># Diferenças finitas, entrada por entrada</span></span>
+<span id="cb32-21"><a href="#cb32-21" aria-hidden="true" tabindex="-1"></a>num <span class="ot">&lt;-</span> <span class="cf">function</span>(W, qual) { Gm <span class="ot">&lt;-</span> W <span class="sc">*</span> <span class="dv">0</span>; h <span class="ot">&lt;-</span> <span class="fl">1e-6</span></span>
+<span id="cb32-22"><a href="#cb32-22" aria-hidden="true" tabindex="-1"></a>  <span class="cf">for</span> (i <span class="cf">in</span> <span class="fu">seq_along</span>(W)) { Wp <span class="ot">&lt;-</span> W; Wm <span class="ot">&lt;-</span> W; Wp[i] <span class="ot">&lt;-</span> Wp[i] <span class="sc">+</span> h; Wm[i] <span class="ot">&lt;-</span> Wm[i] <span class="sc">-</span> h</span>
+<span id="cb32-23"><a href="#cb32-23" aria-hidden="true" tabindex="-1"></a>    args_p <span class="ot">&lt;-</span> <span class="fu">list</span>(Wq, Wk, Wv); args_m <span class="ot">&lt;-</span> <span class="fu">list</span>(Wq, Wk, Wv); args_p[[qual]] <span class="ot">&lt;-</span> Wp; args_m[[qual]] <span class="ot">&lt;-</span> Wm</span>
+<span id="cb32-24"><a href="#cb32-24" aria-hidden="true" tabindex="-1"></a>    Gm[i] <span class="ot">&lt;-</span> (<span class="fu">do.call</span>(frente, args_p)<span class="sc">$</span>perda <span class="sc">-</span> <span class="fu">do.call</span>(frente, args_m)<span class="sc">$</span>perda) <span class="sc">/</span> (<span class="dv">2</span> <span class="sc">*</span> h) }; Gm }</span>
+<span id="cb32-25"><a href="#cb32-25" aria-hidden="true" tabindex="-1"></a><span class="fu">c</span>(<span class="at">Wq =</span> <span class="fu">max</span>(<span class="fu">abs</span>(<span class="fu">num</span>(Wq, <span class="dv">1</span>) <span class="sc">-</span> GWq)), <span class="at">Wk =</span> <span class="fu">max</span>(<span class="fu">abs</span>(<span class="fu">num</span>(Wk, <span class="dv">2</span>) <span class="sc">-</span> GWk)), <span class="at">Wv =</span> <span class="fu">max</span>(<span class="fu">abs</span>(<span class="fu">num</span>(Wv, <span class="dv">3</span>) <span class="sc">-</span> GWv)))</span>
+<span id="cb32-26"><a href="#cb32-26" aria-hidden="true" tabindex="-1"></a><span class="co"># Jacobiano da softmax: diag(a) - a a' é simétrico, semidefinido, anula 1 e tem norma &lt;= 1/2</span></span>
+<span id="cb32-27"><a href="#cb32-27" aria-hidden="true" tabindex="-1"></a>Js <span class="ot">&lt;-</span> <span class="fu">lapply</span>(<span class="dv">1</span><span class="sc">:</span>n, <span class="cf">function</span>(i) { a <span class="ot">&lt;-</span> f<span class="sc">$</span>A[i, ]; <span class="fu">diag</span>(a) <span class="sc">-</span> a <span class="sc">%o%</span> a })</span>
+<span id="cb32-28"><a href="#cb32-28" aria-hidden="true" tabindex="-1"></a><span class="fu">c</span>(<span class="at">max_norma =</span> <span class="fu">max</span>(<span class="fu">sapply</span>(Js, <span class="cf">function</span>(J) <span class="fu">max</span>(<span class="fu">eigen</span>(J, <span class="at">symmetric =</span> <span class="cn">TRUE</span>)<span class="sc">$</span>values))),</span>
+<span id="cb32-29"><a href="#cb32-29" aria-hidden="true" tabindex="-1"></a>  <span class="at">min_autovalor =</span> <span class="fu">min</span>(<span class="fu">sapply</span>(Js, <span class="cf">function</span>(J) <span class="fu">min</span>(<span class="fu">eigen</span>(J, <span class="at">symmetric =</span> <span class="cn">TRUE</span>)<span class="sc">$</span>values))),</span>
+<span id="cb32-30"><a href="#cb32-30" aria-hidden="true" tabindex="-1"></a>  <span class="at">J_vezes_1 =</span> <span class="fu">max</span>(<span class="fu">sapply</span>(Js, <span class="cf">function</span>(J) <span class="fu">max</span>(<span class="fu">abs</span>(J <span class="sc">%*%</span> <span class="fu">rep</span>(<span class="dv">1</span>, n))))))</span>
+<span id="cb32-31"><a href="#cb32-31" aria-hidden="true" tabindex="-1"></a><span class="co"># Logits extremos: a norma 1/2 é atingida quando dois tokens dividem a atenção</span></span>
+<span id="cb32-32"><a href="#cb32-32" aria-hidden="true" tabindex="-1"></a>a <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="fl">0.5</span>, <span class="fl">0.5</span>, <span class="dv">0</span>, <span class="dv">0</span>); <span class="fu">max</span>(<span class="fu">eigen</span>(<span class="fu">diag</span>(a) <span class="sc">-</span> a <span class="sc">%o%</span> a, <span class="at">symmetric =</span> <span class="cn">TRUE</span>)<span class="sc">$</span>values)</span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<p><strong>Saída</strong></p>
+<pre class="text"><code>          Wq           Wk           Wv 
+1.952691e-08 1.122034e-08 9.273741e-09 
+    max_norma min_autovalor     J_vezes_1 
+ 4.582684e-01 -4.815091e-17  6.049848e-17 
+[1] 0.5</code></pre>
+<p><a href="https://github.com/Raydonal/modelos-lineares/blob/main/R/cap08/08_atencao_gradiente.R">Ver no GitHub</a></p>
+</div>
+<div id="tabset-8-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-8-2-tab">
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>python/cap08/08_atencao_gradiente.py</strong></pre>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb34" data-filename="python/cap08/08_atencao_gradiente.py"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true" tabindex="-1"></a><span class="co">"""Cap. 8 -- Retropropagação numa camada de atenção, conferida por diferenças finitas."""</span></span>
+<span id="cb34-2"><a href="#cb34-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> sys</span>
+<span id="cb34-3"><a href="#cb34-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> pathlib <span class="im">import</span> Path</span>
+<span id="cb34-4"><a href="#cb34-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-5"><a href="#cb34-5" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb34-6"><a href="#cb34-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-7"><a href="#cb34-7" aria-hidden="true" tabindex="-1"></a>sys.path.insert(<span class="dv">0</span>, <span class="bu">str</span>(Path(<span class="va">__file__</span>).resolve().parents[<span class="dv">1</span>]))</span>
+<span id="cb34-8"><a href="#cb34-8" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> comum.gerador <span class="im">import</span> Gerador  <span class="co"># noqa: E402</span></span>
+<span id="cb34-9"><a href="#cb34-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-10"><a href="#cb34-10" aria-hidden="true" tabindex="-1"></a>g <span class="op">=</span> Gerador(<span class="dv">88</span>)<span class="op">;</span> n, d, dk <span class="op">=</span> <span class="dv">6</span>, <span class="dv">5</span>, <span class="dv">3</span></span>
+<span id="cb34-11"><a href="#cb34-11" aria-hidden="true" tabindex="-1"></a>X, T <span class="op">=</span> g.matriz_normal(n, d), g.matriz_normal(n, d)</span>
+<span id="cb34-12"><a href="#cb34-12" aria-hidden="true" tabindex="-1"></a>W <span class="op">=</span> {<span class="st">"q"</span>: g.matriz_normal(d, dk), <span class="st">"k"</span>: g.matriz_normal(d, dk), <span class="st">"v"</span>: g.matriz_normal(d, d)}</span>
+<span id="cb34-13"><a href="#cb34-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-14"><a href="#cb34-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-15"><a href="#cb34-15" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> softmax(S):</span>
+<span id="cb34-16"><a href="#cb34-16" aria-hidden="true" tabindex="-1"></a>    E <span class="op">=</span> np.exp(S <span class="op">-</span> S.<span class="bu">max</span>(<span class="dv">1</span>, keepdims<span class="op">=</span><span class="va">True</span>))<span class="op">;</span> <span class="cf">return</span> E <span class="op">/</span> E.<span class="bu">sum</span>(<span class="dv">1</span>, keepdims<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb34-17"><a href="#cb34-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-18"><a href="#cb34-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-19"><a href="#cb34-19" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> frente(W):</span>
+<span id="cb34-20"><a href="#cb34-20" aria-hidden="true" tabindex="-1"></a>    Q, K, V <span class="op">=</span> X <span class="op">@</span> W[<span class="st">"q"</span>], X <span class="op">@</span> W[<span class="st">"k"</span>], X <span class="op">@</span> W[<span class="st">"v"</span>]</span>
+<span id="cb34-21"><a href="#cb34-21" aria-hidden="true" tabindex="-1"></a>    A <span class="op">=</span> softmax(Q <span class="op">@</span> K.T <span class="op">/</span> np.sqrt(dk))<span class="op">;</span> O <span class="op">=</span> A <span class="op">@</span> V</span>
+<span id="cb34-22"><a href="#cb34-22" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> Q, K, V, A, O, <span class="fl">0.5</span> <span class="op">*</span> ((O <span class="op">-</span> T) <span class="op">**</span> <span class="dv">2</span>).<span class="bu">sum</span>()</span>
+<span id="cb34-23"><a href="#cb34-23" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-24"><a href="#cb34-24" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-25"><a href="#cb34-25" aria-hidden="true" tabindex="-1"></a>Q, K, V, A, O, L <span class="op">=</span> frente(W)</span>
+<span id="cb34-26"><a href="#cb34-26" aria-hidden="true" tabindex="-1"></a>GO <span class="op">=</span> O <span class="op">-</span> T<span class="op">;</span> GA <span class="op">=</span> GO <span class="op">@</span> V.T</span>
+<span id="cb34-27"><a href="#cb34-27" aria-hidden="true" tabindex="-1"></a>GS <span class="op">=</span> A <span class="op">*</span> (GA <span class="op">-</span> (GA <span class="op">*</span> A).<span class="bu">sum</span>(<span class="dv">1</span>, keepdims<span class="op">=</span><span class="va">True</span>))</span>
+<span id="cb34-28"><a href="#cb34-28" aria-hidden="true" tabindex="-1"></a>grad <span class="op">=</span> {<span class="st">"q"</span>: X.T <span class="op">@</span> (GS <span class="op">@</span> K) <span class="op">/</span> np.sqrt(dk), <span class="st">"k"</span>: X.T <span class="op">@</span> (GS.T <span class="op">@</span> Q) <span class="op">/</span> np.sqrt(dk), <span class="st">"v"</span>: X.T <span class="op">@</span> (A.T <span class="op">@</span> GO)}</span>
+<span id="cb34-29"><a href="#cb34-29" aria-hidden="true" tabindex="-1"></a>h <span class="op">=</span> <span class="fl">1e-6</span></span>
+<span id="cb34-30"><a href="#cb34-30" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> c <span class="kw">in</span> <span class="st">"qkv"</span>:</span>
+<span id="cb34-31"><a href="#cb34-31" aria-hidden="true" tabindex="-1"></a>    num <span class="op">=</span> np.zeros_like(W[c])</span>
+<span id="cb34-32"><a href="#cb34-32" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> idx <span class="kw">in</span> np.ndindex(W[c].shape):</span>
+<span id="cb34-33"><a href="#cb34-33" aria-hidden="true" tabindex="-1"></a>        Wp <span class="op">=</span> {k: v.copy() <span class="cf">for</span> k, v <span class="kw">in</span> W.items()}<span class="op">;</span> Wm <span class="op">=</span> {k: v.copy() <span class="cf">for</span> k, v <span class="kw">in</span> W.items()}</span>
+<span id="cb34-34"><a href="#cb34-34" aria-hidden="true" tabindex="-1"></a>        Wp[c][idx] <span class="op">+=</span> h<span class="op">;</span> Wm[c][idx] <span class="op">-=</span> h</span>
+<span id="cb34-35"><a href="#cb34-35" aria-hidden="true" tabindex="-1"></a>        num[idx] <span class="op">=</span> (frente(Wp)[<span class="op">-</span><span class="dv">1</span>] <span class="op">-</span> frente(Wm)[<span class="op">-</span><span class="dv">1</span>]) <span class="op">/</span> (<span class="dv">2</span> <span class="op">*</span> h)</span>
+<span id="cb34-36"><a href="#cb34-36" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f"W_</span><span class="sc">{</span>c<span class="sc">}</span><span class="ss">: max |retropropagação - diferenças finitas| = </span><span class="sc">{</span>np<span class="sc">.</span><span class="bu">abs</span>(num <span class="op">-</span> grad[c])<span class="sc">.</span><span class="bu">max</span>()<span class="sc">:.2e}</span><span class="ss">"</span>)</span>
+<span id="cb34-37"><a href="#cb34-37" aria-hidden="true" tabindex="-1"></a>J <span class="op">=</span> [np.diag(a) <span class="op">-</span> np.outer(a, a) <span class="cf">for</span> a <span class="kw">in</span> A]</span>
+<span id="cb34-38"><a href="#cb34-38" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"maior autovalor do jacobiano da softmax:"</span>, <span class="bu">round</span>(<span class="bu">max</span>(np.linalg.eigvalsh(M)[<span class="op">-</span><span class="dv">1</span>] <span class="cf">for</span> M <span class="kw">in</span> J), <span class="dv">6</span>), <span class="st">"(&lt;= 1/2)"</span>)</span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<p><strong>Saída</strong></p>
+<pre class="text"><code>W_q: max |retropropagação - diferenças finitas| = 1.57e-08
+W_k: max |retropropagação - diferenças finitas| = 1.86e-08
+W_v: max |retropropagação - diferenças finitas| = 1.50e-08
+maior autovalor do jacobiano da softmax: 0.458268 (&lt;= 1/2)</code></pre>
+<p><a href="https://github.com/Raydonal/modelos-lineares/blob/main/python/cap08/08_atencao_gradiente.py">Ver no GitHub</a></p>
+</div>
+</div>
+</div>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copiada");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copiada");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/raydonal\.github\.io\/modelos-lineares\/");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="./cap07.html" class="pagination-link" aria-label="7. Normas matriciais, condicionamento e a inversa de Moore–Penrose">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-title">7. Normas matriciais, condicionamento e a inversa de Moore–Penrose</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="./cap09.html" class="pagination-link" aria-label="9. Vetores aleatórios e a distribuição normal multivariada">
+        <span class="nav-page-text"><span class="chapter-title">9. Vetores aleatórios e a distribuição normal multivariada</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+
+
+
+
+<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/Raydonal/modelos-lineares/issues/new" class="toc-action"><i class="bi bi-github"></i>Criar uma issue</a></li></ul></div></div></div></footer></body></html>
