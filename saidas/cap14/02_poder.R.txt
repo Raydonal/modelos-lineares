@@ -1,0 +1,13 @@
+r 10 lambda 5.0 poder 0.5620
+r 15 lambda 7.5 poder 0.7529
+r 16 lambda 8.0 poder 0.7814
+r 17 lambda 8.5 poder 0.8070
+r 18 lambda 9.0 poder 0.8300
+r 20 lambda 10.0 poder 0.8690
+aproximação normal: r = 15.70
+q  1 poder(lambda = 10, nu = 30) 0.8642
+q  2 poder(lambda = 10, nu = 30) 0.7724
+q  3 poder(lambda = 10, nu = 30) 0.6992
+q  6 poder(lambda = 10, nu = 30) 0.5418
+q 12 poder(lambda = 10, nu = 30) 0.3677
+lambda 5.833 poder 0.4632 simulado 0.4586

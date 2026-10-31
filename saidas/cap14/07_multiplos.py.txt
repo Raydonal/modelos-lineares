@@ -1,0 +1,9 @@
+  a  nu      t   Bonf  Tukey   Dunn    Sch
+  3  12  2.179  2.779  2.668  2.502  2.788
+  5  20  2.086  3.153  2.992  2.651  3.386
+ 10  40  2.021  3.514  3.348  2.811  4.372
+ 20  80  1.990  3.819  3.665  2.964  5.713
+ep 1.2649 limites: t 2.756 Bonf 3.516 Tukey 3.375 Dunn 3.165 Sch 3.526
+cobertura: t 0.7356 Bonf 0.9661 Tukey 0.9509 Scheffé 0.9797
+limiares BH 0.010 0.020 0.030 0.040 0.050
+rejeições: Bonferroni 1 Holm 2 BH 4

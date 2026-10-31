@@ -1,0 +1,16 @@
+jogos 224 posto 28 gl 196 s 13.323
+mando: 2.54 ep 0.89
+F(27,196) 2.862 p 1.49e-05
+m 378 t 1.972 Bonf 3.900 max-t 3.769 Scheffé 6.454
+pares: sem ajuste 70 Bonf 9 max-t 14 Scheffé 0 BH 24
+contraste máximo: |t| = sqrt(q F) = 8.790
+limiar BH: p <= 0.00317, |t| >= 2.987
+sob ausência de efeito: esperadas 18.9 falsas sem ajuste
+melhores: PHA SF DAL
+piores: CLE NO IND
+rating 1o - 2o 2.46; 1o - 28o 24.50
+1o -  2o: 2.46 ep 4.91 t 0.50
+1o -  5o: 3.41 ep 4.97 t 0.69
+1o - 10o: 5.65 ep 4.85 t 1.17
+1o - 14o: 7.34 ep 5.06 t 1.45
+ep mínimo 4.44 médio 4.84 máximo 5.07

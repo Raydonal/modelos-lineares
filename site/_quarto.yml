@@ -19,7 +19,7 @@ book:
     - part: "Distribuições"
       chapters: [cap09.qmd, cap10.qmd]
     - part: "O modelo linear"
-      chapters: [cap11.qmd, cap12.qmd, cap13.qmd]
+      chapters: [cap11.qmd, cap12.qmd, cap13.qmd, cap14.qmd]
     - part: "O livro"
       chapters: [participe.qmd, erratas.qmd]
 

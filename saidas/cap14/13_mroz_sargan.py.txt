@@ -1,0 +1,10 @@
+modelo 1
+primeiro estágio: F(2,425) 55.83
+MQ 0.1086 pai 0.0592 (0.0351) mãe 0.0385 (0.0382)
+ambos 0.0505 (0.0322)
+Sargan S 0.3558 gl 1 p 0.551
+modelo 2
+primeiro estágio: F(2,423) 55.40
+MQ 0.1075 pai 0.0702 (0.0344) mãe 0.0493 (0.0374)
+ambos 0.0614 (0.0314)
+Sargan S 0.3781 gl 1 p 0.539

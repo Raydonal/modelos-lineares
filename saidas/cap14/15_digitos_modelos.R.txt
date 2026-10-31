@@ -1,0 +1,29 @@
+candidatos 19; base lin30: val 0.8833 fim 0.8855
+knn3      val 0.9767 fim 0.9630
+knn5      val 0.9733 fim 0.9562
+knn7      val 0.9733 fim 0.9529
+knn9      val 0.9700 fim 0.9529
+knn1      val 0.9667 fim 0.9630
+cent      val 0.8833 fim 0.8788
+cent40    val 0.8833 fim 0.8788
+lin30     val 0.8833 fim 0.8855
+cent10    val 0.8800 fim 0.8721
+ridge10   val 0.8800 fim 0.8990
+ridge100  val 0.8800 fim 0.8990
+cent20    val 0.8767 fim 0.8754
+lin20     val 0.8733 fim 0.8956
+lin50     val 0.8733 fim 0.8822
+lin40     val 0.8700 fim 0.8923
+ridge0.01 val 0.8700 fim 0.8822
+ridge1    val 0.8700 fim 0.8822
+ridge0.1  val 0.8667 fim 0.8822
+ridge1000 val 0.8533 fim 0.8620
+lin10     val 0.8433 fim 0.8788
+t min -2.00 max 4.95; crítico max-t 2.667 (Bonf 3.008)
+achados: sem ajuste 6 Bonf 5 max-t 5 BH 5
+sem ajuste: lin10 knn1 knn3 knn5 knn7 knn9
+melhores que a base: Bonf 5 max-t 5 BH 5
+correlação média entre as diferenças: 0.48
+vencedor knn3: val 0.9767 fim 0.9630 (dif 0.0137)
+todos: dif média val - fim -0.0044
+máx. de 20 nulos independentes: +0.0211 (1.87 erros-padrão)

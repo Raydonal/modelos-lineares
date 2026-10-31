@@ -1,0 +1,15 @@
+SQ erro sub 7968.75 QM 177.08 gl 45
+interação: SQ 321.7 F(6,45) 0.303 p 0.932
+dose: SQ 20020.5 F(3,45) 37.69 p 2.5e-12
+interação ingênua: QM 254.2 F(6,55) 0.211 p 0.972
+reta: SQ lin 19536.4 falta 484.1 F(2,45) 1.367 p 0.265
+parábola: falta 3.6 F(1,45) 0.020 p 0.887
+termo quadrático: SQ 480.5 F(1,45) 2.713 p 0.106
+Tukey: SQRes 1503.3 D 175.0 F(1,9) 1.186 p 0.304
+variedade: F(2,10) 1.485 p 0.272 (QM parcelas 601.3)
+médias 79.39 98.89 114.22 123.39 ep 4.436
+mult.: t 2.014 Bonf 2.487 Dunn 2.431 Tukey 2.668 Sch 2.904
+0.2 - 0: 19.50 +- 10.78 (Dunnett)
+0.4 - 0: 34.83 +- 10.78 (Dunnett)
+0.6 - 0: 44.00 +- 10.78 (Dunnett)
+pares vizinhos 19.50 15.33 9.17, Tukey +- 11.83

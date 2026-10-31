@@ -1,0 +1,11 @@
+bilateral 0.0593 unilateral 0.0296
+mistura com F 0.0296 mistura com chi2 0.0228
+  a   n  P(RV=0)  t(chi2)  t(mist)      c95
+  6   3   0.6340   0.0149   0.0301      2.0
+ 10   4   0.6149   0.0145   0.0303      2.0
+ 30   3   0.5568   0.0190   0.0389      2.3
+200   3   0.5218   0.0224   0.0452      2.5
+RV obs 11.163 em phi = 29
+P(RV<0.01) 0.8347 c95 0.513 max 9.894 p sim 0.00005
+p chi2 0.00083 p mistura 0.00042
+correlação de vizinhos em média sob H0 -0.086 (obs. 0.236)

@@ -1,0 +1,7 @@
+Z'x 2.0 1.0  Z'y 1.0 1.0
+b 0.60  e 0.6 -0.4 0.2 -0.8
+e'PZe 0.20  e'e/n 0.30  S 0.6667 p 0.414
+identidade: 0.7033378718 0.7033378718
+efeito direto (0.0, 0.0): rejeita 0.057  média beta 0.999
+efeito direto (0.0, 0.3): rejeita 0.700  média beta 1.300
+efeito direto (0.3, 0.3): rejeita 0.053  média beta 1.599
