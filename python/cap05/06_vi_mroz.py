@@ -1,4 +1,4 @@
-"""Cap. 5 -- Variáveis instrumentais como projeção oblíqua (dados de Mroz)."""
+"""Cap. 5: Variáveis instrumentais como projeção oblíqua (dados de Mroz)."""
 from pathlib import Path
 
 import numpy as np

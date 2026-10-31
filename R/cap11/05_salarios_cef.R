@@ -1,4 +1,4 @@
-# Cap. 11 -- Salários: regressão e média condicional
+# Cap. 11: Salários: regressão e média condicional
 w <- read.csv(file.path("dados", "wage1.csv"))
 y <- log(w$wage); e <- w$educ; n <- length(y)
 nj <- table(e); ej <- as.numeric(names(nj))   # 18 caselas

@@ -1,4 +1,4 @@
-"""Cap. 3 -- Validação cruzada leave-one-out em forma fechada e mínimos quadrados recursivos."""
+"""Cap. 3: Validação cruzada leave-one-out em forma fechada e mínimos quadrados recursivos."""
 import time
 from pathlib import Path
 

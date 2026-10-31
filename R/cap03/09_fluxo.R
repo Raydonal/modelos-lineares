@@ -1,4 +1,4 @@
-# Cap. 3 -- Fluxo normalizante com uma camada de acoplamento afim (Jacobiano triangular)
+# Cap. 3: Fluxo normalizante com uma camada de acoplamento afim (Jacobiano triangular)
 # Gerador: z ~ N(0, I); x1 = z1; x2 = t(x1) + exp(s(x1)) z2
 s_fun <- function(x1) log(0.5) + 0.3 * x1
 t_fun <- function(x1) 0.5 * x1^2 - 1

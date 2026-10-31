@@ -1,4 +1,4 @@
-"""Cap. 13 -- Parcelas subdivididas: MQ = MQG, os erros-padrão não"""
+"""Cap. 13: Parcelas subdivididas: MQ = MQG, os erros-padrão não"""
 from pathlib import Path
 
 import numpy as np

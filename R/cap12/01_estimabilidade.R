@@ -1,4 +1,4 @@
-# Cap. 12 -- Funções estimáveis num fator com três níveis
+# Cap. 12: Funções estimáveis num fator com três níveis
 y <- c(5, 7, 10, 12, 9); grupo <- c(1, 1, 2, 2, 3)
 X <- cbind(1, outer(grupo, 1:3, "==") * 1)    # [1 D]: posto 3
 XtX <- crossprod(X); Xty <- crossprod(X, y)

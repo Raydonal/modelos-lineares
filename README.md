@@ -1,4 +1,4 @@
-# Modelos Lineares: Teoria, Geometria e Aplicações — código companheiro
+# Modelos Lineares: Teoria, Geometria e Aplicações: código companheiro
 
 Código em **R** e **Python** que reproduz todos os exemplos, saídas e figuras do livro
 *Modelos Lineares: Teoria, Geometria e Aplicações* (título provisório), de

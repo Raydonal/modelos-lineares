@@ -1,4 +1,4 @@
-# Cap. 7 -- Robustez adversarial de um classificador linear
+# Cap. 7: Robustez adversarial de um classificador linear
 dig <- read.csv(file.path("dados", "digitos.csv"))
 X <- cbind(1, as.matrix(dig[, -1]) / 16); y <- dig$digito
 tr <- 1:1000; te <- 1001:nrow(X)

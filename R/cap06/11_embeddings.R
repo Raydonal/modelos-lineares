@@ -1,4 +1,4 @@
-# Cap. 6 -- Embeddings de palavras pela SVD da matriz PPMI de coocorrências (romances de Jane Austen)
+# Cap. 6: Embeddings de palavras pela SVD da matriz PPMI de coocorrências (romances de Jane Austen)
 d <- read.csv(file.path("dados", "austen.csv"))
 p <- unlist(regmatches(tolower(d$texto), gregexpr("[a-z]+", tolower(d$texto))))
 length(p)                                              # palavras no corpus

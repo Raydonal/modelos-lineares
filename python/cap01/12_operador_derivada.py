@@ -1,4 +1,4 @@
-"""Cap. 1 -- Representação matricial do operador derivada em P_3 e mudança de base."""
+"""Cap. 1: Representação matricial do operador derivada em P_3 e mudança de base."""
 import numpy as np
 
 D = np.zeros((4, 4))

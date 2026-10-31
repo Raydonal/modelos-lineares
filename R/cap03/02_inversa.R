@@ -1,4 +1,4 @@
-# Cap. 3 -- Inversa por Gauss-Jordan, pela adjunta e regra de Cramer
+# Cap. 3: Inversa por Gauss-Jordan, pela adjunta e regra de Cramer
 gauss_jordan_inv <- function(A) {
   n <- nrow(A); M <- cbind(A, diag(n))          # [A | I]
   for (j in 1:n) {

@@ -1,4 +1,4 @@
-# Cap. 10 -- Deriva de embeddings detectada pelo T^2 de Hotelling
+# Cap. 10: Deriva de embeddings detectada pelo T^2 de Hotelling
 source(file.path("R", "comum", "gerador.R"))  # sorteios do Python
 source(file.path("R", "comum", "austen.R"))
 emb <- embeddings_austen(); E <- emb$E

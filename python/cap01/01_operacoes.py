@@ -1,4 +1,4 @@
-"""Cap. 1 -- Operações básicas com vetores e matrizes."""
+"""Cap. 1: Operações básicas com vetores e matrizes."""
 import numpy as np
 
 A = np.array([[2, 1],

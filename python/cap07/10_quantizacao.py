@@ -1,4 +1,4 @@
-"""Cap. 7 -- Quantização de embeddings: erro em normas e preservação de vizinhos."""
+"""Cap. 7: Quantização de embeddings: erro em normas e preservação de vizinhos."""
 import re
 from collections import Counter
 from pathlib import Path

@@ -1,4 +1,4 @@
-"""Cap. 5 -- Projeções oblíquas e ortogonais em R^3."""
+"""Cap. 5: Projeções oblíquas e ortogonais em R^3."""
 import numpy as np
 from scipy.linalg import null_space, qr
 

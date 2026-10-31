@@ -1,4 +1,4 @@
-"""Cap. 2 -- Conhecendo os dados de Longley"""
+"""Cap. 2: Conhecendo os dados de Longley"""
 import sys
 from pathlib import Path
 

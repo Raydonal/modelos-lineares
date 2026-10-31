@@ -1,4 +1,4 @@
-"""Cap. 11 -- Modelo multivariado: a forma vetorizada com Kronecker"""
+"""Cap. 11: Modelo multivariado: a forma vetorizada com Kronecker"""
 import sys
 from pathlib import Path
 

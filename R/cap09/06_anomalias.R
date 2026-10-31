@@ -1,4 +1,4 @@
-# Cap. 9 -- Anomalias pela distância de Mahalanobis (dígitos)
+# Cap. 9: Anomalias pela distância de Mahalanobis (dígitos)
 dig <- read.csv(file.path("dados", "digitos.csv"))
 X <- as.matrix(dig[, -1]) / 16; y <- dig$digito
 tr <- 1:1000; te <- 1001:nrow(X)

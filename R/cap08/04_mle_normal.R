@@ -1,4 +1,4 @@
-# Cap. 8 -- Máxima verossimilhança da normal multivariada pelo cálculo matricial (dados wage1)
+# Cap. 8: Máxima verossimilhança da normal multivariada pelo cálculo matricial (dados wage1)
 w <- read.csv(file.path("dados", "wage1.csv"))
 X <- cbind(lsal = log(w$wage), educ = w$educ, exper = w$exper, perm = w$tenure); n <- nrow(X); p <- ncol(X)
 loglik <- function(mu, Sigma) {

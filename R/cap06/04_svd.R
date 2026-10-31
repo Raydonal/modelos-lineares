@@ -1,4 +1,4 @@
-# Cap. 6 -- Decomposição em valores singulares, subespaços fundamentais e Eckart-Young
+# Cap. 6: Decomposição em valores singulares, subespaços fundamentais e Eckart-Young
 A <- matrix(c(1, 2, 0, 1,
               2, 4, 1, 1,
               3, 6, 1, 2), 3, byrow = TRUE)                # a matriz 3 x 4 de posto 2 do Cap. 4

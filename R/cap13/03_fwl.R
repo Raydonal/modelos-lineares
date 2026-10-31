@@ -1,4 +1,4 @@
-# Cap. 13 -- Frisch-Waugh-Lovell e o viés de variável omitida (wage1)
+# Cap. 13: Frisch-Waugh-Lovell e o viés de variável omitida (wage1)
 w <- read.csv(file.path("dados", "wage1.csv")); y <- log(w$wage)
 X1 <- cbind(1, exper = w$exper, tenure = w$tenure)  # controles
 x2 <- w$educ                                        # de interesse

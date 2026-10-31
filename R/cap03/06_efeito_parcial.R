@@ -1,4 +1,4 @@
-# Cap. 3 -- Coeficiente parcial pela inversa particionada (prévia de Frisch-Waugh-Lovell)
+# Cap. 3: Coeficiente parcial pela inversa particionada (prévia de Frisch-Waugh-Lovell)
 dados <- read.csv(file.path("dados", "wage1.csv"))
 y <- log(dados$wage)
 X1 <- cbind(1, exper = dados$exper)              # controles

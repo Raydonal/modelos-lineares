@@ -1,4 +1,4 @@
-"""Cap. 5 -- Figuras descritivas: Mroz, Seatbelts e mcycle (figuras/cap05/dados_*)."""
+"""Cap. 5: Figuras descritivas: Mroz, Seatbelts e mcycle (figuras/cap05/dados_*)."""
 import sys
 from pathlib import Path
 

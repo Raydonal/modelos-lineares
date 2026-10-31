@@ -1,4 +1,4 @@
-# Cap. 8 -- Minimização de funções quadráticas, com e sem restrições lineares
+# Cap. 8: Minimização de funções quadráticas, com e sem restrições lineares
 A <- matrix(c(2, -1, -1, -1, 2, -1, -1, -1, 2), 3)          # Laplaciano do triângulo: posto 2, A 1 = 0
 eigen(A, symmetric = TRUE)$values
 f <- function(x, b) 0.5 * drop(t(x) %*% A %*% x) - sum(b * x)

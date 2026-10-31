@@ -1,4 +1,4 @@
-# Cap. 11 -- Codificações de um fator: o que cada coeficiente mede
+# Cap. 11: Codificações de um fator: o que cada coeficiente mede
 a <- read.csv(file.path("dados", "yates_oats.csv"))
 dose <- factor(a$nitro)                       # 4 níveis: 0 a 0,6
 mu <- tapply(a$yield, dose, mean)             # médias das caselas

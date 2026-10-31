@@ -1,4 +1,4 @@
-# Cap. 5 -- Ajuste sazonal e regressão: o teorema de Lovell (dados Seatbelts)
+# Cap. 5: Ajuste sazonal e regressão: o teorema de Lovell (dados Seatbelts)
 s <- read.csv(file.path("dados", "seatbelts.csv")); n <- nrow(s)
 y <- log(s$motoristas)
 X <- cbind(km = log(s$km), preco = log(s$preco_gasolina), lei = s$lei)

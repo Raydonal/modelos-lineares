@@ -1,4 +1,4 @@
-# Cap. 13 -- Mínimos quadrados generalizados: três exemplos pequenos
+# Cap. 13: Mínimos quadrados generalizados: três exemplos pequenos
 # (a) Média comum de duas medidas com variâncias 1 e 4
 X <- matrix(1, 2, 1); V <- diag(c(1, 4)); Vi <- solve(V)
 w <- drop(solve(t(X) %*% Vi %*% X, t(X) %*% Vi))  # pesos de MQG

@@ -1,4 +1,4 @@
-# Cap. 7 -- Normas matriciais: fórmulas das normas induzidas, Frobenius e raio espectral
+# Cap. 7: Normas matriciais: fórmulas das normas induzidas, Frobenius e raio espectral
 A <- matrix(c(1, -2, 3,
               0, 4, -1,
               2, 1, 1), 3, byrow = TRUE)

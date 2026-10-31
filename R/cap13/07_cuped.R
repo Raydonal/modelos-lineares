@@ -1,4 +1,4 @@
-# Cap. 13 -- Ajuste por covariável em testes A/B (CUPED) e FWL
+# Cap. 13: Ajuste por covariável em testes A/B (CUPED) e FWL
 source(file.path("R", "comum", "gerador.R"))
 um <- function(g, n) {                   # um experimento simulado
   x <- g$normal(n)                            # métrica pré-teste

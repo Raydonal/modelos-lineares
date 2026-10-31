@@ -1,4 +1,4 @@
-"""Cap. 4 -- Ratings de Massey na NFL: o que é estimável num campeonato."""
+"""Cap. 4: Ratings de Massey na NFL: o que é estimável num campeonato."""
 from pathlib import Path
 
 import numpy as np

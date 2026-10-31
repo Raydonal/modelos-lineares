@@ -1,4 +1,4 @@
-"""Cap. 2 -- Fatoração QR por reflexões de Householder."""
+"""Cap. 2: Fatoração QR por reflexões de Householder."""
 import numpy as np
 
 

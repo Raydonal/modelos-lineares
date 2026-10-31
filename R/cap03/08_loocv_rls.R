@@ -1,4 +1,4 @@
-# Cap. 3 -- Validação cruzada leave-one-out em forma fechada e mínimos quadrados recursivos
+# Cap. 3: Validação cruzada leave-one-out em forma fechada e mínimos quadrados recursivos
 db <- read.csv(file.path("dados", "diabetes.csv"))
 X <- cbind(1, as.matrix(db[, 1:10])); y <- db$y
 n <- nrow(X); p <- ncol(X)

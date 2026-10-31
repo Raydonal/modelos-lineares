@@ -1,4 +1,4 @@
-# Cap. 11 -- Sazonalidade: indicadoras de mês ou harmônicos de Fourier
+# Cap. 11: Sazonalidade: indicadoras de mês ou harmônicos de Fourier
 s <- read.csv(file.path("dados", "seatbelts.csv"))
 y <- log(s$motoristas); n <- length(y); t <- 1:n
 D <- outer(s$mes, 1:12, "==") * 1             # 12 indicadoras

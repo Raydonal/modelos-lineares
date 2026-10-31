@@ -1,4 +1,4 @@
-# Cap. 4 -- Ratings de Massey na NFL: o que é estimável num campeonato
+# Cap. 4: Ratings de Massey na NFL: o que é estimável num campeonato
 nfl <- read.csv(file.path("dados", "nfl.csv"))
 s <- subset(nfl, ano == 1981)
 times <- sort(unique(c(s$mandante, s$visitante)))         # 28 times

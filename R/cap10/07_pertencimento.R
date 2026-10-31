@@ -1,4 +1,4 @@
-# Cap. 10 -- Ataques de pertencimento contra o mecanismo gaussiano
+# Cap. 10: Ataques de pertencimento contra o mecanismo gaussiano
 source(file.path("R", "comum", "gerador.R"))  # sorteios do Python
 db <- read.csv(file.path("dados", "diabetes.csv"))
 X <- as.matrix(db[, 1:10]); p <- ncol(X)

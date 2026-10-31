@@ -1,4 +1,4 @@
-# Cap. 10 -- Wishart, complemento de Schur e o T^2 de Hotelling
+# Cap. 10: Wishart, complemento de Schur e o T^2 de Hotelling
 source(file.path("R", "comum", "gerador.R"))  # sorteios do Python
 p <- 3; n <- 12; R <- 20000
 mu <- c(1, 2, 0)

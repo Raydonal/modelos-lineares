@@ -1,4 +1,4 @@
-"""Cap. 12 -- Regressão federada: regiões sem juntar os dados"""
+"""Cap. 12: Regressão federada: regiões sem juntar os dados"""
 from pathlib import Path
 
 import numpy as np

@@ -1,4 +1,4 @@
-"""Cap. 9 -- Carteira de variância mínima e valor em risco."""
+"""Cap. 9: Carteira de variância mínima e valor em risco."""
 from pathlib import Path
 
 import numpy as np

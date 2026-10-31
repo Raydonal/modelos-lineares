@@ -1,4 +1,4 @@
-# Cap. 10 -- Cochran na análise de variância com um fator
+# Cap. 10: Cochran na análise de variância com um fator
 source(file.path("R", "comum", "gerador.R"))  # sorteios do Python
 a <- 3; r <- 5; n <- a * r; sigma <- 2
 grupo <- rep(1:a, each = r)

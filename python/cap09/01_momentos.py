@@ -1,4 +1,4 @@
-"""Cap. 9 -- Momentos: Var(Ax), viés de A/n e E(x'Ax)."""
+"""Cap. 9: Momentos: Var(Ax), viés de A/n e E(x'Ax)."""
 import sys
 from pathlib import Path
 

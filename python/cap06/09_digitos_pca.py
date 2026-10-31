@@ -1,4 +1,4 @@
-"""Cap. 6 -- Componentes principais dos dígitos manuscritos e o teorema de Eckart-Young."""
+"""Cap. 6: Componentes principais dos dígitos manuscritos e o teorema de Eckart-Young."""
 from pathlib import Path
 
 import numpy as np

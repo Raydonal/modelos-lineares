@@ -1,4 +1,4 @@
-# Cap. 13 -- Mínimos quadrados restritos: retornos constantes
+# Cap. 13: Mínimos quadrados restritos: retornos constantes
 source(file.path("R", "comum", "gerador.R")); g <- gerador(1928)
 n <- 30                                       # 30 firmas simuladas
 lK <- 2 + g$normal(n); lL <- 3 + 0.8 * lK + 0.6 * g$normal(n)

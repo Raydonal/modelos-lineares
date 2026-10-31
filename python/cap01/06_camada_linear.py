@@ -1,4 +1,4 @@
-"""Cap. 1 -- Camadas lineares: composição de funções afins é afim."""
+"""Cap. 1: Camadas lineares: composição de funções afins é afim."""
 import numpy as np
 
 rng = np.random.default_rng(1)

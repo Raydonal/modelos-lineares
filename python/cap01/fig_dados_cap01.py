@@ -1,4 +1,4 @@
-"""Cap. 1 -- Figuras descritivas dos conjuntos de dados (figuras/cap01/dados_*)."""
+"""Cap. 1: Figuras descritivas dos conjuntos de dados (figuras/cap01/dados_*)."""
 import re
 import sys
 from collections import Counter

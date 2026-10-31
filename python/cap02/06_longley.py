@@ -1,4 +1,4 @@
-"""Cap. 2 -- Mínimos quadrados nos dados de Longley: equações normais versus QR."""
+"""Cap. 2: Mínimos quadrados nos dados de Longley: equações normais versus QR."""
 from pathlib import Path
 
 import numpy as np

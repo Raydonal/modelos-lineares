@@ -1,4 +1,4 @@
-"""Cap. 9 -- Melhor preditor linear e correlações parciais."""
+"""Cap. 9: Melhor preditor linear e correlações parciais."""
 from pathlib import Path
 
 import numpy as np

@@ -1,4 +1,4 @@
-"""Cap. 1 -- Conhecendo o experimento de aveia"""
+"""Cap. 1: Conhecendo o experimento de aveia"""
 import sys
 from pathlib import Path
 

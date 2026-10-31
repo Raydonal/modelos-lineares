@@ -1,4 +1,4 @@
-"""Cap. 6 -- Gradiente descendente: taxa de aprendizado, autovalores da hessiana e padronização."""
+"""Cap. 6: Gradiente descendente: taxa de aprendizado, autovalores da hessiana e padronização."""
 from pathlib import Path
 
 import numpy as np

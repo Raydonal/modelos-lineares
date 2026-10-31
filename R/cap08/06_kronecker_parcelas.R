@@ -1,4 +1,4 @@
-# Cap. 8 -- Parcelas subdivididas no experimento de aveia: a covariância como produto de Kronecker
+# Cap. 8: Parcelas subdivididas no experimento de aveia: a covariância como produto de Kronecker
 a <- read.csv(file.path("dados", "yates_oats.csv"))
 a <- a[order(a$block, a$gen, a$nitro), ]                   # 18 parcelas (bloco x variedade), 4 subparcelas cada
 y <- a$yield; n <- length(y)

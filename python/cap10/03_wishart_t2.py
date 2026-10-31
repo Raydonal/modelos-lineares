@@ -1,4 +1,4 @@
-"""Cap. 10 -- Wishart, complemento de Schur e o T^2 de Hotelling."""
+"""Cap. 10: Wishart, complemento de Schur e o T^2 de Hotelling."""
 import sys
 from pathlib import Path
 

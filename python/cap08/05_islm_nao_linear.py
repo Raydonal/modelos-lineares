@@ -1,4 +1,4 @@
-"""Cap. 8 -- IS-LM não linear: estática comparativa pelo teorema da função implícita."""
+"""Cap. 8: IS-LM não linear: estática comparativa pelo teorema da função implícita."""
 import numpy as np
 
 c0, c1, T = 100, 0.75, 200

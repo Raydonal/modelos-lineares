@@ -1,4 +1,4 @@
-# Cap. 9 -- Melhor preditor linear, precisão e correlações parciais
+# Cap. 9: Melhor preditor linear, precisão e correlações parciais
 w <- read.csv(file.path("dados", "wage1.csv"))
 D <- data.frame(lsal = log(w$wage), educ = w$educ, exper = w$exper,
                 perman = w$tenure)

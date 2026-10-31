@@ -1,4 +1,4 @@
-"""Cap. 9 -- Imputação pela distribuição condicional."""
+"""Cap. 9: Imputação pela distribuição condicional."""
 import sys
 from pathlib import Path
 

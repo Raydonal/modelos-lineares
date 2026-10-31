@@ -1,4 +1,4 @@
-# Cap. 6 -- Raio espectral, série de Neumann e matrizes estocásticas positivas
+# Cap. 6: Raio espectral, série de Neumann e matrizes estocásticas positivas
 raio <- function(M) max(Mod(eigen(M)$values))
 # Uma matriz com raio espectral < 1 mas norma "grande": A^k -> 0 depois de crescer
 A <- matrix(c(0.5, 4, 0, 0.6), 2, byrow = TRUE)

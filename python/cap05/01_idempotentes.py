@@ -1,4 +1,4 @@
-"""Cap. 5 -- Matrizes idempotentes: posto = traço, identidade de posto, potências."""
+"""Cap. 5: Matrizes idempotentes: posto = traço, identidade de posto, potências."""
 import numpy as np
 
 posto = lambda M: np.linalg.matrix_rank(M, tol=1e-10)

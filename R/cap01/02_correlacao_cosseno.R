@@ -1,4 +1,4 @@
-# Cap. 1 -- Correlação amostral como cosseno entre vetores centrados
+# Cap. 1: Correlação amostral como cosseno entre vetores centrados
 dados <- read.csv(file.path("dados", "wage1.csv"))
 y <- log(dados$wage)                   # log do salário-hora
 x <- dados$educ                        # anos de escolaridade

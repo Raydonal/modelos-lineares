@@ -1,4 +1,4 @@
-# Cap. 7 -- Número de condição: sistemas lineares e mínimos quadrados
+# Cap. 7: Número de condição: sistemas lineares e mínimos quadrados
 kappa2 <- function(M) { s <- svd(M)$d; max(s) / min(s) }
 H <- outer(1:8, 1:8, function(i, j) 1 / (i + j - 1))      # matriz de Hilbert 8 x 8
 x <- rep(1, 8); b <- H %*% x

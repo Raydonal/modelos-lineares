@@ -1,4 +1,4 @@
-"""Cap. 3 -- Figura descritiva dos dados de diabetes (figuras/cap03/dados_diabetes)."""
+"""Cap. 3: Figura descritiva dos dados de diabetes (figuras/cap03/dados_diabetes)."""
 import sys
 from pathlib import Path
 

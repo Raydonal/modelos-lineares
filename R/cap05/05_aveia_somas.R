@@ -1,4 +1,4 @@
-# Cap. 5 -- Somas de quadrados como projeções no experimento de aveia
+# Cap. 5: Somas de quadrados como projeções no experimento de aveia
 aveia <- read.csv(file.path("dados", "yates_oats.csv"))
 proj <- function(X) { q <- qr(X); Q <- qr.Q(q)[, seq_len(q$rank), drop = FALSE]; Q %*% t(Q) }
 ind  <- function(f) model.matrix(~ factor(f) - 1)

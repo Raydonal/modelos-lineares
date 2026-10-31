@@ -1,4 +1,4 @@
-"""Cap. 4 -- O gradiente descendente converge para a solução de norma mínima."""
+"""Cap. 4: O gradiente descendente converge para a solução de norma mínima."""
 import numpy as np
 
 rng = np.random.default_rng(7)

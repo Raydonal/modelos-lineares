@@ -1,4 +1,4 @@
-"""Cap. 4 -- Figuras de dados do capítulo (geradas em figuras/cap04/)."""
+"""Cap. 4: Figuras de dados do capítulo (geradas em figuras/cap04/)."""
 import sys
 from pathlib import Path
 

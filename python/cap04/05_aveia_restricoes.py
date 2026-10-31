@@ -1,4 +1,4 @@
-"""Cap. 4 -- Restrições de identificação no experimento de aveia e inversas generalizadas."""
+"""Cap. 4: Restrições de identificação no experimento de aveia e inversas generalizadas."""
 from pathlib import Path
 
 import numpy as np

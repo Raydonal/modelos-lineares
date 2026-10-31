@@ -1,4 +1,4 @@
-"""Cap. 13 -- Erros AR(1) na regressão de acidentes (Seatbelts)"""
+"""Cap. 13: Erros AR(1) na regressão de acidentes (Seatbelts)"""
 from pathlib import Path
 
 import numpy as np

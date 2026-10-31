@@ -1,4 +1,4 @@
-# Cap. 9 -- Carteira de variância mínima e valor em risco
+# Cap. 9: Carteira de variância mínima e valor em risco
 eu <- read.csv(file.path("dados", "eustock.csv"))
 r <- 100 * diff(log(as.matrix(eu[, -1])))   # retornos diários em %
 n <- nrow(r); um <- rep(1, 4)

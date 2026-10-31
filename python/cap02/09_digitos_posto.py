@@ -1,4 +1,4 @@
-"""Cap. 2 -- Posto exato e posto numérico da matriz de imagens de dígitos."""
+"""Cap. 2: Posto exato e posto numérico da matriz de imagens de dígitos."""
 from pathlib import Path
 
 import numpy as np

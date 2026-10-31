@@ -1,4 +1,4 @@
-# Cap. 6 -- Interação genótipo x ambiente pela SVD: o modelo AMMI (trigo de inverno, Ontário, 1993)
+# Cap. 6: Interação genótipo x ambiente pela SVD: o modelo AMMI (trigo de inverno, Ontário, 1993)
 w <- read.csv(file.path("dados", "yan_trigo.csv"))
 Y <- with(w, tapply(producao, list(genotipo, ambiente), mean))   # 18 genótipos x 9 ambientes
 dim(Y)

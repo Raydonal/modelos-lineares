@@ -1,4 +1,4 @@
-"""Cap. 13 -- Mínimos quadrados restritos: retornos constantes"""
+"""Cap. 13: Mínimos quadrados restritos: retornos constantes"""
 import sys
 from pathlib import Path
 

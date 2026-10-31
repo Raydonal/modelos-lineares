@@ -1,4 +1,4 @@
-# Cap. 6 -- Gradiente descendente: taxa de aprendizado, autovalores da hessiana e padronização
+# Cap. 6: Gradiente descendente: taxa de aprendizado, autovalores da hessiana e padronização
 db <- read.csv(file.path("dados", "diabetes.csv"))
 y <- db$y; n <- length(y)
 X_bruto <- cbind(1, as.matrix(db[, 1:10]))

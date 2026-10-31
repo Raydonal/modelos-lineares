@@ -1,4 +1,4 @@
-"""Cap. 9 -- Conhecendo os índices europeus: retornos diários"""
+"""Cap. 9: Conhecendo os índices europeus: retornos diários"""
 import sys
 from pathlib import Path
 

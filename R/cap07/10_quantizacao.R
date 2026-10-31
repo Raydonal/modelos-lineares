@@ -1,4 +1,4 @@
-# Cap. 7 -- Quantização de embeddings: erro em normas e preservação de vizinhos
+# Cap. 7: Quantização de embeddings: erro em normas e preservação de vizinhos
 d <- read.csv(file.path("dados", "austen.csv"))
 p <- unlist(regmatches(tolower(d$texto), gregexpr("[a-z]+", tolower(d$texto))))
 fr <- table(p); fr <- fr[order(-fr, names(fr), method = "radix")]

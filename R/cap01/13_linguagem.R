@@ -1,4 +1,4 @@
-# Cap. 1 -- Modelos de linguagem pela álgebra linear: tokens (BPE), embeddings e busca por similaridade
+# Cap. 1: Modelos de linguagem pela álgebra linear: tokens (BPE), embeddings e busca por similaridade
 d <- read.csv(file.path("dados", "austen.csv"))
 palavras <- function(txt) unlist(regmatches(tolower(txt), gregexpr("[a-z]+", tolower(txt))))
 

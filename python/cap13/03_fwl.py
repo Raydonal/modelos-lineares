@@ -1,4 +1,4 @@
-"""Cap. 13 -- Frisch-Waugh-Lovell e o viés de variável omitida"""
+"""Cap. 13: Frisch-Waugh-Lovell e o viés de variável omitida"""
 from pathlib import Path
 
 import numpy as np

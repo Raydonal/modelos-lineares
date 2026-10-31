@@ -1,4 +1,4 @@
-# Cap. 1 -- Processo de Gram-Schmidt (versão clássica)
+# Cap. 1: Processo de Gram-Schmidt (versão clássica)
 gram_schmidt <- function(X) {
   Q <- matrix(0, nrow(X), ncol(X))
   for (j in seq_len(ncol(X))) {

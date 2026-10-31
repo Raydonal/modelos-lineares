@@ -1,4 +1,4 @@
-"""Cap. 3 -- Conhecendo os dados de diabetes"""
+"""Cap. 3: Conhecendo os dados de diabetes"""
 import sys
 from pathlib import Path
 

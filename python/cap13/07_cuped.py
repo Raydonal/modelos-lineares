@@ -1,4 +1,4 @@
-"""Cap. 13 -- Ajuste por covariável em testes A/B (CUPED) e FWL"""
+"""Cap. 13: Ajuste por covariável em testes A/B (CUPED) e FWL"""
 import sys
 from pathlib import Path
 

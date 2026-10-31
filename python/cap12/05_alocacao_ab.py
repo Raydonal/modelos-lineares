@@ -1,4 +1,4 @@
-"""Cap. 12 -- Teste A/B/n: quantas unidades dar ao controle?"""
+"""Cap. 12: Teste A/B/n: quantas unidades dar ao controle?"""
 import sys
 from pathlib import Path
 

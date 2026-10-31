@@ -1,4 +1,4 @@
-"""Cap. 12 -- Funções estimáveis num fator com três níveis"""
+"""Cap. 12: Funções estimáveis num fator com três níveis"""
 import numpy as np
 
 y = np.array([5, 7, 10, 12, 9.]); grupo = np.array([1, 1, 2, 2, 3])

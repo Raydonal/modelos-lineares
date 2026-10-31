@@ -1,4 +1,4 @@
-# Cap. 2 -- Adaptação de posto baixo (LoRA): fatoração de posto e contagem de parâmetros
+# Cap. 2: Adaptação de posto baixo (LoRA): fatoração de posto e contagem de parâmetros
 set.seed(7)
 d <- 64; r <- 4
 W0 <- matrix(rnorm(d * d), d, d)              # pesos "pré-treinados" (posto completo)

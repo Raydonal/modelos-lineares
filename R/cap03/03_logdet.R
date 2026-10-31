@@ -1,4 +1,4 @@
-# Cap. 3 -- Determinantes grandes: LU, log-determinante e estouro numérico
+# Cap. 3: Determinantes grandes: LU, log-determinante e estouro numérico
 set.seed(1)
 n <- 1200
 A <- diag(n) * 0.5 + matrix(rnorm(n * n, sd = 0.01), n)  # det ~ 0.5^1200

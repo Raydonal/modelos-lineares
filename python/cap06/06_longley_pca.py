@@ -1,4 +1,4 @@
-"""Cap. 6 -- Componentes principais e quase colinearidade nos dados de Longley."""
+"""Cap. 6: Componentes principais e quase colinearidade nos dados de Longley."""
 from pathlib import Path
 
 import numpy as np

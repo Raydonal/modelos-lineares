@@ -1,4 +1,4 @@
-# Cap. 4 -- Existência e não unicidade de inversas generalizadas
+# Cap. 4: Existência e não unicidade de inversas generalizadas
 A <- matrix(c(1, 2, 0,  1,
               2, 4, 1,  1,
               3, 6, 1,  2), 3, byrow = TRUE)    # 3 x 4, posto 2

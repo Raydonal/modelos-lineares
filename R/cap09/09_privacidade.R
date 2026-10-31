@@ -1,4 +1,4 @@
-# Cap. 9 -- Privacidade diferencial: o mecanismo gaussiano
+# Cap. 9: Privacidade diferencial: o mecanismo gaussiano
 source(file.path("R", "comum", "gerador.R"))  # sorteios do Python
 db <- read.csv(file.path("dados", "diabetes.csv"))
 X <- as.matrix(db[, 1:10]); n <- nrow(X); p <- ncol(X)

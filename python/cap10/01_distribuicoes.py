@@ -1,4 +1,4 @@
-"""Cap. 10 -- Qui-quadrado não central, mistura de Poisson e a F."""
+"""Cap. 10: Qui-quadrado não central, mistura de Poisson e a F."""
 import sys
 from pathlib import Path
 

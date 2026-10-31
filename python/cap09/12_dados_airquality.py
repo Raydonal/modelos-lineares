@@ -1,4 +1,4 @@
-"""Cap. 9 -- Conhecendo os dados airquality"""
+"""Cap. 9: Conhecendo os dados airquality"""
 import sys
 from pathlib import Path
 

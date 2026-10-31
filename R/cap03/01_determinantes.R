@@ -1,4 +1,4 @@
-# Cap. 3 -- Determinante pela fórmula de Leibniz e suas propriedades
+# Cap. 3: Determinante pela fórmula de Leibniz e suas propriedades
 permutacoes <- function(n) {                   # todas as permutações de 1..n
   if (n == 1) return(matrix(1, 1, 1))
   P <- permutacoes(n - 1)

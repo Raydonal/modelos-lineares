@@ -1,4 +1,4 @@
-"""Cap. 6 -- Decomposição em valores singulares, subespaços fundamentais e Eckart-Young."""
+"""Cap. 6: Decomposição em valores singulares, subespaços fundamentais e Eckart-Young."""
 import sys
 from pathlib import Path
 

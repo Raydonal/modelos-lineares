@@ -1,4 +1,4 @@
-"""Cap. 11 -- Interações como produtos de Kronecker linha a linha"""
+"""Cap. 11: Interações como produtos de Kronecker linha a linha"""
 from pathlib import Path
 
 import numpy as np

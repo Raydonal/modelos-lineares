@@ -1,4 +1,4 @@
-"""Cap. 7 -- Pseudo-inversa, tolerância e filtros espectrais num classificador de dígitos."""
+"""Cap. 7: Pseudo-inversa, tolerância e filtros espectrais num classificador de dígitos."""
 from pathlib import Path
 
 import numpy as np

@@ -1,4 +1,4 @@
-# Cap. 1 -- Conhecendo os dados wage1: estatísticas descritivas
+# Cap. 1: Conhecendo os dados wage1: estatísticas descritivas
 source(file.path("R", "comum", "descritiva.R"))
 w <- read.csv(file.path("dados", "wage1.csv"))
 w$lwage <- log(w$wage)                  # log do salário-hora

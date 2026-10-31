@@ -1,4 +1,4 @@
-"""Cap. 13 -- Mínimos quadrados generalizados: três exemplos"""
+"""Cap. 13: Mínimos quadrados generalizados: três exemplos"""
 import sys
 from pathlib import Path
 

@@ -1,4 +1,4 @@
-"""Cap. 8 -- Máxima verossimilhança da normal multivariada pelo cálculo matricial (dados wage1)."""
+"""Cap. 8: Máxima verossimilhança da normal multivariada pelo cálculo matricial (dados wage1)."""
 from pathlib import Path
 
 import numpy as np

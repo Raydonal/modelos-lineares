@@ -1,4 +1,4 @@
-# Cap. 5 -- Conhecendo os dados mcycle: estatísticas descritivas
+# Cap. 5: Conhecendo os dados mcycle: estatísticas descritivas
 source(file.path("R", "comum", "descritiva.R"))
 d <- read.csv(file.path("dados", "mcycle.csv"))
 resumo(d)

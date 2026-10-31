@@ -1,4 +1,4 @@
-# Cap. 8 -- Produto de Kronecker, vec e vech
+# Cap. 8: Produto de Kronecker, vec e vech
 source(file.path("R", "comum", "gerador.R")); g <- gerador(81)
 A <- matriz_normal(g, 2, 3); B <- matriz_normal(g, 4, 2); C <- matriz_normal(g, 3, 5); D <- matriz_normal(g, 2, 3)
 c(produto_misto = max(abs(kronecker(A, B) %*% kronecker(C, D) - kronecker(A %*% C, B %*% D))),

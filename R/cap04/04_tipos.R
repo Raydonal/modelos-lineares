@@ -1,4 +1,4 @@
-# Cap. 4 -- Inversas reflexivas, de mínimos quadrados, de norma mínima e de Moore-Penrose
+# Cap. 4: Inversas reflexivas, de mínimos quadrados, de norma mínima e de Moore-Penrose
 A <- matrix(c(1, 2, 0, 1,  2, 4, 1, 1,  3, 6, 1, 2), 3, byrow = TRUE)   # posto 2
 ginv_sub <- function(M, i, j) {                 # inversa generalizada por submatriz
   G <- matrix(0, ncol(M), nrow(M)); G[j, i] <- solve(M[i, j]); G

@@ -1,4 +1,4 @@
-# Cap. 7 -- Perturbação de autovalores e valores singulares; Eckart-Young na norma espectral
+# Cap. 7: Perturbação de autovalores e valores singulares; Eckart-Young na norma espectral
 source(file.path("R", "comum", "gerador.R")); g <- gerador(74)
 S <- matriz_normal(g, 6, 6); A <- S + t(S)                # simétrica
 E <- matriz_normal(g, 6, 6); E <- 1e-3 * (E + t(E))       # perturbação simétrica

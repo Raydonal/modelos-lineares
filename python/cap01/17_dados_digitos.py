@@ -1,4 +1,4 @@
-"""Cap. 1 -- Conhecendo os dígitos manuscritos"""
+"""Cap. 1: Conhecendo os dígitos manuscritos"""
 from pathlib import Path
 
 import numpy as np

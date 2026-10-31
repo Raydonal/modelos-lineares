@@ -1,4 +1,4 @@
-"""Cap. 1 -- Correlação amostral como cosseno entre vetores centrados."""
+"""Cap. 1: Correlação amostral como cosseno entre vetores centrados."""
 from pathlib import Path
 
 import numpy as np

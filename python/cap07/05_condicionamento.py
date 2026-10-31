@@ -1,4 +1,4 @@
-"""Cap. 7 -- Número de condição: sistemas lineares e mínimos quadrados."""
+"""Cap. 7: Número de condição: sistemas lineares e mínimos quadrados."""
 import sys
 from pathlib import Path
 

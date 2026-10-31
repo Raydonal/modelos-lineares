@@ -1,4 +1,4 @@
-# Cap. 4 -- Conhecendo a temporada de 1981 da NFL
+# Cap. 4: Conhecendo a temporada de 1981 da NFL
 source(file.path("R", "comum", "descritiva.R"))
 j <- read.csv(file.path("dados", "nfl.csv")); j <- j[j$ano == 1981, ]
 j$margem <- j$pontos_mandante - j$pontos_visitante

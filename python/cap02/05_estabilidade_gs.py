@@ -1,4 +1,4 @@
-"""Cap. 2 -- Perda de ortogonalidade: Gram-Schmidt clássico, modificado e Householder."""
+"""Cap. 2: Perda de ortogonalidade: Gram-Schmidt clássico, modificado e Householder."""
 import numpy as np
 
 

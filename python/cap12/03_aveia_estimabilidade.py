@@ -1,4 +1,4 @@
-"""Cap. 12 -- Aveia sem a casela Victory/0,6: o que é estimável"""
+"""Cap. 12: Aveia sem a casela Victory/0,6: o que é estimável"""
 from pathlib import Path
 
 import numpy as np

@@ -1,4 +1,4 @@
-"""Cap. 3 -- Determinantes grandes: LU, log-determinante e estouro numérico."""
+"""Cap. 3: Determinantes grandes: LU, log-determinante e estouro numérico."""
 import numpy as np
 import scipy.linalg as sla
 

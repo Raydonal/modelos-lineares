@@ -1,4 +1,4 @@
-"""Cap. 7 -- Perturbação de autovalores e valores singulares; Eckart-Young na norma espectral."""
+"""Cap. 7: Perturbação de autovalores e valores singulares; Eckart-Young na norma espectral."""
 import sys
 from pathlib import Path
 

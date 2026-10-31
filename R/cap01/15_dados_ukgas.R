@@ -1,4 +1,4 @@
-# Cap. 1 -- Conhecendo os dados UKgas: estatísticas descritivas
+# Cap. 1: Conhecendo os dados UKgas: estatísticas descritivas
 source(file.path("R", "comum", "descritiva.R"))
 g <- read.csv(file.path("dados", "ukgas.csv"))
 g$log_cons <- log(g$consumo)

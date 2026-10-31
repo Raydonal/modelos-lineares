@@ -1,4 +1,4 @@
-# Cap. 2 -- Perda de ortogonalidade: Gram-Schmidt clássico, modificado e Householder
+# Cap. 2: Perda de ortogonalidade: Gram-Schmidt clássico, modificado e Householder
 gs_classico <- function(X) {
   Q <- X
   for (j in seq_len(ncol(X))) {

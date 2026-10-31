@@ -1,4 +1,4 @@
-# Cap. 4 -- Equações normais de um modelo superparametrizado: o que muda e o que não muda
+# Cap. 4: Equações normais de um modelo superparametrizado: o que muda e o que não muda
 grupo <- factor(c(1, 1, 2, 2, 2, 3, 3))
 y <- c(12, 14, 18, 17, 19, 10, 11)
 X <- cbind(1, model.matrix(~ grupo - 1))          # mu, alfa1, alfa2, alfa3 (posto 3)

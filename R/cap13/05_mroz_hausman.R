@@ -1,4 +1,4 @@
-# Cap. 13 -- MQ2E como MQG e o teste de Hausman (dados de Mroz)
+# Cap. 13: MQ2E como MQG e o teste de Hausman (dados de Mroz)
 m <- read.csv(file.path("dados", "mroz.csv"))
 y <- m$lwage; n <- length(y); X <- cbind(1, educ = m$educ)
 Zs <- list(pai = cbind(1, m$fatheduc),

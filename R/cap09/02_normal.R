@@ -1,4 +1,4 @@
-# Cap. 9 -- Normal multivariada: densidade, condicionais, singular
+# Cap. 9: Normal multivariada: densidade, condicionais, singular
 source(file.path("R", "comum", "gerador.R"))  # sorteios do Python
 mu <- c(1, 2, 0)
 Sigma <- matrix(c(4, 2, 1, 2, 3, -1, 1, -1, 2), 3)

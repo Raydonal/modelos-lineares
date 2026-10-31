@@ -10,7 +10,7 @@ from pathlib import Path
 
 RAIZ = Path(__file__).resolve().parents[1]
 LIVRO = RAIZ.parent / "livro"
-NUM = re.compile(r"\d+(?:\{?,\}?\d+)?(?:[eE][-+]?\d+)?")
+NUM = re.compile(r"\d+(?:(?:\{,\}|[.,])\d+)?(?:[eE][-+]?\d+)?")
 
 
 def normal(texto):
@@ -29,7 +29,9 @@ def principal(cap, rev):
     velhas = [l[1:] for l in alterados.splitlines()
               if l.startswith("-") and not l.startswith("---")]
     conhecido |= normal("\n".join(velhas))
-    suspeitos = sorted(normal("\n".join(novas)) - conhecido)
+    # o texto pode arredondar: 832.13 vale se a saída traz 832.1341
+    suspeitos = sorted(n for n in normal("\n".join(novas)) - conhecido
+                       if not any(c.startswith(n) for c in conhecido))
     # inteiros pequenos são quase sempre rótulos, contagens ou expoentes
     suspeitos = [n for n in suspeitos if "." in n or len(n) > 2]
     print(cap, "números sem origem:", suspeitos or "nenhum")

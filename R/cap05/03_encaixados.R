@@ -1,4 +1,4 @@
-# Cap. 5 -- Subespaços encaixados, somas de quadrados e restrições (dados wage1)
+# Cap. 5: Subespaços encaixados, somas de quadrados e restrições (dados wage1)
 w  <- read.csv(file.path("dados", "wage1.csv"))
 y  <- log(w$wage); n <- length(y)
 proj <- function(X) X %*% solve(crossprod(X), t(X))   # posto coluna completo

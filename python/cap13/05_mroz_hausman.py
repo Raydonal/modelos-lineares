@@ -1,4 +1,4 @@
-"""Cap. 13 -- MQ2E como MQG e o teste de Hausman (dados de Mroz)"""
+"""Cap. 13: MQ2E como MQG e o teste de Hausman (dados de Mroz)"""
 from pathlib import Path
 
 import numpy as np

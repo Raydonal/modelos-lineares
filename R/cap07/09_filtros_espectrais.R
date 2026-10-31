@@ -1,4 +1,4 @@
-# Cap. 7 -- Pseudo-inversa, tolerância e filtros espectrais num classificador de dígitos
+# Cap. 7: Pseudo-inversa, tolerância e filtros espectrais num classificador de dígitos
 dig <- read.csv(file.path("dados", "digitos.csv"))
 X <- cbind(1, as.matrix(dig[, -1]) / 16); y <- dig$digito  # pixels em [0, 1] e intercepto
 tr <- 1:1000; te <- 1001:nrow(X)

@@ -1,4 +1,4 @@
-# Cap. 9 -- Conhecendo os dados airquality: faltantes e associações
+# Cap. 9: Conhecendo os dados airquality: faltantes e associações
 source(file.path("R", "comum", "descritiva.R"))
 a <- read.csv(file.path("dados", "airquality.csv"))
 v <- c("Ozone", "Solar.R", "Wind", "Temp")

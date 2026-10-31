@@ -1,4 +1,4 @@
-# Cap. 1 -- Similaridade cosseno e classificação pelo centróide mais próximo
+# Cap. 1: Similaridade cosseno e classificação pelo centróide mais próximo
 dig <- read.csv(file.path("dados", "digitos.csv"))
 X <- as.matrix(dig[, -1])                      # 1797 imagens x 64 pixels
 rotulo <- dig$digito

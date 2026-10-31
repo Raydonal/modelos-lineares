@@ -1,4 +1,4 @@
-"""Cap. 12 -- Gauss-Markov: três estimadores da inclinação"""
+"""Cap. 12: Gauss-Markov: três estimadores da inclinação"""
 import sys
 from pathlib import Path
 

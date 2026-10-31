@@ -1,4 +1,4 @@
-"""Cap. 1 -- Conhecendo os dados UKgas: estatísticas descritivas"""
+"""Cap. 1: Conhecendo os dados UKgas: estatísticas descritivas"""
 import sys
 from pathlib import Path
 

@@ -1,4 +1,4 @@
-# Cap. 5 -- Conhecendo os dados Seatbelts: estatísticas descritivas
+# Cap. 5: Conhecendo os dados Seatbelts: estatísticas descritivas
 source(file.path("R", "comum", "descritiva.R"))
 s <- read.csv(file.path("dados", "seatbelts.csv"))
 resumo(s, c("motoristas", "km", "preco_gasolina"))

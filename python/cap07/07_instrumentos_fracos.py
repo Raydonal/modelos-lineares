@@ -1,4 +1,4 @@
-"""Cap. 7 -- Instrumentos fracos: a amplificação 1/|r| da projeção oblíqua (simulação)."""
+"""Cap. 7: Instrumentos fracos: a amplificação 1/|r| da projeção oblíqua (simulação)."""
 import sys
 from pathlib import Path
 

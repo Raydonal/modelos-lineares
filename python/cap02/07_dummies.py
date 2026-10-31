@@ -1,4 +1,4 @@
-"""Cap. 2 -- A armadilha das variáveis indicadoras: posto incompleto e identificação."""
+"""Cap. 2: A armadilha das variáveis indicadoras: posto incompleto e identificação."""
 from pathlib import Path
 
 import numpy as np

@@ -1,4 +1,4 @@
-# Cap. 7 -- Quanto os dados de Longley podem ser arredondados? (Beaton, Rubin e Barone, 1976)
+# Cap. 7: Quanto os dados de Longley podem ser arredondados? (Beaton, Rubin e Barone, 1976)
 L <- read.csv(file.path("dados", "longley.csv"))
 X <- cbind(intercepto = 1, as.matrix(L[, 2:7])); y <- L$Employed
 kappa2 <- function(M) { s <- svd(M)$d; max(s) / min(s) }

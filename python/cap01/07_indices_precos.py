@@ -1,4 +1,4 @@
-"""Cap. 1 -- Índices de Laspeyres, Paasche e Fisher como razões de produtos internos."""
+"""Cap. 1: Índices de Laspeyres, Paasche e Fisher como razões de produtos internos."""
 import numpy as np
 import pandas as pd
 

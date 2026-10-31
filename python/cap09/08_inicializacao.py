@@ -1,4 +1,4 @@
-"""Cap. 9 -- Inicialização de redes: variância das ativações."""
+"""Cap. 9: Inicialização de redes: variância das ativações."""
 import sys
 from pathlib import Path
 

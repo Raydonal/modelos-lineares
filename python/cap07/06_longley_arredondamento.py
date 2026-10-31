@@ -1,4 +1,4 @@
-"""Cap. 7 -- Quanto os dados de Longley podem ser arredondados? (Beaton, Rubin e Barone, 1976)."""
+"""Cap. 7: Quanto os dados de Longley podem ser arredondados? (Beaton, Rubin e Barone, 1976)."""
 import sys
 from pathlib import Path
 

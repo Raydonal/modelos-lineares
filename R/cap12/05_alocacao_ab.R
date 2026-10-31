@@ -1,4 +1,4 @@
-# Cap. 12 -- Teste A/B/n: quantas unidades dar ao controle?
+# Cap. 12: Teste A/B/n: quantas unidades dar ao controle?
 k <- 4; N <- 600                              # 4 variantes + controle
 v <- function(n0) { nt <- (N - n0) / k   # Var(ybar_t - ybar_0)/s2
   c(n0 = n0, nt = nt, var = 1 / nt + 1 / n0,

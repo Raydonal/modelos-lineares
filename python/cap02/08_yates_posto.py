@@ -1,4 +1,4 @@
-"""Cap. 2 -- Posto da matriz de delineamento superparametrizada do experimento de aveia."""
+"""Cap. 2: Posto da matriz de delineamento superparametrizada do experimento de aveia."""
 from pathlib import Path
 
 import numpy as np

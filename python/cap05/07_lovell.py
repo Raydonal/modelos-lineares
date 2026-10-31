@@ -1,4 +1,4 @@
-"""Cap. 5 -- Ajuste sazonal e regressão: o teorema de Lovell (dados Seatbelts)."""
+"""Cap. 5: Ajuste sazonal e regressão: o teorema de Lovell (dados Seatbelts)."""
 from pathlib import Path
 
 import numpy as np

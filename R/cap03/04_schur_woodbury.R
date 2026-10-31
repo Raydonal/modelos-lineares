@@ -1,4 +1,4 @@
-# Cap. 3 -- Complemento de Schur, inversa particionada e identidade de Woodbury
+# Cap. 3: Complemento de Schur, inversa particionada e identidade de Woodbury
 set.seed(2)
 M <- crossprod(matrix(rnorm(36), 6)) + diag(6)       # 6 x 6 simétrica não singular
 i1 <- 1:2; i2 <- 3:6

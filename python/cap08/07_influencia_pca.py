@@ -1,4 +1,4 @@
-"""Cap. 8 -- Influência de cada imagem no primeiro autovalor (derivada de autovalores)."""
+"""Cap. 8: Influência de cada imagem no primeiro autovalor (derivada de autovalores)."""
 from pathlib import Path
 
 import numpy as np

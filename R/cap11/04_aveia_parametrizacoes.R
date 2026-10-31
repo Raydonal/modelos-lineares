@@ -1,4 +1,4 @@
-# Cap. 11 -- Aveia: parametrizações do modelo com interação
+# Cap. 11: Aveia: parametrizações do modelo com interação
 a <- read.csv(file.path("dados", "yates_oats.csv"))
 a$gen <- factor(a$gen); a$dose <- factor(a$nitro)
 mc <- lm(yield ~ 0 + gen:dose, data = a)      # médias das caselas

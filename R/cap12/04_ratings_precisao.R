@@ -1,4 +1,4 @@
-# Cap. 12 -- Ratings de Massey: estimabilidade e precisão
+# Cap. 12: Ratings de Massey: estimabilidade e precisão
 nfl <- read.csv(file.path("dados", "nfl.csv"))
 s <- subset(nfl, ano == 1981)
 times <- sort(unique(c(s$mandante, s$visitante)))

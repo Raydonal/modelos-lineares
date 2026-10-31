@@ -1,4 +1,4 @@
-# Cap. 4 -- Compatibilidade e solução geral de A x = b (e de A X C = B)
+# Cap. 4: Compatibilidade e solução geral de A x = b (e de A X C = B)
 A <- matrix(c(1, 2, 0, 1,  2, 4, 1, 1,  3, 6, 1, 2), 3, byrow = TRUE)   # posto 2
 G <- MASS::ginv(A)
 compativel <- function(b) isTRUE(all.equal(drop(A %*% G %*% b), b))  # teste A G b = b

@@ -12,7 +12,8 @@ RAIZ = Path(__file__).resolve().parents[1]
 LIVRO = RAIZ.parent / "livro"
 TOKEN = re.compile(
     r"\\(?P<bloco>section|subsection|aplicacao)\b"
-    r"|\\codigoR(?:\[[^\]]*\])?\{R/(?P<cap_s>cap\d\d)/(?P<script>[^}]+)\.R\}"
+    r"|\\(?:reproduzir\{|codigoR(?:\[[^\]]*\])?\{R/)"
+    r"(?P<cap_s>cap\d\d)/(?P<script>[^}.]+)(?:\.R)?\}"
     r"|\\includegraphics(?:\[[^\]]*\])?\{(?P<cap_f>cap\d\d)/(?P<fig>[^}]+)\}")
 
 

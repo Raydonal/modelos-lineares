@@ -1,4 +1,4 @@
-"""Cap. 4 -- Figura descritiva da temporada de 1981 da NFL (figuras/cap04/dados_nfl)."""
+"""Cap. 4: Figura descritiva da temporada de 1981 da NFL (figuras/cap04/dados_nfl)."""
 import sys
 from pathlib import Path
 

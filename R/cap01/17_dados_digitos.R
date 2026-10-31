@@ -1,4 +1,4 @@
-# Cap. 1 -- Conhecendo os dígitos manuscritos
+# Cap. 1: Conhecendo os dígitos manuscritos
 d <- read.csv(file.path("dados", "digitos.csv"))
 X <- as.matrix(d[, -1]); dim(X)          # 1797 imagens, 64 pixels
 table(d$digito)                               # classes equilibradas

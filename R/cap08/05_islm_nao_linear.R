@@ -1,4 +1,4 @@
-# Cap. 8 -- IS-LM não linear: estática comparativa pelo teorema da função implícita
+# Cap. 8: IS-LM não linear: estática comparativa pelo teorema da função implícita
 # IS: Y = c0 + c1 (Y - T) + I(r) + G, com I(r) = 800 (r/5)^(-0,3125)
 # LM: M/P = L(Y, r) = 500 (Y/4000)^2 (r/5)^(-1)      (tangentes ao modelo linear do Cap. 3 em Y = 4000, r = 5)
 c0 <- 100; c1 <- 0.75; Tx <- 200

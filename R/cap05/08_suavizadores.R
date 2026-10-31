@@ -1,4 +1,4 @@
-# Cap. 5 -- Suavizadores lineares: projeções e não projeções (dados mcycle)
+# Cap. 5: Suavizadores lineares: projeções e não projeções (dados mcycle)
 mc <- read.csv(file.path("dados", "mcycle.csv")); x <- mc$times; y <- mc$accel; n <- length(y)
 tr <- function(A) sum(diag(A))
 base <- function(K) {                         # B-splines cúbicas, K nós interiores equiespaçados

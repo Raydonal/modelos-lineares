@@ -1,4 +1,4 @@
-# Cap. 8 -- Derivadas matriciais conferidas por diferenças finitas
+# Cap. 8: Derivadas matriciais conferidas por diferenças finitas
 source(file.path("R", "comum", "gerador.R")); g <- gerador(80)
 n <- 4
 X <- crossprod(matriz_normal(g, 6, n)) + diag(n)            # definida positiva

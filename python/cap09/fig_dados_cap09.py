@@ -1,4 +1,4 @@
-"""Cap. 9 -- Figuras descritivas: índices europeus e airquality (figuras/cap09/dados_*)."""
+"""Cap. 9: Figuras descritivas: índices europeus e airquality (figuras/cap09/dados_*)."""
 import sys
 from pathlib import Path
 

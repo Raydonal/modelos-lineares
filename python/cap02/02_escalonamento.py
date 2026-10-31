@@ -1,4 +1,4 @@
-"""Cap. 2 -- Forma escalonada reduzida, bases dos quatro subespaços e fatoração de posto."""
+"""Cap. 2: Forma escalonada reduzida, bases dos quatro subespaços e fatoração de posto."""
 import numpy as np
 
 

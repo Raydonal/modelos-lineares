@@ -1,4 +1,4 @@
-"""Cap. 11 -- Sazonalidade: indicadoras ou harmônicos de Fourier"""
+"""Cap. 11: Sazonalidade: indicadoras ou harmônicos de Fourier"""
 from pathlib import Path
 
 import numpy as np

@@ -1,4 +1,4 @@
-"""Cap. 1 -- Conhecendo os dados wage1: estatísticas descritivas"""
+"""Cap. 1: Conhecendo os dados wage1: estatísticas descritivas"""
 import sys
 from pathlib import Path
 

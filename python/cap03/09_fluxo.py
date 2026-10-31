@@ -1,4 +1,4 @@
-"""Cap. 3 -- Fluxo normalizante com uma camada de acoplamento afim (Jacobiano triangular)."""
+"""Cap. 3: Fluxo normalizante com uma camada de acoplamento afim (Jacobiano triangular)."""
 import numpy as np
 from scipy.stats import norm
 

@@ -1,4 +1,4 @@
-"""Cap. 10 -- Teste de Chow: a mesma equação de salários?"""
+"""Cap. 10: Teste de Chow: a mesma equação de salários?"""
 from pathlib import Path
 
 import numpy as np

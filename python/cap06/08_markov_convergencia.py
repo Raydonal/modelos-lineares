@@ -1,4 +1,4 @@
-"""Cap. 6 -- Velocidade de convergência do mercado de trabalho para o equilíbrio."""
+"""Cap. 6: Velocidade de convergência do mercado de trabalho para o equilíbrio."""
 import numpy as np
 
 P = np.array([[0.960, 0.015, 0.025], [0.250, 0.600, 0.150], [0.040, 0.030, 0.930]])

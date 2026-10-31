@@ -1,4 +1,4 @@
-"""Cap. 8 -- Retropropagação numa camada de atenção, conferida por diferenças finitas."""
+"""Cap. 8: Retropropagação numa camada de atenção, conferida por diferenças finitas."""
 import sys
 from pathlib import Path
 

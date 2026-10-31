@@ -1,4 +1,4 @@
-"""Cap. 6 -- Figura descritiva do ensaio de trigo (figuras/cap06/dados_trigo)."""
+"""Cap. 6: Figura descritiva do ensaio de trigo (figuras/cap06/dados_trigo)."""
 import sys
 from pathlib import Path
 

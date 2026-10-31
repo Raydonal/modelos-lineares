@@ -1,4 +1,4 @@
-# Cap. 4 -- Interpolação de norma mínima e dupla descida (modelo de "features fracas")
+# Cap. 4: Interpolação de norma mínima e dupla descida (modelo de "features fracas")
 set.seed(2026)
 D <- 500; n <- 50; sigma <- 0.5
 beta <- rep(2 / sqrt(D), D)                      # 500 efeitos fracos, ||beta|| = 2

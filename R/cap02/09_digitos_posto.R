@@ -1,4 +1,4 @@
-# Cap. 2 -- Posto exato e posto numérico da matriz de imagens de dígitos
+# Cap. 2: Posto exato e posto numérico da matriz de imagens de dígitos
 dig <- read.csv(file.path("dados", "digitos.csv"))
 X <- as.matrix(dig[, -1])                                   # 1797 x 64
 nulas <- which(colSums(X != 0) == 0)                         # pixels sempre apagados

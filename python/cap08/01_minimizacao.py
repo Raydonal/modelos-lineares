@@ -1,4 +1,4 @@
-"""Cap. 8 -- Minimização de funções quadráticas, com e sem restrições lineares."""
+"""Cap. 8: Minimização de funções quadráticas, com e sem restrições lineares."""
 import numpy as np
 from scipy.optimize import minimize_scalar
 

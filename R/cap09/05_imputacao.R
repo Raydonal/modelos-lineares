@@ -1,4 +1,4 @@
-# Cap. 9 -- Imputação pela distribuição condicional (qualidade do ar)
+# Cap. 9: Imputação pela distribuição condicional (qualidade do ar)
 source(file.path("R", "comum", "gerador.R"))  # sorteios do Python
 aq <- read.csv(file.path("dados", "airquality.csv"))
 V <- cbind(lozonio = log(aq$Ozone), rad = aq$Solar.R,

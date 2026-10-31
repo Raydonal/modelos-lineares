@@ -1,4 +1,4 @@
-"""Cap. 1 -- Processo de Gram-Schmidt (versão clássica)."""
+"""Cap. 1: Processo de Gram-Schmidt (versão clássica)."""
 import numpy as np
 
 

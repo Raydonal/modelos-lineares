@@ -1,4 +1,4 @@
-# Cap. 5 -- Matrizes idempotentes: posto = traço, identidade de posto, potências
+# Cap. 5: Matrizes idempotentes: posto = traço, identidade de posto, potências
 posto <- function(M) qr(M, tol = 1e-10)$rank
 tr <- function(M) sum(diag(M))
 

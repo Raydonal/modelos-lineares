@@ -1,4 +1,4 @@
-# Cap. 1 -- Decomposição da SQ de tratamentos em contrastes polinomiais ortogonais
+# Cap. 1: Decomposição da SQ de tratamentos em contrastes polinomiais ortogonais
 aveia <- read.csv(file.path("dados", "yates_oats.csv"))
 y <- aveia$yield
 dose <- factor(aveia$nitro)

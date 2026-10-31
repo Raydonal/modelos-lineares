@@ -1,4 +1,4 @@
-# Cap. 7 -- A inversa de Moore-Penrose pela SVD: propriedades, limite ridge e descontinuidade
+# Cap. 7: A inversa de Moore-Penrose pela SVD: propriedades, limite ridge e descontinuidade
 A <- matrix(c(1, 2, 0, 1,
               2, 4, 1, 1,
               3, 6, 1, 2), 3, byrow = TRUE)                # posto 2 (Cap. 4)

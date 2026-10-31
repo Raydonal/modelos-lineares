@@ -1,4 +1,4 @@
-"""Cap. 6 -- Conhecendo o ensaio de trigo: 18 cultivares, 9 locais"""
+"""Cap. 6: Conhecendo o ensaio de trigo: 18 cultivares, 9 locais"""
 import sys
 from pathlib import Path
 

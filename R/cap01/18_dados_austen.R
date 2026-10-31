@@ -1,4 +1,4 @@
-# Cap. 1 -- Conhecendo os romances de Jane Austen
+# Cap. 1: Conhecendo os romances de Jane Austen
 d <- read.csv(file.path("dados", "austen.csv"))
 pal <- function(t) {
   t <- tolower(t); unlist(regmatches(t, gregexpr("[a-z]+", t)))

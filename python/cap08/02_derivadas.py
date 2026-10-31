@@ -1,4 +1,4 @@
-"""Cap. 8 -- Derivadas matriciais conferidas por diferenças finitas."""
+"""Cap. 8: Derivadas matriciais conferidas por diferenças finitas."""
 import sys
 from pathlib import Path
 

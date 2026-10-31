@@ -1,4 +1,4 @@
-# Cap. 1 -- Conhecendo o experimento de aveia
+# Cap. 1: Conhecendo o experimento de aveia
 source(file.path("R", "comum", "descritiva.R"))
 a <- read.csv(file.path("dados", "yates_oats.csv"))
 resumo(a, "yield")

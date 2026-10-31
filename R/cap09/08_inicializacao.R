@@ -1,4 +1,4 @@
-# Cap. 9 -- Inicialização de redes: variância das ativações por camada
+# Cap. 9: Inicialização de redes: variância das ativações por camada
 source(file.path("R", "comum", "gerador.R"))  # sorteios do Python
 g <- gerador(17); n <- 128; L <- 30; B <- 16
 X0 <- matriz_normal(g, n, B)                 # 16 entradas N(0, I)

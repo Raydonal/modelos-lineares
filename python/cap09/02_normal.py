@@ -1,4 +1,4 @@
-"""Cap. 9 -- Normal multivariada: densidade, condicionais."""
+"""Cap. 9: Normal multivariada: densidade, condicionais."""
 import sys
 from pathlib import Path
 

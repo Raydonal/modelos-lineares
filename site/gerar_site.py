@@ -19,7 +19,7 @@ CERCA = "`````"          # mais crases do que qualquer script usa
 
 def titulo_do_script(caminho):
     linha = caminho.read_text(encoding="utf-8").splitlines()[0]
-    m = re.match(r'^(?:# |""")Cap\. ?\d+ -- (.*?)\.?(?:""")?$', linha)
+    m = re.match(r'^(?:# |""")Cap\. ?\d+(?:: | -- )(.*?)\.?(?:""")?$', linha)
     if m is None:
         raise SystemExit(f"{caminho}: primeira linha sem título")
     return m.group(1)

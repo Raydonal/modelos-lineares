@@ -1,4 +1,4 @@
-# Cap. 1 -- Camadas lineares: composição de funções afins é afim
+# Cap. 1: Camadas lineares: composição de funções afins é afim
 set.seed(1)
 W1 <- matrix(rnorm(4 * 3), 4, 3); b1 <- rnorm(4)   # camada 1: R^3 -> R^4
 W2 <- matrix(rnorm(2 * 4), 2, 4); b2 <- rnorm(2)   # camada 2: R^4 -> R^2

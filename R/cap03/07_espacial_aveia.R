@@ -1,4 +1,4 @@
-# Cap. 3 -- Verossimilhança gaussiana com correlação espacial: log-determinantes e sistemas
+# Cap. 3: Verossimilhança gaussiana com correlação espacial: log-determinantes e sistemas
 aveia <- read.csv(file.path("dados", "yates_oats.csv"))
 y <- aveia$yield
 X <- model.matrix(~ factor(block) + factor(nitro) + factor(gen), aveia)   # 72 x 11

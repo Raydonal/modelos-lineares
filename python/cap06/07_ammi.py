@@ -1,4 +1,4 @@
-"""Cap. 6 -- Interação genótipo x ambiente pela SVD: o modelo AMMI."""
+"""Cap. 6: Interação genótipo x ambiente pela SVD: o modelo AMMI."""
 from pathlib import Path
 
 import numpy as np

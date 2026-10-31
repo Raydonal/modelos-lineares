@@ -1,4 +1,4 @@
-"""Cap. 4 -- Interpolação de norma mínima e dupla descida (modelo de "features fracas")."""
+"""Cap. 4: Interpolação de norma mínima e dupla descida (modelo de "features fracas")."""
 import numpy as np
 
 rng = np.random.default_rng(2026)

@@ -1,4 +1,4 @@
-# Cap. 2 -- Fatoração QR por reflexões de Householder
+# Cap. 2: Fatoração QR por reflexões de Householder
 householder_qr <- function(A) {
   m <- nrow(A); n <- ncol(A); R <- A; Q <- diag(m)
   for (k in 1:min(n, m - 1)) {

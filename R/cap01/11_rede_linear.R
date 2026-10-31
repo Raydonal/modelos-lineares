@@ -1,4 +1,4 @@
-# Cap. 1 -- Uma rede linear de duas camadas treinada por gradiente aprende
+# Cap. 1: Uma rede linear de duas camadas treinada por gradiente aprende
 # a mesma função que a regressão de mínimos quadrados
 set.seed(42)
 n <- 500; p <- 5; h <- 8

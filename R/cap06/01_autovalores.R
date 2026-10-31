@@ -1,4 +1,4 @@
-# Cap. 6 -- Autovalores: traço, determinante, AB e BA, diagonalização
+# Cap. 6: Autovalores: traço, determinante, AB e BA, diagonalização
 A <- matrix(c(2, 1, 0,
               1, 3, 1,
               0, 1, 4), 3, byrow = TRUE)

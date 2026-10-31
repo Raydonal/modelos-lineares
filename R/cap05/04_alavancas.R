@@ -1,4 +1,4 @@
-# Cap. 5 -- A diagonal da matriz chapéu (alavancas) nos dados wage1
+# Cap. 5: A diagonal da matriz chapéu (alavancas) nos dados wage1
 w <- read.csv(file.path("dados", "wage1.csv"))
 X <- cbind(1, w$educ, w$exper, w$tenure); y <- log(w$wage)
 n <- nrow(X); p <- ncol(X)

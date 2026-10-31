@@ -1,4 +1,4 @@
-"""Cap. 5 -- Suavizadores lineares: projeções e não projeções (dados mcycle)."""
+"""Cap. 5: Suavizadores lineares: projeções e não projeções (dados mcycle)."""
 from pathlib import Path
 
 import numpy as np

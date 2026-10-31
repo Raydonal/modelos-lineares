@@ -1,4 +1,4 @@
-# Cap. 13 -- Parcelas subdivididas: MQ = MQG, mas os erros-padrão não
+# Cap. 13: Parcelas subdivididas: MQ = MQG, mas os erros-padrão não
 a <- read.csv(file.path("dados", "yates_oats.csv"))
 a$gen <- factor(a$gen); a$dose <- factor(a$nitro)
 a$parcela <- interaction(a$block, a$gen)

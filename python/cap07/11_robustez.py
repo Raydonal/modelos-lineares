@@ -1,4 +1,4 @@
-"""Cap. 7 -- Robustez adversarial de um classificador linear."""
+"""Cap. 7: Robustez adversarial de um classificador linear."""
 from pathlib import Path
 
 import numpy as np

@@ -1,4 +1,4 @@
-# Cap. 1 -- A média móvel como operador linear: núcleo, imagem e sazonalidade
+# Cap. 1: A média móvel como operador linear: núcleo, imagem e sazonalidade
 gas <- read.csv(file.path("dados", "ukgas.csv"))
 y <- log(gas$consumo)                        # log torna a sazonalidade aditiva
 n <- length(y)                               # 108 trimestres (1960-1986)

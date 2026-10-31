@@ -1,4 +1,4 @@
-"""Cap. 5 -- Sanitização de embeddings: projetar fora o gênero."""
+"""Cap. 5: Sanitização de embeddings: projetar fora o gênero."""
 import sys
 from pathlib import Path
 

@@ -1,4 +1,4 @@
-"""Cap. 5 -- Somas de quadrados como projeções no experimento de aveia."""
+"""Cap. 5: Somas de quadrados como projeções no experimento de aveia."""
 import sys
 from pathlib import Path
 

@@ -1,4 +1,4 @@
-"""Cap. 2 -- Fatoração LU com e sem pivotamento; substituições progressiva e regressiva."""
+"""Cap. 2: Fatoração LU com e sem pivotamento; substituições progressiva e regressiva."""
 import numpy as np
 import scipy.linalg as sla
 

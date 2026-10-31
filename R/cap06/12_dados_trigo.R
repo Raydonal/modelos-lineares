@@ -1,4 +1,4 @@
-# Cap. 6 -- Conhecendo o ensaio de trigo: 18 cultivares, 9 locais
+# Cap. 6: Conhecendo o ensaio de trigo: 18 cultivares, 9 locais
 source(file.path("R", "comum", "descritiva.R"))
 d <- read.csv(file.path("dados", "yan_trigo.csv"))
 resumo(d, "producao")

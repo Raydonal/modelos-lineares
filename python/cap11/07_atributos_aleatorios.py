@@ -1,4 +1,4 @@
-"""Cap. 11 -- Atributos aleatórios: uma rede de uma camada congelada"""
+"""Cap. 11: Atributos aleatórios: uma rede de uma camada congelada"""
 import sys
 from pathlib import Path
 

@@ -1,4 +1,4 @@
-# Cap. 3 -- Desaprendizado de máquina: remover registros por Woodbury
+# Cap. 3: Desaprendizado de máquina: remover registros por Woodbury
 source(file.path("R", "comum", "gerador.R"))  # sorteios do Python
 db <- read.csv(file.path("dados", "diabetes.csv"))
 X <- cbind(1, as.matrix(db[, 1:10])); y <- db$y

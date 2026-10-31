@@ -1,4 +1,4 @@
-"""Cap. 5 -- Conhecendo os dados de Mroz: estatísticas descritivas"""
+"""Cap. 5: Conhecendo os dados de Mroz: estatísticas descritivas"""
 import sys
 from pathlib import Path
 

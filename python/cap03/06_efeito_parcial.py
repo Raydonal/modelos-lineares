@@ -1,4 +1,4 @@
-"""Cap. 3 -- Coeficiente parcial pela inversa particionada (prévia de Frisch-Waugh-Lovell)."""
+"""Cap. 3: Coeficiente parcial pela inversa particionada (prévia de Frisch-Waugh-Lovell)."""
 from pathlib import Path
 
 import numpy as np

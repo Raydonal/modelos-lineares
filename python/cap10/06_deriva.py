@@ -1,4 +1,4 @@
-"""Cap. 10 -- Deriva de embeddings detectada pelo T^2 de Hotelling."""
+"""Cap. 10: Deriva de embeddings detectada pelo T^2 de Hotelling."""
 import re
 import sys
 from pathlib import Path

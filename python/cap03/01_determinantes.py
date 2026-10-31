@@ -1,4 +1,4 @@
-"""Cap. 3 -- Determinante pela fórmula de Leibniz e suas propriedades."""
+"""Cap. 3: Determinante pela fórmula de Leibniz e suas propriedades."""
 from itertools import permutations
 from math import prod
 

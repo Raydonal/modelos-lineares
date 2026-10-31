@@ -1,4 +1,4 @@
-"""Cap. 11 -- Salários: regressão e média condicional"""
+"""Cap. 11: Salários: regressão e média condicional"""
 from pathlib import Path
 
 import numpy as np

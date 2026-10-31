@@ -1,4 +1,4 @@
-"""Cap. 2 -- Posto de matrizes e desigualdades de posto."""
+"""Cap. 2: Posto de matrizes e desigualdades de posto."""
 import numpy as np
 
 posto = np.linalg.matrix_rank                   # posto via SVD (tolerância padrão)

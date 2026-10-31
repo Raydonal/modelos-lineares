@@ -1,4 +1,4 @@
-# Cap. 7 -- Resposta da aveia ao nitrogênio: condicionamento de bases polinomiais
+# Cap. 7: Resposta da aveia ao nitrogênio: condicionamento de bases polinomiais
 a <- read.csv(file.path("dados", "yates_oats.csv"))
 dose <- a$nitro * 50.80235 / 0.4046856                      # cwt/acre -> kg de N por hectare
 y <- a$yield; n <- length(y)

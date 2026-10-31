@@ -1,4 +1,4 @@
-"""Cap. 9 -- Autocodificador linear, PPCA e VAE linear."""
+"""Cap. 9: Autocodificador linear, PPCA e VAE linear."""
 from pathlib import Path
 
 import numpy as np

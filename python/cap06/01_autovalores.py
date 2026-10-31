@@ -1,4 +1,4 @@
-"""Cap. 6 -- Autovalores: traço, determinante, AB e BA, diagonalização."""
+"""Cap. 6: Autovalores: traço, determinante, AB e BA, diagonalização."""
 import sys
 from pathlib import Path
 

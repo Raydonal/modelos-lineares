@@ -1,4 +1,4 @@
-"""Cap. 10 -- Ataques de pertencimento e o mecanismo gaussiano."""
+"""Cap. 10: Ataques de pertencimento e o mecanismo gaussiano."""
 import sys
 from pathlib import Path
 

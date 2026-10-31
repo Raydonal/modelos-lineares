@@ -1,4 +1,4 @@
-"""Cap. 7 -- Norma de projeções oblíquas e ângulos principais."""
+"""Cap. 7: Norma de projeções oblíquas e ângulos principais."""
 import sys
 from pathlib import Path
 

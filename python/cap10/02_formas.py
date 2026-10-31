@@ -1,4 +1,4 @@
-"""Cap. 10 -- Cochran na análise de variância com um fator."""
+"""Cap. 10: Cochran na análise de variância com um fator."""
 import sys
 from pathlib import Path
 

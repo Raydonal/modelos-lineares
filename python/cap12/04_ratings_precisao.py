@@ -1,4 +1,4 @@
-"""Cap. 12 -- Ratings de Massey: estimabilidade e precisão"""
+"""Cap. 12: Ratings de Massey: estimabilidade e precisão"""
 from pathlib import Path
 
 import numpy as np

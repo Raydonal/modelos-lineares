@@ -1,4 +1,4 @@
-"""Cap. 9 -- Detecção de anomalias pela distância de Mahalanobis."""
+"""Cap. 9: Detecção de anomalias pela distância de Mahalanobis."""
 from pathlib import Path
 
 import numpy as np

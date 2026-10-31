@@ -1,4 +1,4 @@
-# Cap. 2 -- Fatoração LU com e sem pivotamento; substituições progressiva e regressiva
+# Cap. 2: Fatoração LU com e sem pivotamento; substituições progressiva e regressiva
 lu_sem_pivo <- function(A) {
   n <- nrow(A); L <- diag(n); U <- A
   for (k in 1:(n - 1)) {

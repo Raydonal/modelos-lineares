@@ -1,4 +1,4 @@
-"""Cap. 7 -- Figuras de dados do capítulo (geradas em figuras/cap07/)."""
+"""Cap. 7: Figuras de dados do capítulo (geradas em figuras/cap07/)."""
 import re
 import sys
 from collections import Counter

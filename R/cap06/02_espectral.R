@@ -1,4 +1,4 @@
-# Cap. 6 -- Teorema espectral, projeções espectrais, quociente de Rayleigh e Ky Fan
+# Cap. 6: Teorema espectral, projeções espectrais, quociente de Rayleigh e Ky Fan
 A <- matrix(c(4, 1, 1, 0,
               1, 3, 0, 1,
               1, 0, 3, 1,

@@ -1,4 +1,4 @@
-"""Cap. 1 -- Decomposição ortogonal da produção de aveia (Yates, 1935)."""
+"""Cap. 1: Decomposição ortogonal da produção de aveia (Yates, 1935)."""
 from pathlib import Path
 
 import numpy as np

@@ -1,4 +1,4 @@
-# Cap. 10 -- Parcelas subdivididas: dois estratos de erro (aveia)
+# Cap. 10: Parcelas subdivididas: dois estratos de erro (aveia)
 av <- read.csv(file.path("dados", "yates_oats.csv"))
 y <- av$yield; n <- length(y)
 proj <- function(f) { D <- outer(f, unique(f), "==") * 1

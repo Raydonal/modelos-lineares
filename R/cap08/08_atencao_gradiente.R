@@ -1,4 +1,4 @@
-# Cap. 8 -- Retropropagação numa camada de atenção, conferida por diferenças finitas
+# Cap. 8: Retropropagação numa camada de atenção, conferida por diferenças finitas
 source(file.path("R", "comum", "gerador.R")); g <- gerador(88)
 n <- 6; d <- 5; dk <- 3
 X <- matriz_normal(g, n, d); Tg <- matriz_normal(g, n, d)  # entrada e alvo

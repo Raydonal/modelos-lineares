@@ -1,4 +1,4 @@
-# Cap. 6 -- Componentes principais dos dígitos manuscritos e o teorema de Eckart-Young
+# Cap. 6: Componentes principais dos dígitos manuscritos e o teorema de Eckart-Young
 dig <- read.csv(file.path("dados", "digitos.csv"))
 X <- as.matrix(dig[, -1]); n <- nrow(X)            # 1797 imagens de 8 x 8 pixels
 Xc <- scale(X, scale = FALSE)                      # centra (não padroniza)

@@ -1,4 +1,4 @@
-# Cap. 1 -- Decomposição ortogonal da produção de aveia (Yates, 1935)
+# Cap. 1: Decomposição ortogonal da produção de aveia (Yates, 1935)
 aveia <- read.csv(file.path("dados", "yates_oats.csv"))
 y <- aveia$yield
 n <- length(y)

@@ -1,4 +1,4 @@
-"""Cap. 11 -- Codificações de um fator: o que cada coeficiente mede"""
+"""Cap. 11: Codificações de um fator: o que cada coeficiente mede"""
 from pathlib import Path
 
 import numpy as np

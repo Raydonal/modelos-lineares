@@ -1,4 +1,4 @@
-"""Cap. 3 -- Complemento de Schur, inversa particionada e identidade de Woodbury."""
+"""Cap. 3: Complemento de Schur, inversa particionada e identidade de Woodbury."""
 import time
 
 import numpy as np

@@ -1,4 +1,4 @@
-"""Cap. 7 -- Normas matriciais: fórmulas das normas induzidas, Frobenius e raio espectral."""
+"""Cap. 7: Normas matriciais: fórmulas das normas induzidas, Frobenius e raio espectral."""
 import sys
 from pathlib import Path
 

@@ -1,4 +1,4 @@
-# Cap. 2 -- Mínimos quadrados nos dados de Longley: equações normais versus QR
+# Cap. 2: Mínimos quadrados nos dados de Longley: equações normais versus QR
 lon <- read.csv(file.path("dados", "longley.csv"))
 X <- cbind(1, as.matrix(lon[, c("GNP.deflator", "GNP", "Unemployed",
                                 "Armed.Forces", "Population", "Year")]))

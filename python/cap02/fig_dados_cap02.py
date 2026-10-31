@@ -1,4 +1,4 @@
-"""Cap. 2 -- Figura descritiva dos dados de Longley (figuras/cap02/dados_longley)."""
+"""Cap. 2: Figura descritiva dos dados de Longley (figuras/cap02/dados_longley)."""
 import sys
 from pathlib import Path
 

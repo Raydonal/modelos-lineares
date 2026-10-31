@@ -1,4 +1,4 @@
-"""Cap. 5 -- Conhecendo os dados Seatbelts"""
+"""Cap. 5: Conhecendo os dados Seatbelts"""
 import sys
 from pathlib import Path
 

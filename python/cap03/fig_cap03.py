@@ -1,4 +1,4 @@
-"""Cap. 3 -- Figuras de dados do capítulo (geradas em figuras/cap03/)."""
+"""Cap. 3: Figuras de dados do capítulo (geradas em figuras/cap03/)."""
 import sys
 import time
 from pathlib import Path

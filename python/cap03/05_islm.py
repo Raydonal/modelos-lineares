@@ -1,4 +1,4 @@
-"""Cap. 3 -- Estática comparativa no modelo IS-LM pela regra de Cramer."""
+"""Cap. 3: Estática comparativa no modelo IS-LM pela regra de Cramer."""
 import numpy as np
 
 p = dict(c0=100, c1=0.75, i0=1050, b=50, k=0.25, h=100, T=200, G=250, MP=500)

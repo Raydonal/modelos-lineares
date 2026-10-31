@@ -1,4 +1,4 @@
-# Cap. 5 -- Projeções oblíquas e ortogonais em R^3
+# Cap. 5: Projeções oblíquas e ortogonais em R^3
 norma <- function(v) sqrt(sum(v^2))
 # Projeção sobre U = C(B) (o plano z = 0) ao longo de W = ger{w}, w = (1, 1, 1)
 B <- cbind(c(1, 0, 0), c(0, 1, 0))

@@ -1,4 +1,4 @@
-"""Cap. 5 -- Subespaços encaixados, somas de quadrados e restrições (dados wage1)."""
+"""Cap. 5: Subespaços encaixados, somas de quadrados e restrições (dados wage1)."""
 from pathlib import Path
 
 import numpy as np

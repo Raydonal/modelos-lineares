@@ -1,4 +1,4 @@
-# Cap. 3 -- Estática comparativa no modelo IS-LM pela regra de Cramer
+# Cap. 3: Estática comparativa no modelo IS-LM pela regra de Cramer
 # IS: Y = c0 + c1 (Y - T) + i0 - b r + G      LM: M/P = k Y - h r
 par <- list(c0 = 100, c1 = 0.75, i0 = 1050, b = 50, k = 0.25, h = 100,
             T = 200, G = 250, MP = 500)

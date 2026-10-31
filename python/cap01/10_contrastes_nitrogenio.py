@@ -1,4 +1,4 @@
-"""Cap. 1 -- Decomposição da SQ de tratamentos em contrastes polinomiais ortogonais."""
+"""Cap. 1: Decomposição da SQ de tratamentos em contrastes polinomiais ortogonais."""
 from pathlib import Path
 
 import numpy as np

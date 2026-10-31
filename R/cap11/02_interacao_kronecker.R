@@ -1,4 +1,4 @@
-# Cap. 11 -- Interações como produtos de Kronecker linha a linha
+# Cap. 11: Interações como produtos de Kronecker linha a linha
 a <- read.csv(file.path("dados", "yates_oats.csv"))
 ga <- as.integer(factor(a$gen)); nb <- as.integer(factor(a$nitro))
 ind <- function(f, k) outer(f, 1:k, "==") * 1  # indicadoras

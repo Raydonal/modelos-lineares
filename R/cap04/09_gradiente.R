@@ -1,4 +1,4 @@
-# Cap. 4 -- O gradiente descendente converge para a solução de norma mínima
+# Cap. 4: O gradiente descendente converge para a solução de norma mínima
 set.seed(7)
 n <- 20; p <- 100
 X <- matrix(rnorm(n * p), n); y <- rnorm(n)

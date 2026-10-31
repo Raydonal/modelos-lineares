@@ -1,4 +1,4 @@
-# Cap. 4 -- Restrições de identificação no experimento de aveia e inversas generalizadas
+# Cap. 4: Restrições de identificação no experimento de aveia e inversas generalizadas
 aveia <- read.csv(file.path("dados", "yates_oats.csv"))
 ind <- function(f) model.matrix(~ factor(f) - 1)
 X <- cbind(1, ind(aveia$block), ind(aveia$nitro), ind(aveia$gen))    # 72 x 14, posto 11

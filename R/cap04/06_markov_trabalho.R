@@ -1,4 +1,4 @@
-# Cap. 4 -- Cadeia de Markov do mercado de trabalho: sistemas singulares compatíveis
+# Cap. 4: Cadeia de Markov do mercado de trabalho: sistemas singulares compatíveis
 estados <- c("E", "D", "F")       # empregado, desempregado, fora da força de trabalho
 P <- matrix(c(0.960, 0.015, 0.025,
               0.250, 0.600, 0.150,

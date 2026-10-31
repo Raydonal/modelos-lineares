@@ -1,4 +1,4 @@
-# Cap. 10 -- Qui-quadrado não central, mistura de Poisson e a F
+# Cap. 10: Qui-quadrado não central, mistura de Poisson e a F
 source(file.path("R", "comum", "gerador.R"))  # sorteios do Python
 g <- gerador(29); N <- 20000; k <- 3
 mu <- c(2, 0, 0)                              # lambda = ||mu||^2 = 4

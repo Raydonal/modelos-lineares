@@ -1,4 +1,4 @@
-"""Cap. 3 -- Desaprendizado de máquina por Woodbury."""
+"""Cap. 3: Desaprendizado de máquina por Woodbury."""
 import sys
 import time
 from pathlib import Path

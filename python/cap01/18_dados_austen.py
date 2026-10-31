@@ -1,4 +1,4 @@
-"""Cap. 1 -- Conhecendo os romances de Jane Austen"""
+"""Cap. 1: Conhecendo os romances de Jane Austen"""
 import re
 from collections import Counter
 from pathlib import Path

@@ -1,4 +1,4 @@
-# Cap. 5 -- A atenção como suavizador: temperatura, projeções e colapso de posto
+# Cap. 5: A atenção como suavizador: temperatura, projeções e colapso de posto
 softmax <- function(M) { M <- M - apply(M, 1, max); E <- exp(M); E / rowSums(E) }
 posto <- function(M) qr(M, tol = 1e-8)$rank
 source(file.path("R", "comum", "gerador.R"))           # mesmos sorteios que o Python

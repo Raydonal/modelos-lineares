@@ -1,4 +1,4 @@
-"""Cap. 7 -- A inversa de Moore-Penrose pela SVD: propriedades, limite ridge e descontinuidade."""
+"""Cap. 7: A inversa de Moore-Penrose pela SVD: propriedades, limite ridge e descontinuidade."""
 import numpy as np
 
 A = np.array([[1.0, 2, 0, 1], [2, 4, 1, 1], [3, 6, 1, 2]])

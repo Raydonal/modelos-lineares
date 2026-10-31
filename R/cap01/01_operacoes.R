@@ -1,4 +1,4 @@
-# Cap. 1 -- Operações básicas com vetores e matrizes
+# Cap. 1: Operações básicas com vetores e matrizes
 A <- matrix(c(2, 1,
               0, 3,
               1, -1), nrow = 3, byrow = TRUE)    # 3 x 2

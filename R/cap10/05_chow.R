@@ -1,4 +1,4 @@
-# Cap. 10 -- Teste de Chow: a mesma equação de salários para os sexos?
+# Cap. 10: Teste de Chow: a mesma equação de salários para os sexos?
 w <- read.csv(file.path("dados", "wage1.csv"))
 y <- log(w$wage); n <- length(y); m <- w$female == 1
 X <- cbind(1, w$educ, w$exper, w$tenure); k <- ncol(X)

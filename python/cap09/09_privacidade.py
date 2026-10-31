@@ -1,4 +1,4 @@
-"""Cap. 9 -- Privacidade diferencial: o mecanismo gaussiano."""
+"""Cap. 9: Privacidade diferencial: o mecanismo gaussiano."""
 import sys
 from pathlib import Path
 

@@ -1,4 +1,4 @@
-# Cap. 3 -- Conhecendo os dados de diabetes: estatísticas descritivas
+# Cap. 3: Conhecendo os dados de diabetes: estatísticas descritivas
 source(file.path("R", "comum", "descritiva.R"))
 d <- read.csv(file.path("dados", "diabetes.csv"))
 resumo(d)

@@ -1,4 +1,4 @@
-# Cap. 5 -- Variáveis instrumentais como projeção oblíqua (dados de Mroz)
+# Cap. 5: Variáveis instrumentais como projeção oblíqua (dados de Mroz)
 m <- read.csv(file.path("dados", "mroz.csv"))
 y <- m$lwage; n <- length(y)
 X <- cbind(1, educ = m$educ); Z <- cbind(1, fatheduc = m$fatheduc)

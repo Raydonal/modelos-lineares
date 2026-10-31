@@ -1,4 +1,4 @@
-"""Cap. 6 -- Raio espectral, série de Neumann e matrizes estocásticas positivas."""
+"""Cap. 6: Raio espectral, série de Neumann e matrizes estocásticas positivas."""
 import numpy as np
 
 raio = lambda M: np.abs(np.linalg.eigvals(M)).max()

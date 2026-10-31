@@ -1,4 +1,4 @@
-# Cap. 12 -- Regressão federada: combinar regiões sem juntar os dados
+# Cap. 12: Regressão federada: combinar regiões sem juntar os dados
 w <- read.csv(file.path("dados", "wage1.csv"))
 w$regiao <- with(w, ifelse(northcen == 1, "centro-norte",
               ifelse(south == 1, "sul", ifelse(west == 1, "oeste",

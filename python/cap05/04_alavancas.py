@@ -1,4 +1,4 @@
-"""Cap. 5 -- A diagonal da matriz chapéu (alavancas) nos dados wage1."""
+"""Cap. 5: A diagonal da matriz chapéu (alavancas) nos dados wage1."""
 from pathlib import Path
 
 import numpy as np

@@ -1,4 +1,4 @@
-# Cap. 1 -- Índices de preços de Laspeyres, Paasche e Fisher como razões de produtos internos
+# Cap. 1: Índices de preços de Laspeyres, Paasche e Fisher como razões de produtos internos
 cesta <- data.frame(
   bem = c("arroz", "feijão", "carne", "leite", "pão"),
   p0  = c(5.20, 8.90, 38.50, 4.60, 12.00),    # preços no período base (R$/unidade)

@@ -1,4 +1,4 @@
-"""Cap. 1 -- Modelos de linguagem pela álgebra linear: tokens (BPE), embeddings e busca por similaridade."""
+"""Cap. 1: Modelos de linguagem pela álgebra linear: tokens (BPE), embeddings e busca por similaridade."""
 import re
 import sys
 from collections import Counter

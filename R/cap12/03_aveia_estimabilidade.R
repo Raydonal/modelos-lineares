@@ -1,4 +1,4 @@
-# Cap. 12 -- Aveia sem a casela Victory/0,6: o que ainda é estimável
+# Cap. 12: Aveia sem a casela Victory/0,6: o que ainda é estimável
 a <- read.csv(file.path("dados", "yates_oats.csv"))
 a$gen <- factor(a$gen); a$dose <- factor(a$nitro)
 b <- a[!(a$gen == "Victory" & a$nitro == 0.6), ]

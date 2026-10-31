@@ -1,4 +1,4 @@
-"""Cap. 6 -- Matrizes definidas positivas: critérios, Cholesky, ordem de Loewner."""
+"""Cap. 6: Matrizes definidas positivas: critérios, Cholesky, ordem de Loewner."""
 from pathlib import Path
 
 import pandas as pd

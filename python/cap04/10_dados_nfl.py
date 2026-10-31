@@ -1,4 +1,4 @@
-"""Cap. 4 -- Conhecendo a temporada de 1981 da NFL"""
+"""Cap. 4: Conhecendo a temporada de 1981 da NFL"""
 import sys
 from pathlib import Path
 

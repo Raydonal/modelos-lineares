@@ -1,4 +1,4 @@
-"""Cap. 5 -- A atenção como suavizador: temperatura, projeções e colapso de posto."""
+"""Cap. 5: A atenção como suavizador: temperatura, projeções e colapso de posto."""
 import sys
 from pathlib import Path
 

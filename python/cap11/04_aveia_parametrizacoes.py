@@ -1,4 +1,4 @@
-"""Cap. 11 -- Aveia: parametrizações do modelo com interação"""
+"""Cap. 11: Aveia: parametrizações do modelo com interação"""
 from pathlib import Path
 
 import numpy as np

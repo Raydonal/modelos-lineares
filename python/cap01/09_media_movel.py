@@ -1,4 +1,4 @@
-"""Cap. 1 -- A média móvel como operador linear: núcleo, imagem e sazonalidade."""
+"""Cap. 1: A média móvel como operador linear: núcleo, imagem e sazonalidade."""
 from pathlib import Path
 
 import numpy as np

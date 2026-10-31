@@ -1,4 +1,4 @@
-"""Cap. 1 -- Retorno da educação: regressão simples como projeção ortogonal."""
+"""Cap. 1: Retorno da educação: regressão simples como projeção ortogonal."""
 from pathlib import Path
 
 import numpy as np

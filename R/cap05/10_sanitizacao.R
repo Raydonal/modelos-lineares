@@ -1,4 +1,4 @@
-# Cap. 5 -- Sanitização de embeddings: projetar fora o gênero
+# Cap. 5: Sanitização de embeddings: projetar fora o gênero
 source(file.path("R", "comum", "gerador.R"))  # sorteios do Python
 source(file.path("R", "comum", "austen.R"))   # embeddings do Cap. 6
 emb <- embeddings_austen(); E <- emb$E; C <- emb$C; vocab <- emb$vocab

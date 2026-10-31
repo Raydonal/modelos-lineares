@@ -1,4 +1,4 @@
-# Cap. 9 -- Conhecendo os índices europeus: retornos diários
+# Cap. 9: Conhecendo os índices europeus: retornos diários
 source(file.path("R", "comum", "descritiva.R"))
 eu <- read.csv(file.path("dados", "eustock.csv"))
 r <- as.data.frame(100 * diff(log(as.matrix(eu[, -1]))))  # em %

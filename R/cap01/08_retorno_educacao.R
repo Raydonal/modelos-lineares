@@ -1,4 +1,4 @@
-# Cap. 1 -- Retorno da educação: regressão simples como projeção ortogonal
+# Cap. 1: Retorno da educação: regressão simples como projeção ortogonal
 dados <- read.csv(file.path("dados", "wage1.csv"))
 y <- log(dados$wage)
 x <- dados$educ

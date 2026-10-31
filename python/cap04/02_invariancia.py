@@ -1,4 +1,4 @@
-"""Cap. 4 -- Equações normais de um modelo superparametrizado: o que muda e o que não muda."""
+"""Cap. 4: Equações normais de um modelo superparametrizado: o que muda e o que não muda."""
 import numpy as np
 
 g = np.array([1, 1, 2, 2, 2, 3, 3])

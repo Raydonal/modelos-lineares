@@ -1,4 +1,4 @@
-# Cap. 9 -- Regressão por processo gaussiano (mcycle)
+# Cap. 9: Regressão por processo gaussiano (mcycle)
 mc <- read.csv(file.path("dados", "mcycle.csv"))
 t <- mc$times; y <- mc$accel; n <- length(y)
 r <- y - mean(y)

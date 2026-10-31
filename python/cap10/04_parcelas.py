@@ -1,4 +1,4 @@
-"""Cap. 10 -- Parcelas subdivididas: dois estratos de erro (aveia)."""
+"""Cap. 10: Parcelas subdivididas: dois estratos de erro (aveia)."""
 from pathlib import Path
 
 import numpy as np

@@ -1,4 +1,4 @@
-# Cap. 11 -- Modelo multivariado: a forma vetorizada com Kronecker
+# Cap. 11: Modelo multivariado: a forma vetorizada com Kronecker
 source(file.path("R", "comum", "gerador.R"))  # sorteios do Python
 g <- gerador(11); n <- 50
 X <- cbind(1, matriz_normal(g, n, 2))         # n x 3

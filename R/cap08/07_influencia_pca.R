@@ -1,4 +1,4 @@
-# Cap. 8 -- Influência de cada imagem no primeiro autovalor (derivada de autovalores)
+# Cap. 8: Influência de cada imagem no primeiro autovalor (derivada de autovalores)
 dig <- read.csv(file.path("dados", "digitos.csv"))
 X <- as.matrix(dig[, -1]); n <- nrow(X)
 S <- cov(X); e <- eigen(S, symmetric = TRUE); l1 <- e$values[1]; q1 <- e$vectors[, 1]

@@ -1,4 +1,4 @@
-"""Cap. 6 -- Teorema espectral, projeções espectrais, quociente de Rayleigh e Ky Fan."""
+"""Cap. 6: Teorema espectral, projeções espectrais, quociente de Rayleigh e Ky Fan."""
 import sys
 from pathlib import Path
 

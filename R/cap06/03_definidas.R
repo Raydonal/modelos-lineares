@@ -1,4 +1,4 @@
-# Cap. 6 -- Matrizes definidas positivas: critérios, Cholesky, ordem de Loewner
+# Cap. 6: Matrizes definidas positivas: critérios, Cholesky, ordem de Loewner
 A <- matrix(c(4, 2, -2,
               2, 10, 4,
               -2, 4, 9), 3, byrow = TRUE)

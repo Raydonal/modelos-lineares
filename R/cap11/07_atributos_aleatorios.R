@@ -1,4 +1,4 @@
-# Cap. 11 -- Atributos aleatórios: uma rede de uma camada congelada
+# Cap. 11: Atributos aleatórios: uma rede de uma camada congelada
 source(file.path("R", "comum", "gerador.R"))  # sorteios do Python
 d <- read.csv(file.path("dados", "digitos.csv"))
 X <- cbind(1, as.matrix(d[, -1]) / 16)        # intercepto e pixels

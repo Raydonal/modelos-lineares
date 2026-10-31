@@ -1,4 +1,4 @@
-"""Cap. 2 -- Adaptação de posto baixo (LoRA): fatoração de posto e contagem de parâmetros."""
+"""Cap. 2: Adaptação de posto baixo (LoRA): fatoração de posto e contagem de parâmetros."""
 import numpy as np
 import pandas as pd
 

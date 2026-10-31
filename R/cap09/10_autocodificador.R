@@ -1,4 +1,4 @@
-# Cap. 9 -- Autocodificador linear, PCA probabilística e VAE linear
+# Cap. 9: Autocodificador linear, PCA probabilística e VAE linear
 dig <- read.csv(file.path("dados", "digitos.csv"))
 X <- as.matrix(dig[, -1]) / 16
 tr <- X[1:1000, ]; te <- X[-(1:1000), ]

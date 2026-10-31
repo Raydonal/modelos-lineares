@@ -1,4 +1,4 @@
-# Cap. 2 -- A armadilha das variáveis indicadoras: posto incompleto e identificação
+# Cap. 2: A armadilha das variáveis indicadoras: posto incompleto e identificação
 dados <- read.csv(file.path("dados", "wage1.csv"))
 y <- log(dados$wage)
 nordeste <- 1 - dados$northcen - dados$south - dados$west     # categoria omitida nos dados

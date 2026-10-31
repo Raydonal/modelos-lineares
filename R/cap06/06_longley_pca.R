@@ -1,4 +1,4 @@
-# Cap. 6 -- Componentes principais e quase colinearidade nos dados de Longley
+# Cap. 6: Componentes principais e quase colinearidade nos dados de Longley
 L <- read.csv(file.path("dados", "longley.csv"))
 X <- as.matrix(L[, c("GNP.deflator", "GNP", "Unemployed", "Armed.Forces", "Population", "Year")])
 R <- cor(X)                                     # matriz de correlações (variáveis padronizadas)

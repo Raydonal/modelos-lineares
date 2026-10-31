@@ -1,4 +1,4 @@
-"""Cap. 8 -- Parcelas subdivididas no experimento de aveia: a covariância como produto de Kronecker."""
+"""Cap. 8: Parcelas subdivididas no experimento de aveia: a covariância como produto de Kronecker."""
 from pathlib import Path
 
 import numpy as np

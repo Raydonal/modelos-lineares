@@ -1,4 +1,4 @@
-"""Cap. 9 -- Regressão por processo gaussiano (mcycle)."""
+"""Cap. 9: Regressão por processo gaussiano (mcycle)."""
 from pathlib import Path
 
 import numpy as np

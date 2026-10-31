@@ -1,4 +1,4 @@
-"""Cap. 3 -- Verossimilhança gaussiana com correlação espacial: log-determinantes e sistemas."""
+"""Cap. 3: Verossimilhança gaussiana com correlação espacial: log-determinantes e sistemas."""
 from pathlib import Path
 
 import numpy as np

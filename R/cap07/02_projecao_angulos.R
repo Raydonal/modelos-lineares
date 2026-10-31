@@ -1,4 +1,4 @@
-# Cap. 7 -- Norma de projeções oblíquas e ângulos principais
+# Cap. 7: Norma de projeções oblíquas e ângulos principais
 norma2 <- function(M) svd(M)$d[1]
 # A projeção do Cap. 5: sobre o plano z = 0 ao longo de (1, 1, 1)
 P <- matrix(c(1, 0, -1, 0, 1, -1, 0, 0, 0), 3, byrow = TRUE)

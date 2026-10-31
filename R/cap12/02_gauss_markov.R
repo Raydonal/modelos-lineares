@@ -1,4 +1,4 @@
-# Cap. 12 -- Gauss-Markov: três estimadores não viesados da inclinação
+# Cap. 12: Gauss-Markov: três estimadores não viesados da inclinação
 source(file.path("R", "comum", "gerador.R"))
 x <- 0:4; X <- cbind(1, x); n <- 5
 A <- rbind(mq = solve(crossprod(X), t(X))[2, ],  # a'y para cada um

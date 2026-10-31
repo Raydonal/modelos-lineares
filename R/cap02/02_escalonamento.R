@@ -1,4 +1,4 @@
-# Cap. 2 -- Forma escalonada reduzida, bases dos quatro subespaços e fatoração de posto
+# Cap. 2: Forma escalonada reduzida, bases dos quatro subespaços e fatoração de posto
 escalonar <- function(A, tol = 1e-10) {
   R <- A; m <- nrow(R); n <- ncol(R); pivos <- integer(0); i <- 1
   for (j in seq_len(n)) {

@@ -1,4 +1,4 @@
-"""Cap. 6 -- Embeddings de palavras pela SVD da matriz PPMI de coocorrências (romances de Jane Austen)."""
+"""Cap. 6: Embeddings de palavras pela SVD da matriz PPMI de coocorrências (romances de Jane Austen)."""
 import re
 from collections import Counter
 from pathlib import Path

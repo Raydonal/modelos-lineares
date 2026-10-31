@@ -1,4 +1,4 @@
-"""Cap. 7 -- Resposta da aveia ao nitrogênio: condicionamento de bases polinomiais."""
+"""Cap. 7: Resposta da aveia ao nitrogênio: condicionamento de bases polinomiais."""
 from pathlib import Path
 
 import numpy as np

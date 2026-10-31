@@ -1,4 +1,4 @@
-# Cap. 13 -- Erros AR(1) na regressão de acidentes (Seatbelts)
+# Cap. 13: Erros AR(1) na regressão de acidentes (Seatbelts)
 s <- read.csv(file.path("dados", "seatbelts.csv")); n <- nrow(s)
 y <- log(s$motoristas)
 X <- cbind(km = log(s$km), preco = log(s$preco_gasolina),

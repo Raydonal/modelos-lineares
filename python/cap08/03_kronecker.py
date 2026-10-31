@@ -1,4 +1,4 @@
-"""Cap. 8 -- Produto de Kronecker, vec e vech."""
+"""Cap. 8: Produto de Kronecker, vec e vech."""
 import sys
 from pathlib import Path
 

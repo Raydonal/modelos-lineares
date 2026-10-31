@@ -1,4 +1,4 @@
-"""Cap. 1 -- Similaridade cosseno e classificação pelo centróide mais próximo."""
+"""Cap. 1: Similaridade cosseno e classificação pelo centróide mais próximo."""
 from pathlib import Path
 
 import numpy as np

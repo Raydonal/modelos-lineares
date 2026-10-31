@@ -1,4 +1,4 @@
-# Cap. 2 -- Posto de matrizes e desigualdades de posto
+# Cap. 2: Posto de matrizes e desigualdades de posto
 posto <- function(A) qr(A)$rank                 # posto via QR (tolerância padrão)
 
 A <- matrix(c(1, 2, 0, 3,
