@@ -78,7 +78,7 @@ Use `make PYTHON=/caminho/para/python` para escolher o interpretador.
 `make site` gera as páginas a partir dos scripts, das saídas e das figuras já gravados e renderiza o site
 em `site/_site/` (requer [Quarto](https://quarto.org) e `pdftocairo`, do poppler). Nada é executado de novo:
 depois de mudar um script, rode `make capXX` antes. As páginas `site/capXX.qmd` são geradas e não devem ser
-editadas. A publicação no GitHub Pages (`.github/workflows/site.yml`) só roda com o repositório público.
+editadas. Para publicar no GitHub Pages, com o repositório já público, mova `site/publicar.yml` para `.github/workflows/`.
 
 ## Licença
 
