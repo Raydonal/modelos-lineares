@@ -369,7 +369,7 @@ window.Quarto = {
 <div class="code-with-filename-file">
 <pre><strong>R/cap07/01_normas.R</strong></pre>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1" data-filename="R/cap07/01_normas.R"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Cap. 7 -- Normas matriciais: fórmulas das normas induzidas, Frobenius e raio espectral</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1" data-filename="R/cap07/01_normas.R"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Cap. 7: Normas matriciais: fórmulas das normas induzidas, Frobenius e raio espectral</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>A <span class="ot">&lt;-</span> <span class="fu">matrix</span>(<span class="fu">c</span>(<span class="dv">1</span>, <span class="sc">-</span><span class="dv">2</span>, <span class="dv">3</span>,</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>              <span class="dv">0</span>, <span class="dv">4</span>, <span class="sc">-</span><span class="dv">1</span>,</span>
 <span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>              <span class="dv">2</span>, <span class="dv">1</span>, <span class="dv">1</span>), <span class="dv">3</span>, <span class="at">byrow =</span> <span class="cn">TRUE</span>)</span>
@@ -403,7 +403,7 @@ window.Quarto = {
 <div class="code-with-filename-file">
 <pre><strong>python/cap07/01_normas.py</strong></pre>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3" data-filename="python/cap07/01_normas.py"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co">"""Cap. 7 -- Normas matriciais: fórmulas das normas induzidas, Frobenius e raio espectral."""</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3" data-filename="python/cap07/01_normas.py"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co">"""Cap. 7: Normas matriciais: fórmulas das normas induzidas, Frobenius e raio espectral."""</span></span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> sys</span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> pathlib <span class="im">import</span> Path</span>
 <span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a></span>
@@ -443,7 +443,7 @@ máx ||Ax||/||x|| em 10 000 vetores: 5.157732</code></pre>
 <div class="code-with-filename-file">
 <pre><strong>R/cap07/02_projecao_angulos.R</strong></pre>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5" data-filename="R/cap07/02_projecao_angulos.R"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Cap. 7 -- Norma de projeções oblíquas e ângulos principais</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5" data-filename="R/cap07/02_projecao_angulos.R"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Cap. 7: Norma de projeções oblíquas e ângulos principais</span></span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>norma2 <span class="ot">&lt;-</span> <span class="cf">function</span>(M) <span class="fu">svd</span>(M)<span class="sc">$</span>d[<span class="dv">1</span>]</span>
 <span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="co"># A projeção do Cap. 5: sobre o plano z = 0 ao longo de (1, 1, 1)</span></span>
 <span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>P <span class="ot">&lt;-</span> <span class="fu">matrix</span>(<span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">0</span>, <span class="sc">-</span><span class="dv">1</span>, <span class="dv">0</span>, <span class="dv">1</span>, <span class="sc">-</span><span class="dv">1</span>, <span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">0</span>), <span class="dv">3</span>, <span class="at">byrow =</span> <span class="cn">TRUE</span>)</span>
@@ -475,7 +475,7 @@ máx ||Ax||/||x|| em 10 000 vetores: 5.157732</code></pre>
 <div class="code-with-filename-file">
 <pre><strong>python/cap07/02_projecao_angulos.py</strong></pre>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7" data-filename="python/cap07/02_projecao_angulos.py"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co">"""Cap. 7 -- Norma de projeções oblíquas e ângulos principais."""</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7" data-filename="python/cap07/02_projecao_angulos.py"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co">"""Cap. 7: Norma de projeções oblíquas e ângulos principais."""</span></span>
 <span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> sys</span>
 <span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> pathlib <span class="im">import</span> Path</span>
 <span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a></span>
@@ -519,7 +519,7 @@ máx ||Ax||/||x|| em 10 000 vetores: 5.157732</code></pre>
 <div class="code-with-filename-file">
 <pre><strong>R/cap07/03_moore_penrose.R</strong></pre>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb9" data-filename="R/cap07/03_moore_penrose.R"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Cap. 7 -- A inversa de Moore-Penrose pela SVD: propriedades, limite ridge e descontinuidade</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb9" data-filename="R/cap07/03_moore_penrose.R"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Cap. 7: A inversa de Moore-Penrose pela SVD: propriedades, limite ridge e descontinuidade</span></span>
 <span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>A <span class="ot">&lt;-</span> <span class="fu">matrix</span>(<span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">0</span>, <span class="dv">1</span>,</span>
 <span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>              <span class="dv">2</span>, <span class="dv">4</span>, <span class="dv">1</span>, <span class="dv">1</span>,</span>
 <span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>              <span class="dv">3</span>, <span class="dv">6</span>, <span class="dv">1</span>, <span class="dv">2</span>), <span class="dv">3</span>, <span class="at">byrow =</span> <span class="cn">TRUE</span>)                <span class="co"># posto 2 (Cap. 4)</span></span>
@@ -562,7 +562,7 @@ cota    0.3604 0.03604 0.003604 0.0003604 3.604e-05 3.604e-06
 <div class="code-with-filename-file">
 <pre><strong>python/cap07/03_moore_penrose.py</strong></pre>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb11" data-filename="python/cap07/03_moore_penrose.py"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="co">"""Cap. 7 -- A inversa de Moore-Penrose pela SVD: propriedades, limite ridge e descontinuidade."""</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb11" data-filename="python/cap07/03_moore_penrose.py"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="co">"""Cap. 7: A inversa de Moore-Penrose pela SVD: propriedades, limite ridge e descontinuidade."""</span></span>
 <span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>A <span class="op">=</span> np.array([[<span class="fl">1.0</span>, <span class="dv">2</span>, <span class="dv">0</span>, <span class="dv">1</span>], [<span class="dv">2</span>, <span class="dv">4</span>, <span class="dv">1</span>, <span class="dv">1</span>], [<span class="dv">3</span>, <span class="dv">6</span>, <span class="dv">1</span>, <span class="dv">2</span>]])</span>
@@ -602,7 +602,7 @@ lambda = 1e-06: erro espectral = 3.6042e-06, fórmula = 3.6042e-06, cota = 3.604
 <div class="code-with-filename-file">
 <pre><strong>R/cap07/04_perturbacao.R</strong></pre>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb13" data-filename="R/cap07/04_perturbacao.R"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Cap. 7 -- Perturbação de autovalores e valores singulares; Eckart-Young na norma espectral</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb13" data-filename="R/cap07/04_perturbacao.R"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Cap. 7: Perturbação de autovalores e valores singulares; Eckart-Young na norma espectral</span></span>
 <span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a><span class="fu">source</span>(<span class="fu">file.path</span>(<span class="st">"R"</span>, <span class="st">"comum"</span>, <span class="st">"gerador.R"</span>)); g <span class="ot">&lt;-</span> <span class="fu">gerador</span>(<span class="dv">74</span>)</span>
 <span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>S <span class="ot">&lt;-</span> <span class="fu">matriz_normal</span>(g, <span class="dv">6</span>, <span class="dv">6</span>); A <span class="ot">&lt;-</span> S <span class="sc">+</span> <span class="fu">t</span>(S)                <span class="co"># simétrica</span></span>
 <span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a>E <span class="ot">&lt;-</span> <span class="fu">matriz_normal</span>(g, <span class="dv">6</span>, <span class="dv">6</span>); E <span class="ot">&lt;-</span> <span class="fl">1e-3</span> <span class="sc">*</span> (E <span class="sc">+</span> <span class="fu">t</span>(E))       <span class="co"># perturbação simétrica</span></span>
@@ -636,7 +636,7 @@ sigma_k_mais_1 3.300585 2.554966 1.490991 1.338917
 <div class="code-with-filename-file">
 <pre><strong>python/cap07/04_perturbacao.py</strong></pre>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb15" data-filename="python/cap07/04_perturbacao.py"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="co">"""Cap. 7 -- Perturbação de autovalores e valores singulares; Eckart-Young na norma espectral."""</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb15" data-filename="python/cap07/04_perturbacao.py"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="co">"""Cap. 7: Perturbação de autovalores e valores singulares; Eckart-Young na norma espectral."""</span></span>
 <span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> sys</span>
 <span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> pathlib <span class="im">import</span> Path</span>
 <span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a></span>
@@ -678,7 +678,7 @@ k = 4: ||X - X_k||_2 = 1.338917, sigma_k+1 = 1.338917</code></pre>
 <div class="code-with-filename-file">
 <pre><strong>R/cap07/05_condicionamento.R</strong></pre>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb17" data-filename="R/cap07/05_condicionamento.R"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Cap. 7 -- Número de condição: sistemas lineares e mínimos quadrados</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb17" data-filename="R/cap07/05_condicionamento.R"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Cap. 7: Número de condição: sistemas lineares e mínimos quadrados</span></span>
 <span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a>kappa2 <span class="ot">&lt;-</span> <span class="cf">function</span>(M) { s <span class="ot">&lt;-</span> <span class="fu">svd</span>(M)<span class="sc">$</span>d; <span class="fu">max</span>(s) <span class="sc">/</span> <span class="fu">min</span>(s) }</span>
 <span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a>H <span class="ot">&lt;-</span> <span class="fu">outer</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">8</span>, <span class="dv">1</span><span class="sc">:</span><span class="dv">8</span>, <span class="cf">function</span>(i, j) <span class="dv">1</span> <span class="sc">/</span> (i <span class="sc">+</span> j <span class="sc">-</span> <span class="dv">1</span>))      <span class="co"># matriz de Hilbert 8 x 8</span></span>
 <span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="fu">rep</span>(<span class="dv">1</span>, <span class="dv">8</span>); b <span class="ot">&lt;-</span> H <span class="sc">%*%</span> x</span>
@@ -716,7 +716,7 @@ erro_qr      1.44e-15 3.77e-14 9.16e-12 2.36e-10</code></pre>
 <div class="code-with-filename-file">
 <pre><strong>python/cap07/05_condicionamento.py</strong></pre>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb19" data-filename="python/cap07/05_condicionamento.py"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="co">"""Cap. 7 -- Número de condição: sistemas lineares e mínimos quadrados."""</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb19" data-filename="python/cap07/05_condicionamento.py"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="co">"""Cap. 7: Número de condição: sistemas lineares e mínimos quadrados."""</span></span>
 <span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> sys</span>
 <span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> pathlib <span class="im">import</span> Path</span>
 <span id="cb19-4"><a href="#cb19-4" aria-hidden="true" tabindex="-1"></a></span>
@@ -756,7 +756,7 @@ kappa = 1.0e+07: erro equações normais = 3.10e-03, erro QR/SVD = 6.04e-11</cod
 <div class="code-with-filename-file">
 <pre><strong>R/cap07/06_longley_arredondamento.R</strong></pre>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb21" data-filename="R/cap07/06_longley_arredondamento.R"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Cap. 7 -- Quanto os dados de Longley podem ser arredondados? (Beaton, Rubin e Barone, 1976)</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb21" data-filename="R/cap07/06_longley_arredondamento.R"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Cap. 7: Quanto os dados de Longley podem ser arredondados? (Beaton, Rubin e Barone, 1976)</span></span>
 <span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a>L <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="fu">file.path</span>(<span class="st">"dados"</span>, <span class="st">"longley.csv"</span>))</span>
 <span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a>X <span class="ot">&lt;-</span> <span class="fu">cbind</span>(<span class="at">intercepto =</span> <span class="dv">1</span>, <span class="fu">as.matrix</span>(L[, <span class="dv">2</span><span class="sc">:</span><span class="dv">7</span>])); y <span class="ot">&lt;-</span> L<span class="sc">$</span>Employed</span>
 <span id="cb21-4"><a href="#cb21-4" aria-hidden="true" tabindex="-1"></a>kappa2 <span class="ot">&lt;-</span> <span class="cf">function</span>(M) { s <span class="ot">&lt;-</span> <span class="fu">svd</span>(M)<span class="sc">$</span>d; <span class="fu">max</span>(s) <span class="sc">/</span> <span class="fu">min</span>(s) }</span>
@@ -803,7 +803,7 @@ muda_sinal 0.036</code></pre>
 <div class="code-with-filename-file">
 <pre><strong>python/cap07/06_longley_arredondamento.py</strong></pre>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb23" data-filename="python/cap07/06_longley_arredondamento.py"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="co">"""Cap. 7 -- Quanto os dados de Longley podem ser arredondados? (Beaton, Rubin e Barone, 1976)."""</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb23" data-filename="python/cap07/06_longley_arredondamento.py"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="co">"""Cap. 7: Quanto os dados de Longley podem ser arredondados? (Beaton, Rubin e Barone, 1976)."""</span></span>
 <span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> sys</span>
 <span id="cb23-3"><a href="#cb23-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> pathlib <span class="im">import</span> Path</span>
 <span id="cb23-4"><a href="#cb23-4" aria-hidden="true" tabindex="-1"></a></span>
@@ -892,7 +892,7 @@ muda_sinal       0.049         0.719  0.904  ...         0.000       0.058  0.03
 <div class="code-with-filename-file">
 <pre><strong>R/cap07/07_instrumentos_fracos.R</strong></pre>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb26" data-filename="R/cap07/07_instrumentos_fracos.R"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Cap. 7 -- Instrumentos fracos: a amplificação 1/|r| da projeção oblíqua (simulação)</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb26" data-filename="R/cap07/07_instrumentos_fracos.R"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Cap. 7: Instrumentos fracos: a amplificação 1/|r| da projeção oblíqua (simulação)</span></span>
 <span id="cb26-2"><a href="#cb26-2" aria-hidden="true" tabindex="-1"></a><span class="fu">source</span>(<span class="fu">file.path</span>(<span class="st">"R"</span>, <span class="st">"comum"</span>, <span class="st">"gerador.R"</span>)); g <span class="ot">&lt;-</span> <span class="fu">gerador</span>(<span class="dv">77</span>)</span>
 <span id="cb26-3"><a href="#cb26-3" aria-hidden="true" tabindex="-1"></a>n <span class="ot">&lt;-</span> <span class="dv">428</span>; beta <span class="ot">&lt;-</span> <span class="fl">0.06</span>                                     <span class="co"># tamanho e efeito como nos dados de Mroz</span></span>
 <span id="cb26-4"><a href="#cb26-4" aria-hidden="true" tabindex="-1"></a>simula <span class="ot">&lt;-</span> <span class="cf">function</span>(pi1) {</span>
@@ -930,7 +930,7 @@ mq_mediana   0.319  0.349  0.357  0.359</code></pre>
 <div class="code-with-filename-file">
 <pre><strong>python/cap07/07_instrumentos_fracos.py</strong></pre>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb28" data-filename="python/cap07/07_instrumentos_fracos.py"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a><span class="co">"""Cap. 7 -- Instrumentos fracos: a amplificação 1/|r| da projeção oblíqua (simulação)."""</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb28" data-filename="python/cap07/07_instrumentos_fracos.py"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a><span class="co">"""Cap. 7: Instrumentos fracos: a amplificação 1/|r| da projeção oblíqua (simulação)."""</span></span>
 <span id="cb28-2"><a href="#cb28-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> sys</span>
 <span id="cb28-3"><a href="#cb28-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> pathlib <span class="im">import</span> Path</span>
 <span id="cb28-4"><a href="#cb28-4" aria-hidden="true" tabindex="-1"></a></span>
@@ -1013,7 +1013,7 @@ força 0.05: r = 0.051, F = 1.1, VI mediana = 0.145, IQR = 0.706 (IQR*r = 0.036)
 <div class="code-with-filename-file">
 <pre><strong>R/cap07/08_dose_polinomios.R</strong></pre>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb31" data-filename="R/cap07/08_dose_polinomios.R"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Cap. 7 -- Resposta da aveia ao nitrogênio: condicionamento de bases polinomiais</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb31" data-filename="R/cap07/08_dose_polinomios.R"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Cap. 7: Resposta da aveia ao nitrogênio: condicionamento de bases polinomiais</span></span>
 <span id="cb31-2"><a href="#cb31-2" aria-hidden="true" tabindex="-1"></a>a <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="fu">file.path</span>(<span class="st">"dados"</span>, <span class="st">"yates_oats.csv"</span>))</span>
 <span id="cb31-3"><a href="#cb31-3" aria-hidden="true" tabindex="-1"></a>dose <span class="ot">&lt;-</span> a<span class="sc">$</span>nitro <span class="sc">*</span> <span class="fl">50.80235</span> <span class="sc">/</span> <span class="fl">0.4046856</span>                      <span class="co"># cwt/acre -&gt; kg de N por hectare</span></span>
 <span id="cb31-4"><a href="#cb31-4" aria-hidden="true" tabindex="-1"></a>y <span class="ot">&lt;-</span> a<span class="sc">$</span>yield; n <span class="ot">&lt;-</span> <span class="fu">length</span>(y)</span>
@@ -1055,7 +1055,7 @@ kappa_XtX 2.000e+11 3.661e+09       63.780          1
 <div class="code-with-filename-file">
 <pre><strong>python/cap07/08_dose_polinomios.py</strong></pre>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb33" data-filename="python/cap07/08_dose_polinomios.py"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a><span class="co">"""Cap. 7 -- Resposta da aveia ao nitrogênio: condicionamento de bases polinomiais."""</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb33" data-filename="python/cap07/08_dose_polinomios.py"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a><span class="co">"""Cap. 7: Resposta da aveia ao nitrogênio: condicionamento de bases polinomiais."""</span></span>
 <span id="cb33-2"><a href="#cb33-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> pathlib <span class="im">import</span> Path</span>
 <span id="cb33-3"><a href="#cb33-3" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb33-4"><a href="#cb33-4" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
@@ -1092,7 +1092,7 @@ ortogonais   kappa(X) = 1, kappa(X'X) = 1, máx |corr| entre estimativas = 0.000
 <div class="code-with-filename-file">
 <pre><strong>R/cap07/09_filtros_espectrais.R</strong></pre>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb35" data-filename="R/cap07/09_filtros_espectrais.R"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Cap. 7 -- Pseudo-inversa, tolerância e filtros espectrais num classificador de dígitos</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb35" data-filename="R/cap07/09_filtros_espectrais.R"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Cap. 7: Pseudo-inversa, tolerância e filtros espectrais num classificador de dígitos</span></span>
 <span id="cb35-2"><a href="#cb35-2" aria-hidden="true" tabindex="-1"></a>dig <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="fu">file.path</span>(<span class="st">"dados"</span>, <span class="st">"digitos.csv"</span>))</span>
 <span id="cb35-3"><a href="#cb35-3" aria-hidden="true" tabindex="-1"></a>X <span class="ot">&lt;-</span> <span class="fu">cbind</span>(<span class="dv">1</span>, <span class="fu">as.matrix</span>(dig[, <span class="sc">-</span><span class="dv">1</span>]) <span class="sc">/</span> <span class="dv">16</span>); y <span class="ot">&lt;-</span> dig<span class="sc">$</span>digito  <span class="co"># pixels em [0, 1] e intercepto</span></span>
 <span id="cb35-4"><a href="#cb35-4" aria-hidden="true" tabindex="-1"></a>tr <span class="ot">&lt;-</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">1000</span>; te <span class="ot">&lt;-</span> <span class="dv">1001</span><span class="sc">:</span><span class="fu">nrow</span>(X)</span>
@@ -1137,7 +1137,7 @@ norma_W  21.8101  8.3509  3.6112  2.6379  1.9320   1.0347</code></pre>
 <div class="code-with-filename-file">
 <pre><strong>python/cap07/09_filtros_espectrais.py</strong></pre>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb37" data-filename="python/cap07/09_filtros_espectrais.py"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb37-1"><a href="#cb37-1" aria-hidden="true" tabindex="-1"></a><span class="co">"""Cap. 7 -- Pseudo-inversa, tolerância e filtros espectrais num classificador de dígitos."""</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb37" data-filename="python/cap07/09_filtros_espectrais.py"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb37-1"><a href="#cb37-1" aria-hidden="true" tabindex="-1"></a><span class="co">"""Cap. 7: Pseudo-inversa, tolerância e filtros espectrais num classificador de dígitos."""</span></span>
 <span id="cb37-2"><a href="#cb37-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> pathlib <span class="im">import</span> Path</span>
 <span id="cb37-3"><a href="#cb37-3" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb37-4"><a href="#cb37-4" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
@@ -1226,7 +1226,7 @@ ridge lambda = 100: gl = 15.79, acurácia = 0.8971, ||W||_F = 1.0347</code></pre
 <div class="code-with-filename-file">
 <pre><strong>R/cap07/10_quantizacao.R</strong></pre>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb40" data-filename="R/cap07/10_quantizacao.R"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb40-1"><a href="#cb40-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Cap. 7 -- Quantização de embeddings: erro em normas e preservação de vizinhos</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb40" data-filename="R/cap07/10_quantizacao.R"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb40-1"><a href="#cb40-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Cap. 7: Quantização de embeddings: erro em normas e preservação de vizinhos</span></span>
 <span id="cb40-2"><a href="#cb40-2" aria-hidden="true" tabindex="-1"></a>d <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="fu">file.path</span>(<span class="st">"dados"</span>, <span class="st">"austen.csv"</span>))</span>
 <span id="cb40-3"><a href="#cb40-3" aria-hidden="true" tabindex="-1"></a>p <span class="ot">&lt;-</span> <span class="fu">unlist</span>(<span class="fu">regmatches</span>(<span class="fu">tolower</span>(d<span class="sc">$</span>texto), <span class="fu">gregexpr</span>(<span class="st">"[a-z]+"</span>, <span class="fu">tolower</span>(d<span class="sc">$</span>texto))))</span>
 <span id="cb40-4"><a href="#cb40-4" aria-hidden="true" tabindex="-1"></a>fr <span class="ot">&lt;-</span> <span class="fu">table</span>(p); fr <span class="ot">&lt;-</span> fr[<span class="fu">order</span>(<span class="sc">-</span>fr, <span class="fu">names</span>(fr), <span class="at">method =</span> <span class="st">"radix"</span>)]</span>
@@ -1279,7 +1279,7 @@ max_erro_rel_linha
 <div class="code-with-filename-file">
 <pre><strong>python/cap07/10_quantizacao.py</strong></pre>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb42" data-filename="python/cap07/10_quantizacao.py"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb42-1"><a href="#cb42-1" aria-hidden="true" tabindex="-1"></a><span class="co">"""Cap. 7 -- Quantização de embeddings: erro em normas e preservação de vizinhos."""</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb42" data-filename="python/cap07/10_quantizacao.py"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb42-1"><a href="#cb42-1" aria-hidden="true" tabindex="-1"></a><span class="co">"""Cap. 7: Quantização de embeddings: erro em normas e preservação de vizinhos."""</span></span>
 <span id="cb42-2"><a href="#cb42-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> re</span>
 <span id="cb42-3"><a href="#cb42-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> collections <span class="im">import</span> Counter</span>
 <span id="cb42-4"><a href="#cb42-4" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> pathlib <span class="im">import</span> Path</span>
@@ -1394,7 +1394,7 @@ max_erro_rel_linha
 <div class="code-with-filename-file">
 <pre><strong>R/cap07/11_robustez.R</strong></pre>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb45" data-filename="R/cap07/11_robustez.R"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb45-1"><a href="#cb45-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Cap. 7 -- Robustez adversarial de um classificador linear</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb45" data-filename="R/cap07/11_robustez.R"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb45-1"><a href="#cb45-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Cap. 7: Robustez adversarial de um classificador linear</span></span>
 <span id="cb45-2"><a href="#cb45-2" aria-hidden="true" tabindex="-1"></a>dig <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="fu">file.path</span>(<span class="st">"dados"</span>, <span class="st">"digitos.csv"</span>))</span>
 <span id="cb45-3"><a href="#cb45-3" aria-hidden="true" tabindex="-1"></a>X <span class="ot">&lt;-</span> <span class="fu">cbind</span>(<span class="dv">1</span>, <span class="fu">as.matrix</span>(dig[, <span class="sc">-</span><span class="dv">1</span>]) <span class="sc">/</span> <span class="dv">16</span>); y <span class="ot">&lt;-</span> dig<span class="sc">$</span>digito</span>
 <span id="cb45-4"><a href="#cb45-4" aria-hidden="true" tabindex="-1"></a>tr <span class="ot">&lt;-</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">1000</span>; te <span class="ot">&lt;-</span> <span class="dv">1001</span><span class="sc">:</span><span class="fu">nrow</span>(X)</span>
@@ -1457,7 +1457,7 @@ ridge_10           0.4630</code></pre>
 <div class="code-with-filename-file">
 <pre><strong>python/cap07/11_robustez.py</strong></pre>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb47" data-filename="python/cap07/11_robustez.py"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb47-1"><a href="#cb47-1" aria-hidden="true" tabindex="-1"></a><span class="co">"""Cap. 7 -- Robustez adversarial de um classificador linear."""</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb47" data-filename="python/cap07/11_robustez.py"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb47-1"><a href="#cb47-1" aria-hidden="true" tabindex="-1"></a><span class="co">"""Cap. 7: Robustez adversarial de um classificador linear."""</span></span>
 <span id="cb47-2"><a href="#cb47-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> pathlib <span class="im">import</span> Path</span>
 <span id="cb47-3"><a href="#cb47-3" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb47-4"><a href="#cb47-4" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>

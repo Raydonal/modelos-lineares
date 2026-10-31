@@ -369,7 +369,7 @@ window.Quarto = {
 <div class="code-with-filename-file">
 <pre><strong>R/cap03/01_determinantes.R</strong></pre>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1" data-filename="R/cap03/01_determinantes.R"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Cap. 3 -- Determinante pela fórmula de Leibniz e suas propriedades</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1" data-filename="R/cap03/01_determinantes.R"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Cap. 3: Determinante pela fórmula de Leibniz e suas propriedades</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>permutacoes <span class="ot">&lt;-</span> <span class="cf">function</span>(n) {                   <span class="co"># todas as permutações de 1..n</span></span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (n <span class="sc">==</span> <span class="dv">1</span>) <span class="fu">return</span>(<span class="fu">matrix</span>(<span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">1</span>))</span>
 <span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>  P <span class="ot">&lt;-</span> <span class="fu">permutacoes</span>(n <span class="sc">-</span> <span class="dv">1</span>)</span>
@@ -415,7 +415,7 @@ area
 <div class="code-with-filename-file">
 <pre><strong>python/cap03/01_determinantes.py</strong></pre>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3" data-filename="python/cap03/01_determinantes.py"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co">"""Cap. 3 -- Determinante pela fórmula de Leibniz e suas propriedades."""</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3" data-filename="python/cap03/01_determinantes.py"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co">"""Cap. 3: Determinante pela fórmula de Leibniz e suas propriedades."""</span></span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> itertools <span class="im">import</span> permutations</span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> math <span class="im">import</span> prod</span>
 <span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a></span>
@@ -464,7 +464,7 @@ area
 <div class="code-with-filename-file">
 <pre><strong>R/cap03/02_inversa.R</strong></pre>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5" data-filename="R/cap03/02_inversa.R"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Cap. 3 -- Inversa por Gauss-Jordan, pela adjunta e regra de Cramer</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5" data-filename="R/cap03/02_inversa.R"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Cap. 3: Inversa por Gauss-Jordan, pela adjunta e regra de Cramer</span></span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>gauss_jordan_inv <span class="ot">&lt;-</span> <span class="cf">function</span>(A) {</span>
 <span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>  n <span class="ot">&lt;-</span> <span class="fu">nrow</span>(A); M <span class="ot">&lt;-</span> <span class="fu">cbind</span>(A, <span class="fu">diag</span>(n))          <span class="co"># [A | I]</span></span>
 <span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>  <span class="cf">for</span> (j <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span>n) {</span>
@@ -516,7 +516,7 @@ solve     6   15  -23</code></pre>
 <div class="code-with-filename-file">
 <pre><strong>python/cap03/02_inversa.py</strong></pre>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7" data-filename="python/cap03/02_inversa.py"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co">"""Cap. 3 -- Inversa por Gauss-Jordan, pela adjunta e regra de Cramer."""</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7" data-filename="python/cap03/02_inversa.py"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co">"""Cap. 3: Inversa por Gauss-Jordan, pela adjunta e regra de Cramer."""</span></span>
 <span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a></span>
@@ -573,7 +573,7 @@ solve     6   15  -23</code></pre>
 <div class="code-with-filename-file">
 <pre><strong>R/cap03/03_logdet.R</strong></pre>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb9" data-filename="R/cap03/03_logdet.R"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Cap. 3 -- Determinantes grandes: LU, log-determinante e estouro numérico</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb9" data-filename="R/cap03/03_logdet.R"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Cap. 3: Determinantes grandes: LU, log-determinante e estouro numérico</span></span>
 <span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">1</span>)</span>
 <span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>n <span class="ot">&lt;-</span> <span class="dv">1200</span></span>
 <span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>A <span class="ot">&lt;-</span> <span class="fu">diag</span>(n) <span class="sc">*</span> <span class="fl">0.5</span> <span class="sc">+</span> <span class="fu">matrix</span>(<span class="fu">rnorm</span>(n <span class="sc">*</span> n, <span class="at">sd =</span> <span class="fl">0.01</span>), n)  <span class="co"># det ~ 0.5^1200</span></span>
@@ -605,7 +605,7 @@ attr(,"class")
 <div class="code-with-filename-file">
 <pre><strong>python/cap03/03_logdet.py</strong></pre>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb11" data-filename="python/cap03/03_logdet.py"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="co">"""Cap. 3 -- Determinantes grandes: LU, log-determinante e estouro numérico."""</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb11" data-filename="python/cap03/03_logdet.py"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="co">"""Cap. 3: Determinantes grandes: LU, log-determinante e estouro numérico."""</span></span>
 <span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> scipy.linalg <span class="im">as</span> sla</span>
 <span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a></span>
@@ -636,7 +636,7 @@ SlogdetResult(sign=np.float64(1.0), logabsdet=np.float64(-832.1824447962825))
 <div class="code-with-filename-file">
 <pre><strong>R/cap03/04_schur_woodbury.R</strong></pre>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb13" data-filename="R/cap03/04_schur_woodbury.R"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Cap. 3 -- Complemento de Schur, inversa particionada e identidade de Woodbury</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb13" data-filename="R/cap03/04_schur_woodbury.R"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Cap. 3: Complemento de Schur, inversa particionada e identidade de Woodbury</span></span>
 <span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">2</span>)</span>
 <span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>M <span class="ot">&lt;-</span> <span class="fu">crossprod</span>(<span class="fu">matrix</span>(<span class="fu">rnorm</span>(<span class="dv">36</span>), <span class="dv">6</span>)) <span class="sc">+</span> <span class="fu">diag</span>(<span class="dv">6</span>)       <span class="co"># 6 x 6 simétrica não singular</span></span>
 <span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a>i1 <span class="ot">&lt;-</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">2</span>; i2 <span class="ot">&lt;-</span> <span class="dv">3</span><span class="sc">:</span><span class="dv">6</span></span>
@@ -681,7 +681,7 @@ SlogdetResult(sign=np.float64(1.0), logabsdet=np.float64(-832.1824447962825))
 <div class="code-with-filename-file">
 <pre><strong>python/cap03/04_schur_woodbury.py</strong></pre>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb15" data-filename="python/cap03/04_schur_woodbury.py"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="co">"""Cap. 3 -- Complemento de Schur, inversa particionada e identidade de Woodbury."""</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb15" data-filename="python/cap03/04_schur_woodbury.py"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="co">"""Cap. 3: Complemento de Schur, inversa particionada e identidade de Woodbury."""</span></span>
 <span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> time</span>
 <span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
@@ -762,7 +762,7 @@ diferença = 1.9e-13; direto 0.122s; Woodbury 0.0003s
 <div class="code-with-filename-file">
 <pre><strong>R/cap03/05_islm.R</strong></pre>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb18" data-filename="R/cap03/05_islm.R"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Cap. 3 -- Estática comparativa no modelo IS-LM pela regra de Cramer</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb18" data-filename="R/cap03/05_islm.R"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Cap. 3: Estática comparativa no modelo IS-LM pela regra de Cramer</span></span>
 <span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a><span class="co"># IS: Y = c0 + c1 (Y - T) + i0 - b r + G      LM: M/P = k Y - h r</span></span>
 <span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a>par <span class="ot">&lt;-</span> <span class="fu">list</span>(<span class="at">c0 =</span> <span class="dv">100</span>, <span class="at">c1 =</span> <span class="fl">0.75</span>, <span class="at">i0 =</span> <span class="dv">1050</span>, <span class="at">b =</span> <span class="dv">50</span>, <span class="at">k =</span> <span class="fl">0.25</span>, <span class="at">h =</span> <span class="dv">100</span>,</span>
 <span id="cb18-4"><a href="#cb18-4" aria-hidden="true" tabindex="-1"></a>            <span class="at">T =</span> <span class="dv">200</span>, <span class="at">G =</span> <span class="dv">250</span>, <span class="at">MP =</span> <span class="dv">500</span>)</span>
@@ -802,7 +802,7 @@ dY_dG_formula
 <div class="code-with-filename-file">
 <pre><strong>python/cap03/05_islm.py</strong></pre>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb20" data-filename="python/cap03/05_islm.py"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="co">"""Cap. 3 -- Estática comparativa no modelo IS-LM pela regra de Cramer."""</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb20" data-filename="python/cap03/05_islm.py"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="co">"""Cap. 3: Estática comparativa no modelo IS-LM pela regra de Cramer."""</span></span>
 <span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb20-3"><a href="#cb20-3" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb20-4"><a href="#cb20-4" aria-hidden="true" tabindex="-1"></a>p <span class="op">=</span> <span class="bu">dict</span>(c0<span class="op">=</span><span class="dv">100</span>, c1<span class="op">=</span><span class="fl">0.75</span>, i0<span class="op">=</span><span class="dv">1050</span>, b<span class="op">=</span><span class="dv">50</span>, k<span class="op">=</span><span class="fl">0.25</span>, h<span class="op">=</span><span class="dv">100</span>, T<span class="op">=</span><span class="dv">200</span>, G<span class="op">=</span><span class="dv">250</span>, MP<span class="op">=</span><span class="dv">500</span>)</span>
@@ -877,7 +877,7 @@ dG: [2.66666667 0.00666667]  dM/P: [ 1.33333333 -0.00666667]</code></pre>
 <div class="code-with-filename-file">
 <pre><strong>R/cap03/06_efeito_parcial.R</strong></pre>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb23" data-filename="R/cap03/06_efeito_parcial.R"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Cap. 3 -- Coeficiente parcial pela inversa particionada (prévia de Frisch-Waugh-Lovell)</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb23" data-filename="R/cap03/06_efeito_parcial.R"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Cap. 3: Coeficiente parcial pela inversa particionada (prévia de Frisch-Waugh-Lovell)</span></span>
 <span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a>dados <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="fu">file.path</span>(<span class="st">"dados"</span>, <span class="st">"wage1.csv"</span>))</span>
 <span id="cb23-3"><a href="#cb23-3" aria-hidden="true" tabindex="-1"></a>y <span class="ot">&lt;-</span> <span class="fu">log</span>(dados<span class="sc">$</span>wage)</span>
 <span id="cb23-4"><a href="#cb23-4" aria-hidden="true" tabindex="-1"></a>X1 <span class="ot">&lt;-</span> <span class="fu">cbind</span>(<span class="dv">1</span>, <span class="at">exper =</span> dados<span class="sc">$</span>exper)              <span class="co"># controles</span></span>
@@ -909,7 +909,7 @@ b_educ_completo  b_educ_residuo  b_educ_simples
 <div class="code-with-filename-file">
 <pre><strong>python/cap03/06_efeito_parcial.py</strong></pre>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb25" data-filename="python/cap03/06_efeito_parcial.py"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="co">"""Cap. 3 -- Coeficiente parcial pela inversa particionada (prévia de Frisch-Waugh-Lovell)."""</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb25" data-filename="python/cap03/06_efeito_parcial.py"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="co">"""Cap. 3: Coeficiente parcial pela inversa particionada (prévia de Frisch-Waugh-Lovell)."""</span></span>
 <span id="cb25-2"><a href="#cb25-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> pathlib <span class="im">import</span> Path</span>
 <span id="cb25-3"><a href="#cb25-3" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb25-4"><a href="#cb25-4" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
@@ -947,7 +947,7 @@ b_educ_completo  b_educ_residuo  b_educ_simples
 <div class="code-with-filename-file">
 <pre><strong>R/cap03/07_espacial_aveia.R</strong></pre>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb27" data-filename="R/cap03/07_espacial_aveia.R"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Cap. 3 -- Verossimilhança gaussiana com correlação espacial: log-determinantes e sistemas</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb27" data-filename="R/cap03/07_espacial_aveia.R"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Cap. 3: Verossimilhança gaussiana com correlação espacial: log-determinantes e sistemas</span></span>
 <span id="cb27-2"><a href="#cb27-2" aria-hidden="true" tabindex="-1"></a>aveia <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="fu">file.path</span>(<span class="st">"dados"</span>, <span class="st">"yates_oats.csv"</span>))</span>
 <span id="cb27-3"><a href="#cb27-3" aria-hidden="true" tabindex="-1"></a>y <span class="ot">&lt;-</span> aveia<span class="sc">$</span>yield</span>
 <span id="cb27-4"><a href="#cb27-4" aria-hidden="true" tabindex="-1"></a>X <span class="ot">&lt;-</span> <span class="fu">model.matrix</span>(<span class="sc">~</span> <span class="fu">factor</span>(block) <span class="sc">+</span> <span class="fu">factor</span>(nitro) <span class="sc">+</span> <span class="fu">factor</span>(gen), aveia)   <span class="co"># 72 x 11</span></span>
@@ -993,7 +993,7 @@ b_educ_completo  b_educ_residuo  b_educ_simples
 <div class="code-with-filename-file">
 <pre><strong>python/cap03/07_espacial_aveia.py</strong></pre>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb29" data-filename="python/cap03/07_espacial_aveia.py"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a><span class="co">"""Cap. 3 -- Verossimilhança gaussiana com correlação espacial: log-determinantes e sistemas."""</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb29" data-filename="python/cap03/07_espacial_aveia.py"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a><span class="co">"""Cap. 3: Verossimilhança gaussiana com correlação espacial: log-determinantes e sistemas."""</span></span>
 <span id="cb29-2"><a href="#cb29-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> pathlib <span class="im">import</span> Path</span>
 <span id="cb29-3"><a href="#cb29-3" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb29-4"><a href="#cb29-4" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
@@ -1102,7 +1102,7 @@ phi_hat = 28.99, ganho = 5.58</code></pre>
 <div class="code-with-filename-file">
 <pre><strong>R/cap03/08_loocv_rls.R</strong></pre>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb32" data-filename="R/cap03/08_loocv_rls.R"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Cap. 3 -- Validação cruzada leave-one-out em forma fechada e mínimos quadrados recursivos</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb32" data-filename="R/cap03/08_loocv_rls.R"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Cap. 3: Validação cruzada leave-one-out em forma fechada e mínimos quadrados recursivos</span></span>
 <span id="cb32-2"><a href="#cb32-2" aria-hidden="true" tabindex="-1"></a>db <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="fu">file.path</span>(<span class="st">"dados"</span>, <span class="st">"diabetes.csv"</span>))</span>
 <span id="cb32-3"><a href="#cb32-3" aria-hidden="true" tabindex="-1"></a>X <span class="ot">&lt;-</span> <span class="fu">cbind</span>(<span class="dv">1</span>, <span class="fu">as.matrix</span>(db[, <span class="dv">1</span><span class="sc">:</span><span class="dv">10</span>])); y <span class="ot">&lt;-</span> db<span class="sc">$</span>y</span>
 <span id="cb32-4"><a href="#cb32-4" aria-hidden="true" tabindex="-1"></a>n <span class="ot">&lt;-</span> <span class="fu">nrow</span>(X); p <span class="ot">&lt;-</span> <span class="fu">ncol</span>(X)</span>
@@ -1143,7 +1143,7 @@ phi_hat = 28.99, ganho = 5.58</code></pre>
 <div class="code-with-filename-file">
 <pre><strong>python/cap03/08_loocv_rls.py</strong></pre>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb34" data-filename="python/cap03/08_loocv_rls.py"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true" tabindex="-1"></a><span class="co">"""Cap. 3 -- Validação cruzada leave-one-out em forma fechada e mínimos quadrados recursivos."""</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb34" data-filename="python/cap03/08_loocv_rls.py"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true" tabindex="-1"></a><span class="co">"""Cap. 3: Validação cruzada leave-one-out em forma fechada e mínimos quadrados recursivos."""</span></span>
 <span id="cb34-2"><a href="#cb34-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> time</span>
 <span id="cb34-3"><a href="#cb34-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> pathlib <span class="im">import</span> Path</span>
 <span id="cb34-4"><a href="#cb34-4" aria-hidden="true" tabindex="-1"></a></span>
@@ -1242,7 +1242,7 @@ PRESS = 1326775, SQres = 1263986
 <div class="code-with-filename-file">
 <pre><strong>R/cap03/09_fluxo.R</strong></pre>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb37" data-filename="R/cap03/09_fluxo.R"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb37-1"><a href="#cb37-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Cap. 3 -- Fluxo normalizante com uma camada de acoplamento afim (Jacobiano triangular)</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb37" data-filename="R/cap03/09_fluxo.R"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb37-1"><a href="#cb37-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Cap. 3: Fluxo normalizante com uma camada de acoplamento afim (Jacobiano triangular)</span></span>
 <span id="cb37-2"><a href="#cb37-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Gerador: z ~ N(0, I); x1 = z1; x2 = t(x1) + exp(s(x1)) z2</span></span>
 <span id="cb37-3"><a href="#cb37-3" aria-hidden="true" tabindex="-1"></a>s_fun <span class="ot">&lt;-</span> <span class="cf">function</span>(x1) <span class="fu">log</span>(<span class="fl">0.5</span>) <span class="sc">+</span> <span class="fl">0.3</span> <span class="sc">*</span> x1</span>
 <span id="cb37-4"><a href="#cb37-4" aria-hidden="true" tabindex="-1"></a>t_fun <span class="ot">&lt;-</span> <span class="cf">function</span>(x1) <span class="fl">0.5</span> <span class="sc">*</span> x1<span class="sc">^</span><span class="dv">2</span> <span class="sc">-</span> <span class="dv">1</span></span>
@@ -1272,7 +1272,7 @@ PRESS = 1326775, SQres = 1263986
 <div class="code-with-filename-file">
 <pre><strong>python/cap03/09_fluxo.py</strong></pre>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb39" data-filename="python/cap03/09_fluxo.py"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb39-1"><a href="#cb39-1" aria-hidden="true" tabindex="-1"></a><span class="co">"""Cap. 3 -- Fluxo normalizante com uma camada de acoplamento afim (Jacobiano triangular)."""</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb39" data-filename="python/cap03/09_fluxo.py"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb39-1"><a href="#cb39-1" aria-hidden="true" tabindex="-1"></a><span class="co">"""Cap. 3: Fluxo normalizante com uma camada de acoplamento afim (Jacobiano triangular)."""</span></span>
 <span id="cb39-2"><a href="#cb39-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb39-3"><a href="#cb39-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> scipy.stats <span class="im">import</span> norm</span>
 <span id="cb39-4"><a href="#cb39-4" aria-hidden="true" tabindex="-1"></a></span>
@@ -1351,7 +1351,7 @@ PRESS = 1326775, SQres = 1263986
 <div class="code-with-filename-file">
 <pre><strong>R/cap03/10_desaprendizado.R</strong></pre>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb42" data-filename="R/cap03/10_desaprendizado.R"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb42-1"><a href="#cb42-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Cap. 3 -- Desaprendizado de máquina: remover registros por Woodbury</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb42" data-filename="R/cap03/10_desaprendizado.R"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb42-1"><a href="#cb42-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Cap. 3: Desaprendizado de máquina: remover registros por Woodbury</span></span>
 <span id="cb42-2"><a href="#cb42-2" aria-hidden="true" tabindex="-1"></a><span class="fu">source</span>(<span class="fu">file.path</span>(<span class="st">"R"</span>, <span class="st">"comum"</span>, <span class="st">"gerador.R"</span>))  <span class="co"># sorteios do Python</span></span>
 <span id="cb42-3"><a href="#cb42-3" aria-hidden="true" tabindex="-1"></a>db <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="fu">file.path</span>(<span class="st">"dados"</span>, <span class="st">"diabetes.csv"</span>))</span>
 <span id="cb42-4"><a href="#cb42-4" aria-hidden="true" tabindex="-1"></a>X <span class="ot">&lt;-</span> <span class="fu">cbind</span>(<span class="dv">1</span>, <span class="fu">as.matrix</span>(db[, <span class="dv">1</span><span class="sc">:</span><span class="dv">10</span>])); y <span class="ot">&lt;-</span> db<span class="sc">$</span>y</span>
@@ -1431,7 +1431,7 @@ retreinar_s atualizar_s       razao
 <div class="code-with-filename-file">
 <pre><strong>python/cap03/10_desaprendizado.py</strong></pre>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb44" data-filename="python/cap03/10_desaprendizado.py"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb44-1"><a href="#cb44-1" aria-hidden="true" tabindex="-1"></a><span class="co">"""Cap. 3 -- Desaprendizado de máquina por Woodbury."""</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb44" data-filename="python/cap03/10_desaprendizado.py"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb44-1"><a href="#cb44-1" aria-hidden="true" tabindex="-1"></a><span class="co">"""Cap. 3: Desaprendizado de máquina por Woodbury."""</span></span>
 <span id="cb44-2"><a href="#cb44-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> sys</span>
 <span id="cb44-3"><a href="#cb44-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> time</span>
 <span id="cb44-4"><a href="#cb44-4" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> pathlib <span class="im">import</span> Path</span>
@@ -1538,7 +1538,7 @@ retreinar 1.457s, atualizar 6.3e-05s, razão 23279</code></pre>
 <div class="code-with-filename-file">
 <pre><strong>R/cap03/11_dados_diabetes.R</strong></pre>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb46" data-filename="R/cap03/11_dados_diabetes.R"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb46-1"><a href="#cb46-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Cap. 3 -- Conhecendo os dados de diabetes: estatísticas descritivas</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb46" data-filename="R/cap03/11_dados_diabetes.R"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb46-1"><a href="#cb46-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Cap. 3: Conhecendo os dados de diabetes: estatísticas descritivas</span></span>
 <span id="cb46-2"><a href="#cb46-2" aria-hidden="true" tabindex="-1"></a><span class="fu">source</span>(<span class="fu">file.path</span>(<span class="st">"R"</span>, <span class="st">"comum"</span>, <span class="st">"descritiva.R"</span>))</span>
 <span id="cb46-3"><a href="#cb46-3" aria-hidden="true" tabindex="-1"></a>d <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="fu">file.path</span>(<span class="st">"dados"</span>, <span class="st">"diabetes.csv"</span>))</span>
 <span id="cb46-4"><a href="#cb46-4" aria-hidden="true" tabindex="-1"></a><span class="fu">resumo</span>(d)</span>
@@ -1575,7 +1575,7 @@ s5          0.516   0.318  -0.399   0.618   1.000</code></pre>
 <div class="code-with-filename-file">
 <pre><strong>python/cap03/11_dados_diabetes.py</strong></pre>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb48" data-filename="python/cap03/11_dados_diabetes.py"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb48-1"><a href="#cb48-1" aria-hidden="true" tabindex="-1"></a><span class="co">"""Cap. 3 -- Conhecendo os dados de diabetes"""</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb48" data-filename="python/cap03/11_dados_diabetes.py"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb48-1"><a href="#cb48-1" aria-hidden="true" tabindex="-1"></a><span class="co">"""Cap. 3: Conhecendo os dados de diabetes"""</span></span>
 <span id="cb48-2"><a href="#cb48-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> sys</span>
 <span id="cb48-3"><a href="#cb48-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> pathlib <span class="im">import</span> Path</span>
 <span id="cb48-4"><a href="#cb48-4" aria-hidden="true" tabindex="-1"></a></span>

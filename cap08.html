@@ -366,7 +366,7 @@ window.Quarto = {
 <div class="code-with-filename-file">
 <pre><strong>R/cap08/01_minimizacao.R</strong></pre>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1" data-filename="R/cap08/01_minimizacao.R"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Cap. 8 -- Minimização de funções quadráticas, com e sem restrições lineares</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1" data-filename="R/cap08/01_minimizacao.R"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Cap. 8: Minimização de funções quadráticas, com e sem restrições lineares</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>A <span class="ot">&lt;-</span> <span class="fu">matrix</span>(<span class="fu">c</span>(<span class="dv">2</span>, <span class="sc">-</span><span class="dv">1</span>, <span class="sc">-</span><span class="dv">1</span>, <span class="sc">-</span><span class="dv">1</span>, <span class="dv">2</span>, <span class="sc">-</span><span class="dv">1</span>, <span class="sc">-</span><span class="dv">1</span>, <span class="sc">-</span><span class="dv">1</span>, <span class="dv">2</span>), <span class="dv">3</span>)          <span class="co"># Laplaciano do triângulo: posto 2, A 1 = 0</span></span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">eigen</span>(A, <span class="at">symmetric =</span> <span class="cn">TRUE</span>)<span class="sc">$</span>values</span>
 <span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>f <span class="ot">&lt;-</span> <span class="cf">function</span>(x, b) <span class="fl">0.5</span> <span class="sc">*</span> <span class="fu">drop</span>(<span class="fu">t</span>(x) <span class="sc">%*%</span> A <span class="sc">%*%</span> x) <span class="sc">-</span> <span class="fu">sum</span>(b <span class="sc">*</span> x)</span>
@@ -411,7 +411,7 @@ min_numerico        schur     x2_otimo
 <div class="code-with-filename-file">
 <pre><strong>python/cap08/01_minimizacao.py</strong></pre>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3" data-filename="python/cap08/01_minimizacao.py"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co">"""Cap. 8 -- Minimização de funções quadráticas, com e sem restrições lineares."""</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3" data-filename="python/cap08/01_minimizacao.py"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co">"""Cap. 8: Minimização de funções quadráticas, com e sem restrições lineares."""</span></span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> scipy.optimize <span class="im">import</span> minimize_scalar</span>
 <span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a></span>
@@ -450,7 +450,7 @@ mínimo em x2: numérico = 19.500000, complemento de Schur = 19.500000</code></p
 <div class="code-with-filename-file">
 <pre><strong>R/cap08/02_derivadas.R</strong></pre>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5" data-filename="R/cap08/02_derivadas.R"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Cap. 8 -- Derivadas matriciais conferidas por diferenças finitas</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5" data-filename="R/cap08/02_derivadas.R"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Cap. 8: Derivadas matriciais conferidas por diferenças finitas</span></span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="fu">source</span>(<span class="fu">file.path</span>(<span class="st">"R"</span>, <span class="st">"comum"</span>, <span class="st">"gerador.R"</span>)); g <span class="ot">&lt;-</span> <span class="fu">gerador</span>(<span class="dv">80</span>)</span>
 <span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>n <span class="ot">&lt;-</span> <span class="dv">4</span></span>
 <span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>X <span class="ot">&lt;-</span> <span class="fu">crossprod</span>(<span class="fu">matriz_normal</span>(g, <span class="dv">6</span>, n)) <span class="sc">+</span> <span class="fu">diag</span>(n)            <span class="co"># definida positiva</span></span>
@@ -492,7 +492,7 @@ mínimo em x2: numérico = 19.500000, complemento de Schur = 19.500000</code></p
 <div class="code-with-filename-file">
 <pre><strong>python/cap08/02_derivadas.py</strong></pre>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7" data-filename="python/cap08/02_derivadas.py"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co">"""Cap. 8 -- Derivadas matriciais conferidas por diferenças finitas."""</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7" data-filename="python/cap08/02_derivadas.py"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co">"""Cap. 8: Derivadas matriciais conferidas por diferenças finitas."""</span></span>
 <span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> sys</span>
 <span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> pathlib <span class="im">import</span> Path</span>
 <span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a></span>
@@ -533,7 +533,7 @@ d lambda_1: numérica = -1.873281, fórmula = -1.873281</code></pre>
 <div class="code-with-filename-file">
 <pre><strong>R/cap08/03_kronecker.R</strong></pre>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb9" data-filename="R/cap08/03_kronecker.R"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Cap. 8 -- Produto de Kronecker, vec e vech</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb9" data-filename="R/cap08/03_kronecker.R"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Cap. 8: Produto de Kronecker, vec e vech</span></span>
 <span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="fu">source</span>(<span class="fu">file.path</span>(<span class="st">"R"</span>, <span class="st">"comum"</span>, <span class="st">"gerador.R"</span>)); g <span class="ot">&lt;-</span> <span class="fu">gerador</span>(<span class="dv">81</span>)</span>
 <span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>A <span class="ot">&lt;-</span> <span class="fu">matriz_normal</span>(g, <span class="dv">2</span>, <span class="dv">3</span>); B <span class="ot">&lt;-</span> <span class="fu">matriz_normal</span>(g, <span class="dv">4</span>, <span class="dv">2</span>); C <span class="ot">&lt;-</span> <span class="fu">matriz_normal</span>(g, <span class="dv">3</span>, <span class="dv">5</span>); D <span class="ot">&lt;-</span> <span class="fu">matriz_normal</span>(g, <span class="dv">2</span>, <span class="dv">3</span>)</span>
 <span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a><span class="fu">c</span>(<span class="at">produto_misto =</span> <span class="fu">max</span>(<span class="fu">abs</span>(<span class="fu">kronecker</span>(A, B) <span class="sc">%*%</span> <span class="fu">kronecker</span>(C, D) <span class="sc">-</span> <span class="fu">kronecker</span>(A <span class="sc">%*%</span> C, B <span class="sc">%*%</span> D))),</span>
@@ -580,7 +580,7 @@ duplicacao       dim1       dim2
 <div class="code-with-filename-file">
 <pre><strong>python/cap08/03_kronecker.py</strong></pre>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb11" data-filename="python/cap08/03_kronecker.py"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="co">"""Cap. 8 -- Produto de Kronecker, vec e vech."""</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb11" data-filename="python/cap08/03_kronecker.py"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="co">"""Cap. 8: Produto de Kronecker, vec e vech."""</span></span>
 <span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> sys</span>
 <span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> pathlib <span class="im">import</span> Path</span>
 <span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a></span>
@@ -621,7 +621,7 @@ autovalores do Kronecker = produtos: 5.329070518200751e-15</code></pre>
 <div class="code-with-filename-file">
 <pre><strong>R/cap08/04_mle_normal.R</strong></pre>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb13" data-filename="R/cap08/04_mle_normal.R"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Cap. 8 -- Máxima verossimilhança da normal multivariada pelo cálculo matricial (dados wage1)</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb13" data-filename="R/cap08/04_mle_normal.R"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Cap. 8: Máxima verossimilhança da normal multivariada pelo cálculo matricial (dados wage1)</span></span>
 <span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>w <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="fu">file.path</span>(<span class="st">"dados"</span>, <span class="st">"wage1.csv"</span>))</span>
 <span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>X <span class="ot">&lt;-</span> <span class="fu">cbind</span>(<span class="at">lsal =</span> <span class="fu">log</span>(w<span class="sc">$</span>wage), <span class="at">educ =</span> w<span class="sc">$</span>educ, <span class="at">exper =</span> w<span class="sc">$</span>exper, <span class="at">perm =</span> w<span class="sc">$</span>tenure); n <span class="ot">&lt;-</span> <span class="fu">nrow</span>(X); p <span class="ot">&lt;-</span> <span class="fu">ncol</span>(X)</span>
 <span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a>loglik <span class="ot">&lt;-</span> <span class="cf">function</span>(mu, Sigma) {</span>
@@ -669,7 +669,7 @@ perm  0.326 -0.056  0.499  1.000</code></pre>
 <div class="code-with-filename-file">
 <pre><strong>python/cap08/04_mle_normal.py</strong></pre>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb15" data-filename="python/cap08/04_mle_normal.py"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="co">"""Cap. 8 -- Máxima verossimilhança da normal multivariada pelo cálculo matricial (dados wage1)."""</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb15" data-filename="python/cap08/04_mle_normal.py"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="co">"""Cap. 8: Máxima verossimilhança da normal multivariada pelo cálculo matricial (dados wage1)."""</span></span>
 <span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> pathlib <span class="im">import</span> Path</span>
 <span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
@@ -712,7 +712,7 @@ log-verossimilhança máxima = -5395.3143</code></pre>
 <div class="code-with-filename-file">
 <pre><strong>R/cap08/05_islm_nao_linear.R</strong></pre>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb17" data-filename="R/cap08/05_islm_nao_linear.R"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Cap. 8 -- IS-LM não linear: estática comparativa pelo teorema da função implícita</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb17" data-filename="R/cap08/05_islm_nao_linear.R"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Cap. 8: IS-LM não linear: estática comparativa pelo teorema da função implícita</span></span>
 <span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a><span class="co"># IS: Y = c0 + c1 (Y - T) + I(r) + G, com I(r) = 800 (r/5)^(-0,3125)</span></span>
 <span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a><span class="co"># LM: M/P = L(Y, r) = 500 (Y/4000)^2 (r/5)^(-1)      (tangentes ao modelo linear do Cap. 3 em Y = 4000, r = 5)</span></span>
 <span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a>c0 <span class="ot">&lt;-</span> <span class="dv">100</span>; c1 <span class="ot">&lt;-</span> <span class="fl">0.75</span>; Tx <span class="ot">&lt;-</span> <span class="dv">200</span></span>
@@ -764,7 +764,7 @@ r 0.00667 -0.00667
 <div class="code-with-filename-file">
 <pre><strong>python/cap08/05_islm_nao_linear.py</strong></pre>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb19" data-filename="python/cap08/05_islm_nao_linear.py"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="co">"""Cap. 8 -- IS-LM não linear: estática comparativa pelo teorema da função implícita."""</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb19" data-filename="python/cap08/05_islm_nao_linear.py"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="co">"""Cap. 8: IS-LM não linear: estática comparativa pelo teorema da função implícita."""</span></span>
 <span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb19-4"><a href="#cb19-4" aria-hidden="true" tabindex="-1"></a>c0, c1, T <span class="op">=</span> <span class="dv">100</span>, <span class="fl">0.75</span>, <span class="dv">200</span></span>
@@ -853,7 +853,7 @@ M/P = 3000: Y = 5428.462, r =  1.535, dY/dM = 0.315</code></pre>
 <div class="code-with-filename-file">
 <pre><strong>R/cap08/06_kronecker_parcelas.R</strong></pre>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb22" data-filename="R/cap08/06_kronecker_parcelas.R"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Cap. 8 -- Parcelas subdivididas no experimento de aveia: a covariância como produto de Kronecker</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb22" data-filename="R/cap08/06_kronecker_parcelas.R"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Cap. 8: Parcelas subdivididas no experimento de aveia: a covariância como produto de Kronecker</span></span>
 <span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a>a <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="fu">file.path</span>(<span class="st">"dados"</span>, <span class="st">"yates_oats.csv"</span>))</span>
 <span id="cb22-3"><a href="#cb22-3" aria-hidden="true" tabindex="-1"></a>a <span class="ot">&lt;-</span> a[<span class="fu">order</span>(a<span class="sc">$</span>block, a<span class="sc">$</span>gen, a<span class="sc">$</span>nitro), ]                   <span class="co"># 18 parcelas (bloco x variedade), 4 subparcelas cada</span></span>
 <span id="cb22-4"><a href="#cb22-4" aria-hidden="true" tabindex="-1"></a>y <span class="ot">&lt;-</span> a<span class="sc">$</span>yield; n <span class="ot">&lt;-</span> <span class="fu">length</span>(y)</span>
@@ -895,7 +895,7 @@ MQO_ingenuo          4.42       4.42             5.10</code></pre>
 <div class="code-with-filename-file">
 <pre><strong>python/cap08/06_kronecker_parcelas.py</strong></pre>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb24" data-filename="python/cap08/06_kronecker_parcelas.py"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="co">"""Cap. 8 -- Parcelas subdivididas no experimento de aveia: a covariância como produto de Kronecker."""</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb24" data-filename="python/cap08/06_kronecker_parcelas.py"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="co">"""Cap. 8: Parcelas subdivididas no experimento de aveia: a covariância como produto de Kronecker."""</span></span>
 <span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> pathlib <span class="im">import</span> Path</span>
 <span id="cb24-3"><a href="#cb24-3" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb24-4"><a href="#cb24-4" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
@@ -973,7 +973,7 @@ EP MQG: [5.28 5.28 4.13]  EP MQO ingênuo: [4.42 4.42 5.1 ]</code></pre>
 <div class="code-with-filename-file">
 <pre><strong>R/cap08/07_influencia_pca.R</strong></pre>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb27" data-filename="R/cap08/07_influencia_pca.R"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Cap. 8 -- Influência de cada imagem no primeiro autovalor (derivada de autovalores)</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb27" data-filename="R/cap08/07_influencia_pca.R"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Cap. 8: Influência de cada imagem no primeiro autovalor (derivada de autovalores)</span></span>
 <span id="cb27-2"><a href="#cb27-2" aria-hidden="true" tabindex="-1"></a>dig <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="fu">file.path</span>(<span class="st">"dados"</span>, <span class="st">"digitos.csv"</span>))</span>
 <span id="cb27-3"><a href="#cb27-3" aria-hidden="true" tabindex="-1"></a>X <span class="ot">&lt;-</span> <span class="fu">as.matrix</span>(dig[, <span class="sc">-</span><span class="dv">1</span>]); n <span class="ot">&lt;-</span> <span class="fu">nrow</span>(X)</span>
 <span id="cb27-4"><a href="#cb27-4" aria-hidden="true" tabindex="-1"></a>S <span class="ot">&lt;-</span> <span class="fu">cov</span>(X); e <span class="ot">&lt;-</span> <span class="fu">eigen</span>(S, <span class="at">symmetric =</span> <span class="cn">TRUE</span>); l1 <span class="ot">&lt;-</span> e<span class="sc">$</span>values[<span class="dv">1</span>]; q1 <span class="ot">&lt;-</span> e<span class="sc">$</span>vectors[, <span class="dv">1</span>]</span>
@@ -1006,7 +1006,7 @@ digito
 <div class="code-with-filename-file">
 <pre><strong>python/cap08/07_influencia_pca.py</strong></pre>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb29" data-filename="python/cap08/07_influencia_pca.py"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a><span class="co">"""Cap. 8 -- Influência de cada imagem no primeiro autovalor (derivada de autovalores)."""</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb29" data-filename="python/cap08/07_influencia_pca.py"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a><span class="co">"""Cap. 8: Influência de cada imagem no primeiro autovalor (derivada de autovalores)."""</span></span>
 <span id="cb29-2"><a href="#cb29-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> pathlib <span class="im">import</span> Path</span>
 <span id="cb29-3"><a href="#cb29-3" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb29-4"><a href="#cb29-4" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
@@ -1077,7 +1077,7 @@ digito
 <div class="code-with-filename-file">
 <pre><strong>R/cap08/08_atencao_gradiente.R</strong></pre>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb32" data-filename="R/cap08/08_atencao_gradiente.R"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Cap. 8 -- Retropropagação numa camada de atenção, conferida por diferenças finitas</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb32" data-filename="R/cap08/08_atencao_gradiente.R"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Cap. 8: Retropropagação numa camada de atenção, conferida por diferenças finitas</span></span>
 <span id="cb32-2"><a href="#cb32-2" aria-hidden="true" tabindex="-1"></a><span class="fu">source</span>(<span class="fu">file.path</span>(<span class="st">"R"</span>, <span class="st">"comum"</span>, <span class="st">"gerador.R"</span>)); g <span class="ot">&lt;-</span> <span class="fu">gerador</span>(<span class="dv">88</span>)</span>
 <span id="cb32-3"><a href="#cb32-3" aria-hidden="true" tabindex="-1"></a>n <span class="ot">&lt;-</span> <span class="dv">6</span>; d <span class="ot">&lt;-</span> <span class="dv">5</span>; dk <span class="ot">&lt;-</span> <span class="dv">3</span></span>
 <span id="cb32-4"><a href="#cb32-4" aria-hidden="true" tabindex="-1"></a>X <span class="ot">&lt;-</span> <span class="fu">matriz_normal</span>(g, n, d); Tg <span class="ot">&lt;-</span> <span class="fu">matriz_normal</span>(g, n, d)  <span class="co"># entrada e alvo</span></span>
@@ -1123,7 +1123,7 @@ digito
 <div class="code-with-filename-file">
 <pre><strong>python/cap08/08_atencao_gradiente.py</strong></pre>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb34" data-filename="python/cap08/08_atencao_gradiente.py"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true" tabindex="-1"></a><span class="co">"""Cap. 8 -- Retropropagação numa camada de atenção, conferida por diferenças finitas."""</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb34" data-filename="python/cap08/08_atencao_gradiente.py"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true" tabindex="-1"></a><span class="co">"""Cap. 8: Retropropagação numa camada de atenção, conferida por diferenças finitas."""</span></span>
 <span id="cb34-2"><a href="#cb34-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> sys</span>
 <span id="cb34-3"><a href="#cb34-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> pathlib <span class="im">import</span> Path</span>
 <span id="cb34-4"><a href="#cb34-4" aria-hidden="true" tabindex="-1"></a></span>

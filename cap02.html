@@ -369,7 +369,7 @@ window.Quarto = {
 <div class="code-with-filename-file">
 <pre><strong>R/cap02/01_posto.R</strong></pre>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1" data-filename="R/cap02/01_posto.R"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Cap. 2 -- Posto de matrizes e desigualdades de posto</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1" data-filename="R/cap02/01_posto.R"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Cap. 2: Posto de matrizes e desigualdades de posto</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>posto <span class="ot">&lt;-</span> <span class="cf">function</span>(A) <span class="fu">qr</span>(A)<span class="sc">$</span>rank                 <span class="co"># posto via QR (tolerância padrão)</span></span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>A <span class="ot">&lt;-</span> <span class="fu">matrix</span>(<span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">0</span>, <span class="dv">3</span>,</span>
@@ -401,7 +401,7 @@ posto_soma       cota
 <div class="code-with-filename-file">
 <pre><strong>python/cap02/01_posto.py</strong></pre>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3" data-filename="python/cap02/01_posto.py"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co">"""Cap. 2 -- Posto de matrizes e desigualdades de posto."""</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3" data-filename="python/cap02/01_posto.py"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co">"""Cap. 2: Posto de matrizes e desigualdades de posto."""</span></span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>posto <span class="op">=</span> np.linalg.matrix_rank                   <span class="co"># posto via SVD (tolerância padrão)</span></span>
@@ -436,7 +436,7 @@ posto(A + C): 3  cota: 3</code></pre>
 <div class="code-with-filename-file">
 <pre><strong>R/cap02/02_escalonamento.R</strong></pre>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5" data-filename="R/cap02/02_escalonamento.R"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Cap. 2 -- Forma escalonada reduzida, bases dos quatro subespaços e fatoração de posto</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5" data-filename="R/cap02/02_escalonamento.R"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Cap. 2: Forma escalonada reduzida, bases dos quatro subespaços e fatoração de posto</span></span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>escalonar <span class="ot">&lt;-</span> <span class="cf">function</span>(A, <span class="at">tol =</span> <span class="fl">1e-10</span>) {</span>
 <span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>  R <span class="ot">&lt;-</span> A; m <span class="ot">&lt;-</span> <span class="fu">nrow</span>(R); n <span class="ot">&lt;-</span> <span class="fu">ncol</span>(R); pivos <span class="ot">&lt;-</span> <span class="fu">integer</span>(<span class="dv">0</span>); i <span class="ot">&lt;-</span> <span class="dv">1</span></span>
 <span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>  <span class="cf">for</span> (j <span class="cf">in</span> <span class="fu">seq_len</span>(n)) {</span>
@@ -501,7 +501,7 @@ posto(A + C): 3  cota: 3</code></pre>
 <div class="code-with-filename-file">
 <pre><strong>python/cap02/02_escalonamento.py</strong></pre>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7" data-filename="python/cap02/02_escalonamento.py"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co">"""Cap. 2 -- Forma escalonada reduzida, bases dos quatro subespaços e fatoração de posto."""</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7" data-filename="python/cap02/02_escalonamento.py"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co">"""Cap. 2: Forma escalonada reduzida, bases dos quatro subespaços e fatoração de posto."""</span></span>
 <span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a></span>
@@ -573,7 +573,7 @@ posto(A + C): 3  cota: 3</code></pre>
 <div class="code-with-filename-file">
 <pre><strong>R/cap02/03_lu.R</strong></pre>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb9" data-filename="R/cap02/03_lu.R"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Cap. 2 -- Fatoração LU com e sem pivotamento; substituições progressiva e regressiva</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb9" data-filename="R/cap02/03_lu.R"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Cap. 2: Fatoração LU com e sem pivotamento; substituições progressiva e regressiva</span></span>
 <span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>lu_sem_pivo <span class="ot">&lt;-</span> <span class="cf">function</span>(A) {</span>
 <span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>  n <span class="ot">&lt;-</span> <span class="fu">nrow</span>(A); L <span class="ot">&lt;-</span> <span class="fu">diag</span>(n); U <span class="ot">&lt;-</span> A</span>
 <span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>  <span class="cf">for</span> (k <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span>(n <span class="sc">-</span> <span class="dv">1</span>)) {</span>
@@ -654,7 +654,7 @@ solve       1    1</code></pre>
 <div class="code-with-filename-file">
 <pre><strong>python/cap02/03_lu.py</strong></pre>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb11" data-filename="python/cap02/03_lu.py"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="co">"""Cap. 2 -- Fatoração LU com e sem pivotamento; substituições progressiva e regressiva."""</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb11" data-filename="python/cap02/03_lu.py"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="co">"""Cap. 2: Fatoração LU com e sem pivotamento; substituições progressiva e regressiva."""</span></span>
 <span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> scipy.linalg <span class="im">as</span> sla</span>
 <span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a></span>
@@ -726,7 +726,7 @@ solve:    [1. 1.]</code></pre>
 <div class="code-with-filename-file">
 <pre><strong>R/cap02/04_householder.R</strong></pre>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb13" data-filename="R/cap02/04_householder.R"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Cap. 2 -- Fatoração QR por reflexões de Householder</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb13" data-filename="R/cap02/04_householder.R"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Cap. 2: Fatoração QR por reflexões de Householder</span></span>
 <span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>householder_qr <span class="ot">&lt;-</span> <span class="cf">function</span>(A) {</span>
 <span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>  m <span class="ot">&lt;-</span> <span class="fu">nrow</span>(A); n <span class="ot">&lt;-</span> <span class="fu">ncol</span>(A); R <span class="ot">&lt;-</span> A; Q <span class="ot">&lt;-</span> <span class="fu">diag</span>(m)</span>
 <span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a>  <span class="cf">for</span> (k <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span><span class="fu">min</span>(n, m <span class="sc">-</span> <span class="dv">1</span>)) {</span>
@@ -769,7 +769,7 @@ solve:    [1. 1.]</code></pre>
 <div class="code-with-filename-file">
 <pre><strong>python/cap02/04_householder.py</strong></pre>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb15" data-filename="python/cap02/04_householder.py"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="co">"""Cap. 2 -- Fatoração QR por reflexões de Householder."""</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb15" data-filename="python/cap02/04_householder.py"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="co">"""Cap. 2: Fatoração QR por reflexões de Householder."""</span></span>
 <span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a></span>
@@ -820,7 +820,7 @@ solve:    [1. 1.]</code></pre>
 <div class="code-with-filename-file">
 <pre><strong>R/cap02/05_estabilidade_gs.R</strong></pre>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb17" data-filename="R/cap02/05_estabilidade_gs.R"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Cap. 2 -- Perda de ortogonalidade: Gram-Schmidt clássico, modificado e Householder</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb17" data-filename="R/cap02/05_estabilidade_gs.R"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Cap. 2: Perda de ortogonalidade: Gram-Schmidt clássico, modificado e Householder</span></span>
 <span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a>gs_classico <span class="ot">&lt;-</span> <span class="cf">function</span>(X) {</span>
 <span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a>  Q <span class="ot">&lt;-</span> X</span>
 <span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a>  <span class="cf">for</span> (j <span class="cf">in</span> <span class="fu">seq_len</span>(<span class="fu">ncol</span>(X))) {</span>
@@ -867,7 +867,7 @@ solve:    [1. 1.]</code></pre>
 <div class="code-with-filename-file">
 <pre><strong>python/cap02/05_estabilidade_gs.py</strong></pre>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb19" data-filename="python/cap02/05_estabilidade_gs.py"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="co">"""Cap. 2 -- Perda de ortogonalidade: Gram-Schmidt clássico, modificado e Householder."""</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb19" data-filename="python/cap02/05_estabilidade_gs.py"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="co">"""Cap. 2: Perda de ortogonalidade: Gram-Schmidt clássico, modificado e Householder."""</span></span>
 <span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb19-4"><a href="#cb19-4" aria-hidden="true" tabindex="-1"></a></span>
@@ -977,7 +977,7 @@ solve:    [1. 1.]</code></pre>
 <div class="code-with-filename-file">
 <pre><strong>R/cap02/06_longley.R</strong></pre>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb22" data-filename="R/cap02/06_longley.R"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Cap. 2 -- Mínimos quadrados nos dados de Longley: equações normais versus QR</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb22" data-filename="R/cap02/06_longley.R"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Cap. 2: Mínimos quadrados nos dados de Longley: equações normais versus QR</span></span>
 <span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a>lon <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="fu">file.path</span>(<span class="st">"dados"</span>, <span class="st">"longley.csv"</span>))</span>
 <span id="cb22-3"><a href="#cb22-3" aria-hidden="true" tabindex="-1"></a>X <span class="ot">&lt;-</span> <span class="fu">cbind</span>(<span class="dv">1</span>, <span class="fu">as.matrix</span>(lon[, <span class="fu">c</span>(<span class="st">"GNP.deflator"</span>, <span class="st">"GNP"</span>, <span class="st">"Unemployed"</span>,</span>
 <span id="cb22-4"><a href="#cb22-4" aria-hidden="true" tabindex="-1"></a>                                <span class="st">"Armed.Forces"</span>, <span class="st">"Population"</span>, <span class="st">"Year"</span>)]))</span>
@@ -1016,7 +1016,7 @@ Year             8.1 15.0
 <div class="code-with-filename-file">
 <pre><strong>python/cap02/06_longley.py</strong></pre>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb24" data-filename="python/cap02/06_longley.py"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="co">"""Cap. 2 -- Mínimos quadrados nos dados de Longley: equações normais versus QR."""</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb24" data-filename="python/cap02/06_longley.py"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="co">"""Cap. 2: Mínimos quadrados nos dados de Longley: equações normais versus QR."""</span></span>
 <span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> pathlib <span class="im">import</span> Path</span>
 <span id="cb24-3"><a href="#cb24-3" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb24-4"><a href="#cb24-4" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
@@ -1104,7 +1104,7 @@ cond(X) = 2.38e+07, cond(X'X) = 5.69e+14</code></pre>
 <div class="code-with-filename-file">
 <pre><strong>R/cap02/07_dummies.R</strong></pre>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb27" data-filename="R/cap02/07_dummies.R"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Cap. 2 -- A armadilha das variáveis indicadoras: posto incompleto e identificação</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb27" data-filename="R/cap02/07_dummies.R"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Cap. 2: A armadilha das variáveis indicadoras: posto incompleto e identificação</span></span>
 <span id="cb27-2"><a href="#cb27-2" aria-hidden="true" tabindex="-1"></a>dados <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="fu">file.path</span>(<span class="st">"dados"</span>, <span class="st">"wage1.csv"</span>))</span>
 <span id="cb27-3"><a href="#cb27-3" aria-hidden="true" tabindex="-1"></a>y <span class="ot">&lt;-</span> <span class="fu">log</span>(dados<span class="sc">$</span>wage)</span>
 <span id="cb27-4"><a href="#cb27-4" aria-hidden="true" tabindex="-1"></a>nordeste <span class="ot">&lt;-</span> <span class="dv">1</span> <span class="sc">-</span> dados<span class="sc">$</span>northcen <span class="sc">-</span> dados<span class="sc">$</span>south <span class="sc">-</span> dados<span class="sc">$</span>west     <span class="co"># categoria omitida nos dados</span></span>
@@ -1143,7 +1143,7 @@ cond(X) = 2.38e+07, cond(X'X) = 5.69e+14</code></pre>
 <div class="code-with-filename-file">
 <pre><strong>python/cap02/07_dummies.py</strong></pre>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb29" data-filename="python/cap02/07_dummies.py"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a><span class="co">"""Cap. 2 -- A armadilha das variáveis indicadoras: posto incompleto e identificação."""</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb29" data-filename="python/cap02/07_dummies.py"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a><span class="co">"""Cap. 2: A armadilha das variáveis indicadoras: posto incompleto e identificação."""</span></span>
 <span id="cb29-2"><a href="#cb29-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> pathlib <span class="im">import</span> Path</span>
 <span id="cb29-3"><a href="#cb29-3" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb29-4"><a href="#cb29-4" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
@@ -1187,7 +1187,7 @@ cond(X) = 2.38e+07, cond(X'X) = 5.69e+14</code></pre>
 <div class="code-with-filename-file">
 <pre><strong>R/cap02/08_yates_posto.R</strong></pre>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb31" data-filename="R/cap02/08_yates_posto.R"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Cap. 2 -- Posto da matriz de delineamento superparametrizada do experimento de aveia</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb31" data-filename="R/cap02/08_yates_posto.R"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Cap. 2: Posto da matriz de delineamento superparametrizada do experimento de aveia</span></span>
 <span id="cb31-2"><a href="#cb31-2" aria-hidden="true" tabindex="-1"></a>aveia <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="fu">file.path</span>(<span class="st">"dados"</span>, <span class="st">"yates_oats.csv"</span>))</span>
 <span id="cb31-3"><a href="#cb31-3" aria-hidden="true" tabindex="-1"></a>ind <span class="ot">&lt;-</span> <span class="cf">function</span>(f) <span class="fu">model.matrix</span>(<span class="sc">~</span> <span class="fu">factor</span>(f) <span class="sc">-</span> <span class="dv">1</span>)            <span class="co"># indicadoras de um fator</span></span>
 <span id="cb31-4"><a href="#cb31-4" aria-hidden="true" tabindex="-1"></a>X <span class="ot">&lt;-</span> <span class="fu">cbind</span>(<span class="dv">1</span>, <span class="fu">ind</span>(aveia<span class="sc">$</span>block), <span class="fu">ind</span>(aveia<span class="sc">$</span>nitro), <span class="fu">ind</span>(aveia<span class="sc">$</span>gen))</span>
@@ -1223,7 +1223,7 @@ colunas   posto
 <div class="code-with-filename-file">
 <pre><strong>python/cap02/08_yates_posto.py</strong></pre>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb33" data-filename="python/cap02/08_yates_posto.py"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a><span class="co">"""Cap. 2 -- Posto da matriz de delineamento superparametrizada do experimento de aveia."""</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb33" data-filename="python/cap02/08_yates_posto.py"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a><span class="co">"""Cap. 2: Posto da matriz de delineamento superparametrizada do experimento de aveia."""</span></span>
 <span id="cb33-2"><a href="#cb33-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> pathlib <span class="im">import</span> Path</span>
 <span id="cb33-3"><a href="#cb33-3" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb33-4"><a href="#cb33-4" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
@@ -1296,7 +1296,7 @@ colunas   posto
 <div class="code-with-filename-file">
 <pre><strong>R/cap02/09_digitos_posto.R</strong></pre>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb36" data-filename="R/cap02/09_digitos_posto.R"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb36-1"><a href="#cb36-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Cap. 2 -- Posto exato e posto numérico da matriz de imagens de dígitos</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb36" data-filename="R/cap02/09_digitos_posto.R"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb36-1"><a href="#cb36-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Cap. 2: Posto exato e posto numérico da matriz de imagens de dígitos</span></span>
 <span id="cb36-2"><a href="#cb36-2" aria-hidden="true" tabindex="-1"></a>dig <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="fu">file.path</span>(<span class="st">"dados"</span>, <span class="st">"digitos.csv"</span>))</span>
 <span id="cb36-3"><a href="#cb36-3" aria-hidden="true" tabindex="-1"></a>X <span class="ot">&lt;-</span> <span class="fu">as.matrix</span>(dig[, <span class="sc">-</span><span class="dv">1</span>])                                   <span class="co"># 1797 x 64</span></span>
 <span id="cb36-4"><a href="#cb36-4" aria-hidden="true" tabindex="-1"></a>nulas <span class="ot">&lt;-</span> <span class="fu">which</span>(<span class="fu">colSums</span>(X <span class="sc">!=</span> <span class="dv">0</span>) <span class="sc">==</span> <span class="dv">0</span>)                         <span class="co"># pixels sempre apagados</span></span>
@@ -1321,7 +1321,7 @@ colunas   posto
 <div class="code-with-filename-file">
 <pre><strong>python/cap02/09_digitos_posto.py</strong></pre>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb38" data-filename="python/cap02/09_digitos_posto.py"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb38-1"><a href="#cb38-1" aria-hidden="true" tabindex="-1"></a><span class="co">"""Cap. 2 -- Posto exato e posto numérico da matriz de imagens de dígitos."""</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb38" data-filename="python/cap02/09_digitos_posto.py"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb38-1"><a href="#cb38-1" aria-hidden="true" tabindex="-1"></a><span class="co">"""Cap. 2: Posto exato e posto numérico da matriz de imagens de dígitos."""</span></span>
 <span id="cb38-2"><a href="#cb38-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> pathlib <span class="im">import</span> Path</span>
 <span id="cb38-3"><a href="#cb38-3" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb38-4"><a href="#cb38-4" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
@@ -1393,7 +1393,7 @@ colunas   posto
 <div class="code-with-filename-file">
 <pre><strong>R/cap02/10_lora.R</strong></pre>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb41" data-filename="R/cap02/10_lora.R"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb41-1"><a href="#cb41-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Cap. 2 -- Adaptação de posto baixo (LoRA): fatoração de posto e contagem de parâmetros</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb41" data-filename="R/cap02/10_lora.R"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb41-1"><a href="#cb41-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Cap. 2: Adaptação de posto baixo (LoRA): fatoração de posto e contagem de parâmetros</span></span>
 <span id="cb41-2"><a href="#cb41-2" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">7</span>)</span>
 <span id="cb41-3"><a href="#cb41-3" aria-hidden="true" tabindex="-1"></a>d <span class="ot">&lt;-</span> <span class="dv">64</span>; r <span class="ot">&lt;-</span> <span class="dv">4</span></span>
 <span id="cb41-4"><a href="#cb41-4" aria-hidden="true" tabindex="-1"></a>W0 <span class="ot">&lt;-</span> <span class="fu">matrix</span>(<span class="fu">rnorm</span>(d <span class="sc">*</span> d), d, d)              <span class="co"># pesos "pré-treinados" (posto completo)</span></span>
@@ -1434,7 +1434,7 @@ colunas   posto
 <div class="code-with-filename-file">
 <pre><strong>python/cap02/10_lora.py</strong></pre>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb43" data-filename="python/cap02/10_lora.py"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb43-1"><a href="#cb43-1" aria-hidden="true" tabindex="-1"></a><span class="co">"""Cap. 2 -- Adaptação de posto baixo (LoRA): fatoração de posto e contagem de parâmetros."""</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb43" data-filename="python/cap02/10_lora.py"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb43-1"><a href="#cb43-1" aria-hidden="true" tabindex="-1"></a><span class="co">"""Cap. 2: Adaptação de posto baixo (LoRA): fatoração de posto e contagem de parâmetros."""</span></span>
 <span id="cb43-2"><a href="#cb43-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb43-3"><a href="#cb43-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
 <span id="cb43-4"><a href="#cb43-4" aria-hidden="true" tabindex="-1"></a></span>
@@ -1482,7 +1482,7 @@ colunas   posto
 <div class="code-with-filename-file">
 <pre><strong>R/cap02/11_dados_longley.R</strong></pre>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb45" data-filename="R/cap02/11_dados_longley.R"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb45-1"><a href="#cb45-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Cap. 2 -- Conhecendo os dados de Longley: estatísticas descritivas</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb45" data-filename="R/cap02/11_dados_longley.R"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb45-1"><a href="#cb45-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Cap. 2: Conhecendo os dados de Longley: estatísticas descritivas</span></span>
 <span id="cb45-2"><a href="#cb45-2" aria-hidden="true" tabindex="-1"></a><span class="fu">source</span>(<span class="fu">file.path</span>(<span class="st">"R"</span>, <span class="st">"comum"</span>, <span class="st">"descritiva.R"</span>))</span>
 <span id="cb45-3"><a href="#cb45-3" aria-hidden="true" tabindex="-1"></a>l <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="fu">file.path</span>(<span class="st">"dados"</span>, <span class="st">"longley.csv"</span>))</span>
 <span id="cb45-4"><a href="#cb45-4" aria-hidden="true" tabindex="-1"></a>v <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"Employed"</span>, <span class="st">"GNP.deflator"</span>, <span class="st">"GNP"</span>, <span class="st">"Unemployed"</span>,</span>
@@ -1514,7 +1514,7 @@ Year        0.971   0.991   0.995   0.668   0.417   0.994   1.000</code></pre>
 <div class="code-with-filename-file">
 <pre><strong>python/cap02/11_dados_longley.py</strong></pre>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb47" data-filename="python/cap02/11_dados_longley.py"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb47-1"><a href="#cb47-1" aria-hidden="true" tabindex="-1"></a><span class="co">"""Cap. 2 -- Conhecendo os dados de Longley"""</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb47" data-filename="python/cap02/11_dados_longley.py"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb47-1"><a href="#cb47-1" aria-hidden="true" tabindex="-1"></a><span class="co">"""Cap. 2: Conhecendo os dados de Longley"""</span></span>
 <span id="cb47-2"><a href="#cb47-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> sys</span>
 <span id="cb47-3"><a href="#cb47-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> pathlib <span class="im">import</span> Path</span>
 <span id="cb47-4"><a href="#cb47-4" aria-hidden="true" tabindex="-1"></a></span>

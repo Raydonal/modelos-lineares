@@ -366,7 +366,7 @@ window.Quarto = {
 <div class="code-with-filename-file">
 <pre><strong>R/cap11/01_codificacoes.R</strong></pre>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1" data-filename="R/cap11/01_codificacoes.R"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Cap. 11 -- Codificações de um fator: o que cada coeficiente mede</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1" data-filename="R/cap11/01_codificacoes.R"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Cap. 11: Codificações de um fator: o que cada coeficiente mede</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>a <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="fu">file.path</span>(<span class="st">"dados"</span>, <span class="st">"yates_oats.csv"</span>))</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>dose <span class="ot">&lt;-</span> <span class="fu">factor</span>(a<span class="sc">$</span>nitro)                       <span class="co"># 4 níveis: 0 a 0,6</span></span>
 <span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>mu <span class="ot">&lt;-</span> <span class="fu">tapply</span>(a<span class="sc">$</span>yield, dose, mean)             <span class="co"># médias das caselas</span></span>
@@ -418,7 +418,7 @@ b3 -0.224  0.671 -0.671 0.224
 <div class="code-with-filename-file">
 <pre><strong>python/cap11/01_codificacoes.py</strong></pre>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3" data-filename="python/cap11/01_codificacoes.py"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co">"""Cap. 11 -- Codificações de um fator: o que cada coeficiente mede"""</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3" data-filename="python/cap11/01_codificacoes.py"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co">"""Cap. 11: Codificações de um fator: o que cada coeficiente mede"""</span></span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> pathlib <span class="im">import</span> Path</span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
@@ -493,7 +493,7 @@ médias: [ 79.39  98.89 114.22 123.39]</code></pre>
 <div class="code-with-filename-file">
 <pre><strong>R/cap11/02_interacao_kronecker.R</strong></pre>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5" data-filename="R/cap11/02_interacao_kronecker.R"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Cap. 11 -- Interações como produtos de Kronecker linha a linha</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5" data-filename="R/cap11/02_interacao_kronecker.R"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Cap. 11: Interações como produtos de Kronecker linha a linha</span></span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>a <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="fu">file.path</span>(<span class="st">"dados"</span>, <span class="st">"yates_oats.csv"</span>))</span>
 <span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>ga <span class="ot">&lt;-</span> <span class="fu">as.integer</span>(<span class="fu">factor</span>(a<span class="sc">$</span>gen)); nb <span class="ot">&lt;-</span> <span class="fu">as.integer</span>(<span class="fu">factor</span>(a<span class="sc">$</span>nitro))</span>
 <span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>ind <span class="ot">&lt;-</span> <span class="cf">function</span>(f, k) <span class="fu">outer</span>(f, <span class="dv">1</span><span class="sc">:</span>k, <span class="st">"=="</span>) <span class="sc">*</span> <span class="dv">1</span>  <span class="co"># indicadoras</span></span>
@@ -526,7 +526,7 @@ médias: [ 79.39  98.89 114.22 123.39]</code></pre>
 <div class="code-with-filename-file">
 <pre><strong>python/cap11/02_interacao_kronecker.py</strong></pre>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7" data-filename="python/cap11/02_interacao_kronecker.py"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co">"""Cap. 11 -- Interações como produtos de Kronecker linha a linha"""</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7" data-filename="python/cap11/02_interacao_kronecker.py"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co">"""Cap. 11: Interações como produtos de Kronecker linha a linha"""</span></span>
 <span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> pathlib <span class="im">import</span> Path</span>
 <span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
@@ -575,7 +575,7 @@ colunas 12, posto 11, caselas cheias 11</code></pre>
 <div class="code-with-filename-file">
 <pre><strong>R/cap11/03_multivariado.R</strong></pre>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb9" data-filename="R/cap11/03_multivariado.R"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Cap. 11 -- Modelo multivariado: a forma vetorizada com Kronecker</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb9" data-filename="R/cap11/03_multivariado.R"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Cap. 11: Modelo multivariado: a forma vetorizada com Kronecker</span></span>
 <span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="fu">source</span>(<span class="fu">file.path</span>(<span class="st">"R"</span>, <span class="st">"comum"</span>, <span class="st">"gerador.R"</span>))  <span class="co"># sorteios do Python</span></span>
 <span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>g <span class="ot">&lt;-</span> <span class="fu">gerador</span>(<span class="dv">11</span>); n <span class="ot">&lt;-</span> <span class="dv">50</span></span>
 <span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>X <span class="ot">&lt;-</span> <span class="fu">cbind</span>(<span class="dv">1</span>, <span class="fu">matriz_normal</span>(g, n, <span class="dv">2</span>))         <span class="co"># n x 3</span></span>
@@ -605,7 +605,7 @@ colunas 12, posto 11, caselas cheias 11</code></pre>
 <div class="code-with-filename-file">
 <pre><strong>python/cap11/03_multivariado.py</strong></pre>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb11" data-filename="python/cap11/03_multivariado.py"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="co">"""Cap. 11 -- Modelo multivariado: a forma vetorizada com Kronecker"""</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb11" data-filename="python/cap11/03_multivariado.py"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="co">"""Cap. 11: Modelo multivariado: a forma vetorizada com Kronecker"""</span></span>
 <span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> sys</span>
 <span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> pathlib <span class="im">import</span> Path</span>
 <span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a></span>
@@ -650,7 +650,7 @@ colunas 12, posto 11, caselas cheias 11</code></pre>
 <div class="code-with-filename-file">
 <pre><strong>R/cap11/04_aveia_parametrizacoes.R</strong></pre>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb13" data-filename="R/cap11/04_aveia_parametrizacoes.R"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Cap. 11 -- Aveia: parametrizações do modelo com interação</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb13" data-filename="R/cap11/04_aveia_parametrizacoes.R"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Cap. 11: Aveia: parametrizações do modelo com interação</span></span>
 <span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>a <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="fu">file.path</span>(<span class="st">"dados"</span>, <span class="st">"yates_oats.csv"</span>))</span>
 <span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>a<span class="sc">$</span>gen <span class="ot">&lt;-</span> <span class="fu">factor</span>(a<span class="sc">$</span>gen); a<span class="sc">$</span>dose <span class="ot">&lt;-</span> <span class="fu">factor</span>(a<span class="sc">$</span>nitro)</span>
 <span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a>mc <span class="ot">&lt;-</span> <span class="fu">lm</span>(yield <span class="sc">~</span> <span class="dv">0</span> <span class="sc">+</span> gen<span class="sc">:</span>dose, <span class="at">data =</span> a)      <span class="co"># médias das caselas</span></span>
@@ -701,7 +701,7 @@ tratamento  dif_dose0       soma  dif_media
 <div class="code-with-filename-file">
 <pre><strong>python/cap11/04_aveia_parametrizacoes.py</strong></pre>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb15" data-filename="python/cap11/04_aveia_parametrizacoes.py"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="co">"""Cap. 11 -- Aveia: parametrizações do modelo com interação"""</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb15" data-filename="python/cap11/04_aveia_parametrizacoes.py"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="co">"""Cap. 11: Aveia: parametrizações do modelo com interação"""</span></span>
 <span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> pathlib <span class="im">import</span> Path</span>
 <span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
@@ -785,7 +785,7 @@ Victory - GoldenRain nas doses 0 a 0,4: -7.056</code></pre>
 <div class="code-with-filename-file">
 <pre><strong>R/cap11/05_salarios_cef.R</strong></pre>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb17" data-filename="R/cap11/05_salarios_cef.R"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Cap. 11 -- Salários: regressão e média condicional</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb17" data-filename="R/cap11/05_salarios_cef.R"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Cap. 11: Salários: regressão e média condicional</span></span>
 <span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a>w <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="fu">file.path</span>(<span class="st">"dados"</span>, <span class="st">"wage1.csv"</span>))</span>
 <span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a>y <span class="ot">&lt;-</span> <span class="fu">log</span>(w<span class="sc">$</span>wage); e <span class="ot">&lt;-</span> w<span class="sc">$</span>educ; n <span class="ot">&lt;-</span> <span class="fu">length</span>(y)</span>
 <span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a>nj <span class="ot">&lt;-</span> <span class="fu">table</span>(e); ej <span class="ot">&lt;-</span> <span class="fu">as.numeric</span>(<span class="fu">names</span>(nj))   <span class="co"># 18 caselas</span></span>
@@ -824,7 +824,7 @@ incl_ate_12 incl_depois
 <div class="code-with-filename-file">
 <pre><strong>python/cap11/05_salarios_cef.py</strong></pre>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb19" data-filename="python/cap11/05_salarios_cef.py"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="co">"""Cap. 11 -- Salários: regressão e média condicional"""</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb19" data-filename="python/cap11/05_salarios_cef.py"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="co">"""Cap. 11: Salários: regressão e média condicional"""</span></span>
 <span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> pathlib <span class="im">import</span> Path</span>
 <span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb19-4"><a href="#cb19-4" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
@@ -914,7 +914,7 @@ retornos marginais em 8, 12, 16: [0.0353 0.0865 0.1378]</code></pre>
 <div class="code-with-filename-file">
 <pre><strong>R/cap11/06_sazonalidade_fourier.R</strong></pre>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb22" data-filename="R/cap11/06_sazonalidade_fourier.R"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Cap. 11 -- Sazonalidade: indicadoras de mês ou harmônicos de Fourier</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb22" data-filename="R/cap11/06_sazonalidade_fourier.R"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Cap. 11: Sazonalidade: indicadoras de mês ou harmônicos de Fourier</span></span>
 <span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a>s <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="fu">file.path</span>(<span class="st">"dados"</span>, <span class="st">"seatbelts.csv"</span>))</span>
 <span id="cb22-3"><a href="#cb22-3" aria-hidden="true" tabindex="-1"></a>y <span class="ot">&lt;-</span> <span class="fu">log</span>(s<span class="sc">$</span>motoristas); n <span class="ot">&lt;-</span> <span class="fu">length</span>(y); t <span class="ot">&lt;-</span> <span class="dv">1</span><span class="sc">:</span>n</span>
 <span id="cb22-4"><a href="#cb22-4" aria-hidden="true" tabindex="-1"></a>D <span class="ot">&lt;-</span> <span class="fu">outer</span>(s<span class="sc">$</span>mes, <span class="dv">1</span><span class="sc">:</span><span class="dv">12</span>, <span class="st">"=="</span>) <span class="sc">*</span> <span class="dv">1</span>             <span class="co"># 12 indicadoras</span></span>
@@ -961,7 +961,7 @@ frac    0.000 0.686 0.881 0.932 0.960  0.996  1.000
 <div class="code-with-filename-file">
 <pre><strong>python/cap11/06_sazonalidade_fourier.py</strong></pre>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb24" data-filename="python/cap11/06_sazonalidade_fourier.py"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="co">"""Cap. 11 -- Sazonalidade: indicadoras ou harmônicos de Fourier"""</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb24" data-filename="python/cap11/06_sazonalidade_fourier.py"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="co">"""Cap. 11: Sazonalidade: indicadoras ou harmônicos de Fourier"""</span></span>
 <span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> pathlib <span class="im">import</span> Path</span>
 <span id="cb24-3"><a href="#cb24-3" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb24-4"><a href="#cb24-4" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
@@ -1083,7 +1083,7 @@ efeito da lei, K = 2 e K = 6: [-0.1625 -0.164 ]</code></pre>
 <div class="code-with-filename-file">
 <pre><strong>R/cap11/07_atributos_aleatorios.R</strong></pre>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb27" data-filename="R/cap11/07_atributos_aleatorios.R"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Cap. 11 -- Atributos aleatórios: uma rede de uma camada congelada</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb27" data-filename="R/cap11/07_atributos_aleatorios.R"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Cap. 11: Atributos aleatórios: uma rede de uma camada congelada</span></span>
 <span id="cb27-2"><a href="#cb27-2" aria-hidden="true" tabindex="-1"></a><span class="fu">source</span>(<span class="fu">file.path</span>(<span class="st">"R"</span>, <span class="st">"comum"</span>, <span class="st">"gerador.R"</span>))  <span class="co"># sorteios do Python</span></span>
 <span id="cb27-3"><a href="#cb27-3" aria-hidden="true" tabindex="-1"></a>d <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="fu">file.path</span>(<span class="st">"dados"</span>, <span class="st">"digitos.csv"</span>))</span>
 <span id="cb27-4"><a href="#cb27-4" aria-hidden="true" tabindex="-1"></a>X <span class="ot">&lt;-</span> <span class="fu">cbind</span>(<span class="dv">1</span>, <span class="fu">as.matrix</span>(d[, <span class="sc">-</span><span class="dv">1</span>]) <span class="sc">/</span> <span class="dv">16</span>)        <span class="co"># intercepto e pixels</span></span>
@@ -1125,7 +1125,7 @@ efeito da lei, K = 2 e K = 6: [-0.1625 -0.164 ]</code></pre>
 <div class="code-with-filename-file">
 <pre><strong>python/cap11/07_atributos_aleatorios.py</strong></pre>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb29" data-filename="python/cap11/07_atributos_aleatorios.py"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a><span class="co">"""Cap. 11 -- Atributos aleatórios: uma rede de uma camada congelada"""</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb29" data-filename="python/cap11/07_atributos_aleatorios.py"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a><span class="co">"""Cap. 11: Atributos aleatórios: uma rede de uma camada congelada"""</span></span>
 <span id="cb29-2"><a href="#cb29-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> sys</span>
 <span id="cb29-3"><a href="#cb29-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> pathlib <span class="im">import</span> Path</span>
 <span id="cb29-4"><a href="#cb29-4" aria-hidden="true" tabindex="-1"></a></span>

@@ -371,7 +371,7 @@ window.Quarto = {
 <div class="code-with-filename-file">
 <pre><strong>R/cap05/01_idempotentes.R</strong></pre>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1" data-filename="R/cap05/01_idempotentes.R"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Cap. 5 -- Matrizes idempotentes: posto = traço, identidade de posto, potências</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1" data-filename="R/cap05/01_idempotentes.R"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Cap. 5: Matrizes idempotentes: posto = traço, identidade de posto, potências</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>posto <span class="ot">&lt;-</span> <span class="cf">function</span>(M) <span class="fu">qr</span>(M, <span class="at">tol =</span> <span class="fl">1e-10</span>)<span class="sc">$</span>rank</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>tr <span class="ot">&lt;-</span> <span class="cf">function</span>(M) <span class="fu">sum</span>(<span class="fu">diag</span>(M))</span>
 <span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
@@ -425,7 +425,7 @@ esquerda  direita
 <div class="code-with-filename-file">
 <pre><strong>python/cap05/01_idempotentes.py</strong></pre>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3" data-filename="python/cap05/01_idempotentes.py"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co">"""Cap. 5 -- Matrizes idempotentes: posto = traço, identidade de posto, potências."""</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3" data-filename="python/cap05/01_idempotentes.py"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co">"""Cap. 5: Matrizes idempotentes: posto = traço, identidade de posto, potências."""</span></span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>posto <span class="op">=</span> <span class="kw">lambda</span> M: np.linalg.matrix_rank(M, tol<span class="op">=</span><span class="fl">1e-10</span>)</span>
@@ -475,7 +475,7 @@ erro L^2 - L: 3.3306690738754696e-16  posto: 1</code></pre>
 <div class="code-with-filename-file">
 <pre><strong>R/cap05/02_projecoes.R</strong></pre>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5" data-filename="R/cap05/02_projecoes.R"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Cap. 5 -- Projeções oblíquas e ortogonais em R^3</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5" data-filename="R/cap05/02_projecoes.R"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Cap. 5: Projeções oblíquas e ortogonais em R^3</span></span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>norma <span class="ot">&lt;-</span> <span class="cf">function</span>(v) <span class="fu">sqrt</span>(<span class="fu">sum</span>(v<span class="sc">^</span><span class="dv">2</span>))</span>
 <span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Projeção sobre U = C(B) (o plano z = 0) ao longo de W = ger{w}, w = (1, 1, 1)</span></span>
 <span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>B <span class="ot">&lt;-</span> <span class="fu">cbind</span>(<span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">0</span>, <span class="dv">0</span>), <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">0</span>))</span>
@@ -533,7 +533,7 @@ norma_Po_y   norma_Po
 <div class="code-with-filename-file">
 <pre><strong>python/cap05/02_projecoes.py</strong></pre>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7" data-filename="python/cap05/02_projecoes.py"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co">"""Cap. 5 -- Projeções oblíquas e ortogonais em R^3."""</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7" data-filename="python/cap05/02_projecoes.py"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co">"""Cap. 5: Projeções oblíquas e ortogonais em R^3."""</span></span>
 <span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> scipy.linalg <span class="im">import</span> null_space, qr</span>
 <span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a></span>
@@ -585,7 +585,7 @@ P_W idempotente: True  simétrica: False  W P_W simétrica: True</code></pre>
 <div class="code-with-filename-file">
 <pre><strong>R/cap05/03_encaixados.R</strong></pre>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb9" data-filename="R/cap05/03_encaixados.R"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Cap. 5 -- Subespaços encaixados, somas de quadrados e restrições (dados wage1)</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb9" data-filename="R/cap05/03_encaixados.R"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Cap. 5: Subespaços encaixados, somas de quadrados e restrições (dados wage1)</span></span>
 <span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>w  <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="fu">file.path</span>(<span class="st">"dados"</span>, <span class="st">"wage1.csv"</span>))</span>
 <span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>y  <span class="ot">&lt;-</span> <span class="fu">log</span>(w<span class="sc">$</span>wage); n <span class="ot">&lt;-</span> <span class="fu">length</span>(y)</span>
 <span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>proj <span class="ot">&lt;-</span> <span class="cf">function</span>(X) X <span class="sc">%*%</span> <span class="fu">solve</span>(<span class="fu">crossprod</span>(X), <span class="fu">t</span>(X))   <span class="co"># posto coluna completo</span></span>
@@ -655,7 +655,7 @@ Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’
 <div class="code-with-filename-file">
 <pre><strong>python/cap05/03_encaixados.py</strong></pre>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb11" data-filename="python/cap05/03_encaixados.py"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="co">"""Cap. 5 -- Subespaços encaixados, somas de quadrados e restrições (dados wage1)."""</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb11" data-filename="python/cap05/03_encaixados.py"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="co">"""Cap. 5: Subespaços encaixados, somas de quadrados e restrições (dados wage1)."""</span></span>
 <span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> pathlib <span class="im">import</span> Path</span>
 <span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
@@ -705,7 +705,7 @@ P_X - P_S = P_U: 1.2836953722228372e-16   SQ da restrição = 3.489</code></pre>
 <div class="code-with-filename-file">
 <pre><strong>R/cap05/04_alavancas.R</strong></pre>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb13" data-filename="R/cap05/04_alavancas.R"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Cap. 5 -- A diagonal da matriz chapéu (alavancas) nos dados wage1</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb13" data-filename="R/cap05/04_alavancas.R"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Cap. 5: A diagonal da matriz chapéu (alavancas) nos dados wage1</span></span>
 <span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>w <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="fu">file.path</span>(<span class="st">"dados"</span>, <span class="st">"wage1.csv"</span>))</span>
 <span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>X <span class="ot">&lt;-</span> <span class="fu">cbind</span>(<span class="dv">1</span>, w<span class="sc">$</span>educ, w<span class="sc">$</span>exper, w<span class="sc">$</span>tenure); y <span class="ot">&lt;-</span> <span class="fu">log</span>(w<span class="sc">$</span>wage)</span>
 <span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a>n <span class="ot">&lt;-</span> <span class="fu">nrow</span>(X); p <span class="ot">&lt;-</span> <span class="fu">ncol</span>(X)</span>
@@ -750,7 +750,7 @@ acima_2p_n acima_3p_n
 <div class="code-with-filename-file">
 <pre><strong>python/cap05/04_alavancas.py</strong></pre>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb15" data-filename="python/cap05/04_alavancas.py"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="co">"""Cap. 5 -- A diagonal da matriz chapéu (alavancas) nos dados wage1."""</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb15" data-filename="python/cap05/04_alavancas.py"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="co">"""Cap. 5: A diagonal da matriz chapéu (alavancas) nos dados wage1."""</span></span>
 <span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> pathlib <span class="im">import</span> Path</span>
 <span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
@@ -791,7 +791,7 @@ acima de 2p/n: 54  acima de 3p/n: 18</code></pre>
 <div class="code-with-filename-file">
 <pre><strong>R/cap05/05_aveia_somas.R</strong></pre>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb17" data-filename="R/cap05/05_aveia_somas.R"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Cap. 5 -- Somas de quadrados como projeções no experimento de aveia</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb17" data-filename="R/cap05/05_aveia_somas.R"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Cap. 5: Somas de quadrados como projeções no experimento de aveia</span></span>
 <span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a>aveia <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="fu">file.path</span>(<span class="st">"dados"</span>, <span class="st">"yates_oats.csv"</span>))</span>
 <span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a>proj <span class="ot">&lt;-</span> <span class="cf">function</span>(X) { q <span class="ot">&lt;-</span> <span class="fu">qr</span>(X); Q <span class="ot">&lt;-</span> <span class="fu">qr.Q</span>(q)[, <span class="fu">seq_len</span>(q<span class="sc">$</span>rank), drop <span class="ot">=</span> <span class="cn">FALSE</span>]; Q <span class="sc">%*%</span> <span class="fu">t</span>(Q) }</span>
 <span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a>ind  <span class="ot">&lt;-</span> <span class="cf">function</span>(f) <span class="fu">model.matrix</span>(<span class="sc">~</span> <span class="fu">factor</span>(f) <span class="sc">-</span> <span class="dv">1</span>)</span>
@@ -868,7 +868,7 @@ muda_mais_de_20pc
 <div class="code-with-filename-file">
 <pre><strong>python/cap05/05_aveia_somas.py</strong></pre>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb19" data-filename="python/cap05/05_aveia_somas.py"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="co">"""Cap. 5 -- Somas de quadrados como projeções no experimento de aveia."""</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb19" data-filename="python/cap05/05_aveia_somas.py"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="co">"""Cap. 5: Somas de quadrados como projeções no experimento de aveia."""</span></span>
 <span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> sys</span>
 <span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> pathlib <span class="im">import</span> Path</span>
 <span id="cb19-4"><a href="#cb19-4" aria-hidden="true" tabindex="-1"></a></span>
@@ -1022,7 +1022,7 @@ fração em que a conclusão a 5% muda: 0.282</code></pre>
 <div class="code-with-filename-file">
 <pre><strong>R/cap05/06_vi_mroz.R</strong></pre>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb22" data-filename="R/cap05/06_vi_mroz.R"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Cap. 5 -- Variáveis instrumentais como projeção oblíqua (dados de Mroz)</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb22" data-filename="R/cap05/06_vi_mroz.R"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Cap. 5: Variáveis instrumentais como projeção oblíqua (dados de Mroz)</span></span>
 <span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a>m <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="fu">file.path</span>(<span class="st">"dados"</span>, <span class="st">"mroz.csv"</span>))</span>
 <span id="cb22-3"><a href="#cb22-3" aria-hidden="true" tabindex="-1"></a>y <span class="ot">&lt;-</span> m<span class="sc">$</span>lwage; n <span class="ot">&lt;-</span> <span class="fu">length</span>(y)</span>
 <span id="cb22-4"><a href="#cb22-4" aria-hidden="true" tabindex="-1"></a>X <span class="ot">&lt;-</span> <span class="fu">cbind</span>(<span class="dv">1</span>, <span class="at">educ =</span> m<span class="sc">$</span>educ); Z <span class="ot">&lt;-</span> <span class="fu">cbind</span>(<span class="dv">1</span>, <span class="at">fatheduc =</span> m<span class="sc">$</span>fatheduc)</span>
@@ -1076,7 +1076,7 @@ educ  0.1086487 0.05917348
 <div class="code-with-filename-file">
 <pre><strong>python/cap05/06_vi_mroz.py</strong></pre>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb24" data-filename="python/cap05/06_vi_mroz.py"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="co">"""Cap. 5 -- Variáveis instrumentais como projeção oblíqua (dados de Mroz)."""</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb24" data-filename="python/cap05/06_vi_mroz.py"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="co">"""Cap. 5: Variáveis instrumentais como projeção oblíqua (dados de Mroz)."""</span></span>
 <span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> pathlib <span class="im">import</span> Path</span>
 <span id="cb24-3"><a href="#cb24-3" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb24-4"><a href="#cb24-4" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
@@ -1163,7 +1163,7 @@ MQ2E: [0.551  0.0505]  idempotente: True  |P2| = 2.1923</code></pre>
 <div class="code-with-filename-file">
 <pre><strong>R/cap05/07_lovell.R</strong></pre>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb27" data-filename="R/cap05/07_lovell.R"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Cap. 5 -- Ajuste sazonal e regressão: o teorema de Lovell (dados Seatbelts)</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb27" data-filename="R/cap05/07_lovell.R"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Cap. 5: Ajuste sazonal e regressão: o teorema de Lovell (dados Seatbelts)</span></span>
 <span id="cb27-2"><a href="#cb27-2" aria-hidden="true" tabindex="-1"></a>s <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="fu">file.path</span>(<span class="st">"dados"</span>, <span class="st">"seatbelts.csv"</span>)); n <span class="ot">&lt;-</span> <span class="fu">nrow</span>(s)</span>
 <span id="cb27-3"><a href="#cb27-3" aria-hidden="true" tabindex="-1"></a>y <span class="ot">&lt;-</span> <span class="fu">log</span>(s<span class="sc">$</span>motoristas)</span>
 <span id="cb27-4"><a href="#cb27-4" aria-hidden="true" tabindex="-1"></a>X <span class="ot">&lt;-</span> <span class="fu">cbind</span>(<span class="at">km =</span> <span class="fu">log</span>(s<span class="sc">$</span>km), <span class="at">preco =</span> <span class="fu">log</span>(s<span class="sc">$</span>preco_gasolina), <span class="at">lei =</span> s<span class="sc">$</span>lei)</span>
@@ -1200,7 +1200,7 @@ b_nenhum   -0.1672 -0.4103 -0.1564
 <div class="code-with-filename-file">
 <pre><strong>python/cap05/07_lovell.py</strong></pre>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb29" data-filename="python/cap05/07_lovell.py"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a><span class="co">"""Cap. 5 -- Ajuste sazonal e regressão: o teorema de Lovell (dados Seatbelts)."""</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb29" data-filename="python/cap05/07_lovell.py"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a><span class="co">"""Cap. 5: Ajuste sazonal e regressão: o teorema de Lovell (dados Seatbelts)."""</span></span>
 <span id="cb29-2"><a href="#cb29-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> pathlib <span class="im">import</span> Path</span>
 <span id="cb29-3"><a href="#cb29-3" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb29-4"><a href="#cb29-4" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
@@ -1294,7 +1294,7 @@ s correto = 0.08355,  s ingênuo = 0.08085</code></pre>
 <div class="code-with-filename-file">
 <pre><strong>R/cap05/08_suavizadores.R</strong></pre>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb32" data-filename="R/cap05/08_suavizadores.R"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Cap. 5 -- Suavizadores lineares: projeções e não projeções (dados mcycle)</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb32" data-filename="R/cap05/08_suavizadores.R"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Cap. 5: Suavizadores lineares: projeções e não projeções (dados mcycle)</span></span>
 <span id="cb32-2"><a href="#cb32-2" aria-hidden="true" tabindex="-1"></a>mc <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="fu">file.path</span>(<span class="st">"dados"</span>, <span class="st">"mcycle.csv"</span>)); x <span class="ot">&lt;-</span> mc<span class="sc">$</span>times; y <span class="ot">&lt;-</span> mc<span class="sc">$</span>accel; n <span class="ot">&lt;-</span> <span class="fu">length</span>(y)</span>
 <span id="cb32-3"><a href="#cb32-3" aria-hidden="true" tabindex="-1"></a>tr <span class="ot">&lt;-</span> <span class="cf">function</span>(A) <span class="fu">sum</span>(<span class="fu">diag</span>(A))</span>
 <span id="cb32-4"><a href="#cb32-4" aria-hidden="true" tabindex="-1"></a>base <span class="ot">&lt;-</span> <span class="cf">function</span>(K) {                         <span class="co"># B-splines cúbicas, K nós interiores equiespaçados</span></span>
@@ -1362,7 +1362,7 @@ soma_linhas_nw  soma_linhas_p
 <div class="code-with-filename-file">
 <pre><strong>python/cap05/08_suavizadores.py</strong></pre>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb34" data-filename="python/cap05/08_suavizadores.py"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true" tabindex="-1"></a><span class="co">"""Cap. 5 -- Suavizadores lineares: projeções e não projeções (dados mcycle)."""</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb34" data-filename="python/cap05/08_suavizadores.py"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true" tabindex="-1"></a><span class="co">"""Cap. 5: Suavizadores lineares: projeções e não projeções (dados mcycle)."""</span></span>
 <span id="cb34-2"><a href="#cb34-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> pathlib <span class="im">import</span> Path</span>
 <span id="cb34-3"><a href="#cb34-3" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb34-4"><a href="#cb34-4" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
@@ -1479,7 +1479,7 @@ Nadaraya-Watson      23.7351  17.7611      0.1877  ...   0.9249  595.9699  655.5
 <div class="code-with-filename-file">
 <pre><strong>R/cap05/09_atencao.R</strong></pre>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb37" data-filename="R/cap05/09_atencao.R"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb37-1"><a href="#cb37-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Cap. 5 -- A atenção como suavizador: temperatura, projeções e colapso de posto</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb37" data-filename="R/cap05/09_atencao.R"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb37-1"><a href="#cb37-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Cap. 5: A atenção como suavizador: temperatura, projeções e colapso de posto</span></span>
 <span id="cb37-2"><a href="#cb37-2" aria-hidden="true" tabindex="-1"></a>softmax <span class="ot">&lt;-</span> <span class="cf">function</span>(M) { M <span class="ot">&lt;-</span> M <span class="sc">-</span> <span class="fu">apply</span>(M, <span class="dv">1</span>, max); E <span class="ot">&lt;-</span> <span class="fu">exp</span>(M); E <span class="sc">/</span> <span class="fu">rowSums</span>(E) }</span>
 <span id="cb37-3"><a href="#cb37-3" aria-hidden="true" tabindex="-1"></a>posto <span class="ot">&lt;-</span> <span class="cf">function</span>(M) <span class="fu">qr</span>(M, <span class="at">tol =</span> <span class="fl">1e-8</span>)<span class="sc">$</span>rank</span>
 <span id="cb37-4"><a href="#cb37-4" aria-hidden="true" tabindex="-1"></a><span class="fu">source</span>(<span class="fu">file.path</span>(<span class="st">"R"</span>, <span class="st">"comum"</span>, <span class="st">"gerador.R"</span>))           <span class="co"># mesmos sorteios que o Python</span></span>
@@ -1539,7 +1539,7 @@ erro_idemp_L      erro_AL      posto_L
 <div class="code-with-filename-file">
 <pre><strong>python/cap05/09_atencao.py</strong></pre>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb39" data-filename="python/cap05/09_atencao.py"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb39-1"><a href="#cb39-1" aria-hidden="true" tabindex="-1"></a><span class="co">"""Cap. 5 -- A atenção como suavizador: temperatura, projeções e colapso de posto."""</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb39" data-filename="python/cap05/09_atencao.py"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb39-1"><a href="#cb39-1" aria-hidden="true" tabindex="-1"></a><span class="co">"""Cap. 5: A atenção como suavizador: temperatura, projeções e colapso de posto."""</span></span>
 <span id="cb39-2"><a href="#cb39-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> sys</span>
 <span id="cb39-3"><a href="#cb39-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> pathlib <span class="im">import</span> Path</span>
 <span id="cb39-4"><a href="#cb39-4" aria-hidden="true" tabindex="-1"></a></span>
@@ -1656,7 +1656,7 @@ LayerNorm: soma = 3.3e-16, norma = 2.8284 = sqrt(d) = 2.8284, invariância a 3x 
 <div class="code-with-filename-file">
 <pre><strong>R/cap05/10_sanitizacao.R</strong></pre>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb42" data-filename="R/cap05/10_sanitizacao.R"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb42-1"><a href="#cb42-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Cap. 5 -- Sanitização de embeddings: projetar fora o gênero</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb42" data-filename="R/cap05/10_sanitizacao.R"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb42-1"><a href="#cb42-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Cap. 5: Sanitização de embeddings: projetar fora o gênero</span></span>
 <span id="cb42-2"><a href="#cb42-2" aria-hidden="true" tabindex="-1"></a><span class="fu">source</span>(<span class="fu">file.path</span>(<span class="st">"R"</span>, <span class="st">"comum"</span>, <span class="st">"gerador.R"</span>))  <span class="co"># sorteios do Python</span></span>
 <span id="cb42-3"><a href="#cb42-3" aria-hidden="true" tabindex="-1"></a><span class="fu">source</span>(<span class="fu">file.path</span>(<span class="st">"R"</span>, <span class="st">"comum"</span>, <span class="st">"austen.R"</span>))   <span class="co"># embeddings do Cap. 6</span></span>
 <span id="cb42-4"><a href="#cb42-4" aria-hidden="true" tabindex="-1"></a>emb <span class="ot">&lt;-</span> <span class="fu">embeddings_austen</span>(); E <span class="ot">&lt;-</span> emb<span class="sc">$</span>E; C <span class="ot">&lt;-</span> emb<span class="sc">$</span>C; vocab <span class="ot">&lt;-</span> emb<span class="sc">$</span>vocab</span>
@@ -1772,7 +1772,7 @@ elizabeth antes: elinor, emma, catherine, darcy, edmund
 <div class="code-with-filename-file">
 <pre><strong>python/cap05/10_sanitizacao.py</strong></pre>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb44" data-filename="python/cap05/10_sanitizacao.py"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb44-1"><a href="#cb44-1" aria-hidden="true" tabindex="-1"></a><span class="co">"""Cap. 5 -- Sanitização de embeddings: projetar fora o gênero."""</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb44" data-filename="python/cap05/10_sanitizacao.py"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb44-1"><a href="#cb44-1" aria-hidden="true" tabindex="-1"></a><span class="co">"""Cap. 5: Sanitização de embeddings: projetar fora o gênero."""</span></span>
 <span id="cb44-2"><a href="#cb44-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> sys</span>
 <span id="cb44-3"><a href="#cb44-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> pathlib <span class="im">import</span> Path</span>
 <span id="cb44-4"><a href="#cb44-4" aria-hidden="true" tabindex="-1"></a></span>
@@ -1913,7 +1913,7 @@ elizabeth antes: elinor, emma, catherine, darcy, edmund
 <div class="code-with-filename-file">
 <pre><strong>R/cap05/11_dados_mroz.R</strong></pre>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb46" data-filename="R/cap05/11_dados_mroz.R"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb46-1"><a href="#cb46-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Cap. 5 -- Conhecendo os dados de Mroz: estatísticas descritivas</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb46" data-filename="R/cap05/11_dados_mroz.R"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb46-1"><a href="#cb46-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Cap. 5: Conhecendo os dados de Mroz: estatísticas descritivas</span></span>
 <span id="cb46-2"><a href="#cb46-2" aria-hidden="true" tabindex="-1"></a><span class="fu">source</span>(<span class="fu">file.path</span>(<span class="st">"R"</span>, <span class="st">"comum"</span>, <span class="st">"descritiva.R"</span>))</span>
 <span id="cb46-3"><a href="#cb46-3" aria-hidden="true" tabindex="-1"></a>m <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="fu">file.path</span>(<span class="st">"dados"</span>, <span class="st">"mroz.csv"</span>))</span>
 <span id="cb46-4"><a href="#cb46-4" aria-hidden="true" tabindex="-1"></a>v <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"lwage"</span>, <span class="st">"educ"</span>, <span class="st">"exper"</span>, <span class="st">"fatheduc"</span>, <span class="st">"motheduc"</span>)</span>
@@ -1940,7 +1940,7 @@ motheduc    0.047   0.387  -0.112   0.554   1.000</code></pre>
 <div class="code-with-filename-file">
 <pre><strong>python/cap05/11_dados_mroz.py</strong></pre>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb48" data-filename="python/cap05/11_dados_mroz.py"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb48-1"><a href="#cb48-1" aria-hidden="true" tabindex="-1"></a><span class="co">"""Cap. 5 -- Conhecendo os dados de Mroz: estatísticas descritivas"""</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb48" data-filename="python/cap05/11_dados_mroz.py"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb48-1"><a href="#cb48-1" aria-hidden="true" tabindex="-1"></a><span class="co">"""Cap. 5: Conhecendo os dados de Mroz: estatísticas descritivas"""</span></span>
 <span id="cb48-2"><a href="#cb48-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> sys</span>
 <span id="cb48-3"><a href="#cb48-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> pathlib <span class="im">import</span> Path</span>
 <span id="cb48-4"><a href="#cb48-4" aria-hidden="true" tabindex="-1"></a></span>
@@ -2012,7 +2012,7 @@ motheduc    0.047   0.387  -0.112   0.554   1.000</code></pre>
 <div class="code-with-filename-file">
 <pre><strong>R/cap05/12_dados_seatbelts.R</strong></pre>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb51" data-filename="R/cap05/12_dados_seatbelts.R"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb51-1"><a href="#cb51-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Cap. 5 -- Conhecendo os dados Seatbelts: estatísticas descritivas</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb51" data-filename="R/cap05/12_dados_seatbelts.R"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb51-1"><a href="#cb51-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Cap. 5: Conhecendo os dados Seatbelts: estatísticas descritivas</span></span>
 <span id="cb51-2"><a href="#cb51-2" aria-hidden="true" tabindex="-1"></a><span class="fu">source</span>(<span class="fu">file.path</span>(<span class="st">"R"</span>, <span class="st">"comum"</span>, <span class="st">"descritiva.R"</span>))</span>
 <span id="cb51-3"><a href="#cb51-3" aria-hidden="true" tabindex="-1"></a>s <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="fu">file.path</span>(<span class="st">"dados"</span>, <span class="st">"seatbelts.csv"</span>))</span>
 <span id="cb51-4"><a href="#cb51-4" aria-hidden="true" tabindex="-1"></a><span class="fu">resumo</span>(s, <span class="fu">c</span>(<span class="st">"motoristas"</span>, <span class="st">"km"</span>, <span class="st">"preco_gasolina"</span>))</span>
@@ -2047,7 +2047,7 @@ lei        -0.496   0.449   0.383   1.000</code></pre>
 <div class="code-with-filename-file">
 <pre><strong>python/cap05/12_dados_seatbelts.py</strong></pre>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb53" data-filename="python/cap05/12_dados_seatbelts.py"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb53-1"><a href="#cb53-1" aria-hidden="true" tabindex="-1"></a><span class="co">"""Cap. 5 -- Conhecendo os dados Seatbelts"""</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb53" data-filename="python/cap05/12_dados_seatbelts.py"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb53-1"><a href="#cb53-1" aria-hidden="true" tabindex="-1"></a><span class="co">"""Cap. 5: Conhecendo os dados Seatbelts"""</span></span>
 <span id="cb53-2"><a href="#cb53-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> sys</span>
 <span id="cb53-3"><a href="#cb53-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> pathlib <span class="im">import</span> Path</span>
 <span id="cb53-4"><a href="#cb53-4" aria-hidden="true" tabindex="-1"></a></span>
@@ -2132,7 +2132,7 @@ lei        -0.496   0.449   0.383   1.000</code></pre>
 <div class="code-with-filename-file">
 <pre><strong>R/cap05/13_dados_mcycle.R</strong></pre>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb56" data-filename="R/cap05/13_dados_mcycle.R"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb56-1"><a href="#cb56-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Cap. 5 -- Conhecendo os dados mcycle: estatísticas descritivas</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb56" data-filename="R/cap05/13_dados_mcycle.R"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb56-1"><a href="#cb56-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Cap. 5: Conhecendo os dados mcycle: estatísticas descritivas</span></span>
 <span id="cb56-2"><a href="#cb56-2" aria-hidden="true" tabindex="-1"></a><span class="fu">source</span>(<span class="fu">file.path</span>(<span class="st">"R"</span>, <span class="st">"comum"</span>, <span class="st">"descritiva.R"</span>))</span>
 <span id="cb56-3"><a href="#cb56-3" aria-hidden="true" tabindex="-1"></a>d <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="fu">file.path</span>(<span class="st">"dados"</span>, <span class="st">"mcycle.csv"</span>))</span>
 <span id="cb56-4"><a href="#cb56-4" aria-hidden="true" tabindex="-1"></a><span class="fu">resumo</span>(d)</span>
@@ -2161,7 +2161,7 @@ d:fim          21     0.83    14.72   -26.80    30.80</code></pre>
 <div class="code-with-filename-file">
 <pre><strong>python/cap05/13_dados_mcycle.py</strong></pre>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb58" data-filename="python/cap05/13_dados_mcycle.py"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb58-1"><a href="#cb58-1" aria-hidden="true" tabindex="-1"></a><span class="co">"""Cap. 5 -- Conhecendo os dados mcycle: estatísticas descritivas"""</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb58" data-filename="python/cap05/13_dados_mcycle.py"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb58-1"><a href="#cb58-1" aria-hidden="true" tabindex="-1"></a><span class="co">"""Cap. 5: Conhecendo os dados mcycle: estatísticas descritivas"""</span></span>
 <span id="cb58-2"><a href="#cb58-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> sys</span>
 <span id="cb58-3"><a href="#cb58-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> pathlib <span class="im">import</span> Path</span>
 <span id="cb58-4"><a href="#cb58-4" aria-hidden="true" tabindex="-1"></a></span>

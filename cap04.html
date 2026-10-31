@@ -368,7 +368,7 @@ window.Quarto = {
 <div class="code-with-filename-file">
 <pre><strong>R/cap04/01_existencia.R</strong></pre>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1" data-filename="R/cap04/01_existencia.R"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Cap. 4 -- Existência e não unicidade de inversas generalizadas</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1" data-filename="R/cap04/01_existencia.R"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Cap. 4: Existência e não unicidade de inversas generalizadas</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>A <span class="ot">&lt;-</span> <span class="fu">matrix</span>(<span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">0</span>,  <span class="dv">1</span>,</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>              <span class="dv">2</span>, <span class="dv">4</span>, <span class="dv">1</span>,  <span class="dv">1</span>,</span>
 <span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>              <span class="dv">3</span>, <span class="dv">6</span>, <span class="dv">1</span>,  <span class="dv">2</span>), <span class="dv">3</span>, <span class="at">byrow =</span> <span class="cn">TRUE</span>)    <span class="co"># 3 x 4, posto 2</span></span>
@@ -420,7 +420,7 @@ G3  1.4e-14       3
 <div class="code-with-filename-file">
 <pre><strong>python/cap04/01_existencia.py</strong></pre>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3" data-filename="python/cap04/01_existencia.py"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co">"""Cap. 4 -- Existência e não unicidade de inversas generalizadas."""</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3" data-filename="python/cap04/01_existencia.py"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co">"""Cap. 4: Existência e não unicidade de inversas generalizadas."""</span></span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>A <span class="op">=</span> np.array([[<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">0</span>, <span class="dv">1</span>], [<span class="dv">2</span>, <span class="dv">4</span>, <span class="dv">1</span>, <span class="dv">1</span>], [<span class="dv">3</span>, <span class="dv">6</span>, <span class="dv">1</span>, <span class="dv">2</span>]], dtype<span class="op">=</span><span class="bu">float</span>)   <span class="co"># 3 x 4, posto 2</span></span>
@@ -466,7 +466,7 @@ G1 coincide com a de Moore-Penrose: True</code></pre>
 <div class="code-with-filename-file">
 <pre><strong>R/cap04/02_invariancia.R</strong></pre>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5" data-filename="R/cap04/02_invariancia.R"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Cap. 4 -- Equações normais de um modelo superparametrizado: o que muda e o que não muda</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5" data-filename="R/cap04/02_invariancia.R"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Cap. 4: Equações normais de um modelo superparametrizado: o que muda e o que não muda</span></span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>grupo <span class="ot">&lt;-</span> <span class="fu">factor</span>(<span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">2</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">3</span>))</span>
 <span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>y <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">12</span>, <span class="dv">14</span>, <span class="dv">18</span>, <span class="dv">17</span>, <span class="dv">19</span>, <span class="dv">10</span>, <span class="dv">11</span>)</span>
 <span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>X <span class="ot">&lt;-</span> <span class="fu">cbind</span>(<span class="dv">1</span>, <span class="fu">model.matrix</span>(<span class="sc">~</span> grupo <span class="sc">-</span> <span class="dv">1</span>))          <span class="co"># mu, alfa1, alfa2, alfa3 (posto 3)</span></span>
@@ -510,7 +510,7 @@ alfa1_alfa2 -5.000  -5</code></pre>
 <div class="code-with-filename-file">
 <pre><strong>python/cap04/02_invariancia.py</strong></pre>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7" data-filename="python/cap04/02_invariancia.py"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co">"""Cap. 4 -- Equações normais de um modelo superparametrizado: o que muda e o que não muda."""</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7" data-filename="python/cap04/02_invariancia.py"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co">"""Cap. 4: Equações normais de um modelo superparametrizado: o que muda e o que não muda."""</span></span>
 <span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>g <span class="op">=</span> np.array([<span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">2</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">3</span>])</span>
@@ -556,7 +556,7 @@ alfa1-alfa2    -5.0000   -5.0000</code></pre>
 <div class="code-with-filename-file">
 <pre><strong>R/cap04/03_sistemas.R</strong></pre>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb9" data-filename="R/cap04/03_sistemas.R"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Cap. 4 -- Compatibilidade e solução geral de A x = b (e de A X C = B)</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb9" data-filename="R/cap04/03_sistemas.R"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Cap. 4: Compatibilidade e solução geral de A x = b (e de A X C = B)</span></span>
 <span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>A <span class="ot">&lt;-</span> <span class="fu">matrix</span>(<span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">0</span>, <span class="dv">1</span>,  <span class="dv">2</span>, <span class="dv">4</span>, <span class="dv">1</span>, <span class="dv">1</span>,  <span class="dv">3</span>, <span class="dv">6</span>, <span class="dv">1</span>, <span class="dv">2</span>), <span class="dv">3</span>, <span class="at">byrow =</span> <span class="cn">TRUE</span>)   <span class="co"># posto 2</span></span>
 <span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>G <span class="ot">&lt;-</span> MASS<span class="sc">::</span><span class="fu">ginv</span>(A)</span>
 <span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>compativel <span class="ot">&lt;-</span> <span class="cf">function</span>(b) <span class="fu">isTRUE</span>(<span class="fu">all.equal</span>(<span class="fu">drop</span>(A <span class="sc">%*%</span> G <span class="sc">%*%</span> b), b))  <span class="co"># teste A G b = b</span></span>
@@ -607,7 +607,7 @@ k_fora  0.079 1.184 1.137 0.926 0.242
 <div class="code-with-filename-file">
 <pre><strong>python/cap04/03_sistemas.py</strong></pre>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb11" data-filename="python/cap04/03_sistemas.py"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="co">"""Cap. 4 -- Compatibilidade e solução geral de A x = b (e de A X C = B)."""</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb11" data-filename="python/cap04/03_sistemas.py"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="co">"""Cap. 4: Compatibilidade e solução geral de A x = b (e de A X C = B)."""</span></span>
 <span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>A <span class="op">=</span> np.array([[<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">0</span>, <span class="dv">1</span>], [<span class="dv">2</span>, <span class="dv">4</span>, <span class="dv">1</span>, <span class="dv">1</span>], [<span class="dv">3</span>, <span class="dv">6</span>, <span class="dv">1</span>, <span class="dv">2</span>]], dtype<span class="op">=</span><span class="bu">float</span>)</span>
@@ -656,7 +656,7 @@ A X C = B: 2.2737367544323206e-13 1.7053025658242404e-13</code></pre>
 <div class="code-with-filename-file">
 <pre><strong>R/cap04/04_tipos.R</strong></pre>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb13" data-filename="R/cap04/04_tipos.R"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Cap. 4 -- Inversas reflexivas, de mínimos quadrados, de norma mínima e de Moore-Penrose</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb13" data-filename="R/cap04/04_tipos.R"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Cap. 4: Inversas reflexivas, de mínimos quadrados, de norma mínima e de Moore-Penrose</span></span>
 <span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>A <span class="ot">&lt;-</span> <span class="fu">matrix</span>(<span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">0</span>, <span class="dv">1</span>,  <span class="dv">2</span>, <span class="dv">4</span>, <span class="dv">1</span>, <span class="dv">1</span>,  <span class="dv">3</span>, <span class="dv">6</span>, <span class="dv">1</span>, <span class="dv">2</span>), <span class="dv">3</span>, <span class="at">byrow =</span> <span class="cn">TRUE</span>)   <span class="co"># posto 2</span></span>
 <span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>ginv_sub <span class="ot">&lt;-</span> <span class="cf">function</span>(M, i, j) {                 <span class="co"># inversa generalizada por submatriz</span></span>
 <span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a>  G <span class="ot">&lt;-</span> <span class="fu">matrix</span>(<span class="dv">0</span>, <span class="fu">ncol</span>(M), <span class="fu">nrow</span>(M)); G[j, i] <span class="ot">&lt;-</span> <span class="fu">solve</span>(M[i, j]); G</span>
@@ -709,7 +709,7 @@ norma   2.236068 1.7950549 1.1806521
 <div class="code-with-filename-file">
 <pre><strong>python/cap04/04_tipos.py</strong></pre>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb15" data-filename="python/cap04/04_tipos.py"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="co">"""Cap. 4 -- Inversas reflexivas, de mínimos quadrados, de norma mínima e de Moore-Penrose."""</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb15" data-filename="python/cap04/04_tipos.py"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="co">"""Cap. 4: Inversas reflexivas, de mínimos quadrados, de norma mínima e de Moore-Penrose."""</span></span>
 <span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a>A <span class="op">=</span> np.array([[<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">0</span>, <span class="dv">1</span>], [<span class="dv">2</span>, <span class="dv">4</span>, <span class="dv">1</span>, <span class="dv">1</span>], [<span class="dv">3</span>, <span class="dv">6</span>, <span class="dv">1</span>, <span class="dv">2</span>]], dtype<span class="op">=</span><span class="bu">float</span>)</span>
@@ -768,7 +768,7 @@ lambda = 1e-06: dif. = 2.0e-06</code></pre>
 <div class="code-with-filename-file">
 <pre><strong>R/cap04/05_aveia_restricoes.R</strong></pre>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb17" data-filename="R/cap04/05_aveia_restricoes.R"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Cap. 4 -- Restrições de identificação no experimento de aveia e inversas generalizadas</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb17" data-filename="R/cap04/05_aveia_restricoes.R"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Cap. 4: Restrições de identificação no experimento de aveia e inversas generalizadas</span></span>
 <span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a>aveia <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="fu">file.path</span>(<span class="st">"dados"</span>, <span class="st">"yates_oats.csv"</span>))</span>
 <span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a>ind <span class="ot">&lt;-</span> <span class="cf">function</span>(f) <span class="fu">model.matrix</span>(<span class="sc">~</span> <span class="fu">factor</span>(f) <span class="sc">-</span> <span class="dv">1</span>)</span>
 <span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a>X <span class="ot">&lt;-</span> <span class="fu">cbind</span>(<span class="dv">1</span>, <span class="fu">ind</span>(aveia<span class="sc">$</span>block), <span class="fu">ind</span>(aveia<span class="sc">$</span>nitro), <span class="fu">ind</span>(aveia<span class="sc">$</span>gen))    <span class="co"># 72 x 14, posto 11</span></span>
@@ -827,7 +827,7 @@ n6                    44.000    19.417   34.270 34.270     FALSE
 <div class="code-with-filename-file">
 <pre><strong>python/cap04/05_aveia_restricoes.py</strong></pre>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb19" data-filename="python/cap04/05_aveia_restricoes.py"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="co">"""Cap. 4 -- Restrições de identificação no experimento de aveia e inversas generalizadas."""</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb19" data-filename="python/cap04/05_aveia_restricoes.py"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="co">"""Cap. 4: Restrições de identificação no experimento de aveia e inversas generalizadas."""</span></span>
 <span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> pathlib <span class="im">import</span> Path</span>
 <span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb19-4"><a href="#cb19-4" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
@@ -944,7 +944,7 @@ n6                 [44.    19.417 34.27  34.27 ] não estimável</code></pre>
 <div class="code-with-filename-file">
 <pre><strong>R/cap04/06_markov_trabalho.R</strong></pre>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb22" data-filename="R/cap04/06_markov_trabalho.R"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Cap. 4 -- Cadeia de Markov do mercado de trabalho: sistemas singulares compatíveis</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb22" data-filename="R/cap04/06_markov_trabalho.R"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Cap. 4: Cadeia de Markov do mercado de trabalho: sistemas singulares compatíveis</span></span>
 <span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a>estados <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"E"</span>, <span class="st">"D"</span>, <span class="st">"F"</span>)       <span class="co"># empregado, desempregado, fora da força de trabalho</span></span>
 <span id="cb22-3"><a href="#cb22-3" aria-hidden="true" tabindex="-1"></a>P <span class="ot">&lt;-</span> <span class="fu">matrix</span>(<span class="fu">c</span>(<span class="fl">0.960</span>, <span class="fl">0.015</span>, <span class="fl">0.025</span>,</span>
 <span id="cb22-4"><a href="#cb22-4" aria-hidden="true" tabindex="-1"></a>              <span class="fl">0.250</span>, <span class="fl">0.600</span>, <span class="fl">0.150</span>,</span>
@@ -1005,7 +1005,7 @@ D_menos_F 15739.01 15739.01 15739.01
 <div class="code-with-filename-file">
 <pre><strong>python/cap04/06_markov_trabalho.py</strong></pre>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb24" data-filename="python/cap04/06_markov_trabalho.py"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="co">"""Cap. 4 -- Cadeia de Markov do mercado de trabalho: sistemas singulares compatíveis."""</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb24" data-filename="python/cap04/06_markov_trabalho.py"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="co">"""Cap. 4: Cadeia de Markov do mercado de trabalho: sistemas singulares compatíveis."""</span></span>
 <span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb24-3"><a href="#cb24-3" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb24-4"><a href="#cb24-4" aria-hidden="true" tabindex="-1"></a>P <span class="op">=</span> np.array([[<span class="fl">0.960</span>, <span class="fl">0.015</span>, <span class="fl">0.025</span>], [<span class="fl">0.250</span>, <span class="fl">0.600</span>, <span class="fl">0.150</span>], [<span class="fl">0.040</span>, <span class="fl">0.030</span>, <span class="fl">0.930</span>]])</span>
@@ -1048,7 +1048,7 @@ h_E - h_D: [15059.92 15059.92 15059.92]  h_D - h_F: [15739.01 15739.01 15739.01]
 <div class="code-with-filename-file">
 <pre><strong>R/cap04/07_massey_nfl.R</strong></pre>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb26" data-filename="R/cap04/07_massey_nfl.R"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Cap. 4 -- Ratings de Massey na NFL: o que é estimável num campeonato</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb26" data-filename="R/cap04/07_massey_nfl.R"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Cap. 4: Ratings de Massey na NFL: o que é estimável num campeonato</span></span>
 <span id="cb26-2"><a href="#cb26-2" aria-hidden="true" tabindex="-1"></a>nfl <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="fu">file.path</span>(<span class="st">"dados"</span>, <span class="st">"nfl.csv"</span>))</span>
 <span id="cb26-3"><a href="#cb26-3" aria-hidden="true" tabindex="-1"></a>s <span class="ot">&lt;-</span> <span class="fu">subset</span>(nfl, ano <span class="sc">==</span> <span class="dv">1981</span>)</span>
 <span id="cb26-4"><a href="#cb26-4" aria-hidden="true" tabindex="-1"></a>times <span class="ot">&lt;-</span> <span class="fu">sort</span>(<span class="fu">unique</span>(<span class="fu">c</span>(s<span class="sc">$</span>mandante, s<span class="sc">$</span>visitante)))         <span class="co"># 28 times</span></span>
@@ -1135,7 +1135,7 @@ $`2`
 <div class="code-with-filename-file">
 <pre><strong>python/cap04/07_massey_nfl.py</strong></pre>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb28" data-filename="python/cap04/07_massey_nfl.py"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a><span class="co">"""Cap. 4 -- Ratings de Massey na NFL: o que é estimável num campeonato."""</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb28" data-filename="python/cap04/07_massey_nfl.py"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a><span class="co">"""Cap. 4: Ratings de Massey na NFL: o que é estimável num campeonato."""</span></span>
 <span id="cb28-2"><a href="#cb28-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> pathlib <span class="im">import</span> Path</span>
 <span id="cb28-3"><a href="#cb28-3" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb28-4"><a href="#cb28-4" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
@@ -1264,7 +1264,7 @@ EAM Massey = 11.52; apostas = 11.08; zero = 11.68</code></pre>
 <div class="code-with-filename-file">
 <pre><strong>R/cap04/08_dupla_descida.R</strong></pre>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb31" data-filename="R/cap04/08_dupla_descida.R"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Cap. 4 -- Interpolação de norma mínima e dupla descida (modelo de "features fracas")</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb31" data-filename="R/cap04/08_dupla_descida.R"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Cap. 4: Interpolação de norma mínima e dupla descida (modelo de "features fracas")</span></span>
 <span id="cb31-2"><a href="#cb31-2" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">2026</span>)</span>
 <span id="cb31-3"><a href="#cb31-3" aria-hidden="true" tabindex="-1"></a>D <span class="ot">&lt;-</span> <span class="dv">500</span>; n <span class="ot">&lt;-</span> <span class="dv">50</span>; sigma <span class="ot">&lt;-</span> <span class="fl">0.5</span></span>
 <span id="cb31-4"><a href="#cb31-4" aria-hidden="true" tabindex="-1"></a>beta <span class="ot">&lt;-</span> <span class="fu">rep</span>(<span class="dv">2</span> <span class="sc">/</span> <span class="fu">sqrt</span>(D), D)                      <span class="co"># 500 efeitos fracos, ||beta|| = 2</span></span>
@@ -1301,7 +1301,7 @@ risco_preditor_nulo
 <div class="code-with-filename-file">
 <pre><strong>python/cap04/08_dupla_descida.py</strong></pre>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb33" data-filename="python/cap04/08_dupla_descida.py"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a><span class="co">"""Cap. 4 -- Interpolação de norma mínima e dupla descida (modelo de "features fracas")."""</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb33" data-filename="python/cap04/08_dupla_descida.py"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a><span class="co">"""Cap. 4: Interpolação de norma mínima e dupla descida (modelo de "features fracas")."""</span></span>
 <span id="cb33-2"><a href="#cb33-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb33-3"><a href="#cb33-3" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb33-4"><a href="#cb33-4" aria-hidden="true" tabindex="-1"></a>rng <span class="op">=</span> np.random.default_rng(<span class="dv">2026</span>)</span>
@@ -1394,7 +1394,7 @@ risco do preditor nulo: 4.250000000000001</code></pre>
 <div class="code-with-filename-file">
 <pre><strong>R/cap04/09_gradiente.R</strong></pre>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb36" data-filename="R/cap04/09_gradiente.R"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb36-1"><a href="#cb36-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Cap. 4 -- O gradiente descendente converge para a solução de norma mínima</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb36" data-filename="R/cap04/09_gradiente.R"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb36-1"><a href="#cb36-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Cap. 4: O gradiente descendente converge para a solução de norma mínima</span></span>
 <span id="cb36-2"><a href="#cb36-2" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">7</span>)</span>
 <span id="cb36-3"><a href="#cb36-3" aria-hidden="true" tabindex="-1"></a>n <span class="ot">&lt;-</span> <span class="dv">20</span>; p <span class="ot">&lt;-</span> <span class="dv">100</span></span>
 <span id="cb36-4"><a href="#cb36-4" aria-hidden="true" tabindex="-1"></a>X <span class="ot">&lt;-</span> <span class="fu">matrix</span>(<span class="fu">rnorm</span>(n <span class="sc">*</span> p), n); y <span class="ot">&lt;-</span> <span class="fu">rnorm</span>(n)</span>
@@ -1425,7 +1425,7 @@ risco do preditor nulo: 4.250000000000001</code></pre>
 <div class="code-with-filename-file">
 <pre><strong>python/cap04/09_gradiente.py</strong></pre>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb38" data-filename="python/cap04/09_gradiente.py"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb38-1"><a href="#cb38-1" aria-hidden="true" tabindex="-1"></a><span class="co">"""Cap. 4 -- O gradiente descendente converge para a solução de norma mínima."""</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb38" data-filename="python/cap04/09_gradiente.py"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb38-1"><a href="#cb38-1" aria-hidden="true" tabindex="-1"></a><span class="co">"""Cap. 4: O gradiente descendente converge para a solução de norma mínima."""</span></span>
 <span id="cb38-2"><a href="#cb38-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb38-3"><a href="#cb38-3" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb38-4"><a href="#cb38-4" aria-hidden="true" tabindex="-1"></a>rng <span class="op">=</span> np.random.default_rng(<span class="dv">7</span>)</span>
@@ -1522,7 +1522,7 @@ início aleatório:  distância à norma mínima = 9.30
 <div class="code-with-filename-file">
 <pre><strong>R/cap04/10_dados_nfl.R</strong></pre>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb41" data-filename="R/cap04/10_dados_nfl.R"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb41-1"><a href="#cb41-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Cap. 4 -- Conhecendo a temporada de 1981 da NFL</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb41" data-filename="R/cap04/10_dados_nfl.R"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb41-1"><a href="#cb41-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Cap. 4: Conhecendo a temporada de 1981 da NFL</span></span>
 <span id="cb41-2"><a href="#cb41-2" aria-hidden="true" tabindex="-1"></a><span class="fu">source</span>(<span class="fu">file.path</span>(<span class="st">"R"</span>, <span class="st">"comum"</span>, <span class="st">"descritiva.R"</span>))</span>
 <span id="cb41-3"><a href="#cb41-3" aria-hidden="true" tabindex="-1"></a>j <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="fu">file.path</span>(<span class="st">"dados"</span>, <span class="st">"nfl.csv"</span>)); j <span class="ot">&lt;-</span> j[j<span class="sc">$</span>ano <span class="sc">==</span> <span class="dv">1981</span>, ]</span>
 <span id="cb41-4"><a href="#cb41-4" aria-hidden="true" tabindex="-1"></a>j<span class="sc">$</span>margem <span class="ot">&lt;-</span> j<span class="sc">$</span>pontos_mandante <span class="sc">-</span> j<span class="sc">$</span>pontos_visitante</span>
@@ -1552,7 +1552,7 @@ vitorias_mandante           empates  cor_margem_linha
 <div class="code-with-filename-file">
 <pre><strong>python/cap04/10_dados_nfl.py</strong></pre>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb43" data-filename="python/cap04/10_dados_nfl.py"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb43-1"><a href="#cb43-1" aria-hidden="true" tabindex="-1"></a><span class="co">"""Cap. 4 -- Conhecendo a temporada de 1981 da NFL"""</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb43" data-filename="python/cap04/10_dados_nfl.py"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb43-1"><a href="#cb43-1" aria-hidden="true" tabindex="-1"></a><span class="co">"""Cap. 4: Conhecendo a temporada de 1981 da NFL"""</span></span>
 <span id="cb43-2"><a href="#cb43-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> sys</span>
 <span id="cb43-3"><a href="#cb43-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> pathlib <span class="im">import</span> Path</span>
 <span id="cb43-4"><a href="#cb43-4" aria-hidden="true" tabindex="-1"></a></span>

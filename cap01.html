@@ -377,7 +377,7 @@ window.Quarto = {
 <div class="code-with-filename-file">
 <pre><strong>R/cap01/01_operacoes.R</strong></pre>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1" data-filename="R/cap01/01_operacoes.R"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Cap. 1 -- Operações básicas com vetores e matrizes</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1" data-filename="R/cap01/01_operacoes.R"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Cap. 1: Operações básicas com vetores e matrizes</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>A <span class="ot">&lt;-</span> <span class="fu">matrix</span>(<span class="fu">c</span>(<span class="dv">2</span>, <span class="dv">1</span>,</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>              <span class="dv">0</span>, <span class="dv">3</span>,</span>
 <span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>              <span class="dv">1</span>, <span class="sc">-</span><span class="dv">1</span>), <span class="at">nrow =</span> <span class="dv">3</span>, <span class="at">byrow =</span> <span class="cn">TRUE</span>)    <span class="co"># 3 x 2</span></span>
@@ -422,7 +422,7 @@ window.Quarto = {
 <div class="code-with-filename-file">
 <pre><strong>python/cap01/01_operacoes.py</strong></pre>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3" data-filename="python/cap01/01_operacoes.py"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co">"""Cap. 1 -- Operações básicas com vetores e matrizes."""</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3" data-filename="python/cap01/01_operacoes.py"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co">"""Cap. 1: Operações básicas com vetores e matrizes."""</span></span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>A <span class="op">=</span> np.array([[<span class="dv">2</span>, <span class="dv">1</span>],</span>
@@ -469,7 +469,7 @@ window.Quarto = {
 <div class="code-with-filename-file">
 <pre><strong>R/cap01/02_correlacao_cosseno.R</strong></pre>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5" data-filename="R/cap01/02_correlacao_cosseno.R"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Cap. 1 -- Correlação amostral como cosseno entre vetores centrados</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5" data-filename="R/cap01/02_correlacao_cosseno.R"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Cap. 1: Correlação amostral como cosseno entre vetores centrados</span></span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>dados <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="fu">file.path</span>(<span class="st">"dados"</span>, <span class="st">"wage1.csv"</span>))</span>
 <span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>y <span class="ot">&lt;-</span> <span class="fu">log</span>(dados<span class="sc">$</span>wage)                   <span class="co"># log do salário-hora</span></span>
 <span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> dados<span class="sc">$</span>educ                        <span class="co"># anos de escolaridade</span></span>
@@ -493,7 +493,7 @@ window.Quarto = {
 <div class="code-with-filename-file">
 <pre><strong>python/cap01/02_correlacao_cosseno.py</strong></pre>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7" data-filename="python/cap01/02_correlacao_cosseno.py"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co">"""Cap. 1 -- Correlação amostral como cosseno entre vetores centrados."""</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7" data-filename="python/cap01/02_correlacao_cosseno.py"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co">"""Cap. 1: Correlação amostral como cosseno entre vetores centrados."""</span></span>
 <span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> pathlib <span class="im">import</span> Path</span>
 <span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
@@ -536,7 +536,7 @@ correlação             = 0.4311
 <div class="code-with-filename-file">
 <pre><strong>R/cap01/03_gram_schmidt.R</strong></pre>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb9" data-filename="R/cap01/03_gram_schmidt.R"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Cap. 1 -- Processo de Gram-Schmidt (versão clássica)</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb9" data-filename="R/cap01/03_gram_schmidt.R"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Cap. 1: Processo de Gram-Schmidt (versão clássica)</span></span>
 <span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>gram_schmidt <span class="ot">&lt;-</span> <span class="cf">function</span>(X) {</span>
 <span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>  Q <span class="ot">&lt;-</span> <span class="fu">matrix</span>(<span class="dv">0</span>, <span class="fu">nrow</span>(X), <span class="fu">ncol</span>(X))</span>
 <span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>  <span class="cf">for</span> (j <span class="cf">in</span> <span class="fu">seq_len</span>(<span class="fu">ncol</span>(X))) {</span>
@@ -580,7 +580,7 @@ correlação             = 0.4311
 <div class="code-with-filename-file">
 <pre><strong>python/cap01/03_gram_schmidt.py</strong></pre>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb11" data-filename="python/cap01/03_gram_schmidt.py"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="co">"""Cap. 1 -- Processo de Gram-Schmidt (versão clássica)."""</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb11" data-filename="python/cap01/03_gram_schmidt.py"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="co">"""Cap. 1: Processo de Gram-Schmidt (versão clássica)."""</span></span>
 <span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a></span>
@@ -634,7 +634,7 @@ correlação             = 0.4311
 <div class="code-with-filename-file">
 <pre><strong>R/cap01/04_aveia_projecao.R</strong></pre>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb13" data-filename="R/cap01/04_aveia_projecao.R"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Cap. 1 -- Decomposição ortogonal da produção de aveia (Yates, 1935)</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb13" data-filename="R/cap01/04_aveia_projecao.R"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Cap. 1: Decomposição ortogonal da produção de aveia (Yates, 1935)</span></span>
 <span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>aveia <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="fu">file.path</span>(<span class="st">"dados"</span>, <span class="st">"yates_oats.csv"</span>))</span>
 <span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>y <span class="ot">&lt;-</span> aveia<span class="sc">$</span>yield</span>
 <span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a>n <span class="ot">&lt;-</span> <span class="fu">length</span>(y)</span>
@@ -682,7 +682,7 @@ Residuals 68  31965   470.1</code></pre>
 <div class="code-with-filename-file">
 <pre><strong>python/cap01/04_aveia_projecao.py</strong></pre>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb15" data-filename="python/cap01/04_aveia_projecao.py"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="co">"""Cap. 1 -- Decomposição ortogonal da produção de aveia (Yates, 1935)."""</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb15" data-filename="python/cap01/04_aveia_projecao.py"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="co">"""Cap. 1: Decomposição ortogonal da produção de aveia (Yates, 1935)."""</span></span>
 <span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> pathlib <span class="im">import</span> Path</span>
 <span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
@@ -794,7 +794,7 @@ Residual  68.0  31965.444444   470.080065        NaN           NaN</code></pre>
 <div class="code-with-filename-file">
 <pre><strong>R/cap01/05_digitos_cosseno.R</strong></pre>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb18" data-filename="R/cap01/05_digitos_cosseno.R"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Cap. 1 -- Similaridade cosseno e classificação pelo centróide mais próximo</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb18" data-filename="R/cap01/05_digitos_cosseno.R"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Cap. 1: Similaridade cosseno e classificação pelo centróide mais próximo</span></span>
 <span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a>dig <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="fu">file.path</span>(<span class="st">"dados"</span>, <span class="st">"digitos.csv"</span>))</span>
 <span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a>X <span class="ot">&lt;-</span> <span class="fu">as.matrix</span>(dig[, <span class="sc">-</span><span class="dv">1</span>])                      <span class="co"># 1797 imagens x 64 pixels</span></span>
 <span id="cb18-4"><a href="#cb18-4" aria-hidden="true" tabindex="-1"></a>rotulo <span class="ot">&lt;-</span> dig<span class="sc">$</span>digito</span>
@@ -843,7 +843,7 @@ verdadeiro  0  1  2  3  4  5  6  7  8  9
 <div class="code-with-filename-file">
 <pre><strong>python/cap01/05_digitos_cosseno.py</strong></pre>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb20" data-filename="python/cap01/05_digitos_cosseno.py"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="co">"""Cap. 1 -- Similaridade cosseno e classificação pelo centróide mais próximo."""</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb20" data-filename="python/cap01/05_digitos_cosseno.py"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="co">"""Cap. 1: Similaridade cosseno e classificação pelo centróide mais próximo."""</span></span>
 <span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> pathlib <span class="im">import</span> Path</span>
 <span id="cb20-3"><a href="#cb20-3" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb20-4"><a href="#cb20-4" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
@@ -988,7 +988,7 @@ verdadeiro
 <div class="code-with-filename-file">
 <pre><strong>R/cap01/06_camada_linear.R</strong></pre>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb24" data-filename="R/cap01/06_camada_linear.R"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Cap. 1 -- Camadas lineares: composição de funções afins é afim</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb24" data-filename="R/cap01/06_camada_linear.R"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Cap. 1: Camadas lineares: composição de funções afins é afim</span></span>
 <span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">1</span>)</span>
 <span id="cb24-3"><a href="#cb24-3" aria-hidden="true" tabindex="-1"></a>W1 <span class="ot">&lt;-</span> <span class="fu">matrix</span>(<span class="fu">rnorm</span>(<span class="dv">4</span> <span class="sc">*</span> <span class="dv">3</span>), <span class="dv">4</span>, <span class="dv">3</span>); b1 <span class="ot">&lt;-</span> <span class="fu">rnorm</span>(<span class="dv">4</span>)   <span class="co"># camada 1: R^3 -&gt; R^4</span></span>
 <span id="cb24-4"><a href="#cb24-4" aria-hidden="true" tabindex="-1"></a>W2 <span class="ot">&lt;-</span> <span class="fu">matrix</span>(<span class="fu">rnorm</span>(<span class="dv">2</span> <span class="sc">*</span> <span class="dv">4</span>), <span class="dv">2</span>, <span class="dv">4</span>); b2 <span class="ot">&lt;-</span> <span class="fu">rnorm</span>(<span class="dv">2</span>)   <span class="co"># camada 2: R^4 -&gt; R^2</span></span>
@@ -1026,7 +1026,7 @@ verdadeiro
 <div class="code-with-filename-file">
 <pre><strong>python/cap01/06_camada_linear.py</strong></pre>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb26" data-filename="python/cap01/06_camada_linear.py"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="co">"""Cap. 1 -- Camadas lineares: composição de funções afins é afim."""</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb26" data-filename="python/cap01/06_camada_linear.py"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="co">"""Cap. 1: Camadas lineares: composição de funções afins é afim."""</span></span>
 <span id="cb26-2"><a href="#cb26-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb26-3"><a href="#cb26-3" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb26-4"><a href="#cb26-4" aria-hidden="true" tabindex="-1"></a>rng <span class="op">=</span> np.random.default_rng(<span class="dv">1</span>)</span>
@@ -1119,7 +1119,7 @@ verdadeiro
 <div class="code-with-filename-file">
 <pre><strong>R/cap01/07_indices_precos.R</strong></pre>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb29" data-filename="R/cap01/07_indices_precos.R"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Cap. 1 -- Índices de preços de Laspeyres, Paasche e Fisher como razões de produtos internos</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb29" data-filename="R/cap01/07_indices_precos.R"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Cap. 1: Índices de preços de Laspeyres, Paasche e Fisher como razões de produtos internos</span></span>
 <span id="cb29-2"><a href="#cb29-2" aria-hidden="true" tabindex="-1"></a>cesta <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
 <span id="cb29-3"><a href="#cb29-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">bem =</span> <span class="fu">c</span>(<span class="st">"arroz"</span>, <span class="st">"feijão"</span>, <span class="st">"carne"</span>, <span class="st">"leite"</span>, <span class="st">"pão"</span>),</span>
 <span id="cb29-4"><a href="#cb29-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">p0  =</span> <span class="fu">c</span>(<span class="fl">5.20</span>, <span class="fl">8.90</span>, <span class="fl">38.50</span>, <span class="fl">4.60</span>, <span class="fl">12.00</span>),    <span class="co"># preços no período base (R$/unidade)</span></span>
@@ -1156,7 +1156,7 @@ verdadeiro
 <div class="code-with-filename-file">
 <pre><strong>python/cap01/07_indices_precos.py</strong></pre>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb31" data-filename="python/cap01/07_indices_precos.py"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a><span class="co">"""Cap. 1 -- Índices de Laspeyres, Paasche e Fisher como razões de produtos internos."""</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb31" data-filename="python/cap01/07_indices_precos.py"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a><span class="co">"""Cap. 1: Índices de Laspeyres, Paasche e Fisher como razões de produtos internos."""</span></span>
 <span id="cb31-2"><a href="#cb31-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb31-3"><a href="#cb31-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
 <span id="cb31-4"><a href="#cb31-4" aria-hidden="true" tabindex="-1"></a></span>
@@ -1245,7 +1245,7 @@ verdadeiro
 <div class="code-with-filename-file">
 <pre><strong>R/cap01/08_retorno_educacao.R</strong></pre>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb34" data-filename="R/cap01/08_retorno_educacao.R"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Cap. 1 -- Retorno da educação: regressão simples como projeção ortogonal</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb34" data-filename="R/cap01/08_retorno_educacao.R"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Cap. 1: Retorno da educação: regressão simples como projeção ortogonal</span></span>
 <span id="cb34-2"><a href="#cb34-2" aria-hidden="true" tabindex="-1"></a>dados <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="fu">file.path</span>(<span class="st">"dados"</span>, <span class="st">"wage1.csv"</span>))</span>
 <span id="cb34-3"><a href="#cb34-3" aria-hidden="true" tabindex="-1"></a>y <span class="ot">&lt;-</span> <span class="fu">log</span>(dados<span class="sc">$</span>wage)</span>
 <span id="cb34-4"><a href="#cb34-4" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> dados<span class="sc">$</span>educ</span>
@@ -1280,7 +1280,7 @@ verdadeiro
 <div class="code-with-filename-file">
 <pre><strong>python/cap01/08_retorno_educacao.py</strong></pre>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb36" data-filename="python/cap01/08_retorno_educacao.py"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb36-1"><a href="#cb36-1" aria-hidden="true" tabindex="-1"></a><span class="co">"""Cap. 1 -- Retorno da educação: regressão simples como projeção ortogonal."""</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb36" data-filename="python/cap01/08_retorno_educacao.py"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb36-1"><a href="#cb36-1" aria-hidden="true" tabindex="-1"></a><span class="co">"""Cap. 1: Retorno da educação: regressão simples como projeção ortogonal."""</span></span>
 <span id="cb36-2"><a href="#cb36-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> pathlib <span class="im">import</span> Path</span>
 <span id="cb36-3"><a href="#cb36-3" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb36-4"><a href="#cb36-4" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
@@ -1365,7 +1365,7 @@ R2 = 0.1858, cor^2 = 0.1858
 <div class="code-with-filename-file">
 <pre><strong>R/cap01/09_media_movel.R</strong></pre>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb39" data-filename="R/cap01/09_media_movel.R"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb39-1"><a href="#cb39-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Cap. 1 -- A média móvel como operador linear: núcleo, imagem e sazonalidade</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb39" data-filename="R/cap01/09_media_movel.R"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb39-1"><a href="#cb39-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Cap. 1: A média móvel como operador linear: núcleo, imagem e sazonalidade</span></span>
 <span id="cb39-2"><a href="#cb39-2" aria-hidden="true" tabindex="-1"></a>gas <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="fu">file.path</span>(<span class="st">"dados"</span>, <span class="st">"ukgas.csv"</span>))</span>
 <span id="cb39-3"><a href="#cb39-3" aria-hidden="true" tabindex="-1"></a>y <span class="ot">&lt;-</span> <span class="fu">log</span>(gas<span class="sc">$</span>consumo)                        <span class="co"># log torna a sazonalidade aditiva</span></span>
 <span id="cb39-4"><a href="#cb39-4" aria-hidden="true" tabindex="-1"></a>n <span class="ot">&lt;-</span> <span class="fu">length</span>(y)                               <span class="co"># 108 trimestres (1960-1986)</span></span>
@@ -1409,7 +1409,7 @@ dim_imagem dim_nucleo
 <div class="code-with-filename-file">
 <pre><strong>python/cap01/09_media_movel.py</strong></pre>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb41" data-filename="python/cap01/09_media_movel.py"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb41-1"><a href="#cb41-1" aria-hidden="true" tabindex="-1"></a><span class="co">"""Cap. 1 -- A média móvel como operador linear: núcleo, imagem e sazonalidade."""</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb41" data-filename="python/cap01/09_media_movel.py"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb41-1"><a href="#cb41-1" aria-hidden="true" tabindex="-1"></a><span class="co">"""Cap. 1: A média móvel como operador linear: núcleo, imagem e sazonalidade."""</span></span>
 <span id="cb41-2"><a href="#cb41-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> pathlib <span class="im">import</span> Path</span>
 <span id="cb41-3"><a href="#cb41-3" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb41-4"><a href="#cb41-4" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
@@ -1501,7 +1501,7 @@ dim imagem = 105, dim núcleo = 3
 <div class="code-with-filename-file">
 <pre><strong>R/cap01/10_contrastes_nitrogenio.R</strong></pre>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb44" data-filename="R/cap01/10_contrastes_nitrogenio.R"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb44-1"><a href="#cb44-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Cap. 1 -- Decomposição da SQ de tratamentos em contrastes polinomiais ortogonais</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb44" data-filename="R/cap01/10_contrastes_nitrogenio.R"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb44-1"><a href="#cb44-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Cap. 1: Decomposição da SQ de tratamentos em contrastes polinomiais ortogonais</span></span>
 <span id="cb44-2"><a href="#cb44-2" aria-hidden="true" tabindex="-1"></a>aveia <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="fu">file.path</span>(<span class="st">"dados"</span>, <span class="st">"yates_oats.csv"</span>))</span>
 <span id="cb44-3"><a href="#cb44-3" aria-hidden="true" tabindex="-1"></a>y <span class="ot">&lt;-</span> aveia<span class="sc">$</span>yield</span>
 <span id="cb44-4"><a href="#cb44-4" aria-hidden="true" tabindex="-1"></a>dose <span class="ot">&lt;-</span> <span class="fu">factor</span>(aveia<span class="sc">$</span>nitro)</span>
@@ -1535,7 +1535,7 @@ cubico         3.6 0.0002
 <div class="code-with-filename-file">
 <pre><strong>python/cap01/10_contrastes_nitrogenio.py</strong></pre>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb46" data-filename="python/cap01/10_contrastes_nitrogenio.py"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb46-1"><a href="#cb46-1" aria-hidden="true" tabindex="-1"></a><span class="co">"""Cap. 1 -- Decomposição da SQ de tratamentos em contrastes polinomiais ortogonais."""</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb46" data-filename="python/cap01/10_contrastes_nitrogenio.py"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb46-1"><a href="#cb46-1" aria-hidden="true" tabindex="-1"></a><span class="co">"""Cap. 1: Decomposição da SQ de tratamentos em contrastes polinomiais ortogonais."""</span></span>
 <span id="cb46-2"><a href="#cb46-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> pathlib <span class="im">import</span> Path</span>
 <span id="cb46-3"><a href="#cb46-3" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb46-4"><a href="#cb46-4" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
@@ -1616,7 +1616,7 @@ cúbico      SQ =      3.60  fração = 0.0002
 <div class="code-with-filename-file">
 <pre><strong>R/cap01/11_rede_linear.R</strong></pre>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb49" data-filename="R/cap01/11_rede_linear.R"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb49-1"><a href="#cb49-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Cap. 1 -- Uma rede linear de duas camadas treinada por gradiente aprende</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb49" data-filename="R/cap01/11_rede_linear.R"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb49-1"><a href="#cb49-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Cap. 1: Uma rede linear de duas camadas treinada por gradiente aprende</span></span>
 <span id="cb49-2"><a href="#cb49-2" aria-hidden="true" tabindex="-1"></a><span class="co"># a mesma função que a regressão de mínimos quadrados</span></span>
 <span id="cb49-3"><a href="#cb49-3" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">42</span>)</span>
 <span id="cb49-4"><a href="#cb49-4" aria-hidden="true" tabindex="-1"></a>n <span class="ot">&lt;-</span> <span class="dv">500</span>; p <span class="ot">&lt;-</span> <span class="dv">5</span>; h <span class="ot">&lt;-</span> <span class="dv">8</span></span>
@@ -1649,7 +1649,7 @@ mqo  1.986329 -1.002745 0.5271107 0.02338661 3.010954</code></pre>
 <div class="code-with-filename-file">
 <pre><strong>python/cap01/11_rede_linear.py</strong></pre>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb51" data-filename="python/cap01/11_rede_linear.py"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb51-1"><a href="#cb51-1" aria-hidden="true" tabindex="-1"></a><span class="co">"""Cap. 1 -- Uma rede linear de duas camadas treinada por gradiente aprende</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb51" data-filename="python/cap01/11_rede_linear.py"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb51-1"><a href="#cb51-1" aria-hidden="true" tabindex="-1"></a><span class="co">"""Cap. 1: Uma rede linear de duas camadas treinada por gradiente aprende</span></span>
 <span id="cb51-2"><a href="#cb51-2" aria-hidden="true" tabindex="-1"></a><span class="co">a mesma função que a regressão de mínimos quadrados."""</span></span>
 <span id="cb51-3"><a href="#cb51-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb51-4"><a href="#cb51-4" aria-hidden="true" tabindex="-1"></a></span>
@@ -1734,7 +1734,7 @@ mqo:  [ 2.036  -0.9854  0.4836 -0.0146  3.0184]</code></pre>
 <div class="code-with-filename-file">
 <pre><strong>R/cap01/12_operador_derivada.R</strong></pre>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb54" data-filename="R/cap01/12_operador_derivada.R"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb54-1"><a href="#cb54-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Cap. 1 -- Representação matricial do operador derivada em P_3 e mudança de base</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb54" data-filename="R/cap01/12_operador_derivada.R"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb54-1"><a href="#cb54-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Cap. 1: Representação matricial do operador derivada em P_3 e mudança de base</span></span>
 <span id="cb54-2"><a href="#cb54-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Base canônica B = (1, t, t^2, t^3): coordenadas de p(t) = c0 + c1 t + c2 t^2 + c3 t^3</span></span>
 <span id="cb54-3"><a href="#cb54-3" aria-hidden="true" tabindex="-1"></a>D <span class="ot">&lt;-</span> <span class="fu">matrix</span>(<span class="dv">0</span>, <span class="dv">4</span>, <span class="dv">4</span>)</span>
 <span id="cb54-4"><a href="#cb54-4" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> (k <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">3</span>) D[k, k <span class="sc">+</span> <span class="dv">1</span>] <span class="ot">&lt;-</span> k                 <span class="co"># d/dt t^k = k t^(k-1)</span></span>
@@ -1787,7 +1787,7 @@ dim_imagem dim_nucleo
 <div class="code-with-filename-file">
 <pre><strong>python/cap01/12_operador_derivada.py</strong></pre>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb56" data-filename="python/cap01/12_operador_derivada.py"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb56-1"><a href="#cb56-1" aria-hidden="true" tabindex="-1"></a><span class="co">"""Cap. 1 -- Representação matricial do operador derivada em P_3 e mudança de base."""</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb56" data-filename="python/cap01/12_operador_derivada.py"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb56-1"><a href="#cb56-1" aria-hidden="true" tabindex="-1"></a><span class="co">"""Cap. 1: Representação matricial do operador derivada em P_3 e mudança de base."""</span></span>
 <span id="cb56-2"><a href="#cb56-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb56-3"><a href="#cb56-3" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb56-4"><a href="#cb56-4" aria-hidden="true" tabindex="-1"></a>D <span class="op">=</span> np.zeros((<span class="dv">4</span>, <span class="dv">4</span>))</span>
@@ -1837,7 +1837,7 @@ dim imagem = 3, dim núcleo = 1
 <div class="code-with-filename-file">
 <pre><strong>R/cap01/13_linguagem.R</strong></pre>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb58" data-filename="R/cap01/13_linguagem.R"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb58-1"><a href="#cb58-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Cap. 1 -- Modelos de linguagem pela álgebra linear: tokens (BPE), embeddings e busca por similaridade</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb58" data-filename="R/cap01/13_linguagem.R"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb58-1"><a href="#cb58-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Cap. 1: Modelos de linguagem pela álgebra linear: tokens (BPE), embeddings e busca por similaridade</span></span>
 <span id="cb58-2"><a href="#cb58-2" aria-hidden="true" tabindex="-1"></a>d <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="fu">file.path</span>(<span class="st">"dados"</span>, <span class="st">"austen.csv"</span>))</span>
 <span id="cb58-3"><a href="#cb58-3" aria-hidden="true" tabindex="-1"></a>palavras <span class="ot">&lt;-</span> <span class="cf">function</span>(txt) <span class="fu">unlist</span>(<span class="fu">regmatches</span>(<span class="fu">tolower</span>(txt), <span class="fu">gregexpr</span>(<span class="st">"[a-z]+"</span>, <span class="fu">tolower</span>(txt))))</span>
 <span id="cb58-4"><a href="#cb58-4" aria-hidden="true" tabindex="-1"></a></span>
@@ -1923,7 +1923,7 @@ Pride &amp; Prejudice - cap. 44 Pride &amp; Prejudice - cap. 11
 <div class="code-with-filename-file">
 <pre><strong>python/cap01/13_linguagem.py</strong></pre>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb60" data-filename="python/cap01/13_linguagem.py"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb60-1"><a href="#cb60-1" aria-hidden="true" tabindex="-1"></a><span class="co">"""Cap. 1 -- Modelos de linguagem pela álgebra linear: tokens (BPE), embeddings e busca por similaridade."""</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb60" data-filename="python/cap01/13_linguagem.py"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb60-1"><a href="#cb60-1" aria-hidden="true" tabindex="-1"></a><span class="co">"""Cap. 1: Modelos de linguagem pela álgebra linear: tokens (BPE), embeddings e busca por similaridade."""</span></span>
 <span id="cb60-2"><a href="#cb60-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> re</span>
 <span id="cb60-3"><a href="#cb60-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> sys</span>
 <span id="cb60-4"><a href="#cb60-4" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> collections <span class="im">import</span> Counter</span>
@@ -2021,7 +2021,7 @@ Pride &amp; Prejudice - cap. 11    0.250</code></pre>
 <div class="code-with-filename-file">
 <pre><strong>R/cap01/14_dados_wage1.R</strong></pre>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb62" data-filename="R/cap01/14_dados_wage1.R"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb62-1"><a href="#cb62-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Cap. 1 -- Conhecendo os dados wage1: estatísticas descritivas</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb62" data-filename="R/cap01/14_dados_wage1.R"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb62-1"><a href="#cb62-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Cap. 1: Conhecendo os dados wage1: estatísticas descritivas</span></span>
 <span id="cb62-2"><a href="#cb62-2" aria-hidden="true" tabindex="-1"></a><span class="fu">source</span>(<span class="fu">file.path</span>(<span class="st">"R"</span>, <span class="st">"comum"</span>, <span class="st">"descritiva.R"</span>))</span>
 <span id="cb62-3"><a href="#cb62-3" aria-hidden="true" tabindex="-1"></a>w <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="fu">file.path</span>(<span class="st">"dados"</span>, <span class="st">"wage1.csv"</span>))</span>
 <span id="cb62-4"><a href="#cb62-4" aria-hidden="true" tabindex="-1"></a>w<span class="sc">$</span>lwage <span class="ot">&lt;-</span> <span class="fu">log</span>(w<span class="sc">$</span>wage)                  <span class="co"># log do salário-hora</span></span>
@@ -2057,7 +2057,7 @@ d:16-18        99    2.068    0.492    1.099    3.218</code></pre>
 <div class="code-with-filename-file">
 <pre><strong>python/cap01/14_dados_wage1.py</strong></pre>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb64" data-filename="python/cap01/14_dados_wage1.py"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb64-1"><a href="#cb64-1" aria-hidden="true" tabindex="-1"></a><span class="co">"""Cap. 1 -- Conhecendo os dados wage1: estatísticas descritivas"""</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb64" data-filename="python/cap01/14_dados_wage1.py"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb64-1"><a href="#cb64-1" aria-hidden="true" tabindex="-1"></a><span class="co">"""Cap. 1: Conhecendo os dados wage1: estatísticas descritivas"""</span></span>
 <span id="cb64-2"><a href="#cb64-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> sys</span>
 <span id="cb64-3"><a href="#cb64-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> pathlib <span class="im">import</span> Path</span>
 <span id="cb64-4"><a href="#cb64-4" aria-hidden="true" tabindex="-1"></a></span>
@@ -2144,7 +2144,7 @@ d:16-18        99    2.068    0.492    1.099    3.218</code></pre>
 <div class="code-with-filename-file">
 <pre><strong>R/cap01/15_dados_ukgas.R</strong></pre>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb67" data-filename="R/cap01/15_dados_ukgas.R"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb67-1"><a href="#cb67-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Cap. 1 -- Conhecendo os dados UKgas: estatísticas descritivas</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb67" data-filename="R/cap01/15_dados_ukgas.R"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb67-1"><a href="#cb67-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Cap. 1: Conhecendo os dados UKgas: estatísticas descritivas</span></span>
 <span id="cb67-2"><a href="#cb67-2" aria-hidden="true" tabindex="-1"></a><span class="fu">source</span>(<span class="fu">file.path</span>(<span class="st">"R"</span>, <span class="st">"comum"</span>, <span class="st">"descritiva.R"</span>))</span>
 <span id="cb67-3"><a href="#cb67-3" aria-hidden="true" tabindex="-1"></a>g <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="fu">file.path</span>(<span class="st">"dados"</span>, <span class="st">"ukgas.csv"</span>))</span>
 <span id="cb67-4"><a href="#cb67-4" aria-hidden="true" tabindex="-1"></a>g<span class="sc">$</span>log_cons <span class="ot">&lt;-</span> <span class="fu">log</span>(g<span class="sc">$</span>consumo)</span>
@@ -2181,7 +2181,7 @@ log    0.66   0.98   1.37</code></pre>
 <div class="code-with-filename-file">
 <pre><strong>python/cap01/15_dados_ukgas.py</strong></pre>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb69" data-filename="python/cap01/15_dados_ukgas.py"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb69-1"><a href="#cb69-1" aria-hidden="true" tabindex="-1"></a><span class="co">"""Cap. 1 -- Conhecendo os dados UKgas: estatísticas descritivas"""</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb69" data-filename="python/cap01/15_dados_ukgas.py"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb69-1"><a href="#cb69-1" aria-hidden="true" tabindex="-1"></a><span class="co">"""Cap. 1: Conhecendo os dados UKgas: estatísticas descritivas"""</span></span>
 <span id="cb69-2"><a href="#cb69-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> sys</span>
 <span id="cb69-3"><a href="#cb69-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> pathlib <span class="im">import</span> Path</span>
 <span id="cb69-4"><a href="#cb69-4" aria-hidden="true" tabindex="-1"></a></span>
@@ -2267,7 +2267,7 @@ log     0.66    0.98    1.37</code></pre>
 <div class="code-with-filename-file">
 <pre><strong>R/cap01/16_dados_aveia.R</strong></pre>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb72" data-filename="R/cap01/16_dados_aveia.R"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb72-1"><a href="#cb72-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Cap. 1 -- Conhecendo o experimento de aveia</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb72" data-filename="R/cap01/16_dados_aveia.R"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb72-1"><a href="#cb72-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Cap. 1: Conhecendo o experimento de aveia</span></span>
 <span id="cb72-2"><a href="#cb72-2" aria-hidden="true" tabindex="-1"></a><span class="fu">source</span>(<span class="fu">file.path</span>(<span class="st">"R"</span>, <span class="st">"comum"</span>, <span class="st">"descritiva.R"</span>))</span>
 <span id="cb72-3"><a href="#cb72-3" aria-hidden="true" tabindex="-1"></a>a <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="fu">file.path</span>(<span class="st">"dados"</span>, <span class="st">"yates_oats.csv"</span>))</span>
 <span id="cb72-4"><a href="#cb72-4" aria-hidden="true" tabindex="-1"></a><span class="fu">resumo</span>(a, <span class="st">"yield"</span>)</span>
@@ -2313,7 +2313,7 @@ Victory    71.5  89.7 110.8 118.5</code></pre>
 <div class="code-with-filename-file">
 <pre><strong>python/cap01/16_dados_aveia.py</strong></pre>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb74" data-filename="python/cap01/16_dados_aveia.py"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb74-1"><a href="#cb74-1" aria-hidden="true" tabindex="-1"></a><span class="co">"""Cap. 1 -- Conhecendo o experimento de aveia"""</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb74" data-filename="python/cap01/16_dados_aveia.py"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb74-1"><a href="#cb74-1" aria-hidden="true" tabindex="-1"></a><span class="co">"""Cap. 1: Conhecendo o experimento de aveia"""</span></span>
 <span id="cb74-2"><a href="#cb74-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> sys</span>
 <span id="cb74-3"><a href="#cb74-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> pathlib <span class="im">import</span> Path</span>
 <span id="cb74-4"><a href="#cb74-4" aria-hidden="true" tabindex="-1"></a></span>
@@ -2413,7 +2413,7 @@ Victory     71.5   89.7  110.8  118.5</code></pre>
 <div class="code-with-filename-file">
 <pre><strong>R/cap01/17_dados_digitos.R</strong></pre>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb77" data-filename="R/cap01/17_dados_digitos.R"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb77-1"><a href="#cb77-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Cap. 1 -- Conhecendo os dígitos manuscritos</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb77" data-filename="R/cap01/17_dados_digitos.R"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb77-1"><a href="#cb77-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Cap. 1: Conhecendo os dígitos manuscritos</span></span>
 <span id="cb77-2"><a href="#cb77-2" aria-hidden="true" tabindex="-1"></a>d <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="fu">file.path</span>(<span class="st">"dados"</span>, <span class="st">"digitos.csv"</span>))</span>
 <span id="cb77-3"><a href="#cb77-3" aria-hidden="true" tabindex="-1"></a>X <span class="ot">&lt;-</span> <span class="fu">as.matrix</span>(d[, <span class="sc">-</span><span class="dv">1</span>]); <span class="fu">dim</span>(X)          <span class="co"># 1797 imagens, 64 pixels</span></span>
 <span id="cb77-4"><a href="#cb77-4" aria-hidden="true" tabindex="-1"></a><span class="fu">table</span>(d<span class="sc">$</span>digito)                               <span class="co"># classes equilibradas</span></span>
@@ -2444,7 +2444,7 @@ media_pixel  frac_zeros
 <div class="code-with-filename-file">
 <pre><strong>python/cap01/17_dados_digitos.py</strong></pre>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb79" data-filename="python/cap01/17_dados_digitos.py"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb79-1"><a href="#cb79-1" aria-hidden="true" tabindex="-1"></a><span class="co">"""Cap. 1 -- Conhecendo os dígitos manuscritos"""</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb79" data-filename="python/cap01/17_dados_digitos.py"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb79-1"><a href="#cb79-1" aria-hidden="true" tabindex="-1"></a><span class="co">"""Cap. 1: Conhecendo os dígitos manuscritos"""</span></span>
 <span id="cb79-2"><a href="#cb79-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> pathlib <span class="im">import</span> Path</span>
 <span id="cb79-3"><a href="#cb79-3" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb79-4"><a href="#cb79-4" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
@@ -2522,7 +2522,7 @@ sempre zero: 3
 <div class="code-with-filename-file">
 <pre><strong>R/cap01/18_dados_austen.R</strong></pre>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb82" data-filename="R/cap01/18_dados_austen.R"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb82-1"><a href="#cb82-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Cap. 1 -- Conhecendo os romances de Jane Austen</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb82" data-filename="R/cap01/18_dados_austen.R"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb82-1"><a href="#cb82-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Cap. 1: Conhecendo os romances de Jane Austen</span></span>
 <span id="cb82-2"><a href="#cb82-2" aria-hidden="true" tabindex="-1"></a>d <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="fu">file.path</span>(<span class="st">"dados"</span>, <span class="st">"austen.csv"</span>))</span>
 <span id="cb82-3"><a href="#cb82-3" aria-hidden="true" tabindex="-1"></a>pal <span class="ot">&lt;-</span> <span class="cf">function</span>(t) {</span>
 <span id="cb82-4"><a href="#cb82-4" aria-hidden="true" tabindex="-1"></a>  t <span class="ot">&lt;-</span> <span class="fu">tolower</span>(t); <span class="fu">unlist</span>(<span class="fu">regmatches</span>(t, <span class="fu">gregexpr</span>(<span class="st">"[a-z]+"</span>, t)))</span>
@@ -2566,7 +2566,7 @@ p
 <div class="code-with-filename-file">
 <pre><strong>python/cap01/18_dados_austen.py</strong></pre>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb84" data-filename="python/cap01/18_dados_austen.py"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb84-1"><a href="#cb84-1" aria-hidden="true" tabindex="-1"></a><span class="co">"""Cap. 1 -- Conhecendo os romances de Jane Austen"""</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb84" data-filename="python/cap01/18_dados_austen.py"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb84-1"><a href="#cb84-1" aria-hidden="true" tabindex="-1"></a><span class="co">"""Cap. 1: Conhecendo os romances de Jane Austen"""</span></span>
 <span id="cb84-2"><a href="#cb84-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> re</span>
 <span id="cb84-3"><a href="#cb84-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> collections <span class="im">import</span> Counter</span>
 <span id="cb84-4"><a href="#cb84-4" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> pathlib <span class="im">import</span> Path</span>
