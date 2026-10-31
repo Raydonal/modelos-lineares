@@ -1,0 +1,7 @@
+autovalores: [4.732051 3.       1.267949]
+soma = 9.000000, traço = 9.0, produto = 18.000000, det = 18.000000
+rotação: [0.+1.j 0.-1.j]
+BC: [ 4.293393  1.023855 -1.40974 ]
+CB: [ 4.293393  1.023855  0.       -0.       -1.40974 ]
+Jordan: autovalores [1.+0.j 1.+0.j]  posto dos autovetores: 1
+idempotente: [0. 1. 1.]

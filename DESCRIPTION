@@ -1,0 +1,23 @@
+Package: modeloslineares.codigo
+Title: Código Companheiro do Livro "Modelos Lineares"
+Version: 0.1.0
+Authors@R: c(
+    person("Raydonal", "Ospina", role = c("aut", "cre")),
+    person("Cristiano", "Ferraz", role = "aut"),
+    person("André", "Leite", role = "aut"))
+Description: Scripts em R que reproduzem exemplos, figuras e tabelas do livro.
+    Este arquivo existe apenas para declarar dependências (renv usa-o
+    para gerar o renv.lock); não é um pacote instalável.
+License: MIT + file LICENSE
+Encoding: UTF-8
+Depends: R (>= 4.3)
+Imports:
+    ggplot2,
+    MASS,
+    agridat,
+    wooldridge,
+    AER,
+    faraway,
+    glmnet,
+    LearnBayes,
+    janeaustenr

@@ -1,0 +1,19 @@
+# Python
+__pycache__/
+*.pyc
+.venv/
+# R
+.Rhistory
+.RData
+.Rproj.user/
+renv/library/
+renv/staging/
+renv/local/
+# Sistema
+.DS_Store
+# Site (páginas e imagens geradas por site/gerar_site.py)
+site/_site/
+site/.quarto/
+site/imagens/
+site/cap[0-9][0-9].qmd
+site/cap[0-9][0-9].html

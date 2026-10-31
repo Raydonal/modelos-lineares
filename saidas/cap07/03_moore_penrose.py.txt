@@ -1,0 +1,9 @@
+condições de Penrose: [3.552713678800501e-15, 8.881784197001252e-16, 7.216449660063518e-16, 1.6930901125533637e-15]
+igual a pinv: True
+lambda = 1e-01: erro espectral = 2.9182e-01, fórmula = 2.9182e-01, cota = 3.6042e-01
+lambda = 1e-02: erro espectral = 3.5214e-02, fórmula = 3.5214e-02, cota = 3.6042e-02
+lambda = 1e-03: erro espectral = 3.5957e-03, fórmula = 3.5957e-03, cota = 3.6042e-03
+lambda = 1e-04: erro espectral = 3.6033e-04, fórmula = 3.6033e-04, cota = 3.6042e-04
+lambda = 1e-05: erro espectral = 3.6041e-05, fórmula = 3.6041e-05, cota = 3.6042e-05
+lambda = 1e-06: erro espectral = 3.6042e-06, fórmula = 3.6042e-06, cota = 3.6042e-06
+(A_eps^+)_22: ['10', '1e+04', '1e+07', '1e+09', '0']

@@ -1,0 +1,4 @@
+autovalores: [-0.  3.  3.]  mínimo: -1.0  fórmula: -0.9999999999999999
+f(x1 + t1): [-1.0, -1.0, -1.0]  f(t1) com b fora de C(A): [-3.0, -30.0, -300.0]
+restrito: [0.545455 0.272727 0.181818] multiplicador: 0.454545 gradiente/C: [-0.454545 -0.454545 -0.454545]
+mínimo em x2: numérico = 19.500000, complemento de Schur = 19.500000

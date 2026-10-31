@@ -1,0 +1,9 @@
+          norma1 max_soma_colunas        norma_inf  max_soma_linhas 
+        7.000000         7.000000         6.000000         6.000000 
+          norma2           sigma1        frobenius raiz_soma_sigma2 
+        5.158098         5.158098         6.082763         6.082763 
+    raio_espectral     norma2_inversa um_sobre_sigma_min 
+          4.192582           1.060125           1.060125 
+[1] 5.157732
+   norma2 frobenius    norma1 
+ 5.158098  6.082763  7.580451 

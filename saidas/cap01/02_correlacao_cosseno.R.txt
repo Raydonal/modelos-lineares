@@ -1,0 +1,2 @@
+           n    cos_bruto    cos_centr          cor angulo_graus 
+ 526.0000000    0.9570194    0.4310528    0.4310528   64.4656108 

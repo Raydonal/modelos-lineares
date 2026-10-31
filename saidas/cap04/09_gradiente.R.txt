@@ -1,0 +1,4 @@
+      residuo_zero       dist_zero_mn       dist_alea_mn dist_alea_previsto 
+      2.220446e-16       1.561838e-15       9.515293e+00       9.616008e-15 
+  norma_mn norma_alea 
+ 0.4683993  9.5268148 

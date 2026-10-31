@@ -1,0 +1,6 @@
+8 bits, por linha: erro espectral = 0.0035, Frobenius = 0.0066, vizinhos preservados = 0.9927
+8 bits, global   : erro espectral = 0.0090, Frobenius = 0.0178, vizinhos preservados = 0.9793
+4 bits, por linha: erro espectral = 0.0629, Frobenius = 0.1203, vizinhos preservados = 0.8807
+4 bits, global   : erro espectral = 0.1617, Frobenius = 0.3223, vizinhos preservados = 0.7047
+3 bits, por linha: erro espectral = 0.1456, Frobenius = 0.2804, vizinhos preservados = 0.7527
+2 bits, por linha: erro espectral = 0.4022, Frobenius = 0.7546, vizinhos preservados = 0.3060

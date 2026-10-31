@@ -1,0 +1,25 @@
+name: Erro no código
+description: Um script falha ou não reproduz o resultado do livro
+labels: ["codigo"]
+body:
+  - type: input
+    id: script
+    attributes:
+      label: Script
+      placeholder: "R/cap05/06_vi_mroz.R"
+    validations:
+      required: true
+  - type: textarea
+    id: ocorrido
+    attributes:
+      label: O que aconteceu e o que era esperado
+      description: Cole a mensagem de erro ou a saída obtida
+    validations:
+      required: true
+  - type: input
+    id: ambiente
+    attributes:
+      label: Ambiente
+      placeholder: "Windows 11, R 4.5.1, Python 3.12"
+    validations:
+      required: true

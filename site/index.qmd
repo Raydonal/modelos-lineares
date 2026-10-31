@@ -1,0 +1,25 @@
+# Apresentação {.unnumbered}
+
+Este site acompanha o livro *Modelos Lineares: Teoria, Geometria e Aplicações*, de Raydonal Ospina,
+Cristiano Ferraz e André Leite. O livro traz a teoria, as figuras e as tabelas; aqui está o código que
+reproduz cada resultado, em R e em Python, com a saída de cada exemplo.
+
+Cada capítulo traz os exemplos na ordem dos scripts. As abas **R** e **Python** mostram o mesmo exemplo
+nas duas linguagens, e a escolha vale para a página inteira. Os exemplos sintéticos usam um gerador
+portátil, que dá os mesmos números em R e em Python.
+
+## Como reproduzir
+
+```bash
+git clone https://github.com/Raydonal/modelos-lineares.git
+cd modelos-lineares
+python3 -m venv .venv && source .venv/bin/activate
+pip install -r requirements.txt
+Rscript -e 'install.packages("renv"); renv::restore()'
+make tudo       # ou só um capítulo: make cap05
+```
+
+Os scripts devem ser executados a partir da raiz do repositório. O `README.md` traz os detalhes, a
+lista dos conjuntos de dados e as instruções para usar o Docker.
+
+Encontrou um erro ou tem uma sugestão? Veja [Participe](participe.qmd).

@@ -1,0 +1,5 @@
+n = 526
+cosseno (não centrado) = 0.9570
+cosseno (centrado)     = 0.4311
+correlação             = 0.4311
+ângulo                 = 64.47 graus

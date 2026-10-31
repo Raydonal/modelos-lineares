@@ -1,0 +1,16 @@
+       lsal    educ   exper   perm
+lsal  0.282   0.633   0.802  1.248
+educ  0.633   7.653 -11.236 -1.122
+exper 0.802 -11.236 183.853 48.863
+perm  1.248  -1.122  48.863 52.094
+norma_grad_no_mle norma_grad_em_cov 
+     6.037053e-14      2.612225e+00 
+numerica  formula 
+-582.653 -582.653 
+max_diferenca    loglik_max 
+   -0.1972611 -5395.3143300 
+       lsal   educ  exper   perm
+lsal  1.000  0.431  0.111  0.326
+educ  0.431  1.000 -0.300 -0.056
+exper 0.111 -0.300  1.000  0.499
+perm  0.326 -0.056  0.499  1.000

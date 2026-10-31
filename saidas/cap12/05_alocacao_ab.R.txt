@@ -1,0 +1,9 @@
+       n0  nt    var    cor
+igual 120 120 0.0167 0.5000
+otima 200 100 0.0150 0.3333
+var 
+0.1 
+       n0  media_d4 var_media    cor_12 
+ 120.0000    0.2980    0.0172    0.5220 
+       n0  media_d4 var_media    cor_12 
+ 200.0000    0.3001    0.0150    0.3120 

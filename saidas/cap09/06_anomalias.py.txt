@@ -1,0 +1,8 @@
+n = 102  posto = 49  constantes = 15
+euclidiana:           AUC = 0.8898, contra 8 = 0.7475
+mahalanobis  0.001:  AUC = 0.9959, contra 8 = 0.9794
+mahalanobis   0.01:  AUC = 0.9948, contra 8 = 0.9688
+mahalanobis    0.1:  AUC = 0.9868, contra 8 = 0.9349
+mahalanobis      1:  AUC = 0.9580, contra 8 = 0.8546
+média treino = 22.9674, média teste (1) = 41.3306
+falsos positivos: limiar qui2 = 0.0875, quantil 99% do treino = 0.3500

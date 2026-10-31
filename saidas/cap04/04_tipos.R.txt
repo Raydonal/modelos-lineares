@@ -1,0 +1,13 @@
+           sub    mq    nm   mp
+AGA=A     TRUE  TRUE  TRUE TRUE
+GAG=G     TRUE  TRUE  TRUE TRUE
+(AG)'=AG FALSE  TRUE FALSE TRUE
+(GA)'=GA FALSE FALSE  TRUE TRUE
+             sub        mq        mp
+residuo 1.000000 0.5773503 0.5773503
+norma   2.236068 1.7950549 1.1806521
+   dif_nm_mp     norma_mp    norma_sub 
+3.996803e-15 1.705606e+00 4.000000e+00 
+[1] 1.887379e-15
+[1] 1.623785e-01 1.959447e-02 2.000806e-03 2.005038e-04 2.005461e-05
+[6] 2.005375e-06

@@ -1,0 +1,8 @@
+autovalores: [ 1.815851  7.649407 13.534743]
+menores líderes: [np.float64(4.0), np.float64(36.0), np.float64(188.0)]
+[[ 2.        0.        0.      ]
+ [ 1.        3.        0.      ]
+ [-1.        1.666667  2.285218]]
+log det: 5.236441962829949 5.236441962829949
+min autovalor de C^-1 - A^-1: 0.01504829926935157
+P-spline: autovalores em [-3.47e-16, 1.000000], iguais a 1: 2, traço = 11.3441

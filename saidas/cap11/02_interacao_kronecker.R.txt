@@ -1,0 +1,5 @@
+dif_kronecker         posto 
+            0            12 
+[1] 8.049117e-16
+       colunas          posto caselas_cheias 
+            12             11             11 

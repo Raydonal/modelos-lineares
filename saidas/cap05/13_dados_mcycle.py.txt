@@ -1,0 +1,9 @@
+             n   média      dp     mín      Q1 mediana      Q3     máx
+times      133   25.18   13.13    2.40   15.60   23.40   34.80   57.60
+accel      133   -25.5    48.3  -134.0   -54.9   -13.3     0.0    75.0
+instantes distintos 94  repetidos 39
+fase (ms)       n    média       dp      mín      máx
+a:antes        21   -2.243    1.504   -5.400    0.000
+b:queda        52    -67.5     40.7   -134.0     -2.7
+c:oscila       39      3.6     42.5   -107.1     75.0
+d:fim          21     0.83    14.72   -26.80    30.80

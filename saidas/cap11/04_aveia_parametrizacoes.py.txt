@@ -1,0 +1,9 @@
+max dif. ajustados: 1.7e-13
+              0.0     0.2     0.4     0.6
+GoldenRain  80.00   98.50  114.67  124.83
+Marvellous  86.67  108.50  117.17  126.83
+Victory     71.50   89.67  110.83  118.50
+tratamento 6.667, dif. na dose 0 6.667
+soma 5.819, dif. de médias 5.819
+médias 11, colunas efeitos 12, posto 11
+Victory - GoldenRain nas doses 0 a 0,4: -7.056

@@ -1,0 +1,16 @@
+ [1] "e _"  "t h"  "d _"  "t _"  "s _"  "e r"  "i n"  "y _"  "a n"  "o _" 
+[11] "o u"  "er _"
+[1] "wi ll_"  "th ing_" "p re"    "an y_"   "ar e_"   "t ed_"  
+[1] 224
+ [1] "the_" "un"   "b"    "eli"  "e"    "v"    "ab"   "ly_"  "p"    "r"   
+[11] "ou"   "d_"   "g"    "ent"  "le"   "m"    "an_"  "d"    "an"   "c"   
+[21] "ed_"  "re"   "l"    "u"    "c"    "t"    "an"   "t"    "ly_" 
+  palavras     tokens caracteres 
+         6         29         51 
+                 V                  d erro_OE_vs_indices 
+               224                  8                  0 
+[1]   269 13727
+Pride & Prejudice - cap. 17 Pride & Prejudice - cap. 18 
+                      0.348                       0.323 
+Pride & Prejudice - cap. 44 Pride & Prejudice - cap. 11 
+                      0.252                       0.250 

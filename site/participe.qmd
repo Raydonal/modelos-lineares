@@ -1,0 +1,15 @@
+# Participe {.unnumbered}
+
+Sua leitura ajuda a melhorar o livro. Todos os canais abaixo usam uma conta gratuita do GitHub.
+
+- **Encontrou um erro no livro?** Abra um relato de
+  [erro no livro](https://github.com/Raydonal/modelos-lineares/issues/new?template=erro-livro.yml).
+  Informe a versão do PDF, a página e o trecho.
+- **Um script falhou ou o resultado não bate?** Abra um relato de
+  [erro no código](https://github.com/Raydonal/modelos-lineares/issues/new?template=erro-codigo.yml).
+- **Tem uma ideia?** Envie uma
+  [sugestão](https://github.com/Raydonal/modelos-lineares/issues/new?template=sugestao.yml).
+- **Tem uma dúvida?** Pergunte nas
+  [Discussões](https://github.com/Raydonal/modelos-lineares/discussions).
+
+Os erros confirmados entram na página de [erratas](erratas.qmd).

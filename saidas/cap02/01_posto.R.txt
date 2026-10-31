@@ -1,0 +1,6 @@
+  posto_A  posto_At posto_AtA 
+        2         2         2 
+ posto_AB      cota sylvester 
+        2         2         0 
+posto_soma       cota 
+         3          3 

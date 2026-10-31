@@ -1,0 +1,9 @@
+Laspeyres   Paasche    Fisher 
+   1.1338    1.1257    1.1297 
+     bem  peso relativo
+1  arroz 0.103    1.173
+2 feijão 0.070    0.910
+3  carne 0.456    1.166
+4  leite 0.182    1.152
+5    pão 0.189    1.100
+[1] 1.133833

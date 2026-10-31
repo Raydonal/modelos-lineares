@@ -1,0 +1,4 @@
+pai      dif_mqg 7e-14 mq 0.1086 mq2e 0.0592
+         ep_dif 0.0315 H 2.4618 p 0.1166
+pai_mae  dif_mqg 1e-13 mq 0.1086 mq2e 0.0505
+         ep_dif 0.0281 H 4.2856 p 0.0384

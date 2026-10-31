@@ -1,0 +1,5 @@
+longo 0.092029, fwl 0.092029, só x2 residualizado 0.092029
+dif. resíduos 2.6e-15
+ep longo 0.007330, fwl 0.007309, fwl corrigido 0.007330
+curto 0.082744, longo 0.092029, identidade 0.082744
+delta (exper, tenure): [-1.4682 -0.1466]

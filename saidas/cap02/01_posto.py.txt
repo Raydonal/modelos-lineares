@@ -1,0 +1,3 @@
+posto A, A', A'A: 2 2 2
+posto AB: 2  cota: 2  Sylvester: 0
+posto(A + C): 3  cota: 3

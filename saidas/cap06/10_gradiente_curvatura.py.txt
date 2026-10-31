@@ -1,0 +1,6 @@
+bruto       lambda_max = 7.359e+04, lambda_min = 0.001405, kappa = 5.237e+07
+padronizado lambda_max = 4.015, lambda_min = 0.008541, kappa = 470.1
+eta = 1/L     erro após 1, 10, 100, 500 passos: [127.916  51.031  41.376  17.652]; fator previsto 0.99787
+eta = ótimo   erro após 1, 10, 100, 500 passos: [96.123 53.197 36.244  6.609]; fator previsto 0.99575
+eta = 1,98/L  erro após 1, 10, 100, 500 passos: [96.55  52.128 33.685  6.204]; fator previsto 0.99579
+eta = 2,02/L  erro após 1, 10, 100, 500 passos: [9.5472000e+01 5.5550000e+01 1.5816100e+02 4.2592525e+05]; fator previsto 1.02000

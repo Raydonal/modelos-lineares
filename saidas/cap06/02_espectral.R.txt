@@ -1,0 +1,12 @@
+[1] 5.236068 3.000000 3.000000 0.763932
+ QtQ_menos_I reconstrucao 
+3.330669e-16 4.440892e-15 
+0.76393202          3 5.23606798 
+         1          2          1 
+[1] 4.884981e-15
+raiz2_menos_A       inversa 
+ 5.329071e-15  7.771561e-16 
+       min        max lambda_min lambda_max 
+ 0.7741419  5.2230349  0.7639320  5.2360680 
+        max_ao_acaso lambda1_mais_lambda2 
+            8.220121             8.236068 

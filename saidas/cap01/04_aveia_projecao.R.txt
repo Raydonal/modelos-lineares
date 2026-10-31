@@ -1,0 +1,16 @@
+        dose0 dose0.2 dose0.4 dose0.6
+dose0      18       0       0       0
+dose0.2     0      18       0       0
+dose0.4     0       0      18       0
+dose0.6     0       0       0      18
+     total tratamento    residuo 
+  51985.94   20020.50   31965.44 
+  tratamento 
+7.275958e-12 
+[1] -1.44873e-12
+Analysis of Variance Table
+
+Response: y
+          Df Sum Sq Mean Sq F value    Pr(>F)
+dose       3  20020  6673.5  14.197 2.782e-07
+Residuals 68  31965   470.1                  

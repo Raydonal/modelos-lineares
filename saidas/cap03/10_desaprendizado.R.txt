@@ -1,0 +1,10 @@
+  dif_retreino        h_medio mudanca_ajuste    resid_antes   resid_depois 
+  6.384084e-10   3.418158e-02   2.100510e+00   3.611641e+01   3.780070e+01 
+  dif_retreino        h_medio mudanca_ajuste    resid_antes   resid_depois 
+  7.912035e-10   7.761261e-02   4.219818e+00   4.268356e+01   4.729861e+01 
+ dif_inversa     dif_beta 
+1.976335e-13 6.907044e-10 
+    paciente       erro_x       erro_y 
+1.000000e+00 8.952838e-12 2.870593e-11 
+retreinar_s atualizar_s       razao 
+    1.47900     0.00024  6162.50000 

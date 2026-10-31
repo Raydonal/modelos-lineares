@@ -1,0 +1,6 @@
+     postos1      postos2         A1A2 
+2.000000e+00 1.200000e+01 3.469447e-18 
+      lambda     media_q1      teorica     media_q2      teorica   correlacao 
+ 5.833333333  7.819833367  7.833333333 11.963874305 12.000000000  0.003007187 
+   poder_sim    poder_teo 
+ 0.461850000  0.463229545 

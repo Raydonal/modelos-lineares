@@ -1,0 +1,12 @@
+variância acumulada (k = 1, 2, 5, 10, 20, 30, 40): [0.149 0.285 0.545 0.738 0.894 0.959 0.988]
+k para 80, 90, 95, 99%: [13, 21, 29, 41]
+k =  2: erro = 1543523.8, descartados = 1543523.8
+k = 10: erro = 565183.4, descartados = 565183.4
+k = 20: erro = 228205.6, descartados = 228205.6
+k = 40: erro = 25471.0, descartados = 25471.0
+k =  2: acurácia 1-NN = 0.5935
+k =  5: acurácia 1-NN = 0.8632
+k = 10: acurácia 1-NN = 0.9348
+k = 20: acurácia 1-NN = 0.9586
+k = 40: acurácia 1-NN = 0.9624
+k = 64: acurácia 1-NN = 0.9624

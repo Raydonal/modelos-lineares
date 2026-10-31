@@ -1,0 +1,18 @@
+     [,1] [,2] [,3]
+[1,]    1    0   -1
+[2,]    0    1   -1
+[3,]    0    0    0
+  erro_idemp           Pw    simetrica 
+5.551115e-17 2.220446e-16 0.000000e+00 
+     [,1]
+[1,]   -1
+[2,]   -1
+[3,]    0
+ norma_y norma_Py  norma_P 
+1.000000 1.414214 1.732051 
+norma_Po_y   norma_Po 
+         0          1 
+       H1_H2        H1_H3        traco 
+3.608225e-16 3.330669e-16 3.000000e+00 
+    erro_idemp  assimetria_PW assimetria_WPW 
+  4.996004e-16   4.870947e-01   3.330669e-15 

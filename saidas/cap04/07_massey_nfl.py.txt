@@ -1,0 +1,9 @@
+posto: 28  posto dos times: 27
+mando = 2.5357 (média das margens = 2.5357); soma dos ratings = 7.1e-15
+SF - DAL: 0.110 (MP) e 0.110 (ATL = 0)
+melhores: PHA 8.7, SF 6.2, DAL 6.1, CIN 5.5, DET 5.3
+semana 1: componentes = 14
+semana 2: componentes = 2
+semana 3: componentes = 1
+semana 4: componentes = 1
+EAM Massey = 11.52; apostas = 11.08; zero = 11.68

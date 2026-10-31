@@ -1,0 +1,9 @@
+                      lK     lL
+irrestrito 1.0077 0.3522 0.6815
+restrito   1.0753 0.3213 0.6787
+reescrito  1.0753 0.3213 0.6787
+                         lK     lL
+ep_irrestrito 0.3467 0.1383 0.1290
+ep_restrito   0.3290 0.1289 0.1289
+ dif_SQRes    formula 
+0.04871131 0.04871131 

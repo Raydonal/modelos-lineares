@@ -1,0 +1,3 @@
+dif. Kronecker 0.0e+00, posto 12
+max |P(X) - P(DAB)| = 5.3e-16
+colunas 12, posto 11, caselas cheias 11

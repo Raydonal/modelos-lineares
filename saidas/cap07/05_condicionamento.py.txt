@@ -1,0 +1,5 @@
+kappa(H) = 1.5258e+10, erro relativo de solve = 6.12e-08
+kappa = 1.0e+02: erro equações normais = 6.14e-13, erro QR/SVD = 2.44e-15
+kappa = 1.0e+04: erro equações normais = 7.77e-09, erro QR/SVD = 5.73e-14
+kappa = 1.0e+06: erro equações normais = 2.38e-05, erro QR/SVD = 9.01e-12
+kappa = 1.0e+07: erro equações normais = 3.10e-03, erro QR/SVD = 6.04e-11

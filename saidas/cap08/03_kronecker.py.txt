@@ -1,0 +1,4 @@
+produto misto: 1.7763568394002505e-15
+vec(AXC) = (C' kron A) vec X: 8.881784197001252e-16
+A Xs C = B: 3.1086244689504383e-15  igual à via vec: 1.5543122344752192e-15
+autovalores do Kronecker = produtos: 5.329070518200751e-15

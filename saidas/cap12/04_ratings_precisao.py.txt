@@ -1,0 +1,18 @@
+s 13.323, gl 196, SF-DAL 0.110, ep 4.778, t 0.023
+ep min 4.44, médio 4.84, max 5.07
+PHA-SF 2.46, ep 4.91
+semana  2, jogos  28, estimável 0, var/s2 NA
+semana  3, jogos  42, estimável 1, var/s2 1.629
+semana  4, jogos  56, estimável 1, var/s2 0.880
+semana  5, jogos  70, estimável 1, var/s2 0.533
+semana  6, jogos  84, estimável 1, var/s2 0.337
+semana  7, jogos  98, estimável 1, var/s2 0.283
+semana  8, jogos 112, estimável 1, var/s2 0.248
+semana  9, jogos 126, estimável 1, var/s2 0.221
+semana 10, jogos 140, estimável 1, var/s2 0.202
+semana 11, jogos 154, estimável 1, var/s2 0.183
+semana 12, jogos 168, estimável 1, var/s2 0.170
+semana 13, jogos 182, estimável 1, var/s2 0.155
+semana 14, jogos 196, estimável 1, var/s2 0.144
+semana 15, jogos 210, estimável 1, var/s2 0.136
+semana 16, jogos 224, estimável 1, var/s2 0.129

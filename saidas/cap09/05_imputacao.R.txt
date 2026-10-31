@@ -1,0 +1,13 @@
+  completas incompletas 
+        111          42 
+rmse_condicional       rmse_media      cobertura90 
+       0.5242257        0.8697946        0.8828829 
+     media sorteio
+[1,] 1.922   3.663
+[2,] 3.332   3.332
+[3,] 3.089   3.286
+[4,] 1.946   1.946
+[5,] 1.685   1.476
+[6,] 2.342   1.815
+    var_completas var_media_simples   var_condicional       var_sorteio 
+        0.7497270         0.5667138         0.6624414         0.7113081 

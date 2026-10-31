@@ -1,0 +1,5 @@
+idempotente: True  simétrica: False  traço: 2.0
+MQ: [-0.1852  0.1086]  VI: [0.4411 0.0592]
+Z'e = 0.0   X'e = [  0.   110.34]
+|P| = 2.4073,  1/|r| = 2.4073
+MQ2E: [0.551  0.0505]  idempotente: True  |P2| = 2.1923

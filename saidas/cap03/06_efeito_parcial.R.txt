@@ -1,0 +1,6 @@
+bloco_inversa inverso_schur 
+ 0.0002729074  0.0002729074 
+     schur sq_residuo 
+  3664.247   3664.247 
+b_educ_completo  b_educ_residuo  b_educ_simples 
+     0.09793557      0.09793557      0.08274437 

@@ -1,0 +1,16 @@
+                kappa_X               kappa_XtX kappa_colunas_unitarias 
+           2.384586e+07            5.685684e+14            4.327504e+04 
+  intercepto GNP.deflator          GNP   Unemployed Armed.Forces   Population 
+  -3482.2586       0.0151      -0.0358      -0.0202      -0.0103      -0.0511 
+        Year 
+      1.8292 
+   5%   50%   95% 
+0.346 0.655 0.999 
+[1] 0.000141
+[1] 3370
+           intercepto GNP.deflator   GNP Unemployed Armed.Forces Population
+mediana         0.655        3.682 1.983      0.529        0.325      4.933
+muda_sinal      0.049        0.719 0.904      0.005        0.000      0.058
+            Year
+mediana    0.638
+muda_sinal 0.036

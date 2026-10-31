@@ -1,0 +1,5 @@
+posto(I - P): 2
+compatível: True
+pi = [0.6258 0.0479 0.3262]  desemprego = 0.0711
+g = 2004.13; compatível com g: True; com 2500: False
+h_E - h_D: [15059.92 15059.92 15059.92]  h_D - h_F: [15739.01 15739.01 15739.01]

@@ -1,0 +1,7 @@
+K = 9, lambda = 0.7943, janela = 0.9
+                          gl   tr_StS  erro_idemp  ...  max_Sii        CV       GCV
+spline de regressão  13.0000  13.0000      0.0000  ...   0.9904  554.3042  570.3499
+P-spline             11.3441   9.3266      0.1193  ...   0.6262  541.0215  562.2995
+Nadaraya-Watson      23.7351  17.7611      0.1877  ...   0.9249  595.9699  655.5783
+
+[3 rows x 7 columns]

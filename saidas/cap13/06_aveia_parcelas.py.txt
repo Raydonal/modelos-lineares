@@ -1,0 +1,5 @@
+QM parcelas 601.33, QM subparcelas 177.08
+sigma2 177.08, sigma2_p 106.06
+max dif MQ-MQG 9.2e-13, inclusão 2.7e-12
+variedade   5.292  ep ingênuo 4.603  ep correto 7.079
+dose       44.000  ep ingênuo 5.315  ep correto 4.436

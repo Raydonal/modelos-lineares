@@ -1,0 +1,4 @@
+diferença 0.1307, ajustado 0.1699, cuped 0.1698
+fwl 0.1699, cor_xy 0.8173
+médias [0.0988 0.1   ], var [0.0079 0.0029]
+razão 0.3699, teórica 0.3600

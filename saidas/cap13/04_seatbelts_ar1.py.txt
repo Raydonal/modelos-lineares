@@ -1,0 +1,4 @@
+r1 0.4478874
+rho 0.4530, mq -0.1614, ep ingênuo 0.0227, ep AR(1) 0.0362
+mqg -0.1731, ep mqg 0.0343
+efeito em %: mq -14.9, mqg -15.9

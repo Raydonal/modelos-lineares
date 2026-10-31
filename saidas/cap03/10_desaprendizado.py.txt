@@ -1,0 +1,7 @@
+acaso: dif. retreino = 8.1e-10, h médio = 0.0342, mudança no ajuste = 2.10
+  |resíduo| médio antes = 36.12, depois = 37.80
+alavanca: dif. retreino = 7.7e-10, h médio = 0.0776, mudança no ajuste = 4.22
+  |resíduo| médio antes = 42.68, depois = 47.30
+sequencial: dif. relativa da inversa = 1.7e-12, dif. beta = 8.1e-10
+paciente 1: erro em x = 8.3e-12, erro em y = 2.9e-12
+retreinar 1.457s, atualizar 6.3e-05s, razão 23279

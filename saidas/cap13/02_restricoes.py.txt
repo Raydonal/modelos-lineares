@@ -1,0 +1,6 @@
+irrestrito [1.0077 0.3522 0.6815]
+restrito   [1.0753 0.3213 0.6787]
+reescrito  [1.0753 0.3213 0.6787]
+ep irrestrito [0.3467 0.1383 0.129 ]
+ep restrito   [0.329  0.1289 0.1289]
+dif SQRes 0.04871131, fórmula 0.04871131

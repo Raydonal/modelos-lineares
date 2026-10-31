@@ -1,0 +1,14 @@
+tau =   10: |A - P_G| = 2.2e-01, |A^2 - A| = 3.6e-02, tr A = 1.456, posto = 3
+tau =    3: |A - P_G| = 1.4e-01, |A^2 - A| = 7.3e-02, tr A = 2.321, posto = 3
+tau =    1: |A - P_G| = 1.4e-02, |A^2 - A| = 1.2e-02, tr A = 2.952, posto = 3
+tau =  0.3: |A - P_G| = 2.0e-06, |A^2 - A| = 1.3e-06, tr A = 3.000, posto = 3
+tau =  0.1: |A - P_G| = 1.6e-17, |A^2 - A| = 2.8e-17, tr A = 3.000, posto = 3
+L idempotente: True  posto: 1
+k =  1: max|A^k - 1 pi'| = 6.45e-01
+k =  2: max|A^k - 1 pi'| = 5.08e-01
+k =  4: max|A^k - 1 pi'| = 4.13e-01
+k =  8: max|A^k - 1 pi'| = 2.64e-01
+k = 16: max|A^k - 1 pi'| = 9.28e-02
+k = 32: max|A^k - 1 pi'| = 1.02e-02
+k = 64: max|A^k - 1 pi'| = 1.19e-04
+LayerNorm: soma = 3.3e-16, norma = 2.8284 = sqrt(d) = 2.8284, invariância a 3x + 5: 2.8e-16

@@ -1,0 +1,11 @@
+max_dif_ajustados 
+     4.831691e-13 
+               0    0.2    0.4    0.6
+GoldenRain 80.00  98.50 114.67 124.83
+Marvellous 86.67 108.50 117.17 126.83
+Victory    71.50  89.67 110.83 118.50
+tratamento  dif_dose0       soma  dif_media 
+     6.667      6.667      5.819      5.819 
+         medias colunas_efeitos           posto              na 
+             11              12              11               1 
+[1] -7.056

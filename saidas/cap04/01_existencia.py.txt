@@ -1,0 +1,5 @@
+posto: 2
+G1 erro A G A - A = 5.3e-15  posto(G) = 2
+G2 erro A G A - A = 0.0e+00  posto(G) = 2
+G3 erro A G A - A = 7.1e-15  posto(G) = 3
+G1 coincide com a de Moore-Penrose: True

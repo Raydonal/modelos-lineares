@@ -1,0 +1,16 @@
+         DAX    SMI    CAC   FTSE
+media 0.0652 0.0818 0.0437 0.0432
+dp    1.0301 0.9250 1.1031 0.7958
+       DAX   SMI   CAC  FTSE
+DAX  1.000 0.703 0.734 0.639
+SMI  0.703 1.000 0.616 0.585
+CAC  0.734 0.616 1.000 0.649
+FTSE 0.639 0.585 0.649 1.000
+      DAX       SMI       CAC      FTSE dp_minvar dp_iguais 
+   0.0120    0.3326   -0.0389    0.6944    0.7530    0.8322 
+retorno_minvar    dp_alvo_0.1 
+        0.0563         1.1082 
+  VaR_normal VaR_empirico  excedencias      curtose 
+   1.6954457    2.0661022    0.0182894    5.6994288 
+dp_minvar_fora dp_iguais_fora 
+     0.7805357      0.8655613 

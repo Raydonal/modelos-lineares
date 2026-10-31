@@ -1,0 +1,5 @@
+autovalores: [0.763932 3.       3.       5.236068]
+Q'Q = I: True  reconstrução: 3.552713678800501e-15
+raiz^2 - A: 4.884981308350689e-15
+Rayleigh em [0.7741, 5.2230] contido em [0.7639, 5.2361]
+Ky Fan: max tr(V'AV) = 8.2201 <= 8.2361

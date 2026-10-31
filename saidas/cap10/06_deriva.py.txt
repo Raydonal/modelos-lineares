@@ -1,0 +1,5 @@
+PP_2a_metade  T2 =   46.33  F =  4.499  p = 6.125e-06
+Emma          T2 =   73.96  F =  7.183  p = 3.565e-10
+Persuasion    T2 =   98.65  F =  9.581  p = 7.116e-14
+Sense         T2 =  108.42  F = 10.529  p = 2.662e-15
+n_referência = 284  falsos positivos = 0.042

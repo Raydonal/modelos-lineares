@@ -1,0 +1,10 @@
+centro-norte     nordeste        oeste          sul 
+         132          118           89          187 
+[1] 7.477352e-14
+ educ_fed    ep_fed  educ_med    ep_med razao_var 
+   0.0810    0.0068    0.0767    0.0074    1.1941 
+centro-norte     nordeste        oeste          sul 
+      0.0686       0.0864       0.0761       0.0756 
+[1] 1.02e-02 6.75e-04 1.64e-04 8.07e-06 1.98e-06 3.13e-07
+      F     gl1     gl2 p_valor 
+  1.421  18.000 502.000   0.116 

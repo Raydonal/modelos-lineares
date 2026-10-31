@@ -1,0 +1,4 @@
+log det: 1.725589671153216e-10
+det (relativo): 1.5330101256503058e-10
+inversa: 4.612791051905596e-11
+d lambda_1: numérica = -1.873281, fórmula = -1.873281

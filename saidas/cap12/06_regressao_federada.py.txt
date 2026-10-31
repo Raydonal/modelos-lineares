@@ -1,0 +1,7 @@
+{'centro-norte': 132, 'nordeste': 118, 'oeste': 89, 'sul': 187}
+max dif. 7.2e-15
+educ fed 0.0810 (ep 0.0068), média 0.0767 (ep 0.0074)
+razão das variâncias 1.1941
+centro-norte 0.0686 nordeste 0.0864 oeste 0.0761 sul 0.0756
+[1.02e-02 6.75e-04 1.64e-04 8.07e-06 1.98e-06 3.13e-07]
+F 1.421, gl 18 e 502, p-valor 0.116

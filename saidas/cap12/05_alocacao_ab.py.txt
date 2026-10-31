@@ -1,0 +1,5 @@
+igual n0 120 nt 120 var 0.0167 cor 0.5000
+ótima n0 200 nt 100 var 0.0150 cor 0.3333
+redução 0.100
+n0 120, média d4 0.2980, var média 0.0172, cor_12 0.5220
+n0 200, média d4 0.3001, var média 0.0150, cor_12 0.3120

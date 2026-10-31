@@ -1,0 +1,9 @@
+           linear quadratico cubico
+linear         20          0      0
+quadratico      0          4      0
+cubico          0          0     20
+                SQ fracao
+linear     19536.4 0.9758
+quadratico   480.5 0.0240
+cubico         3.6 0.0002
+[1] 20020.5

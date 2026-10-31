@@ -1,0 +1,24 @@
+name: Erro no livro
+description: Erro de conteúdo, de notação ou de digitação no PDF
+labels: ["errata"]
+body:
+  - type: input
+    id: versao
+    attributes:
+      label: Versão do PDF
+      description: Aparece na página de rosto
+    validations:
+      required: true
+  - type: input
+    id: local
+    attributes:
+      label: Página e item
+      placeholder: "p. 215, Teorema 5.3"
+    validations:
+      required: true
+  - type: textarea
+    id: erro
+    attributes:
+      label: O que está escrito e o que deveria estar
+    validations:
+      required: true

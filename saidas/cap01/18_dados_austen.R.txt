@@ -1,0 +1,18 @@
+                    palavras distintas
+Emma                  161973      7093
+Mansfield Park        161459      7760
+Northanger Abbey       78230      6018
+Persuasion             84121      5739
+Pride & Prejudice     122817      6259
+Sense & Sensibility   120722      6273
+    total distintas   uma_vez 
+   729322     13731      4365 
+p
+  the    to   and    of     a   her     i    in   was    it 
+26357 24050 22517 21181 13411 13151 12062 11220 11217 10238 
+  posto  freq freq_x_posto
+1     1 26357        26357
+2    10 10238       102380
+3   100   982        98200
+4  1000    72        72000
+5 10000     1        10000

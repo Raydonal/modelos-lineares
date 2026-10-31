@@ -1,0 +1,3 @@
+SQR: restrito 101.45557, dummy 90.14445, separado 88.58249
+Chow: F = 18.81934, p = 1.85e-14; inclinações: F = 3.04460, p = 0.02847
+s2 homens 0.1835, mulheres 0.1574, razão 1.1659, p = 0.2191

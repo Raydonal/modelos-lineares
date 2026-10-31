@@ -1,0 +1,14 @@
+Emma                    161973   7093
+Mansfield Park          161459   7760
+Northanger Abbey         78230   6018
+Persuasion               84121   5739
+Pride & Prejudice       122817   6259
+Sense & Sensibility     120722   6273
+total 729322  distintas 13731  uma vez 4365
+the:26357 to:24050 and:22517 of:21181 a:13411
+her:13151 i:12062 in:11220 was:11217 it:10238
+posto      1  freq  26357  freq x posto   26357
+posto     10  freq  10238  freq x posto  102380
+posto    100  freq    982  freq x posto   98200
+posto   1000  freq     72  freq x posto   72000
+posto  10000  freq      1  freq x posto   10000

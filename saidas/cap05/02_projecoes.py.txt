@@ -1,0 +1,8 @@
+[[ 1.  0. -1.]
+ [ 0.  1. -1.]
+ [ 0.  0.  0.]]
+P w = [0. 0. 0.]  P y = [-1. -1.  0.]
+|y| = 1, |Py| = 1.4142, |P| = 1.7321
+ortogonal: |Po y| = 0.0, |Po| = 1.0
+diferenças entre fórmulas: 9.43689570931383e-16 6.591949208711867e-16  traço: 3.0
+P_W idempotente: True  simétrica: False  W P_W simétrica: True

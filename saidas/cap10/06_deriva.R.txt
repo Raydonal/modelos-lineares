@@ -1,0 +1,7 @@
+                 T2      F         p
+PP_2a_metade  46.33  4.499 6.125e-06
+Emma          73.96  7.183 3.565e-10
+Persuasion    98.65  9.581 7.116e-14
+Sense        108.40 10.530 2.662e-15
+    n_referencia falsos_positivos 
+         284.000            0.042 

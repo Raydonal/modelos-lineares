@@ -1,0 +1,10 @@
+produto_misto    transposta 
+ 1.776357e-15  0.000000e+00 
+  autovalores           det         traco       inversa 
+ 1.278977e-13  1.000000e+00 -1.421085e-14  1.387779e-17 
+[1] 2.498002e-16
+          resolve mesma_que_via_vec 
+     3.330669e-16      9.714451e-16 
+[1] 0
+duplicacao       dim1       dim2 
+         0          9          6 

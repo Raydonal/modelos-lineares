@@ -1,0 +1,3 @@
+0.0
+SlogdetResult(sign=np.float64(1.0), logabsdet=np.float64(-832.1824447962825))
+-832.1824447962838 -831.7766166719343

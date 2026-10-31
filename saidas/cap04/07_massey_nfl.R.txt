@@ -1,0 +1,27 @@
+      jogos     colunas       posto posto_times 
+        224          29          28          27 
+        mp   lm  ref
+ATL   3.96 2.97 0.00
+DAL   6.10 5.11 2.14
+SF    6.21 5.22 2.25
+mando 2.54 2.54 2.54
+soma_ratings_mp   media_margens 
+         0.0000          2.5357 
+           mp    lm   ref
+SF_DAL  0.110 0.110 0.110
+DAL_ATL 2.141 2.141 2.141
+PHA  SF DAL CIN DET 
+8.7 6.2 6.1 5.5 5.3 
+            [,1] [,2] [,3] [,4] [,5] [,6]
+semana         1    2    3    4    5    6
+componentes   14    2    1    1    1    1
+28 - posto    14    2    1    1    1    1
+$`1`
+ [1] "ATL" "CHI" "CLE" "DET" "GB"  "HOU" "LAN" "NO"  "SD"  "SF" 
+
+$`2`
+ [1] "BUF" "CIN" "DAL" "DEN" "IND" "KC"  "LAA" "MIA" "MIN" "NE"  "NYG" "NYJ"
+[13] "PHA" "PHX" "PIT" "SEA" "TB"  "WAS"
+
+    EAM_massey    EAM_apostas       EAM_zero  acerto_massey acerto_apostas 
+        11.522         11.076         11.679          0.616          0.598 

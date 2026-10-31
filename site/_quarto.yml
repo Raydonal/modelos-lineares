@@ -1,0 +1,44 @@
+project:
+  type: book
+  output-dir: _site
+
+lang: pt
+
+book:
+  title: "Modelos Lineares: material reprodutível"
+  subtitle: "Teoria, Geometria e Aplicações"
+  author: ["Raydonal Ospina", "Cristiano Ferraz", "André Leite"]
+  repo-url: https://github.com/Raydonal/modelos-lineares
+  repo-actions: [issue]
+  search: true
+  chapters:
+    - index.qmd
+    - part: "Álgebra matricial"
+      chapters: [cap01.qmd, cap02.qmd, cap03.qmd, cap04.qmd, cap05.qmd, cap06.qmd, cap07.qmd, cap08.qmd]
+    - part: "Distribuições"
+      chapters: [cap09.qmd, cap10.qmd]
+    - part: "O modelo linear"
+      chapters: [cap11.qmd, cap12.qmd, cap13.qmd]
+    - part: "O livro"
+      chapters: [participe.qmd, erratas.qmd]
+
+format:
+  html:
+    number-sections: false
+    theme: [cosmo, estilo.scss]
+    toc: true
+    toc-depth: 3
+    code-copy: true
+    code-overflow: wrap
+    highlight-style: github
+    anchor-sections: true
+
+# Comentários por página (giscus). Só funcionam com o repositório público:
+# ativar ao abrir o repositório, com repo-id e category-id de giscus.app.
+# website:
+#   comments:
+#     giscus:
+#       repo: Raydonal/modelos-lineares
+#       category: Comentários
+#       mapping: pathname
+#       language: pt

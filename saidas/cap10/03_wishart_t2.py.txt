@@ -1,0 +1,4 @@
+média do complemento de Schur: 9.0378 (teórica 9)
+quantis: [0.8496 2.8145 3.9217 7.0681]
+F:       [0.8517 2.8129 3.8625 6.9919]
+rejeição a 5%: F 0.0521, qui2 0.1655

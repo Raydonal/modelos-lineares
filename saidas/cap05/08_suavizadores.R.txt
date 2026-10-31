@@ -1,0 +1,18 @@
+       CV    CV    CV    CV     CV       CV
+K     2.0   5.0   9.0  13.0   17.0     20.0
+CV 1128.5 576.6 554.3 647.5 9197.2 902623.8
+     K_opt lambda_opt janela_opt 
+ 9.0000000  0.7943282  0.9000000 
+                      gl  tr_StS erro_idemp assimetria max_Sii       CV
+spline_regressao 13.0000 13.0000     0.0000     0.0000  0.9904 554.3042
+p_spline         11.3441  9.3266     0.1193     0.0000  0.6262 541.0215
+nadaraya_watson  23.7351 17.7611     0.1877     0.0653  0.9249 595.9699
+                      GCV
+spline_regressao 570.3499
+p_spline         562.2995
+nadaraya_watson  655.5783
+[1] 0 1
+soma_linhas_nw  soma_linhas_p 
+  2.220446e-16   4.440892e-16 
+  direto   atalho 
+-73.3477 -73.3477 

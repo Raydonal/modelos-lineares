@@ -1,0 +1,9 @@
+primeiras regras: ['e _', 't h', 'd _', 't _', 's _', 'e r', 'i n', 'y _', 'a n', 'o _', 'o u', 'er _']
+tamanho do vocabulário: 224
+['the_', 'un', 'b', 'eli', 'e', 'v', 'ab', 'ly_', 'p', 'r', 'ou', 'd_', 'g', 'ent', 'le', 'm', 'an_', 'd', 'an', 'c', 'ed_', 're', 'l', 'u', 'c', 't', 'an', 't', 'ly_'] 
+6 palavras, 29 tokens
+max|OE - E[ids]| = 0.0
+Pride & Prejudice - cap. 17    0.348
+Pride & Prejudice - cap. 18    0.323
+Pride & Prejudice - cap. 44    0.252
+Pride & Prejudice - cap. 11    0.250

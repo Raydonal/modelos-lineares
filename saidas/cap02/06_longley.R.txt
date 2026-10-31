@@ -1,0 +1,10 @@
+             normais   qr
+(Intercepto)     8.1 14.9
+GNP.deflator     7.9 12.5
+GNP              7.7 13.6
+Unemployed       8.3 14.2
+Armed.Forces     8.5 14.4
+Population       7.5 12.8
+Year             8.1 15.0
+[1] 23845862
+[1] 5.685684e+14

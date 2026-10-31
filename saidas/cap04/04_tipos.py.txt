@@ -1,0 +1,15 @@
+      AGA=A GAG=G (AG)'=AG (GA)'=GA
+sub      sim    sim    não    não
+mq       sim    sim    sim    não
+nm       sim    sim    não    sim
+mp       sim    sim    sim    sim
+sub  resíduo = 1.0000  norma = 2.2361
+mq   resíduo = 0.5774  norma = 1.7951
+mp   resíduo = 0.5774  norma = 1.1807
+lstsq = pinv b: True
+lambda = 1e-01: dif. = 1.6e-01
+lambda = 1e-02: dif. = 2.0e-02
+lambda = 1e-03: dif. = 2.0e-03
+lambda = 1e-04: dif. = 2.0e-04
+lambda = 1e-05: dif. = 2.0e-05
+lambda = 1e-06: dif. = 2.0e-06

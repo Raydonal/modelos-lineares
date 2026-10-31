@@ -1,0 +1,3 @@
+postos: 2.0 12.0  max|A1 A2| = 5.921189464667503e-18
+lambda = 5.8333; médias 7.8198 (teórica 7.8333) e 11.9639 (teórica 12)
+correlação = 0.0030; poder simulado 0.4618, teórico 0.4632

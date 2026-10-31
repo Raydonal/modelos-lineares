@@ -1,0 +1,9 @@
+              longo                 fwl so_x2_residualizado 
+           0.092029            0.092029            0.092029 
+[1] 1.010303e-14
+        ep_longo           ep_fwl ep_fwl_corrigido 
+        0.007330         0.007309         0.007330 
+     curto      longo identidade 
+  0.082744   0.092029   0.082744 
+  exper  tenure 
+-1.4682 -0.1466 

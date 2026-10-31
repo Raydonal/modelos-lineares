@@ -1,0 +1,7 @@
+        norma_P norma_I_menos_P 
+       1.732051        1.732051 
+  angulos_graus1   angulos_graus2 um_sobre_cos_max 
+        0.000000        54.735610         1.732051 
+         norma_P  norma_I_menos_P um_sobre_cos_max 
+        5.329803         5.329803         5.329803 
+[1] 20.21 54.76 79.19

@@ -1,0 +1,11 @@
+fora da diagonal 3.0e-13, diagonal de 96 a 192
+dif. ajustados 2.1e-13
+   K  colunas    SQR   frac
+0  0        0  3.928  0.000
+1  1        2  2.184  0.686
+2  2        4  1.688  0.881
+3  3        6  1.558  0.932
+4  4        8  1.488  0.960
+5  5       10  1.395  0.996
+6  6       11  1.386  1.000
+efeito da lei, K = 2 e K = 6: [-0.1625 -0.164 ]

@@ -1,0 +1,8 @@
+[1] 8.807645 0.652225 0.000000
+   reconstrucao autovalores_AtA 
+   1.776357e-15    1.421085e-14 
+    A_v_nulo    At_u_nulo 
+4.440892e-16 8.881784e-16 
+               erro_svd soma_sigma2_descartados 
+               140.3816                140.3816 
+[1] 208.8201

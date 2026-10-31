@@ -1,0 +1,17 @@
+valores singulares: [1.07573671e+02 1.22964232e+01 4.57195683e+00 1.46755588e+00
+ 6.07200953e-02 3.89941553e-02 2.17831094e-14 1.02139801e-14
+ 1.02139801e-14]
+SVD truncada k =  5: acurácia = 0.6725, ||W||_F = 0.6745
+SVD truncada k = 10: acurácia = 0.8319, ||W||_F = 1.173
+SVD truncada k = 20: acurácia = 0.8921, ||W||_F = 1.617
+SVD truncada k = 30: acurácia = 0.9034, ||W||_F = 2.061
+SVD truncada k = 40: acurácia = 0.8996, ||W||_F = 2.329
+SVD truncada k = 50: acurácia = 0.8959, ||W||_F = 2.737
+SVD truncada k = 62: acurácia = 0.8908, ||W||_F = 29.78
+SVD truncada k = 63: acurácia = 0.8670, ||W||_F = 1.572e+13
+ridge lambda = 0.001: gl = 60.62, acurácia = 0.8921, ||W||_F = 21.8101
+ridge lambda = 0.01: gl = 57.42, acurácia = 0.8959, ||W||_F = 8.3509
+ridge lambda = 0.1: gl = 54.33, acurácia = 0.8946, ||W||_F = 3.6112
+ridge lambda = 1: gl = 48.87, acurácia = 0.8946, ||W||_F = 2.6379
+ridge lambda = 10: gl = 35.21, acurácia = 0.9034, ||W||_F = 1.9320
+ridge lambda = 100: gl = 15.79, acurácia = 0.8971, ||W||_F = 1.0347

@@ -1,0 +1,3 @@
+log_det_numerico  log_det_formula 
+       0.4831472        0.4831472 
+[1] 1

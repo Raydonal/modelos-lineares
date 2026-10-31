@@ -1,0 +1,7 @@
+diferenca  ajustado     cuped       fwl    cor_xy 
+   0.1307    0.1699    0.1698    0.1699    0.8173 
+         dif  ajust
+media 0.0988 0.1000
+var   0.0079 0.0029
+  razao teorica 
+ 0.3699  0.3600 

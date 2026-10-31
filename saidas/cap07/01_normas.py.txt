@@ -1,0 +1,5 @@
+||A||_1 = 7.000000 (máx. soma de colunas 7.000000)
+||A||_inf = 6.000000 (máx. soma de linhas 6.000000)
+||A||_2 = 5.158098 = sigma_1;  ||A||_F = 6.082763 = 6.082763
+raio espectral = 4.192582;  ||A^-1||_2 = 1.060125 = 1/sigma_min
+máx ||Ax||/||x|| em 10 000 vetores: 5.157732

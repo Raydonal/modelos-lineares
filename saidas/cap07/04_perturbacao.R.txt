@@ -1,0 +1,10 @@
+max_variacao_autovalor               norma2_E 
+           0.005122383            0.006041868 
+max_variacao_sigma           norma2_F 
+       0.001801977        0.004603387 
+                   [,1]     [,2]     [,3]     [,4]
+k              1.000000 2.000000 3.000000 4.000000
+erro_espectral 3.300585 2.554966 1.490991 1.338917
+sigma_k_mais_1 3.300585 2.554966 1.490991 1.338917
+   sigma_min    distancia    det_Msing 
+6.201906e-01 6.201906e-01 3.468757e-15 

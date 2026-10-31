@@ -1,0 +1,9 @@
+completas: 111  incompletas: 42
+rmse condicional: 0.5242  rmse média: 0.8698  cobertura 90%: 0.8829
+[[1.922 3.663]
+ [3.332 3.332]
+ [3.089 3.286]
+ [1.946 1.946]
+ [1.685 1.476]
+ [2.342 1.815]]
+variâncias: completas 0.7497  média simples 0.5667  condicional 0.6624  sorteio 0.7113

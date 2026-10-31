@@ -1,0 +1,4 @@
+W_q: max |retropropagação - diferenças finitas| = 1.57e-08
+W_k: max |retropropagação - diferenças finitas| = 1.86e-08
+W_v: max |retropropagação - diferenças finitas| = 1.50e-08
+maior autovalor do jacobiano da softmax: 0.458268 (<= 1/2)

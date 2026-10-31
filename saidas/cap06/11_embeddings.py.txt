@@ -1,0 +1,11 @@
+palavras no corpus: 729322
+densidade = 0.0704
+valores singulares: [246.33  86.14  52.33  36.71  33.42  22.14]
+fração de Frobenius em k = 100: 0.3107
+elizabeth  elinor, emma, catherine, darcy, edmund, jane
+happy      attached, miserable, comfortable, ready, glad, fortunate
+letter     note, visit, answer, speech, news, subject
+mother     father, sister, brother, uncle, aunt, daughter
+walked     ran, went, walking, drove, turned, moved
+london     town, mansfield, home, bath, portsmouth, norland
+ten        five, four, three, seven, six, twelve

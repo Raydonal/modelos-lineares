@@ -1,0 +1,7 @@
+P2 P1 = P1: True  P2 - P1 idempotente: True
+educ          gl =     1   SQ =   27.5606
+exper+tenure  gl =     2   SQ =   19.3135
+resíduo       gl =   522   SQ =  101.4556
+SQ total = 148.3297
+P_[X1 X2] = P1 + P_{M1 X2}: 2.0122792321330962e-16
+P_X - P_S = P_U: 1.2836953722228372e-16   SQ da restrição = 3.489

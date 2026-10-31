@@ -1,0 +1,4 @@
+monômios     kappa(X) = 4.472e+05, kappa(X'X) = 2e+11, máx |corr| entre estimativas = 0.9891
+centrados    kappa(X) = 6.05e+04, kappa(X'X) = 3.661e+09, máx |corr| entre estimativas = 0.9597
+padronizados kappa(X) = 7.986, kappa(X'X) = 63.78, máx |corr| entre estimativas = 0.9597
+ortogonais   kappa(X) = 1, kappa(X'X) = 1, máx |corr| entre estimativas = 0.0000

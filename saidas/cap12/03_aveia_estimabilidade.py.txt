@@ -1,0 +1,7 @@
+n 66, posto 16, gl 50, s 15.46335
+                 desvio   estim.     ep
+doses_0_a_0.4      0.00   -7.056  5.154
+todas_as_doses     0.25   -7.417  5.467
+so_dose_0.6        1.00   -8.500  8.928
+aditivo sem casela -7.604  ep 4.817
+completo interação -6.875  ep 4.603

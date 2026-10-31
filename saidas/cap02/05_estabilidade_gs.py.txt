@@ -1,0 +1,5 @@
+   kappa   clássico  modificado  Householder
+   1e+02    6.2e-14     3.3e-15      6.7e-16
+   1e+05    3.6e-08     9.1e-13      8.9e-16
+   1e+08    1.9e-02     3.4e-09      4.4e-16
+   1e+11    1.0e+00     2.9e-06      5.6e-16

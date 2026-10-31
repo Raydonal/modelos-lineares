@@ -1,0 +1,18 @@
+[1] 4.60338 1.17534 0.20343 0.01493 0.00255 0.00038
+[1] 0.7672 0.9631 0.9970 0.9995 0.9999 1.0000
+   kappa 
+12220.01 
+               [,1]   [,2]   [,3]
+GNP.deflator -0.462  0.058  0.135
+GNP          -0.462  0.053 -0.818
+Unemployed   -0.321 -0.596 -0.107
+Armed.Forces -0.202  0.798 -0.018
+Population   -0.462 -0.046  0.312
+Year         -0.465  0.001  0.450
+  var_ultima      lambda6 
+0.0003767081 0.0003767081 
+          GNP.deflator    GNP Unemployed Armed.Forces Population Year
+vif              135.5 1788.5       33.6          3.6      399.2  759
+espectral        135.5 1788.5       33.6          3.6      399.2  759
+GNP.deflator          GNP   Unemployed Armed.Forces   Population         Year 
+       0.358        0.994        0.912        0.239        0.646        0.710 

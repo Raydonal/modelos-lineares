@@ -1,0 +1,7 @@
+      log_det  det_relativo       inversa      traco_AX 
+ 1.725589e-10  1.533009e-10  4.612792e-11 -5.015918e-09 
+           grad_logdet grad_det_cofatores_rel 
+          4.176173e-10           4.346769e-10 
+[1] 1.902682e-10
+ numerica   formula 
+-1.873281 -1.873281 

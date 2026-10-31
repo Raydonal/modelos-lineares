@@ -1,0 +1,7 @@
+   QM_parcelas QM_subparcelas         sigma2       sigma2_p 
+        601.33         177.08         177.08         106.06 
+max_dif_mq_mqg       inclusao 
+  1.392664e-12   1.932676e-12 
+          estimativa ep_ingenuo ep_correto
+variedade      5.292      4.603      7.079
+dose          44.000      5.315      4.436

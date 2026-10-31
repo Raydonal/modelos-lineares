@@ -1,0 +1,10 @@
+phi =    0  logvero =  -292.66
+phi =    1  logvero =  -292.59
+phi =    2  logvero =  -291.43
+phi =    4  logvero =  -288.79
+phi =    8  logvero =  -287.72
+phi =   15  logvero =  -287.31
+phi =   30  logvero =  -287.08
+phi =   45  logvero =  -287.16
+phi =   60  logvero =  -287.28
+phi_hat = 28.99, ganho = 5.58

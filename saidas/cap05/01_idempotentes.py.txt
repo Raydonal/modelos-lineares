@@ -1,0 +1,8 @@
+oblíqua    erro_idemp=0.0e+00 simétrica=False posto=1 traço=1
+centragem  erro_idemp=2.2e-16 simétrica=True  posto=4 traço=4
+AG         erro_idemp=0.0e+00 simétrica=False posto=2 traço=2
+idempotente construída: 2 2.0 4
+identidade de posto: 12 = 12
+[[0.75 0.25]
+ [0.75 0.25]] 
+erro L^2 - L: 3.3306690738754696e-16  posto: 1

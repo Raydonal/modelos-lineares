@@ -1,0 +1,18 @@
+       posto  soma_linhas 
+2.000000e+00 5.551115e-17 
+  compativel posto_M
+1       TRUE       3
+     E      D      F 
+0.6258 0.0479 0.3262 
+taxa_desemprego    participacao 
+     0.07114625      0.67376831 
+         g compativel_g compativel_2500
+1 2004.128         TRUE           FALSE
+      [,1]     [,2]     [,3]
+E  11967.4  12198.9  15230.2
+D  -3092.5  -2861.1    170.3
+F -18831.6 -18600.1 -15568.7
+              [,1]     [,2]     [,3]
+E_menos_D 15059.92 15059.92 15059.92
+D_menos_F 15739.01 15739.01 15739.01
+[1] 15059.92

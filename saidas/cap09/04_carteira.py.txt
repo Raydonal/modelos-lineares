@@ -1,0 +1,11 @@
+          DAX     SMI     CAC    FTSE
+média  0.0652  0.0818  0.0437  0.0432
+dp     1.0301  0.9250  1.1031  0.7958
+[[1.    0.703 0.734 0.639]
+ [0.703 1.    0.616 0.585]
+ [0.734 0.616 1.    0.649]
+ [0.639 0.585 0.649 1.   ]]
+pesos: [ 0.012   0.3326 -0.0389  0.6944]  dp: 0.753  dp pesos iguais: 0.8322
+retorno da variância mínima: 0.0563  dp para alvo 0,1: 1.1082
+VaR normal = 1.6954, empírico = 2.0661, excedências = 0.0183, curtose = 5.6994
+dp fora da amostra: variância mínima 0.7805  pesos iguais 0.8656

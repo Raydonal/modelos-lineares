@@ -1,0 +1,12 @@
+         n      posto constantes 
+       102         49         15 
+            lambda    auc  auc_8
+euclidiana      NA 0.8898 0.7475
+mahalanobis  0.001 0.9959 0.9794
+mahalanobis  0.010 0.9948 0.9688
+mahalanobis  0.100 0.9868 0.9349
+mahalanobis  1.000 0.9580 0.8546
+         media_treino         media_teste_1       falsos_pos_qui2 
+             22.96740              41.33063               0.08750 
+falsos_pos_q99_treino 
+              0.35000 

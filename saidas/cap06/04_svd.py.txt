@@ -1,0 +1,4 @@
+valores singulares: [8.807645 0.652225 0.      ]
+A V_nulo: 4.440892098500626e-16   A' U_nulo: 8.881784197001252e-16
+Eckart-Young: erro = 140.3816, soma descartados = 140.3816
+melhor de 2000 aproximações ao acaso: 208.8201

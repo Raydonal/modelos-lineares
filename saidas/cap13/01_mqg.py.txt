@@ -1,0 +1,6 @@
+pesos [0.8 0.2], var_mqg 0.80, var_media 1.25
+[[ 3.82241   3.82241 ]
+ [-0.144821 -0.144821]]
+com intercepto 4.441e-16, sem 0.3529
+n=50, rho=0.5: eficiência 0.9879, Kantorovich 0.3623
+n=50, rho=0.9: eficiência 0.9061, Kantorovich 0.0131

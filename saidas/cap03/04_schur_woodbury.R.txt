@@ -1,0 +1,7 @@
+      det_M det_A_det_S 
+   10735.11    10735.11 
+[1] 3.608225e-16
+   diferenca   seg_direto seg_woodbury 
+2.429168e-13 1.960000e+00 0.000000e+00 
+  direto     lema 
+809.6946 809.6946 

@@ -1,0 +1,17 @@
+p =   5: risco mediano =    4.59
+p =  10: risco mediano =    5.14
+p =  20: risco mediano =    6.63
+p =  30: risco mediano =    9.84
+p =  40: risco mediano =   17.56
+p =  45: risco mediano =   32.37
+p =  48: risco mediano =   75.10
+p =  50: risco mediano =  379.68
+p =  52: risco mediano =   80.44
+p =  55: risco mediano =   38.53
+p =  60: risco mediano =   22.06
+p =  80: risco mediano =    9.66
+p = 100: risco mediano =    7.28
+p = 200: risco mediano =    4.70
+p = 300: risco mediano =    4.22
+p = 500: risco mediano =    3.89
+risco do preditor nulo: 4.250000000000001

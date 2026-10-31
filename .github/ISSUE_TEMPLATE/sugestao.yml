@@ -1,0 +1,16 @@
+name: Sugestão
+description: Ideia para o livro ou para o material reprodutível
+labels: ["sugestao"]
+body:
+  - type: input
+    id: tema
+    attributes:
+      label: Capítulo ou tema
+    validations:
+      required: false
+  - type: textarea
+    id: sugestao
+    attributes:
+      label: Sua sugestão
+    validations:
+      required: true

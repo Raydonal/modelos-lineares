@@ -1,0 +1,8 @@
+      kappa_hilbert erro_relativo_solve 
+       1.525758e+10        2.256332e-07 
+amplificacao        kappa 
+ 15257573470  15257575271 
+                 [,1]     [,2]     [,3]     [,4]
+kappa        1.00e+02 1.00e+04 1.00e+06 1.00e+07
+erro_normais 1.38e-13 1.46e-08 4.03e-05 8.17e-03
+erro_qr      1.44e-15 3.77e-14 9.16e-12 2.36e-10

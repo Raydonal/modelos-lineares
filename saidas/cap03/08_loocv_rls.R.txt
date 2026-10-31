@@ -1,0 +1,5 @@
+       max_dif segundos_bruto          PRESS          SQres 
+  8.284928e-12   1.380000e-01   1.326775e+06   1.263986e+06 
+    Min.  1st Qu.   Median     Mean  3rd Qu.     Max. 
+0.007193 0.015497 0.021548 0.024887 0.028207 0.127618 
+[1] 6.662617e-10
