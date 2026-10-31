@@ -7,6 +7,7 @@
 #    make tudo         dados + figuras + exemplos
 #    make cap01        apenas o capítulo 1 (idem cap02, ...)
 #    make site         gera o site em site/_site/ (requer quarto)
+#    make publicar     gera o site e envia à branch gh-pages
 #
 #  Variáveis: PYTHON (padrão: python3) e RSCRIPT (padrão: Rscript)
 # =====================================================================
@@ -14,7 +15,7 @@ PYTHON  ?= python3
 RSCRIPT ?= Rscript
 CAPS    := $(patsubst R/%,%,$(wildcard R/cap*))
 
-.PHONY: tudo dados figuras exemplos site limpar $(CAPS)
+.PHONY: tudo dados figuras exemplos site publicar limpar $(CAPS)
 
 tudo: dados figuras exemplos
 
@@ -44,6 +45,9 @@ $(CAPS):
 site:
 	$(PYTHON) site/gerar_site.py
 	quarto render site
+
+publicar: site
+	bash site/publicar.sh
 
 limpar:
 	rm -rf figuras/cap* saidas/cap*

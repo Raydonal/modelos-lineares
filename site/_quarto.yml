@@ -8,6 +8,7 @@ book:
   title: "Modelos Lineares: material reprodutível"
   subtitle: "Teoria, Geometria e Aplicações"
   author: ["Raydonal Ospina", "Cristiano Ferraz", "André Leite"]
+  site-url: https://raydonal.github.io/modelos-lineares/
   repo-url: https://github.com/Raydonal/modelos-lineares
   repo-actions: [issue]
   search: true
@@ -33,12 +34,12 @@ format:
     highlight-style: github
     anchor-sections: true
 
-# Comentários por página (giscus). Só funcionam com o repositório público:
-# ativar ao abrir o repositório, com repo-id e category-id de giscus.app.
+# Comentários por página (giscus): instalar o app em github.com/apps/giscus e
+# preencher repo-id e category-id em giscus.app.
 # website:
 #   comments:
 #     giscus:
 #       repo: Raydonal/modelos-lineares
-#       category: Comentários
+#       category: General
 #       mapping: pathname
 #       language: pt
